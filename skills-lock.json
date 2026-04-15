@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "css": {
+      "source": "jaredlander/freshbooks-speed",
+      "sourceType": "github",
+      "computedHash": "503b7a7f966a2caed3afb80516febde73dccfcb8d7434e9080a91807b8f43614"
+    }
+  }
+}

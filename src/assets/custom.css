@@ -1,0 +1,117 @@
+/* Hero + corner accents TL & BR (::before / ::after = two rows, gradient = L/R split) */
+:root {
+	--corner-accent-w: 7.5rem;
+	--corner-accent-h: 5rem;
+	--corner-frost: rgba(255, 255, 255, 0.45);
+
+	/* Sticky header (JS toggles inline box-shadow + margin; class .is-scrolled) */
+	--header-sticky-duration: 0.35s;
+	--header-sticky-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, sans-serif;
+}
+
+.hero {
+	position: relative;
+	min-height: min(70vh, 32rem);
+	background-color: #1a2f24;
+	background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=80");
+	background-size: cover;
+	background-position: center;
+}
+
+/**
+ * Single absolutely positioned box; two pseudo-elements = top row + bottom row.
+ * TL: white | frost / frost | transparent (solid white = outer top-left)
+ * BR: transparent | frost / frost | white (solid white = outer bottom-right)
+ */
+.hero__corner-accent {
+	position: absolute !important;
+	width: var(--corner-accent-w) !important;
+	height: var(--corner-accent-h) !important;
+	pointer-events: none !important;
+	z-index: 1 !important;
+}
+
+.hero__corner-accent--tl {
+	top: 0;
+	left: 0;
+}
+
+.hero__corner-accent--br {
+	right: 0;
+	bottom: 0;
+}
+
+.hero__corner-accent::before,
+.hero__corner-accent::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 50%;
+}
+
+.hero__corner-accent::before {
+	top: 0;
+	background: linear-gradient(to right,
+			#fff 50%,
+			var(--corner-frost) 50%);
+}
+
+.hero__corner-accent::after {
+	bottom: 0;
+	background: linear-gradient(to right,
+			var(--corner-frost) 50%,
+			transparent 50%);
+}
+
+/* BR: top row inner = clear; bottom row outer corner = white */
+.hero__corner-accent--br::before {
+	background: linear-gradient(to right, transparent 50%, var(--corner-frost) 50%);
+}
+
+.hero__corner-accent--br::after {
+	background: linear-gradient(to right,
+			var(--corner-frost) 50%,
+			#fff 50%);
+}
+
+/* Header logo swap: header-logo.js toggles header.header--logo-white | header.header--logo-red */
+body.home header:not(.header--logo-white):not(.header--logo-red) .logo-red,
+body:not(.home) header:not(.header--logo-white):not(.header--logo-red) .logo-white {
+	display: none !important;
+}
+
+header.header--logo-white .logo-red,
+header.header--logo-red .logo-white {
+	display: none !important;
+}
+
+/* Smooth scroll state for header bar (pairs with stickyActive() on .header_container) */
+.elementor-location-header .header_container {
+	transition:
+		box-shadow var(--header-sticky-duration) var(--header-sticky-ease),
+		margin-top var(--header-sticky-duration) var(--header-sticky-ease),
+		background-color var(--header-sticky-duration) var(--header-sticky-ease),
+		border-color var(--header-sticky-duration) var(--header-sticky-ease);
+}
+
+.header_container.is-scrolled {
+	background-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.elementor-location-header .header_container {
+		transition-duration: 0.01ms;
+	}
+}
