@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hero corner accent</title>
 	<link rel="stylesheet" href="assets/custom.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body class="home">
@@ -56,6 +57,78 @@
 		<div class="hero__corner-accent hero__corner-accent--tl" aria-hidden="true"></div>
 		<div class="hero__corner-accent hero__corner-accent--br" aria-hidden="true"></div>
 	</section>
+	<div class="elementor-element elementor-element-ef1543f e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="ef1543f" data-element_type="container" data-e-type="container">
+		<div class="e-con-inner">
+			<div class="elementor-element elementor-element-608f2b6 e-con-full e-flex e-con e-child" data-id="608f2b6" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-56eac63 elementor-widget elementor-widget-shortcode" data-id="56eac63" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
+					<div class="elementor-shortcode">
+						<div class="floorplans floorplans--toggle" data-floorplans-toggle="" id="floorplans-1">
+							<div class="floorplans__sidebar">
+								<h2 class="floorplans__heading">Floorplan</h2>
+								<div class="floorplans__tabs" role="tablist" aria-label="Floorplan levels"><button type="button" id="floorplans-1-tab-0" class="floorplans__tab is-active" role="tab" aria-controls="floorplans-1-panel-0" aria-selected="true" data-floorplan-index="0">Main Floor</button><button type="button" id="floorplans-1-tab-1" class="floorplans__tab" role="tab" aria-controls="floorplans-1-panel-1" aria-selected="false" data-floorplan-index="1">Second Floor</button><button type="button" id="floorplans-1-tab-2" class="floorplans__tab" role="tab" aria-controls="floorplans-1-panel-2" aria-selected="false" data-floorplan-index="2">Third Floor</button></div>
+							</div>
+							<div class="floorplans__viewer">
+								<div id="floorplans-1-panel-0" class="floorplans__panel is-active" role="tabpanel" aria-labelledby="floorplans-1-tab-0"><a class="floorplans__media" href="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/uploads/2025/09/third-floor-1.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="floorplans-1-lightbox"><img src="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/uploads/2025/09/third-floor-1.webp" alt="Main Floor" class="floorplans__image"><img src="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/themes/hello-elementor-child/assets/images/ArrowsOut.svg" alt="full screen" class="floorplans__icon"></a>
+									<p class="floorplans__size">232 Sq. ft.</p>
+								</div>
+								<div id="floorplans-1-panel-1" class="floorplans__panel" role="tabpanel" aria-labelledby="floorplans-1-tab-1" hidden=""><a class="floorplans__media" href="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/uploads/2025/09/second-floor-1.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="floorplans-1-lightbox"><img src="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/uploads/2025/09/second-floor-1.webp" alt="Second Floor" class="floorplans__image"><img src="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/themes/hello-elementor-child/assets/images/ArrowsOut.svg" alt="full screen" class="floorplans__icon"></a>
+									<p class="floorplans__size">586 Sq. ft.</p>
+								</div>
+								<div id="floorplans-1-panel-2" class="floorplans__panel" role="tabpanel" aria-labelledby="floorplans-1-tab-2" hidden=""><a class="floorplans__media" href="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/uploads/2025/09/main-floor-1.webp" data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="floorplans-1-lightbox"><img src="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/uploads/2025/09/main-floor-1.webp" alt="Third Floor" class="floorplans__image"><img src="https://wordpress-624537-6328762.cloudwaysapps.com/wp-content/themes/hello-elementor-child/assets/images/ArrowsOut.svg" alt="full screen" class="floorplans__icon"></a>
+									<p class="floorplans__size">588 Sq. ft.</p>
+								</div>
+							</div>
+						</div>
+						<script>
+							(function () {
+								function syncFloorplan (root, index) {
+									var tabs = root.querySelectorAll(".floorplans__tab")
+									var panels = root.querySelectorAll(".floorplans__panel")
+									tabs.forEach(function (tab, i) {
+										var active = i === index
+										tab.classList.toggle("is-active", active)
+										tab.setAttribute("aria-selected", active ? "true" : "false")
+									})
+									panels.forEach(function (panel, i) {
+										var active = i === index
+										panel.classList.toggle("is-active", active)
+										panel.hidden = !active
+									})
+								}
+
+								document.addEventListener("click", function (event) {
+									var tab = event.target.closest(".floorplans__tab")
+									if (!tab) return
+									var root = tab.closest("[data-floorplans-toggle]")
+									if (!root) return
+									var index = parseInt(tab.getAttribute("data-floorplan-index"), 10)
+									if (Number.isNaN(index)) return
+									syncFloorplan(root, index)
+								})
+
+								document.addEventListener("keydown", function (event) {
+									var tab = event.target.closest(".floorplans__tab")
+									if (!tab) return
+									if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return
+									var root = tab.closest("[data-floorplans-toggle]")
+									if (!root) return
+									var tabs = Array.prototype.slice.call(root.querySelectorAll(".floorplans__tab"))
+									var current = tabs.indexOf(tab)
+									if (current === -1) return
+									event.preventDefault()
+									var next = event.key === "ArrowDown" ? current + 1 : current - 1
+									if (next < 0) next = tabs.length - 1
+									if (next >= tabs.length) next = 0
+									tabs[next].focus()
+									syncFloorplan(root, next)
+								})
+							})();
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="trustpilot-widget" data-locale="nl-NL" data-template-id="54ad5defc6454f065c28af8b" data-businessunit-id="5e59366cdb23f90001b24b9e" data-style-height="240px" data-style-width="100%" data-token="65fa45df-4867-4a56-88bc-23a307192249" data-stars="1,2,3,4,5" data-review-languages="nl"> <a href="https://nl.trustpilot.com/review/high-clean.com" target="_blank" rel="noopener">Trustpilot</a> </div>
 	<script src="assets/header-logo.js"></script>
 </body>
