@@ -70,6 +70,7 @@ function customFilterProjects($) {
   ensureFilterTriggers($, $forms);
   toggleOpenForm($, $forms);
   bindClearFilters($, $forms);
+  bindClearButtonVisibility($, $forms);
 }
 
 function getFilterHeading($form) {
@@ -101,23 +102,17 @@ function ensureFilterTriggers($, $forms) {
     if ($form.find(".custom-form__trigger").length) return;
 
     const heading = getFilterHeading($form);
-    const triggerMarkup = '<button type="button" class="custom-form__trigger" aria-expanded="true">' + '<span class="custom-form__trigger-text">' + heading + "</span>" + '<span class="custom-form__chevron" aria-hidden="true"></span>' + "</button>";
+    const triggerMarkup =
+      '<div class="custom-form__trigger" role="button" tabindex="0" aria-expanded="true">' + '<span class="custom-form__trigger-text">' + heading + "</span>" + '<span class="custom-form__chevron" aria-hidden="true"></span>' + "</div>";
 
     $filter.before(triggerMarkup);
   });
 }
 
-function setAllState($filter) {
-  const $allBtn = $filter.find('.e-filter-item[data-filter="__all"]');
-  const $specific = $filter.find(".e-filter-item").not($allBtn);
-  const anySpecific = $specific.filter('[aria-pressed="true"]').length > 0;
-
-  if (!anySpecific && $allBtn.length) {
-    $filter.find(".e-filter-item").attr("aria-pressed", "false");
-    $allBtn.attr("aria-pressed", "true");
-  } else if (anySpecific) {
-    $allBtn.attr("aria-pressed", "false");
-  }
+function setFormExpanded($form, expanded) {
+  const $trigger = $form.find(".custom-form__trigger").first();
+  $form.toggleClass("is-collapsed", !expanded);
+  $trigger.attr("aria-expanded", expanded ? "true" : "false");
 }
 
 function toggleOpenForm($, $forms) {
@@ -131,45 +126,41 @@ function toggleOpenForm($, $forms) {
 
     if (!$filter.length || !$trigger.length || !$items.length) return;
 
-    setAllState($filter);
-    $items.off("click.customFilterItem");
-    $trigger.off("click.customFilterTrigger");
+    const isInitialized = $form.attr("data-custom-filter-init") === "true";
+    if (!isInitialized) {
+      setFormExpanded($form, false);
+      $form.attr("data-custom-filter-init", "true");
+    } else {
+      const expanded = $trigger.attr("aria-expanded") !== "false";
+      setFormExpanded($form, expanded);
+    }
 
-    const expanded = $trigger.attr("aria-expanded") !== "false";
-    $form.toggleClass("is-collapsed", !expanded);
+    $trigger.off("click.customFilterTrigger keydown.customFilterTrigger");
+    $items.off("click.customFilterItem");
 
     $trigger.on("click.customFilterTrigger", function (e) {
       e.preventDefault();
+      e.stopPropagation();
+
       const willExpand = $form.hasClass("is-collapsed");
 
       $forms.not($form).each(function () {
-        const $otherForm = $(this);
-        const $otherTrigger = $otherForm.find(".custom-form__trigger").first();
-        $otherForm.addClass("is-collapsed");
-        $otherTrigger.attr("aria-expanded", "false");
+        setFormExpanded($(this), false);
       });
 
-      $form.toggleClass("is-collapsed", !willExpand);
-      $trigger.attr("aria-expanded", willExpand ? "true" : "false");
+      setFormExpanded($form, willExpand);
     });
 
-    $items.on("click.customFilterItem", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const $option = $(this);
-      const isAll = $option.data("filter") === "__all";
-      const isPressed = $option.attr("aria-pressed") === "true";
-
-      if (isAll) {
-        $items.attr("aria-pressed", "false");
-        $option.attr("aria-pressed", "true");
-        return;
+    $trigger.on("keydown.customFilterTrigger", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        $(this).trigger("click.customFilterTrigger");
       }
+    });
 
-      $filter.find('.e-filter-item[data-filter="__all"]').attr("aria-pressed", "false");
-      $option.attr("aria-pressed", isPressed ? "false" : "true");
-      setAllState($filter);
+    // Keep Elementor in control of filter state and data store.
+    $items.on("click.customFilterItem", function (e) {
+      e.stopPropagation();
     });
   });
 
@@ -182,8 +173,7 @@ function toggleOpenForm($, $forms) {
 
       if ($form.is($target) || $form.has($target).length) return;
 
-      $form.addClass("is-collapsed");
-      $trigger.attr("aria-expanded", "false");
+      setFormExpanded($form, false);
     });
   });
 }
@@ -198,12 +188,55 @@ function bindClearFilters($, $forms) {
     $forms.each(function () {
       const $form = $(this);
       const $filter = $form.find(".e-filter").first();
-      const $items = $filter.find(".e-filter-item");
       const $allBtn = $filter.find('.e-filter-item[data-filter="__all"]');
 
-      $items.attr("aria-pressed", "false");
-      $allBtn.attr("aria-pressed", "true");
-      setAllState($filter);
+      if (!$allBtn.length) return;
+      if ($allBtn.attr("aria-pressed") === "true") return;
+
+      $allBtn.trigger("click");
     });
+  });
+}
+
+function hasAnyActiveFilter($, $forms) {
+  let isActive = false;
+
+  $forms.each(function () {
+    const $filter = $(this).find(".e-filter").first();
+    const $specificPressed = $filter.find('.e-filter-item[aria-pressed="true"]').filter(function () {
+      return $(this).data("filter") !== "__all";
+    });
+
+    if ($specificPressed.length) {
+      isActive = true;
+      return false;
+    }
+  });
+
+  return isActive;
+}
+
+function bindClearButtonVisibility($, $forms) {
+  const $root = $forms.first().closest(".taxonomy-filters");
+  if (!$root.length) return;
+
+  function syncClearButtonVisibility() {
+    $root.toggleClass("has-active-filters", hasAnyActiveFilter($, $forms));
+  }
+
+  syncClearButtonVisibility();
+
+  $forms.each(function () {
+    const $items = $(this).find(".e-filter .e-filter-item");
+    $items.off("click.customFilterClearState");
+    $items.on("click.customFilterClearState", function () {
+      requestAnimationFrame(syncClearButtonVisibility);
+    });
+  });
+
+  const $clearBtn = $(".taxonomy-filters__clear a, .taxonomy-filters__clear .elementor-button");
+  $clearBtn.off("click.customFilterClearState");
+  $clearBtn.on("click.customFilterClearState", function () {
+    requestAnimationFrame(syncClearButtonVisibility);
   });
 }
