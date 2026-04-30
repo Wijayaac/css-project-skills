@@ -176,3 +176,19 @@ if (! function_exists('get_the_floorplans')) {
 }
 
 add_shortcode('get_the_floorplans_shortcode_v2', 'get_the_floorplans');
+
+add_filter('acf/format_value/name=size', 'format_number_with_comma', 10, 3);
+function format_number_with_comma($value, $post_id, $field)
+{
+	if ($value === null || $value === '') {
+		return $value;
+	}
+
+	// Keep original precision: only swap decimal dot to comma.
+	if (is_numeric($value)) {
+		return str_replace('.', ',', (string) $value);
+	}
+
+	return $value;
+}
+
