@@ -1,4 +1,112 @@
 /* Child theme custom styles */
+/* Disable scroll */
+.disable-scroll {
+	overflow-x: hidden;
+}
+
+/* Team bio popup — smooth loading state
+   Problem: Elementor opens the popup wrapper instantly on click, but the
+   bio data arrives async, so the popup briefly looks blank.
+   Fix: while body.team-popup-loading is set, render skeleton placeholders
+   in place of the empty fields. When data arrives, JS swaps in `.is-loaded`
+   on #bio-popup and the real content fades in over the skeletons. */
+@keyframes team-popup-shimmer {
+	0% {
+		background-position: 200% 0;
+	}
+
+	100% {
+		background-position: -200% 0;
+	}
+}
+
+body.team-popup-loading .bio_picture,
+body.team-popup-loading .normal_name p,
+body.team-popup-loading .normal_position p,
+body.team-popup-loading .bio_details {
+	background-image: linear-gradient(90deg, #ececec 25%, #f6f6f6 50%, #ececec 75%);
+	background-size: 200% 100%;
+	animation: team-popup-shimmer 1.4s linear infinite;
+	color: transparent;
+	border-radius: 6px;
+}
+
+body.team-popup-loading .normal_name p {
+	min-height: 1.2em;
+	width: 60%;
+}
+
+body.team-popup-loading .normal_position p {
+	min-height: 1em;
+	width: 40%;
+}
+
+body.team-popup-loading .bio_details {
+	min-height: 6em;
+}
+
+#bio-popup .bio_picture,
+#bio-popup .normal_name,
+#bio-popup .normal_position,
+#bio-popup .bio_details {
+	transition: opacity 0.35s ease-out;
+}
+
+#bio-popup.is-loading .bio_picture,
+#bio-popup.is-loading .normal_name,
+#bio-popup.is-loading .normal_position,
+#bio-popup.is-loading .bio_details {
+	opacity: 0;
+}
+
+#bio-popup.is-loaded .bio_picture,
+#bio-popup.is-loaded .normal_name,
+#bio-popup.is-loaded .normal_position,
+#bio-popup.is-loaded .bio_details {
+	opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	body.team-popup-loading .bio_picture,
+	body.team-popup-loading .normal_name p,
+	body.team-popup-loading .normal_position p,
+	body.team-popup-loading .bio_details {
+		animation: none;
+	}
+
+	#bio-popup .bio_picture,
+	#bio-popup .normal_name,
+	#bio-popup .normal_position,
+	#bio-popup .bio_details {
+		transition: none;
+	}
+}
+
+/* Menu toggle (hamburger) hover animation
+   No markup change — Elementor renders this. We fingerprint the SVG via its
+   unique viewBox ("0 0 30 23") and the middle bar via its `d` attribute,
+   which starts at x=7.25 (6px to the right of the top/bottom bars).
+   On hover, slide the middle bar left so it aligns flush with the others. */
+.elementor-icon:has(> svg[viewBox="0 0 30 23"]) {
+	cursor: pointer;
+}
+
+.elementor-icon svg[viewBox="0 0 30 23"] path {
+	transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.elementor-icon:hover svg[viewBox="0 0 30 23"] path[d^="M7.25"],
+.elementor-icon:focus-visible svg[viewBox="0 0 30 23"] path[d^="M7.25"] {
+	transform: translateX(-6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.elementor-icon svg[viewBox="0 0 30 23"] path {
+		transition: none;
+	}
+}
+
 /* Elementor pagination */
 .post-grid .elementor-pagination {
 	--pager-border: #AB8F6E;
@@ -93,18 +201,27 @@
 	}
 }
 
-/* Child theme custom styles */
 /* Expertise points grid */
 .expertise-points-grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 40px 80px;
+	gap: 80px 40px;
 	/* row gap, column gap – tweak to match design */
+}
+
+
+.expertise-card {
+	border-top: 1px solid #00000024;
+	padding-top: 32px;
 }
 
 @media (min-width: 768px) {
 	.expertise-points-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.expertise-card {
+		padding-right: 40px;
 	}
 }
 
@@ -124,4 +241,21 @@
 	margin: 0;
 	font-size: 15px;
 	line-height: 1.6;
+}
+
+
+/* [template] Teams Loop Item */
+/* max height for overflow modal scrollable */
+.e-loop-item.team .elementor-popup-modal {
+	overflow-y: auto;
+	max-height: 700px;
+}
+
+/* custom close button */
+.e-loop-item.team .popup-close-button {
+	cursor: pointer;
+}
+
+.e-loop-item.team .popup-close-button a {
+	pointer-events: none;
 }
