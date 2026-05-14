@@ -7,7 +7,7 @@
             "label": "Video",
             "name": "video",
             "aria-label": "",
-            "type": "oembed",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,9 +16,9 @@
                 "class": "",
                 "id": ""
             },
-            "width": 1080,
-            "height": 675,
-            "allow_in_bindings": 0
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
         },
         {
             "key": "field_69f4c9be30927",
@@ -63,51 +63,9 @@
             "append": ""
         },
         {
-            "key": "field_69f4ca0130929",
-            "label": "Sector",
-            "name": "sector",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_69f4ca0b3092a",
             "label": "Location",
             "name": "location",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_69f4ca333092b",
-            "label": "Client",
-            "name": "client",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -168,6 +126,27 @@
             "append": ""
         },
         {
+            "key": "field_69f5e4cd61666",
+            "label": "Content",
+            "name": "content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_69f4ca593092e",
             "label": "Gallery",
             "name": "gallery",
@@ -215,5 +194,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1777650286
+    "modified": 1778357234
 }

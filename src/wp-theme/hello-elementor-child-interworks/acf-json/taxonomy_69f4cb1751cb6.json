@@ -7,7 +7,7 @@
     "object_type": [
         "project"
     ],
-    "advanced_configuration": 0,
+    "advanced_configuration": 1,
     "import_source": "",
     "import_date": "",
     "labels": {
@@ -20,17 +20,17 @@
         "update_item": "Update Expertise type",
         "add_new_item": "Add New Expertise type",
         "new_item_name": "New Expertise type Name",
+        "parent_item": "",
+        "parent_item_colon": "",
         "search_items": "Search Expertise type",
-        "popular_items": "Popular Expertise type",
-        "separate_items_with_commas": "Separate expertise type with commas",
-        "add_or_remove_items": "Add or remove expertise type",
-        "choose_from_most_used": "Choose from the most used expertise type",
         "most_used": "",
         "not_found": "No expertise type found",
         "no_terms": "No expertise type",
         "name_field_description": "",
         "slug_field_description": "",
+        "parent_field_description": "",
         "desc_field_description": "",
+        "filter_by_item": "",
         "items_list_navigation": "Expertise type list navigation",
         "items_list": "Expertise type list",
         "back_to_items": "← Go to expertise type",
@@ -46,7 +46,7 @@
     },
     "public": 1,
     "publicly_queryable": 1,
-    "hierarchical": 0,
+    "hierarchical": 1,
     "show_ui": 1,
     "show_in_menu": 1,
     "show_in_nav_menus": 1,
@@ -56,7 +56,7 @@
     "rest_controller_class": "WP_REST_Terms_Controller",
     "show_tagcloud": 1,
     "show_in_quick_edit": 1,
-    "show_admin_column": 0,
+    "show_admin_column": 1,
     "rewrite": {
         "permalink_rewrite": "taxonomy_key",
         "with_front": "1",
@@ -71,5 +71,7 @@
     "meta_box": "default",
     "meta_box_cb": "",
     "meta_box_sanitize_cb": "",
-    "modified": 1777650476
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1778501682
 }

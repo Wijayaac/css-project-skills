@@ -1,9 +1,9 @@
 {
-    "key": "taxonomy_69f4ca77db50d",
-    "title": "Services type",
+    "key": "taxonomy_69f5eb754cc41",
+    "title": "Client Category",
     "menu_order": 0,
     "active": true,
-    "taxonomy": "service-type",
+    "taxonomy": "client-category",
     "object_type": [
         "project"
     ],
@@ -11,31 +11,31 @@
     "import_source": "",
     "import_date": "",
     "labels": {
-        "name": "Services type",
-        "singular_name": "Service type",
-        "menu_name": "Service type",
-        "all_items": "All Service type",
-        "edit_item": "Edit s",
-        "view_item": "View s",
-        "update_item": "Update s",
-        "add_new_item": "Add New s",
-        "new_item_name": "New s Name",
+        "name": "Client Category",
+        "singular_name": "Client Category",
+        "menu_name": "Client Category",
+        "all_items": "All Client Category",
+        "edit_item": "Edit Client Category",
+        "view_item": "View Client Category",
+        "update_item": "Update Client Category",
+        "add_new_item": "Add New Client Category",
+        "new_item_name": "New Client Category Name",
         "parent_item": "",
         "parent_item_colon": "",
-        "search_items": "Search Service type",
+        "search_items": "Search Client Category",
         "most_used": "",
-        "not_found": "No service type found",
-        "no_terms": "No service type",
+        "not_found": "No client category found",
+        "no_terms": "No client category",
         "name_field_description": "",
         "slug_field_description": "",
         "parent_field_description": "",
         "desc_field_description": "",
         "filter_by_item": "",
-        "items_list_navigation": "Service type list navigation",
-        "items_list": "Service type list",
-        "back_to_items": "← Go to service type",
-        "item_link": "s Link",
-        "item_link_description": "A link to a s"
+        "items_list_navigation": "Client Category list navigation",
+        "items_list": "Client Category list",
+        "back_to_items": "← Go to client category",
+        "item_link": "Client Category Link",
+        "item_link_description": "A link to a client category"
     },
     "description": "",
     "capabilities": {
@@ -73,5 +73,5 @@
     "meta_box_sanitize_cb": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1778501731
+    "modified": 1778501723
 }

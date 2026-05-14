@@ -3,6 +3,53 @@
     "title": "Expertise detail",
     "fields": [
         {
+            "key": "field_69fed875c2928",
+            "label": "Homepage card image",
+            "name": "homepage_card_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_69fedb447dfef",
+            "label": "Homepage card tagline",
+            "name": "homepage_card_tagline",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_69f4cb48e7ced",
             "label": "Short text",
             "name": "short_text",
@@ -54,7 +101,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -152,5 +199,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1777650666
+    "modified": 1778309974
 }

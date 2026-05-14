@@ -45,6 +45,30 @@ body.team-popup-loading .bio_details {
 	min-height: 6em;
 }
 
+.image_100,
+.image_100 img {
+    height: 100% !important;
+	min-width: 100% !important;
+	object-fit: cover;
+	object-position: center;
+}
+
+.scale_image_onhover img {
+    transition: transform 0.8s ease !important;
+}
+
+.scale_image_onhover:hover img {
+    transform: scale(1.06) !important;
+}
+
+.card-wrapper .move_button {
+    margin-right: 0;
+    transition: margin-right 1s ease !important;
+}
+.card-wrapper:hover .move_button {
+    margin-right: -12px;
+}
+
 #bio-popup .bio_picture,
 #bio-popup .normal_name,
 #bio-popup .normal_position,
