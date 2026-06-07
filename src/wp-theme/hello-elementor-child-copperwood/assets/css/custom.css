@@ -27,12 +27,52 @@
 	background-color: #4D4D4D;
 }
 
+.header_container.elementor-widget-theme-site-logo img {
+	transition: width 0.3s ease;
+}
+
+.header_container.is-scrolled .elementor-widget-theme-site-logo img {
+	width: 100px !important;
+	height: auto !important;
+	transition: width 0.3s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.elementor-location-header .header_container {
 		transition-duration: 0.01ms;
 	}
 }
 
+/* Custom pagination style */
+.elementor-widget-loop-grid .elementor-pagination {
+	--pager-border: #AB8F6E;
+	--pager-active-bg: #AB8F6E;
+	--pager-text: #fff;
+	--pager-size: 32px;
+	--pager-icon-size: 12px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+	width: 100%;
+}
+
+.elementor-widget-loop-grid .elementor-pagination .page-numbers {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--pager-size);
+	min-width: var(--pager-size);
+	height: var(--pager-size);
+	margin: 0;
+	border: 1px solid var(--pager-border);
+	border-radius: 5px;
+	background: transparent;
+	color: var(--pager-text);
+	font-size: 1rem;
+	line-height: 1;
+	text-decoration: none;
+}
 
 /* custom slider arrow */
 .slider-custom-offset .content-inner,
