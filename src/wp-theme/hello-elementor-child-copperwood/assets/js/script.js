@@ -2,7 +2,114 @@ jQuery(function () {
 	stickyActive();
 	initSliderCustomOffset();
 	initCopperwoodFloorplans();
+	initCopperwoodMaps();
 });
+
+function initCopperwoodMaps() {
+	var maps = document.querySelectorAll("[data-cw-map]");
+
+	if (!maps.length) {
+		return;
+	}
+
+	function boot() {
+		maps.forEach(function (root) {
+			initCopperwoodMap(root);
+		});
+	}
+
+	if (window.google && window.google.maps) {
+		boot();
+		return;
+	}
+
+	var attempts = 0;
+	var timer = setInterval(function () {
+		if (window.google && window.google.maps) {
+			clearInterval(timer);
+			boot();
+			return;
+		}
+
+		attempts += 1;
+
+		if (attempts >= 50) {
+			clearInterval(timer);
+		}
+	}, 100);
+}
+
+function initCopperwoodMap(root) {
+	var canvas = root.querySelector(".cw-map__canvas");
+
+	if (!canvas || canvas.dataset.cwMapReady === "1") {
+		return;
+	}
+
+	var defaults = window.copperwoodMapDefaults || {};
+	var address = canvas.getAttribute("data-address") || "";
+	var title = canvas.getAttribute("data-title") || address;
+	var zoom = parseInt(canvas.getAttribute("data-zoom"), 10);
+	var mapType = canvas.getAttribute("data-map-type") || "hybrid";
+	var lat = parseFloat(canvas.getAttribute("data-lat"));
+	var lng = parseFloat(canvas.getAttribute("data-lng"));
+	var markerIcon = defaults.markerIcon || "";
+	var markerWidth = parseInt(defaults.markerWidth, 10) || 77;
+	var markerHeight = parseInt(defaults.markerHeight, 10) || 89;
+
+	if (Number.isNaN(zoom)) {
+		zoom = 13;
+	}
+
+	var map = new google.maps.Map(canvas, {
+		zoom: zoom,
+		maxZoom: 18,
+		scrollwheel: false,
+		draggable: !("ontouchend" in document),
+		mapTypeId: mapType,
+	});
+
+	function placeMarker(position) {
+		new google.maps.Marker({
+			map: map,
+			position: position,
+			title: title,
+			icon: markerIcon
+				? {
+						url: markerIcon,
+						scaledSize: new google.maps.Size(markerWidth, markerHeight),
+						anchor: new google.maps.Point(
+							Math.round(markerWidth / 2),
+							markerHeight
+						),
+				  }
+				: undefined,
+		});
+
+		map.setCenter(position);
+	}
+
+	canvas.dataset.cwMapReady = "1";
+
+	if (!Number.isNaN(lat) && !Number.isNaN(lng)) {
+		placeMarker({ lat: lat, lng: lng });
+		return;
+	}
+
+	if (!address) {
+		return;
+	}
+
+	var geocoder = new google.maps.Geocoder();
+
+	geocoder.geocode({ address: address }, function (results, status) {
+		if (status !== "OK" || !results || !results[0]) {
+			return;
+		}
+
+		placeMarker(results[0].geometry.location);
+	});
+}
 
 function initCopperwoodFloorplans() {
 	function syncFloorplan(root, index) {

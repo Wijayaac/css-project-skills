@@ -404,3 +404,39 @@
 		--cw-columns-count: 1;
 	}
 }
+
+/* Google Map shortcode */
+.cw-map {
+	display: block;
+	width: 100%;
+}
+
+.cw-map__inner {
+	position: relative;
+	width: 100%;
+}
+
+.cw-map__inner::before {
+	content: "";
+	display: block;
+	padding-top: 30%;
+}
+
+.cw-map__canvas {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 991px) {
+	.cw-map__inner::before {
+		padding-top: 50%;
+	}
+}
+
+@media (max-width: 767px) {
+	.cw-map__inner::before {
+		padding-top: 100%;
+	}
+}
