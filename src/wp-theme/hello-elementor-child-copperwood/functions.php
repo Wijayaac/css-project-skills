@@ -18,14 +18,14 @@ define('COPPERWOOD_CHILD_VERSION', '1.0.0');
 define('COPPERWOOD_THEME_ASSETS', get_stylesheet_directory_uri() . '/assets');
 
 $copperwood_floorplans_file = get_stylesheet_directory() . '/inc/copperwood-floorplans.php';
-$copperwood_map_file        = get_stylesheet_directory() . '/inc/copperwood-map.php';
+$copperwood_custom_map_file = get_stylesheet_directory() . '/inc/custom-map.php';
 
 if (file_exists($copperwood_floorplans_file)) {
 	require_once $copperwood_floorplans_file;
 }
 
-if (file_exists($copperwood_map_file)) {
-	require_once $copperwood_map_file;
+if (file_exists($copperwood_custom_map_file)) {
+	require_once $copperwood_custom_map_file;
 }
 
 add_filter('acf/settings/save_json', function ($path) {
@@ -105,7 +105,7 @@ function child_theme_login_logo()
 	}
 
 	$logo_url = esc_url($logo[0]);
-	?>
+?>
 	<style type="text/css">
 		body.login h1 a {
 			background-image: url('<?php echo $logo_url; ?>') !important;
@@ -116,6 +116,6 @@ function child_theme_login_logo()
 			height: 90px;
 		}
 	</style>
-	<?php
+<?php
 }
 add_action('login_enqueue_scripts', 'child_theme_login_logo');

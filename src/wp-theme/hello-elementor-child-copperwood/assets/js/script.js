@@ -2,11 +2,11 @@ jQuery(function () {
 	stickyActive();
 	initSliderCustomOffset();
 	initCopperwoodFloorplans();
-	initCopperwoodMaps();
+	initCustomMaps();
 });
 
-function initCopperwoodMaps() {
-	var maps = document.querySelectorAll("[data-cw-map]");
+function initCustomMaps() {
+	var maps = document.querySelectorAll("[data-custom-map]");
 
 	if (!maps.length) {
 		return;
@@ -14,7 +14,7 @@ function initCopperwoodMaps() {
 
 	function boot() {
 		maps.forEach(function (root) {
-			initCopperwoodMap(root);
+			initCustomMap(root);
 		});
 	}
 
@@ -39,10 +39,10 @@ function initCopperwoodMaps() {
 	}, 100);
 }
 
-function initCopperwoodMap(root) {
-	var canvas = root.querySelector(".cw-map__canvas");
+function initCustomMap(root) {
+	var canvas = root.querySelector(".map_canvas");
 
-	if (!canvas || canvas.dataset.cwMapReady === "1") {
+	if (!canvas || canvas.dataset.customMapReady === "1") {
 		return;
 	}
 
@@ -53,7 +53,7 @@ function initCopperwoodMap(root) {
 	var mapType = canvas.getAttribute("data-map-type") || "hybrid";
 	var lat = parseFloat(canvas.getAttribute("data-lat"));
 	var lng = parseFloat(canvas.getAttribute("data-lng"));
-	var markerIcon = defaults.markerIcon || "";
+	var markerIcon = canvas.getAttribute("data-icon") || defaults.markerIcon || "";
 	var markerWidth = parseInt(defaults.markerWidth, 10) || 77;
 	var markerHeight = parseInt(defaults.markerHeight, 10) || 89;
 
@@ -89,7 +89,7 @@ function initCopperwoodMap(root) {
 		map.setCenter(position);
 	}
 
-	canvas.dataset.cwMapReady = "1";
+	canvas.dataset.customMapReady = "1";
 
 	if (!Number.isNaN(lat) && !Number.isNaN(lng)) {
 		placeMarker({ lat: lat, lng: lng });

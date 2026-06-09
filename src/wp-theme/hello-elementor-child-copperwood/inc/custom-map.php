@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Google Map shortcode with custom marker.
+ * Custom Google Map shortcode.
  *
  * @package Copperwood
  */
@@ -11,7 +11,7 @@ if (! defined('ABSPATH')) {
 }
 
 /**
- * Resolve the Google Maps API key.
+ * Resolve the Google Maps API key from Elementor settings.
  */
 function copperwood_get_google_maps_api_key()
 {
@@ -21,21 +21,13 @@ function copperwood_get_google_maps_api_key()
 		return $key;
 	}
 
-	if (class_exists('\Elementor\Plugin')) {
-		$key = \Elementor\Plugin::$instance->get_google_maps_api_key();
-
-		if ($key) {
-			return $key;
-		}
-	}
-
 	return (string) get_option('elementor_google_maps_api_key', '');
 }
 
 /**
  * Enqueue Google Maps assets when the shortcode is used.
  */
-function copperwood_map_enqueue_assets()
+function copperwood_custom_map_enqueue_assets()
 {
 	static $enqueued = false;
 
@@ -68,38 +60,45 @@ function copperwood_map_enqueue_assets()
 		'copperwood_custom',
 		'copperwoodMapDefaults',
 		array(
-			'markerIcon' => trailingslashit(get_stylesheet_directory_uri()) . 'map-pin.png',
-			'markerWidth' => 77,
+			'markerIcon'   => trailingslashit(get_stylesheet_directory_uri()) . 'map-pin.png',
+			'markerWidth'  => 77,
 			'markerHeight' => 89,
 		)
 	);
 }
 
 /**
- * Google Map shortcode.
+ * Custom map shortcode.
  *
- * Usage: [copperwood_map address="Copperwood Close, Edmonton, AB"]
+ * Usage: [get_the_map_shortcode lat="53.4880694" lng="-113.6870252"]
  */
-function copperwood_map_shortcode($atts)
+function get_the_map($atts)
 {
 	$atts = shortcode_atts(
 		array(
+			'lat'      => '',
+			'lng'      => '',
+			'icon'     => '',
 			'address'  => '',
 			'title'    => '',
 			'zoom'     => 13,
-			'lat'      => '',
-			'lng'      => '',
 			'map_type' => 'hybrid',
+			'class'    => '',
 		),
 		$atts,
-		'copperwood_map'
+		'get_the_map_shortcode'
 	);
 
-	$address = trim((string) $atts['address']);
 	$lat     = trim((string) $atts['lat']);
 	$lng     = trim((string) $atts['lng']);
+	$address = trim((string) $atts['address']);
+	$icon    = trim((string) $atts['icon']);
 
-	if ($address === '' && ($lat === '' || $lng === '')) {
+	if ($icon === '') {
+		$icon = trailingslashit(get_stylesheet_directory_uri()) . 'map-pin.png';
+	}
+
+	if (($lat === '' || $lng === '') && $address === '') {
 		return '';
 	}
 
@@ -113,18 +112,19 @@ function copperwood_map_shortcode($atts)
 		return '';
 	}
 
-	copperwood_map_enqueue_assets();
+	copperwood_custom_map_enqueue_assets();
 
-	$instance = function_exists('wp_unique_id') ? wp_unique_id('cw-map-') : uniqid('cw-map-');
-	$title    = trim((string) $atts['title']);
+	$instance  = function_exists('wp_unique_id') ? wp_unique_id('custom-map-') : uniqid('custom-map-');
+	$add_class = trim((string) $atts['class']);
+	$title     = trim((string) $atts['title']);
 
 	if ($title === '') {
-		$title = $address;
+		$title = $address ? $address : __('Location', 'copperwood');
 	}
 
 	$zoom = max(1, min(20, (int) $atts['zoom']));
 
-	$map_type = strtolower(trim((string) $atts['map_type']));
+	$map_type          = strtolower(trim((string) $atts['map_type']));
 	$allowed_map_types = array('roadmap', 'satellite', 'hybrid', 'terrain');
 
 	if (! in_array($map_type, $allowed_map_types, true)) {
@@ -133,22 +133,27 @@ function copperwood_map_shortcode($atts)
 
 	ob_start();
 	?>
-	<div class="cw-map" data-cw-map id="<?php echo esc_attr($instance); ?>">
-		<div class="cw-map__inner">
+	<section
+		class="the_custom_map<?php echo $add_class ? ' ' . esc_attr($add_class) : ''; ?>"
+		data-custom-map
+		id="<?php echo esc_attr($instance); ?>">
+		<div class="map_container">
 			<div
-				class="cw-map__canvas"
+				class="map_canvas"
 				data-address="<?php echo esc_attr($address); ?>"
 				data-title="<?php echo esc_attr($title); ?>"
 				data-zoom="<?php echo esc_attr((string) $zoom); ?>"
 				data-map-type="<?php echo esc_attr($map_type); ?>"
+				data-icon="<?php echo esc_url($icon); ?>"
 				<?php if ($lat !== '' && $lng !== '') : ?>
 					data-lat="<?php echo esc_attr($lat); ?>"
 					data-lng="<?php echo esc_attr($lng); ?>"
 				<?php endif; ?>></div>
 		</div>
-	</div>
+	</section>
 	<?php
 	return ob_get_clean();
 }
 
-add_shortcode('copperwood_map', 'copperwood_map_shortcode');
+add_shortcode('get_the_map_shortcode', 'get_the_map');
+add_shortcode('copperwood_map', 'get_the_map');

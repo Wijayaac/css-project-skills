@@ -405,24 +405,25 @@
 	}
 }
 
-/* Google Map shortcode */
-.cw-map {
+/* Custom map shortcode */
+.the_custom_map {
 	display: block;
 	width: 100%;
+	min-height: 375px;
 }
 
-.cw-map__inner {
+.the_custom_map .map_container {
 	position: relative;
 	width: 100%;
 }
 
-.cw-map__inner::before {
+.the_custom_map .map_container::before {
 	content: "";
 	display: block;
 	padding-top: 30%;
 }
 
-.cw-map__canvas {
+.the_custom_map .map_canvas {
 	position: absolute;
 	inset: 0;
 	width: 100%;
@@ -430,13 +431,13 @@
 }
 
 @media (max-width: 991px) {
-	.cw-map__inner::before {
+	.the_custom_map .map_container::before {
 		padding-top: 50%;
 	}
 }
 
 @media (max-width: 767px) {
-	.cw-map__inner::before {
+	.the_custom_map .map_container::before {
 		padding-top: 100%;
 	}
 }
