@@ -187,6 +187,9 @@
 
 .cw-floorplans__viewer {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	min-height: 420px;
 }
 
@@ -250,7 +253,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 2.5rem;
+	gap: 10px;
 }
 
 .cw-floorplans__tab {
@@ -287,7 +290,8 @@
 	}
 
 	.cw-floorplans__tabs {
-		margin-right: 340px;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	.cw-floorplans__tab {
@@ -318,10 +322,6 @@
 }
 
 @media (max-width: 767px) {
-	.cw-floorplans__tabs {
-		gap: 1.5rem;
-	}
-
 	.cw-floorplans__download {
 		width: 100%;
 	}

@@ -11,7 +11,22 @@ if (! defined('ABSPATH')) {
 }
 
 /**
+ * Normalize floorplan name for display (subtitle).
+ */
+function copperwood_floorplan_subtitle($name)
+{
+	$name = trim((string) $name);
+
+	if ($name === '') {
+		return '';
+	}
+
+	return strtoupper($name);
+}
+
+/**
  * Build a short tab label from the repeater name field.
+ * Strips square footage and text after / - – — ‒ delimiters.
  */
 function copperwood_floorplan_tab_label($name)
 {
@@ -21,11 +36,20 @@ function copperwood_floorplan_tab_label($name)
 		return '';
 	}
 
-	if (strpos($name, '/') !== false) {
-		return trim(strtok($name, '/'));
-	}
+	// Keep only the floor name before common separators.
+	$parts = preg_split('/\s*[\/\-–—‒]\s*/u', $name, 2);
+	$label = trim($parts[0]);
 
-	return $name;
+	// Remove trailing square footage (565 SQ.FT., 660 SQ. FT., etc.).
+	$label = preg_replace(
+		'/\s*\d[\d,]*\s*(?:SQ\.?\s*FT\.?|SQUARE\s+FEET)\.?\s*$/iu',
+		'',
+		$label
+	);
+
+	$label = trim($label, " \t\n\r\0\x0B-/–—‒");
+
+	return $label !== '' ? strtoupper($label) : strtoupper(trim($name));
 }
 
 /**
@@ -58,54 +82,160 @@ function copperwood_floorplan_stats_line($post_id)
 }
 
 /**
- * Resolve the model heading from the home-type taxonomy.
+ * Home type slugs that suppress floorplan output (e.g. Show Home listings).
  */
-function copperwood_floorplan_heading($post_id)
+function copperwood_floorplan_excluded_home_type_slugs()
+{
+	return apply_filters(
+		'copperwood_floorplan_excluded_home_type_slugs',
+		array('show-home')
+	);
+}
+
+/**
+ * Assigned home-type terms for a post.
+ */
+function copperwood_get_home_type_terms($post_id)
 {
 	$terms = get_the_terms($post_id, 'home-type');
 
-	if ($terms && ! is_wp_error($terms)) {
-		return $terms[0]->name;
+	if (is_wp_error($terms) || empty($terms)) {
+		return array();
+	}
+
+	return $terms;
+}
+
+/**
+ * Whether the post is tagged with a home type that hides floorplans.
+ */
+function copperwood_post_hides_floorplans($post_id)
+{
+	$excluded = array_map('sanitize_title', copperwood_floorplan_excluded_home_type_slugs());
+
+	foreach (copperwood_get_home_type_terms($post_id) as $term) {
+		if (in_array($term->slug, $excluded, true)) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+/**
+ * Display name for the model home type (e.g. "The Aspen").
+ * Skips excluded slugs such as Show Home when multiple terms are assigned.
+ */
+function copperwood_get_model_home_type_name($post_id)
+{
+	$excluded = array_map('sanitize_title', copperwood_floorplan_excluded_home_type_slugs());
+
+	foreach (copperwood_get_home_type_terms($post_id) as $term) {
+		if (! in_array($term->slug, $excluded, true)) {
+			return $term->name;
+		}
+	}
+
+	return '';
+}
+
+/**
+ * Resolve the floorplan section heading from home-type, then post title.
+ */
+function copperwood_floorplan_heading($post_id)
+{
+	$home_type = copperwood_get_model_home_type_name($post_id);
+
+	if ($home_type !== '') {
+		return $home_type;
 	}
 
 	return get_the_title($post_id);
 }
 
 /**
- * Read repeater rows directly from post meta when ACF name lookup fails.
+ * Post types that support floorplan tab data.
  */
-function copperwood_get_floorplan_rows_from_meta($post_id)
+function copperwood_floorplan_post_types()
 {
-	$rows  = array();
-	$count = (int) get_post_meta($post_id, 'floorplan', true);
+	return apply_filters('copperwood_floorplan_post_types', array('model'));
+}
 
-	if ($count <= 0) {
-		$i = 0;
+/**
+ * Whether a post can render floorplan tabs.
+ */
+function copperwood_post_supports_floorplans($post_id)
+{
+	$post = get_post($post_id);
 
-		while ($i < 20 && metadata_exists('post', $post_id, "floorplan_{$i}_image")) {
-			$i++;
-		}
-
-		$count = $i;
+	if (! $post) {
+		return false;
 	}
 
-	for ($i = 0; $i < $count; $i++) {
-		$name     = get_post_meta($post_id, "floorplan_{$i}_name", true);
-		$image_id = get_post_meta($post_id, "floorplan_{$i}_image", true);
+	return in_array($post->post_type, copperwood_floorplan_post_types(), true);
+}
 
-		if (! $image_id) {
-			continue;
+/**
+ * Repeater field key for floorplan rows.
+ */
+function copperwood_floorplan_field_key()
+{
+	return 'field_6a22c21773560';
+}
+
+/**
+ * Normalize a floorplan image to an array with a valid URL.
+ */
+function copperwood_floorplan_normalize_image($image)
+{
+	if (is_array($image)) {
+		if (empty($image['url'])) {
+			return null;
 		}
 
+		return $image;
+	}
+
+	if (is_numeric($image)) {
+		$image_id = (int) $image;
+
 		if (function_exists('acf_get_attachment')) {
-			$image = acf_get_attachment($image_id);
+			$attachment = acf_get_attachment($image_id);
 		} else {
 			$image_url = wp_get_attachment_image_url($image_id, 'full');
-			$image     = $image_url ? array(
+			$attachment = $image_url ? array(
 				'url' => $image_url,
 				'alt' => get_post_meta($image_id, '_wp_attachment_image_alt', true),
 			) : null;
 		}
+
+		if (! is_array($attachment) || empty($attachment['url'])) {
+			return null;
+		}
+
+		return $attachment;
+	}
+
+	return null;
+}
+
+/**
+ * Read repeater rows from post meta using the ACF field key count only.
+ */
+function copperwood_get_floorplan_rows_from_meta($post_id)
+{
+	$rows  = array();
+	$count = (int) get_post_meta($post_id, copperwood_floorplan_field_key(), true);
+
+	if ($count <= 0) {
+		return $rows;
+	}
+
+	for ($i = 0; $i < $count; $i++) {
+		$name  = get_post_meta($post_id, "floorplan_{$i}_name", true);
+		$image = copperwood_floorplan_normalize_image(
+			get_post_meta($post_id, "floorplan_{$i}_image", true)
+		);
 
 		if (! $image) {
 			continue;
@@ -121,67 +251,65 @@ function copperwood_get_floorplan_rows_from_meta($post_id)
 }
 
 /**
+ * Build floorplan items from repeater rows.
+ */
+function copperwood_build_floorplan_items_from_rows($rows)
+{
+	$items = array();
+
+	if (! is_array($rows)) {
+		return $items;
+	}
+
+	foreach ($rows as $row) {
+		$name  = isset($row['name']) ? $row['name'] : '';
+		$image = copperwood_floorplan_normalize_image(
+			isset($row['image']) ? $row['image'] : null
+		);
+
+		if (! $image) {
+			continue;
+		}
+
+		$label    = copperwood_floorplan_tab_label($name);
+		$subtitle = copperwood_floorplan_subtitle($name);
+
+		$items[] = array(
+			'name'     => $name ? $name : $label,
+			'label'    => $label ? $label : ('FLOOR ' . (count($items) + 1)),
+			'image'    => $image,
+			'subtitle' => $subtitle ? $subtitle : $label,
+		);
+	}
+
+	return $items;
+}
+
+/**
  * Load floorplan repeater rows from the model post.
  */
 function copperwood_get_floorplan_items($post_id)
 {
-	$items = array();
-
 	if (! function_exists('get_field')) {
-		return $items;
+		return array();
 	}
 
-	$rows = get_field('field_6a22c21773560', $post_id);
+	$field_key = copperwood_floorplan_field_key();
+	$rows      = get_field($field_key, $post_id);
 
-	if (! is_array($rows) || empty($rows)) {
+	// Empty repeater from ACF — do not read orphaned post meta.
+	if (is_array($rows)) {
+		return copperwood_build_floorplan_items_from_rows($rows);
+	}
+
+	// Fallback only when ACF lookup fails but the field key count exists.
+	if (metadata_exists('post', $post_id, $field_key)) {
 		$rows = copperwood_get_floorplan_rows_from_meta($post_id);
+
+		return copperwood_build_floorplan_items_from_rows($rows);
 	}
 
-	if (is_array($rows) && ! empty($rows)) {
-		foreach ($rows as $row) {
-			$name  = isset($row['name']) ? $row['name'] : '';
-			$image = isset($row['image']) ? $row['image'] : null;
-
-			if (! $image) {
-				continue;
-			}
-
-			$label = copperwood_floorplan_tab_label($name);
-
-			$items[] = array(
-				'name'     => $name ? $name : $label,
-				'label'    => $label ? $label : ('Floor ' . (count($items) + 1)),
-				'image'    => $image,
-				'subtitle' => strtoupper((string) ($name ? $name : $label)),
-			);
-		}
-
-		return $items;
-	}
-
-	if (function_exists('have_rows') && have_rows('field_6a22c21773560', $post_id)) {
-		while (have_rows('field_6a22c21773560', $post_id)) {
-			the_row();
-
-			$name  = get_sub_field('name');
-			$image = get_sub_field('image');
-
-			if (! $image) {
-				continue;
-			}
-
-			$label = copperwood_floorplan_tab_label($name);
-
-			$items[] = array(
-				'name'     => $name ? $name : $label,
-				'label'    => $label ? $label : ('Floor ' . (count($items) + 1)),
-				'image'    => $image,
-				'subtitle' => strtoupper((string) ($name ? $name : $label)),
-			);
-		}
-	}
-
-	return $items;
+	return array();
 }
 
 /**
@@ -192,6 +320,14 @@ function copperwood_get_floorplans_markup($post_id = null)
 	$post_id = $post_id ? (int) $post_id : get_the_ID();
 
 	if (! $post_id) {
+		return '';
+	}
+
+	if (! copperwood_post_supports_floorplans($post_id)) {
+		return '';
+	}
+
+	if (copperwood_post_hides_floorplans($post_id)) {
 		return '';
 	}
 
@@ -273,7 +409,7 @@ function copperwood_get_floorplans_markup($post_id = null)
 					aria-controls="<?php echo esc_attr($panel_id); ?>"
 					aria-selected="<?php echo $is_active ? 'true' : 'false'; ?>"
 					data-floorplan-index="<?php echo esc_attr((string) $index); ?>">
-					<?php echo esc_html(strtoupper($item['label'])); ?>
+					<?php echo esc_html($item['label']); ?>
 				</button>
 			<?php endforeach; ?>
 		</div>
@@ -292,7 +428,7 @@ function copperwood_floorplans_shortcode($atts)
 			'post_id' => 0,
 		),
 		$atts,
-		'copperwood_floorplans'
+		'copperwood_floorplans_v2'
 	);
 
 	$post_id = (int) $atts['post_id'];
@@ -300,4 +436,5 @@ function copperwood_floorplans_shortcode($atts)
 	return copperwood_get_floorplans_markup($post_id ? $post_id : null);
 }
 
+add_shortcode('copperwood_floorplans_v2', 'copperwood_floorplans_shortcode');
 add_shortcode('copperwood_floorplans', 'copperwood_floorplans_shortcode');
