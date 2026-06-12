@@ -1,0 +1,213 @@
+/* Floorplan tabs */
+.gv-floorplans {
+	--gv-floorplan-accent: #c1a376;
+	--gv-floorplan-tab-active: #c8b6ff;
+	display: flex;
+	flex-direction: column;
+}
+
+.gv-floorplans__main {
+	display: grid;
+	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+	gap: clamp(2rem, 5vw, 4.5rem);
+	align-items: center;
+	margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.gv-floorplans__viewer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 420px;
+}
+
+.gv-floorplans__panel {
+	display: none;
+}
+
+.gv-floorplans__panel.is-active {
+	display: block;
+}
+
+.gv-floorplans__image {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 500px;
+	object-fit: contain;
+	object-position: center;
+}
+
+.gv-floorplans__details {
+	max-width: 34rem;
+}
+
+.gv-floorplans__title {
+	margin: 0 0 1.5rem;
+}
+
+.gv-floorplans__subtitle {
+	margin: 0 0 1.25rem;
+}
+
+.gv-floorplans__stats {
+	margin: 0 0 2rem;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.gv-floorplans__download {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 220px;
+	padding: 0.95rem 1.5rem;
+	background: var(--gv-floorplan-accent);
+	color: #fff;
+	font-size: 0.72rem;
+	line-height: 1;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.gv-floorplans__download:hover,
+.gv-floorplans__download:focus-visible {
+	color: #fff;
+	background: #b09266;
+}
+
+.gv-floorplans__tabs {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+}
+
+.gv-floorplans__tab {
+	appearance: none;
+	border: 0;
+	border-bottom: 2px solid transparent;
+	background: transparent;
+	color: #000;
+	font-size: 0.95rem;
+	line-height: 1.2;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.gv-floorplans__tab.is-active {
+	border-bottom-color: var(--gv-floorplan-tab-active);
+}
+
+.gv-floorplans__tab:focus-visible,
+.gv-floorplans__tab:focus,
+.gv-floorplans__tab:hover {
+	outline: none;
+	outline-offset: 4px;
+	background-color: transparent;
+	color: #000;
+}
+
+@media (min-width: 992px) {
+	.gv-floorplans__image {
+		max-height: 800px;
+		object-position: center right;
+	}
+
+	.gv-floorplans__tabs {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.gv-floorplans__tab {
+		padding: 10px 20px;
+	}
+}
+
+@media (max-width: 991px) {
+	.gv-floorplans {
+		flex-direction: column-reverse;
+	}
+
+	.gv-floorplans__tab {
+		margin-bottom: 20px;
+	}
+
+	.gv-floorplans__main {
+		grid-template-columns: 1fr;
+	}
+
+	.gv-floorplans__viewer {
+		min-height: 0;
+	}
+
+	.gv-floorplans__details {
+		max-width: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.gv-floorplans__download {
+		width: 100%;
+	}
+}
+
+/* Elementor Swiper — progress bar pagination */
+.swiper-progress-pagination .swiper-pagination-horizontal.swiper-pagination-bullets {
+	--gv-swiper-progress: 0.33;
+	--gv-swiper-fill: var(--e-global-color-ee3aeb2, #2d4122);
+	--gv-swiper-track: rgba(84, 89, 95, 0.18);
+
+	position: relative;
+	display: flex !important;
+	align-items: stretch;
+	width: 100%;
+	height: 2px;
+	padding: 0;
+	background-color: var(--gv-swiper-track);
+	border-radius: 0;
+	transform: none !important;
+	margin-top: 32px;
+}
+
+.swiper-progress-pagination.white-bar .swiper-pagination-horizontal.swiper-pagination-bullets {
+	--gv-swiper-fill: #fff;
+	--gv-swiper-track: #FFFFFF29;
+}
+
+.swiper-progress-pagination .swiper-pagination-horizontal.swiper-pagination-bullets::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: calc(var(--gv-swiper-progress) * 100%);
+	background-color: var(--gv-swiper-fill);
+	transition: width 0.35s ease;
+	pointer-events: none;
+}
+
+.swiper-progress-pagination .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	flex: 1 1 0;
+	width: auto;
+	height: 100%;
+	margin: 0 !important;
+	border-radius: 0;
+	opacity: 1;
+	background: transparent;
+	position: relative;
+	z-index: 1;
+}
+
+.swiper-progress-pagination .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+	background: transparent;
+}
+
+.swiper-progress-pagination .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:focus-visible {
+	outline: 2px solid var(--gv-swiper-fill);
+	outline-offset: 4px;
+}
