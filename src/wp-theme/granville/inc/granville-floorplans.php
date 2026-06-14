@@ -10,11 +10,15 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-function granville_floorplan_subtitle($name)
+function granville_floorplan_display_title($name)
 {
 	$name = trim((string) $name);
 
-	return $name === '' ? '' : strtoupper($name);
+	if ($name === '') {
+		return '';
+	}
+
+	return ucwords(strtolower($name));
 }
 
 function granville_floorplan_tab_label($name)
@@ -219,7 +223,7 @@ function granville_build_floorplan_items_from_rows($rows)
 		}
 
 		$label    = granville_floorplan_tab_label($name);
-		$subtitle = granville_floorplan_subtitle($name);
+		$subtitle = granville_floorplan_display_title($name);
 
 		$items[] = array(
 			'name'     => $name ? $name : $label,
@@ -276,22 +280,12 @@ function granville_get_floorplans_markup($post_id = null)
 		return '';
 	}
 
-	$instance   = function_exists('wp_unique_id') ? wp_unique_id('gv-floorplans-') : uniqid('gv-floorplans-');
-	$heading    = granville_floorplan_heading($post_id);
-	$stats_line = granville_floorplan_stats_line($post_id);
-	$download   = get_field('floorplan_url', $post_id);
-
-	if (! is_array($download) || empty($download['url'])) {
-		$download = get_field('field_6a22c07d1bcbd', $post_id);
-	}
-
-	$download_url = (is_array($download) && ! empty($download['url'])) ? $download['url'] : '';
+	$instance = function_exists('wp_unique_id') ? wp_unique_id('gv-floorplans-') : uniqid('gv-floorplans-');
 
 	ob_start();
 ?>
 	<section class="gv-floorplans" data-gv-floorplans id="<?php echo esc_attr($instance); ?>">
-		<div class="gv-floorplans__main">
-			<div class="gv-floorplans__viewer">
+		<div class="gv-floorplans__viewer">
 				<?php foreach ($items as $index => $item) : ?>
 					<?php
 					$is_active = $index === 0;
@@ -312,22 +306,6 @@ function granville_get_floorplans_markup($post_id = null)
 							alt="<?php echo esc_attr($alt); ?>" />
 					</div>
 				<?php endforeach; ?>
-			</div>
-
-			<div class="gv-floorplans__details">
-				<h2 class="gv-floorplans__title"><?php echo esc_html($heading); ?></h2>
-				<p class="gv-floorplans__subtitle"><?php echo esc_html($items[0]['subtitle']); ?></p>
-
-				<?php if ($stats_line) : ?>
-					<p class="gv-floorplans__stats"><?php echo esc_html($stats_line); ?></p>
-				<?php endif; ?>
-
-				<?php if ($download_url) : ?>
-					<a class="gv-floorplans__download" href="<?php echo esc_url($download_url); ?>" download>
-						<?php esc_html_e('Download Floorplan', 'granville'); ?>
-					</a>
-				<?php endif; ?>
-			</div>
 		</div>
 
 		<div class="gv-floorplans__tabs" role="tablist" aria-label="<?php esc_attr_e('Floorplan levels', 'granville'); ?>">

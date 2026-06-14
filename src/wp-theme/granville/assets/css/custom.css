@@ -1,17 +1,13 @@
 /* Floorplan tabs */
 .gv-floorplans {
-	--gv-floorplan-accent: #c1a376;
-	--gv-floorplan-tab-active: #c8b6ff;
+	--gv-floorplan-accent: var(--e-global-color-accent, #b3a67d);
+	--gv-floorplan-tab-active: var(--e-global-color-accent, #b3a67d);
+	--gv-floorplan-tab-inactive: var(--e-global-color-secondary, #54595f);
+
 	display: flex;
 	flex-direction: column;
-}
-
-.gv-floorplans__main {
-	display: grid;
-	grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-	gap: clamp(2rem, 5vw, 4.5rem);
-	align-items: center;
-	margin-bottom: clamp(2rem, 4vw, 3rem);
+	align-items: stretch;
+	max-width: 36rem;
 }
 
 .gv-floorplans__viewer {
@@ -24,6 +20,7 @@
 
 .gv-floorplans__panel {
 	display: none;
+	width: 100%;
 }
 
 .gv-floorplans__panel.is-active {
@@ -35,124 +32,113 @@
 	width: 100%;
 	height: auto;
 	max-height: 500px;
+	margin-inline: auto;
 	object-fit: contain;
 	object-position: center;
-}
-
-.gv-floorplans__details {
-	max-width: 34rem;
-}
-
-.gv-floorplans__title {
-	margin: 0 0 1.5rem;
-}
-
-.gv-floorplans__subtitle {
-	margin: 0 0 1.25rem;
-}
-
-.gv-floorplans__stats {
-	margin: 0 0 2rem;
-	font-size: 14px;
-	text-transform: uppercase;
-}
-
-.gv-floorplans__download {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	min-width: 220px;
-	padding: 0.95rem 1.5rem;
-	background: var(--gv-floorplan-accent);
-	color: #fff;
-	font-size: 0.72rem;
-	line-height: 1;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-
-.gv-floorplans__download:hover,
-.gv-floorplans__download:focus-visible {
-	color: #fff;
-	background: #b09266;
 }
 
 .gv-floorplans__tabs {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	gap: 10px;
+	justify-content: flex-start;
+	gap: 40px;
+	margin-top: 55px;
+	padding: 0;
+	background: transparent;
 }
 
 .gv-floorplans__tab {
 	appearance: none;
-	border: 0;
-	border-bottom: 2px solid transparent;
+	border: none !important;
+	border-bottom: 3px solid transparent !important;
 	background: transparent;
-	color: #000;
+	color: inherit !important;
 	font-size: 0.95rem;
 	line-height: 1.2;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	cursor: pointer;
-	padding: 10px;
+	padding: 0 0 0.65rem;
+	transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .gv-floorplans__tab.is-active {
+	color: var(--gv-floorplan-tab-active);
+	border-bottom-color: var(--gv-floorplan-tab-active) !important;
+}
+
+.gv-floorplans__tab:focus-visible {
+	outline: 2px solid var(--gv-floorplan-tab-active);
+	outline-offset: 4px;
+}
+
+.gv-floorplans__tab:hover,
+.gv-floorplans__tab:focus {
+	background-color: transparent !important;
+	border-bottom-color: var(--gv-floorplan-tab-active) !important;
+}
+
+.gv-floorplans__tab.is-active:hover,
+.gv-floorplans__tab.is-active:focus-visible {
+	color: var(--gv-floorplan-tab-active);
 	border-bottom-color: var(--gv-floorplan-tab-active);
 }
 
-.gv-floorplans__tab:focus-visible,
-.gv-floorplans__tab:focus,
-.gv-floorplans__tab:hover {
-	outline: none;
-	outline-offset: 4px;
-	background-color: transparent;
-	color: #000;
+.gv-floorplans__tab:not(.is-active):hover,
+.gv-floorplans__tab:not(.is-active):focus-visible {
+	color: var(--gv-floorplan-tab-active);
+}
+
+/*
+ * Split background for boxed floorplan content.
+ * Add class "gv-floorplans-split-section" to the full-width Elementor section.
+ */
+.gv-floorplans-split-section {
+	--gv-floorplans-split-white: var(--e-global-color-3c440f3, #ffffff);
+	--gv-floorplans-split-green: var(--e-global-color-ee3aeb2, #2d4122);
+
+	background: linear-gradient(to right,
+			var(--gv-floorplans-split-white) 50%,
+			var(--gv-floorplans-split-green) 50%);
+}
+
+.gv-floorplans-split-section>.elementor-container,
+.gv-floorplans-split-section>.e-con,
+.gv-floorplans-split-section .e-con.e-parent {
+	background-color: transparent !important;
 }
 
 @media (min-width: 992px) {
 	.gv-floorplans__image {
 		max-height: 800px;
-		object-position: center right;
-	}
-
-	.gv-floorplans__tabs {
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-	.gv-floorplans__tab {
-		padding: 10px 20px;
+		object-position: center;
 	}
 }
 
 @media (max-width: 991px) {
 	.gv-floorplans {
-		flex-direction: column-reverse;
-	}
-
-	.gv-floorplans__tab {
-		margin-bottom: 20px;
-	}
-
-	.gv-floorplans__main {
-		grid-template-columns: 1fr;
+		max-width: none;
 	}
 
 	.gv-floorplans__viewer {
 		min-height: 0;
 	}
 
-	.gv-floorplans__details {
-		max-width: none;
+	.gv-floorplans__tabs {
+		justify-content: center;
+		margin-top: clamp(1.25rem, 3vw, 2rem);
+	}
+
+	.gv-floorplans-split-section {
+		background: linear-gradient(to bottom,
+				var(--gv-floorplans-split-white) 68%,
+				var(--gv-floorplans-split-green) 68%);
 	}
 }
 
 @media (max-width: 767px) {
-	.gv-floorplans__download {
-		width: 100%;
+	.gv-floorplans__tabs {
+		gap: 1.25rem;
 	}
 }
 

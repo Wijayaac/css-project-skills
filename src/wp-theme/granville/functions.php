@@ -43,7 +43,7 @@ function child_theme_login_logo() {
 }
 add_action('login_enqueue_scripts', 'child_theme_login_logo');
 
-define('GRANVILLE_CHILD_VERSION', '1.0.2');
+define('GRANVILLE_CHILD_VERSION', '1.0.4');
 
 $granville_floorplans_file = get_stylesheet_directory() . '/inc/granville-floorplans.php';
 

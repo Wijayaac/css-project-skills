@@ -13,7 +13,6 @@ function initGranvilleFloorplans() {
 	function syncFloorplan(root, index) {
 		var tabs = root.querySelectorAll(".gv-floorplans__tab");
 		var panels = root.querySelectorAll(".gv-floorplans__panel");
-		var subtitle = root.querySelector(".gv-floorplans__subtitle");
 
 		tabs.forEach(function (tab, i) {
 			var active = i === index;
@@ -25,10 +24,6 @@ function initGranvilleFloorplans() {
 			var active = i === index;
 			panel.classList.toggle("is-active", active);
 			panel.hidden = !active;
-
-			if (active && subtitle) {
-				subtitle.textContent = panel.getAttribute("data-subtitle") || "";
-			}
 		});
 	}
 
