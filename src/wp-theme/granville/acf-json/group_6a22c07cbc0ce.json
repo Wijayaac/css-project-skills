@@ -1,6 +1,6 @@
 {
     "key": "group_6a22c07cbc0ce",
-    "title": "Models & Quick Possesion details",
+    "title": "Models details",
     "fields": [
         {
             "key": "field_6a22dab1f893b",
@@ -106,6 +106,27 @@
             "max_size": "",
             "mime_types": "",
             "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6a32a06e719ff",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [
@@ -114,13 +135,6 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "model"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
             }
         ]
     ],
@@ -136,5 +150,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1781185335
+    "modified": 1781702797
 }
