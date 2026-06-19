@@ -27,6 +27,16 @@
 	display: block;
 }
 
+.gv-floorplans__title {
+	margin: 0 0 8px 0;
+	font-family: "FreightDisp Pro", "FreightDispPro", Georgia, "Times New Roman", serif;
+	font-size: 22.35px;
+	font-style: italic;
+	line-height: 1;
+	letter-spacing: 0;
+	text-align: center;
+}
+
 .gv-floorplans__image {
 	display: block;
 	width: 100%;
@@ -40,7 +50,7 @@
 .gv-floorplans__tabs {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: center;
 	gap: 40px;
 	margin-top: 55px;
 	padding: 0;

@@ -225,11 +225,15 @@ function granville_build_floorplan_items_from_rows($rows)
 		$label    = granville_floorplan_tab_label($name);
 		$subtitle = granville_floorplan_display_title($name);
 
+		$panel_label = $label ? $label : ('FLOOR ' . (count($items) + 1));
+		$panel_title = granville_floorplan_display_title($panel_label);
+
 		$items[] = array(
-			'name'     => $name ? $name : $label,
-			'label'    => $label ? $label : ('FLOOR ' . (count($items) + 1)),
+			'name'     => $name ? $name : $panel_label,
+			'label'    => $panel_label,
+			'title'    => $panel_title ? $panel_title : $panel_label,
 			'image'    => $image,
-			'subtitle' => $subtitle ? $subtitle : $label,
+			'subtitle' => $subtitle ? $subtitle : $panel_label,
 		);
 	}
 
@@ -300,6 +304,9 @@ function granville_get_floorplans_markup($post_id = null)
 						aria-labelledby="<?php echo esc_attr($tab_id); ?>"
 						data-subtitle="<?php echo esc_attr($item['subtitle']); ?>"
 						<?php echo $is_active ? '' : ' hidden'; ?>>
+						<?php if (! empty($item['title'])) : ?>
+							<p class="gv-floorplans__title"><?php echo esc_html($item['title']); ?></p>
+						<?php endif; ?>
 						<img
 							class="gv-floorplans__image"
 							src="<?php echo esc_url($item['image']['url']); ?>"
