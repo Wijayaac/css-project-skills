@@ -35,6 +35,8 @@
 	line-height: 1;
 	letter-spacing: 0;
 	text-align: center;
+	/* TODO: Uncomment this when the title is added to the floorplan */
+	display: none;
 }
 
 .gv-floorplans__image {

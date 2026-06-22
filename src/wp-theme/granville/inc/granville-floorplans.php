@@ -289,32 +289,6 @@ function granville_get_floorplans_markup($post_id = null)
 	ob_start();
 ?>
 	<section class="gv-floorplans" data-gv-floorplans id="<?php echo esc_attr($instance); ?>">
-		<div class="gv-floorplans__viewer">
-				<?php foreach ($items as $index => $item) : ?>
-					<?php
-					$is_active = $index === 0;
-					$tab_id    = $instance . '-tab-' . $index;
-					$panel_id  = $instance . '-panel-' . $index;
-					$alt       = ! empty($item['image']['alt']) ? $item['image']['alt'] : $item['label'];
-					?>
-					<div
-						id="<?php echo esc_attr($panel_id); ?>"
-						class="gv-floorplans__panel<?php echo $is_active ? ' is-active' : ''; ?>"
-						role="tabpanel"
-						aria-labelledby="<?php echo esc_attr($tab_id); ?>"
-						data-subtitle="<?php echo esc_attr($item['subtitle']); ?>"
-						<?php echo $is_active ? '' : ' hidden'; ?>>
-						<?php if (! empty($item['title'])) : ?>
-							<p class="gv-floorplans__title"><?php echo esc_html($item['title']); ?></p>
-						<?php endif; ?>
-						<img
-							class="gv-floorplans__image"
-							src="<?php echo esc_url($item['image']['url']); ?>"
-							alt="<?php echo esc_attr($alt); ?>" />
-					</div>
-				<?php endforeach; ?>
-		</div>
-
 		<div class="gv-floorplans__tabs" role="tablist" aria-label="<?php esc_attr_e('Floorplan levels', 'granville'); ?>">
 			<?php foreach ($items as $index => $item) : ?>
 				<?php
@@ -332,6 +306,31 @@ function granville_get_floorplans_markup($post_id = null)
 					data-floorplan-index="<?php echo esc_attr((string) $index); ?>">
 					<?php echo esc_html($item['label']); ?>
 				</button>
+			<?php endforeach; ?>
+		</div>
+		<div class="gv-floorplans__viewer">
+			<?php foreach ($items as $index => $item) : ?>
+				<?php
+				$is_active = $index === 0;
+				$tab_id    = $instance . '-tab-' . $index;
+				$panel_id  = $instance . '-panel-' . $index;
+				$alt       = ! empty($item['image']['alt']) ? $item['image']['alt'] : $item['label'];
+				?>
+				<div
+					id="<?php echo esc_attr($panel_id); ?>"
+					class="gv-floorplans__panel<?php echo $is_active ? ' is-active' : ''; ?>"
+					role="tabpanel"
+					aria-labelledby="<?php echo esc_attr($tab_id); ?>"
+					data-subtitle="<?php echo esc_attr($item['subtitle']); ?>"
+					<?php echo $is_active ? '' : ' hidden'; ?>>
+					<?php if (! empty($item['title'])) : ?>
+						<p class="gv-floorplans__title"><?php echo esc_html($item['title']); ?></p>
+					<?php endif; ?>
+					<img
+						class="gv-floorplans__image"
+						src="<?php echo esc_url($item['image']['url']); ?>"
+						alt="<?php echo esc_attr($alt); ?>" />
+				</div>
 			<?php endforeach; ?>
 		</div>
 	</section>
