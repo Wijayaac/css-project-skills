@@ -42,7 +42,11 @@
 	flex-wrap: wrap;
 	margin-bottom: 10px;
 	position: relative;
-	align-items: center;
+	align-items: flex-start;
+}
+
+.features ul>li {
+	flex-direction: column;
 }
 
 .features li ol {
@@ -67,7 +71,7 @@
 	margin-right: 10px;
 	position: absolute;
 	left: -30px;
-	top: 5px;
+	top: 0px;
 }
 
 @media (max-width: 767px) {
@@ -248,7 +252,7 @@
 	fill: currentColor;
 }
 
-.model-slider .swiper-slide-image{
+.model-slider .swiper-slide-image {
 	width: 100%;
 }
 
@@ -404,123 +408,123 @@
 
 /* Amenities Map */
 .map_container {
-  display: grid;
-  grid-template-columns: 30% 65%;
-  gap: 5%;
+	display: grid;
+	grid-template-columns: 30% 65%;
+	gap: 5%;
 }
 
 #map-filter {
-  display: flex;
-  flex-direction: row;
-  gap: 10px 25px;
-  flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	gap: 10px 25px;
+	flex-wrap: wrap;
 }
 
 #map-filter label {
-  display: flex;
-  max-width: max-content;
-  font-size: var(--font18);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 25px;
-  font-family: var(--e-global-typography-primary-font-family);
-  cursor: pointer;
+	display: flex;
+	max-width: max-content;
+	font-size: var(--font18);
+	font-style: normal;
+	font-weight: 500;
+	line-height: 25px;
+	font-family: var(--e-global-typography-primary-font-family);
+	cursor: pointer;
 }
 
 #map-filter input {
-  display: none;
+	display: none;
 }
 
 .map-input:hover .label-text,
 .map-input .label-text:hover,
-.map-input input[type="radio"]:checked + .label-text {
-  color: var(--e-global-color-secondary);
-  font-weight: 700;
+.map-input input[type="radio"]:checked+.label-text {
+	color: var(--e-global-color-secondary);
+	font-weight: 700;
 }
 
 #map-list {
-  max-height: 350px;
-  overflow-y: auto;
-  margin: 10px 0 30px;
-  padding-right: 20px;
+	max-height: 350px;
+	overflow-y: auto;
+	margin: 10px 0 30px;
+	padding-right: 20px;
 }
 
 #map-list::-webkit-scrollbar {
-  width: 6px;
+	width: 6px;
 }
 
 #map-list::-webkit-scrollbar-track {
-  background: #00000026;
+	background: #00000026;
 }
 
 #map-list::-webkit-scrollbar-thumb {
-  background: #6d6d6d;
-  border-radius: 0;
-  border: 1px solid #6d6d6d;
-  background-clip: content-box;
+	background: #6d6d6d;
+	border-radius: 0;
+	border: 1px solid #6d6d6d;
+	background-clip: content-box;
 }
 
 #map-list::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .map-list-item {
-  border: 1px solid #eee;
-  margin-bottom: 15px;
-  padding: 16px 20px;
-  font-family: var(--e-global-typography-primary-font-family);
-  font-size: 14px;
-  color: #626262;
+	border: 1px solid #eee;
+	margin-bottom: 15px;
+	padding: 16px 20px;
+	font-family: var(--e-global-typography-primary-font-family);
+	font-size: 14px;
+	color: #626262;
 }
 
 .map-list-item .name {
-  font-size: var(--font18);
-  font-weight: 700;
-  color: black;
-  margin: 6px 0 4px;
+	font-size: var(--font18);
+	font-weight: 700;
+	color: black;
+	margin: 6px 0 4px;
 }
 
 .map-list-item .category {
-  font-weight: 600;
-  color: var(--e-global-color-secondary);
+	font-weight: 600;
+	color: var(--e-global-color-secondary);
 }
 
 .map-list-item:hover {
-  border-color: var(--e-global-color-secondary);
-  background-color: #ed1c280d;
+	border-color: var(--e-global-color-secondary);
+	background-color: #ed1c280d;
 }
 
 
 @media (max-width: 767px) {
-  :root {
-    --font18: 16px;
-    --font16: 14px;
-  }
+	:root {
+		--font18: 16px;
+		--font16: 14px;
+	}
 
-  #map {
-    max-height: 400px;
-  }
+	#map {
+		max-height: 400px;
+	}
 
-  #map-list {
-    display: none;
-  }
+	#map-list {
+		display: none;
+	}
 
-  .map_container {
-    grid-template-columns: 100%;
-  }
+	.map_container {
+		grid-template-columns: 100%;
+	}
 
-  #map-filter {
-    gap: 10px 13px;
-  }
+	#map-filter {
+		gap: 10px 13px;
+	}
 
-  .mobile_text_center li,
-  .mobile_text_center a {
-    text-align: center;
-    justify-content: center;
-    display: flex !important;
-  }
+	.mobile_text_center li,
+	.mobile_text_center a {
+		text-align: center;
+		justify-content: center;
+		display: flex !important;
+	}
 
-  .mobile_absolute {
-    position: absolute !important;
-  }
+	.mobile_absolute {
+		position: absolute !important;
+	}
 }
