@@ -801,10 +801,218 @@ function showStories($) {
 function triggerChangeSelects($) {
   $(document).on("change", ".variation-radios input:checked", function () {
     const $radio = $(this);
+    const $form = $radio.closest("form.variations_form");
+
+    if ($radio.prop("disabled") || $radio.closest("label").hasClass("is-unavailable")) {
+      $radio.prop("checked", false);
+      return;
+    }
+
+    // Reject combos that do not exist in the variation matrix (e.g. SAGIREV + Channeled).
+    if ($form.hasClass("sagiper-quickview-form")) {
+      const name = $radio.attr("name");
+      const value = $radio.val();
+      const variations = getQuickViewVariations($form);
+      const selected = getQuickViewSelectedAttrs($form, $);
+      selected[name] = value;
+      if (
+        variations.length &&
+        !isQuickViewComboAvailable(variations, selected)
+      ) {
+        $radio.prop("checked", false);
+        const $select = $form.find('select[name="' + name + '"]');
+        $select.val("").trigger("change");
+        syncQuickViewRadioAvailability($form, $);
+        return;
+      }
+    }
+
     $('select[name="' + $radio.attr("name") + '"]')
       .val($radio.val())
       .trigger("change");
   });
+
+  // Block interaction on unavailable pills (span is the visible hit target).
+  $(document).on(
+    "click mousedown pointerdown",
+    ".sagiper-quickview-form .variation-radios label",
+    function (e) {
+      const $input = $(this).find('input[type="radio"]');
+      if (
+        $input.prop("disabled") ||
+        $(this).hasClass("is-unavailable")
+      ) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+      }
+    },
+  );
+}
+
+function getQuickViewVariations($form) {
+  let variations = $form.data("product_variations");
+  if (!variations) {
+    try {
+      variations = JSON.parse($form.attr("data-product_variations") || "[]");
+    } catch (err) {
+      variations = [];
+    }
+  }
+  return Array.isArray(variations) ? variations : [];
+}
+
+function getQuickViewSelectedAttrs($form, $) {
+  const selected = {};
+  $form.find(".variations select").each(function () {
+    const name = $(this).attr("name");
+    const value = $(this).val();
+    if (name && value) {
+      selected[name] = value;
+    }
+  });
+  return selected;
+}
+
+function variationAttrsMatchPartial(variationAttrs, selected) {
+  for (const name in selected) {
+    if (!Object.prototype.hasOwnProperty.call(selected, name)) continue;
+    const selectedVal = selected[name];
+    if (!selectedVal) continue;
+    const varVal = variationAttrs[name];
+    // Empty variation attribute means "any".
+    if (
+      varVal !== undefined &&
+      varVal !== null &&
+      varVal !== "" &&
+      String(varVal) !== String(selectedVal)
+    ) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function isQuickViewComboAvailable(variations, selected) {
+  return variations.some(function (variation) {
+    return variationAttrsMatchPartial(variation.attributes || {}, selected);
+  });
+}
+
+function isQuickViewOptionAvailable(variations, attrName, attrValue, selected) {
+  const others = {};
+  for (const name in selected) {
+    if (
+      Object.prototype.hasOwnProperty.call(selected, name) &&
+      name !== attrName &&
+      selected[name]
+    ) {
+      others[name] = selected[name];
+    }
+  }
+
+  return variations.some(function (variation) {
+    const attrs = variation.attributes || {};
+    if (!variationAttrsMatchPartial(attrs, others)) {
+      return false;
+    }
+    const varVal = attrs[attrName];
+    if (varVal === undefined || varVal === null || varVal === "") {
+      return true;
+    }
+    return String(varVal) === String(attrValue);
+  });
+}
+
+/**
+ * Disable radio pills that cannot form a valid variation with current selections.
+ * Uses data-product_variations (not option.disabled — Woo is unreliable with radio UIs).
+ */
+function syncQuickViewRadioAvailability($form, $) {
+  if (!$form || !$form.length || !$form.hasClass("sagiper-quickview-form")) {
+    return;
+  }
+
+  const variations = getQuickViewVariations($form);
+  if (!variations.length) {
+    return;
+  }
+
+  const selected = getQuickViewSelectedAttrs($form, $);
+  const selectsToReset = [];
+
+  $form.find(".variations select").each(function () {
+    const $select = $(this);
+    const name = $select.attr("name");
+    if (!name) return;
+
+    let selectCleared = false;
+
+    $form
+      .find('.variation-radios input[type="radio"][name="' + name + '"]')
+      .each(function () {
+        const $radio = $(this);
+        const value = $radio.val();
+        if (!value) return;
+
+        const available = isQuickViewOptionAvailable(
+          variations,
+          name,
+          value,
+          selected,
+        );
+        const isDisabled = !available;
+
+        $radio.prop("disabled", isDisabled);
+        $radio.closest("label").toggleClass("is-unavailable", isDisabled);
+
+        // Also mirror onto the hidden <option> so Woo state stays consistent.
+        $select.find("option").filter(function () {
+          return $(this).attr("value") === value;
+        }).prop("disabled", isDisabled);
+
+        if (isDisabled && $radio.is(":checked")) {
+          $radio.prop("checked", false);
+          selectCleared = true;
+          $select.val("");
+        }
+      });
+
+    if (selectCleared) {
+      selectsToReset.push($select);
+    }
+  });
+
+  selectsToReset.forEach(function ($select) {
+    $select.trigger("change");
+  });
+}
+
+function bindQuickViewRadioSync($form, $) {
+  if (!$form.length || !$form.hasClass("sagiper-quickview-form")) {
+    return;
+  }
+  if ($form.data("sagiper-radio-sync-bound")) {
+    syncQuickViewRadioAvailability($form, $);
+    return;
+  }
+
+  $form.data("sagiper-radio-sync-bound", true);
+
+  const runSync = function () {
+    // Defer so Woo finishes updating selects first.
+    setTimeout(function () {
+      syncQuickViewRadioAvailability($form, $);
+    }, 0);
+  };
+
+  $form.on(
+    "woocommerce_update_variation_values.sagiperRadio check_variations.sagiperRadio found_variation.sagiperRadio hide_variation.sagiperRadio",
+    runSync,
+  );
+  $form.on("change.sagiperRadio", ".variations select", runSync);
+
+  runSync();
 }
 
 function initQuickViewVariationForm(context, $) {
@@ -813,6 +1021,7 @@ function initQuickViewVariationForm(context, $) {
     if (typeof $form.wc_variation_form === "function") {
       $form.wc_variation_form(); // initialize variation logic
       $form.find(".variations select").trigger("change"); // update price
+      bindQuickViewRadioSync($form, $);
     } else {
       console.warn("wc_variation_form() is not yet available. Retrying...");
       setTimeout(() => initQuickViewVariationForm(context, $), 300);

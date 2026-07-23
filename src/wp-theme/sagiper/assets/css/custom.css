@@ -603,6 +603,17 @@ form .variations:before {
   background-color: var(--normalBlue);
 }
 
+.variation-radios input[type="radio"]:disabled + span,
+.variation-radios label.is-unavailable span {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.variation-radios label.is-unavailable {
+  cursor: not-allowed;
+}
+
 .variation-radios label:hover {
   border-color: #888;
 }

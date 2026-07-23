@@ -35,6 +35,7 @@ define('BASE_URL', get_site_url());
 $custom_files = [
     'woo-custom-functions.php',
     'woo-shopify-functions.php',
+    'woo-variation-rules.php',
     'shortcode-register.php'
 ];
 
@@ -201,6 +202,13 @@ if (!function_exists("fetch_quickview_product_callback")) {
             // No variations found, return or handle accordingly
             return '<div class="no-variations">This product is not available.</div>';
         }
+        // Theme rule: SAGIREV + Channeled must not resolve in quick view.
+        if (function_exists('sagiper_filter_quickview_variations')) {
+            $available_variations = sagiper_filter_quickview_variations($available_variations);
+        }
+        if (empty($available_variations)) {
+            return '<div class="no-variations">This product is not available.</div>';
+        }
         $available_variations = array_map(function ($variation) {
             // Remove heavy/unneeded data
             unset($variation['image']);
@@ -227,7 +235,7 @@ if (!function_exists("fetch_quickview_product_callback")) {
 
         ob_start(); ?>
 
-<form class="variations_form cart" action="<?php echo esc_url($product->get_permalink()); ?>" method="post"
+<form class="variations_form cart sagiper-quickview-form" action="<?php echo esc_url($product->get_permalink()); ?>" method="post"
     enctype="multipart/form-data" data-product_id="<?php echo esc_attr($product->get_id()); ?>"
     data-product_variations="<?php echo esc_attr($variations_attr); ?>">
     <?= $pictureField; ?>
