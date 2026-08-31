@@ -1,0 +1,384 @@
+/* 
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/elementor/hello-theme-child/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 2.0.0
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/* Add your custom styles here */
+
+/* global colors */
+:root {
+	--e-global-color-primary: #333333;
+	--e-global-color-secondary: #00243D;
+	--e-global-color-text: #333333;
+	--e-global-color-accent: #F2F2F2;
+	--e-global-color-8c4b4c8: #FFF8F4;
+	--e-global-color-bf8f894: #8D5E40;
+	--e-global-color-22bff8a: #1D1F21;
+	--e-global-color-e76072f: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   Testimonial carousel – staircase layout (.container-carousel)
+   -------------------------------------------------------------------------- */
+
+.container-carousel {
+	--stair-step: 150px;
+	--stair-offset-1: var(--stair-step);
+	/* 1st – +150 */
+	--stair-offset-2: 0;
+	/* 2nd – no margin */
+	--stair-offset-3: calc(var(--stair-step) * -1);
+	/* 3rd – -150 */
+	--carousel-card-height: 200px;
+	--carousel-pagination-gap: 0;
+
+	position: relative;
+	padding-top: 0;
+	padding-bottom: calc(var(--stair-step) + var(--carousel-pagination-gap) + 10px);
+}
+
+.container-carousel .elementor-widget-loop-carousel {
+	position: static;
+	width: 100%;
+	overflow: visible;
+}
+
+/* Allow staggered slides to extend below the track */
+.container-carousel .swiper,
+.container-carousel .elementor-loop-container {
+	overflow: visible;
+	height: var(--carousel-card-height) !important;
+	min-height: var(--carousel-card-height) !important;
+	max-height: var(--carousel-card-height) !important;
+}
+
+.container-carousel .swiper-wrapper {
+	align-items: flex-start;
+	height: var(--carousel-card-height) !important;
+}
+
+.container-carousel .swiper-slide {
+	height: var(--carousel-card-height) !important;
+}
+
+/*
+ * With 3 slides visible, Swiper marks the leftmost as .swiper-slide-active.
+ * Target the active slide + next 2 siblings (not prev/active/next – those break
+ * on autoplay). translateY on the inner card avoids fighting Swiper’s slide motion.
+ */
+.container-carousel .swiper-slide>.e-con.e-parent {
+	transform: translateY(0);
+	transition: none;
+	height: var(--carousel-card-height);
+	min-height: var(--carousel-card-height);
+	max-height: var(--carousel-card-height);
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+.container-carousel .swiper-slide>.e-con.e-parent>.e-con-inner {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+
+/* Long quotes scroll inside the card instead of stretching the carousel */
+.container-carousel .swiper-slide .elementor-widget-theme-post-title {
+	flex: 1;
+	min-height: 0;
+	overflow-y: auto;
+}
+
+.container-carousel .swiper-slide-active>.e-con.e-parent {
+	transform: translateY(var(--stair-offset-1));
+}
+
+.container-carousel .swiper-slide-active+.swiper-slide>.e-con.e-parent {
+	transform: translateY(var(--stair-offset-2));
+}
+
+.container-carousel .swiper-slide-active+.swiper-slide+.swiper-slide>.e-con.e-parent {
+	transform: translateY(var(--stair-offset-3));
+}
+
+/* Progress bar pinned to the bottom of .container-carousel */
+.container-carousel .swiper-pagination {
+	position: absolute;
+	bottom: var(--carousel-pagination-gap);
+	left: 0;
+	right: 0;
+	top: auto !important;
+	width: 100% !important;
+	margin: 0;
+	z-index: 2;
+}
+
+.container-carousel .swiper-pagination-progressbar {
+	height: 4px;
+	background: rgba(255, 255, 255, 0.35);
+}
+
+.container-carousel .swiper-pagination-progressbar-fill {
+	background: #004A75;
+}
+
+@media (max-width: 1024px) {
+
+	.container-carousel .swiper-slide>.e-con.e-parent,
+	.container-carousel .swiper-slide-active>.e-con.e-parent,
+	.container-carousel .swiper-slide-active+.swiper-slide>.e-con.e-parent,
+	.container-carousel .swiper-slide-active+.swiper-slide+.swiper-slide>.e-con.e-parent {
+		transform: translateY(0);
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Featured projects carousel – right bleed (.container-swiper-offset)
+   Put the class on the parent section (header + carousel). In Elementor:
+   Slides to show: 2 · Offset sides: Right · Infinite: on.
+   Header buttons: .swiper-offset-prev / .swiper-offset-next
+   -------------------------------------------------------------------------- */
+
+.container-swiper-offset {
+	overflow-x: clip;
+}
+
+/* Extend the track to the right viewport edge */
+.container-swiper-offset .elementor-widget-loop-carousel,
+.container-swiper-offset.elementor-widget-loop-carousel {
+	position: relative;
+	overflow: visible;
+	max-width: none;
+	width: calc(100% + (50vw - 50%));
+	margin-right: calc(50% - 50vw);
+}
+
+.container-swiper-offset .swiper,
+.container-swiper-offset .elementor-loop-container {
+	overflow: visible;
+	/* Undo Elementor’s internal crop; only reveal overflow on the right */
+	clip-path: inset(0 -100vw 0 0);
+}
+
+/* No left peek – align first slide to the content edge */
+.container-swiper-offset .offset-both,
+.container-swiper-offset .offset-right {
+	padding-inline-start: 0 !important;
+	padding-left: 0 !important;
+}
+
+/* Optional header nav (circular outlined buttons in the heading row) */
+.container-swiper-offset .swiper-offset-nav {
+	display: flex;
+	gap: 12px;
+	justify-content: flex-end;
+}
+
+.container-swiper-offset .swiper-offset-prev,
+.container-swiper-offset .swiper-offset-next {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	padding: 0;
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.container-swiper-offset .swiper-offset-prev:hover,
+.container-swiper-offset .swiper-offset-next:hover,
+.container-swiper-offset .swiper-offset-prev:focus-visible,
+.container-swiper-offset .swiper-offset-next:focus-visible {
+	background: var(--e-global-color-text, #1a1a1a);
+	border-color: var(--e-global-color-text, #1a1a1a);
+	color: #fff;
+	outline: none;
+}
+
+.container-swiper-offset .swiper-offset-prev svg,
+.container-swiper-offset .swiper-offset-next svg {
+	width: 18px;
+	height: 18px;
+}
+
+@media (max-width: 767px) {
+
+	.container-swiper-offset .elementor-widget-loop-carousel,
+	.container-swiper-offset.elementor-widget-loop-carousel {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.container-swiper-offset .swiper,
+	.container-swiper-offset .elementor-loop-container {
+		clip-path: inset(0 -50vw 0 0);
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Checkmark list (.custom-list)
+   Add class to the Text widget (or its parent). Uses carbon checkmark-filled.
+   -------------------------------------------------------------------------- */
+
+.custom-list ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.custom-list ul li {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75em;
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+	color: var(--e-global-color-text, #333333);
+	line-height: 1.4;
+}
+
+.custom-list ul li::before {
+	content: "";
+	flex-shrink: 0;
+	display: inline-block;
+	width: 1.25em;
+	height: 1.25em;
+	margin-top: 0.1em;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2300243d' d='M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m-2 19.59l-5-5L10.59 15L14 18.41L21.41 11l1.596 1.586Z'/%3E%3Cpath fill='none' d='m14 21.591l-5-5L10.591 15L14 18.409L21.41 11l1.595 1.585z'/%3E%3C/svg%3E");
+}
+
+/* --------------------------------------------------------------------------
+   Numbered accordion (.container-accordion-align)
+   Nested Accordion widget. Title format:
+   <span class="accordion-num">01</span> Initial Consultation
+   -------------------------------------------------------------------------- */
+
+.container-accordion-align {
+	--accordion-num-width: 2.5rem;
+	--accordion-content-gap: 10.5rem;
+	--accordion-row-padding-y: 1.25rem;
+	--accordion-divider: rgba(0, 36, 61, 0.15);
+}
+
+.container-accordion-align .e-n-accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.container-accordion-align .e-n-accordion-item {
+	border-bottom: 1px solid var(--accordion-divider);
+}
+
+.container-accordion-align .e-n-accordion-item-title {
+	display: flex;
+	align-items: center;
+	gap: var(--accordion-content-gap);
+	padding: var(--accordion-row-padding-y) 0;
+	list-style: none;
+	border: 0;
+	border-bottom: 0 !important;
+}
+
+.container-accordion-align .e-n-accordion-item[open] .e-n-accordion-item-title {
+	align-items: flex-start;
+	padding-bottom: 0.75rem;
+}
+
+.container-accordion-align .e-n-accordion-item-title-header {
+	flex: 1;
+	min-width: 0;
+}
+
+.container-accordion-align .e-n-accordion-item-title-text {
+	display: flex;
+	align-items: baseline;
+	gap: var(--accordion-content-gap);
+}
+
+.container-accordion-align .e-n-accordion-item-title-text .accordion-num,
+.container-accordion-align .e-n-accordion-item-title-text>span:first-child {
+	flex: 0 0 var(--accordion-num-width);
+}
+
+.container-accordion-align .e-n-accordion-item-title-icon {
+	flex-shrink: 0;
+	margin-top: 0.15em;
+}
+
+.container-accordion-align .e-n-accordion-item-title-icon svg {
+	width: 0.85em;
+	height: 0.85em;
+}
+
+/* Body aligns with title column, not the number */
+.container-accordion-align .e-n-accordion-item>.e-con {
+	padding-left: calc(var(--accordion-num-width) + var(--accordion-content-gap));
+	padding-top: 0;
+	padding-bottom: var(--accordion-row-padding-y);
+	border: 0;
+	border-top: 0 !important;
+}
+
+.container-accordion-align .e-n-accordion-item>.e-con p {
+	margin: 0;
+}
+
+.container-accordion-align .e-n-accordion-item>.e-con .e-con-inner {
+	padding: 0;
+}
+
+@media (max-width: 767px) {
+
+	.container-accordion-align {
+		--accordion-num-width: 2rem;
+		--accordion-content-gap: 1rem;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Loop grid numbering (.container-numbering-items)
+   Leave "0" in the .numbering-order heading widget — CSS replaces it.
+   -------------------------------------------------------------------------- */
+
+.container-numbering-items {
+	counter-reset: service-item;
+}
+
+.container-numbering-items .e-loop-item {
+	counter-increment: service-item;
+}
+
+.container-numbering-items .numbering-order .elementor-heading-title {
+	position: relative;
+	visibility: hidden;
+}
+
+.container-numbering-items .numbering-order .elementor-heading-title::before {
+	content: counter(service-item, decimal-leading-zero);
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: visible;
+}
