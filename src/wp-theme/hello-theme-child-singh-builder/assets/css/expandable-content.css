@@ -1,0 +1,523 @@
+/* --------------------------------------------------------------------------
+   Expandable content shortcode (.sb-expandable)
+   Usage: [singh_expandable_content]
+   -------------------------------------------------------------------------- */
+
+.sb-expandable {
+	/* Elementor global fallbacks (live site already defines these on :root) */
+	--e-global-color-primary: #d09535;
+	--e-global-color-secondary: #0a0c10;
+	--e-global-color-text: #000000;
+	--e-global-color-accent: #efebe3;
+	--e-global-color-3918724: #ffffff;
+	--e-global-color-912081c: #f5f5f5;
+	--e-global-color-91a0e65: #232520;
+	--e-global-typography-primary-font-family: "Manrope";
+	--e-global-typography-secondary-font-family: "Manrope";
+	--e-global-typography-text-font-family: "DM Sans";
+	--e-global-typography-accent-font-family: "Manrope";
+	--e-global-typography-8352cd5-font-family: "Manrope";
+	--e-global-typography-8352cd5-font-size: 45px;
+	--e-global-typography-aa06a68-font-family: "DM Sans";
+	--e-global-typography-aa06a68-font-size: 14px;
+
+	/* Component tokens → Elementor globals */
+	--sb-primary: var(--e-global-color-primary, #d09535);
+	--sb-text: var(--e-global-color-text, #000000);
+	--sb-muted: var(--e-global-color-91a0e65, #232520);
+	--sb-inactive: color-mix(in srgb, var(--sb-text) 45%, transparent);
+	--sb-border: #d1d1d1;
+	--sb-surface: var(--e-global-color-accent, #efebe3);
+	--sb-font-display: var(--e-global-typography-primary-font-family, "Manrope"), sans-serif;
+	--sb-font-body: var(--e-global-typography-text-font-family, "DM Sans"), sans-serif;
+	--sb-duration: 6s;
+	--sb-stage-size: 600px;
+	--sb-gap: 3rem;
+	--sb-radius: 1.25rem;
+	--sb-ease: cubic-bezier(0.4, 0, 0.2, 1);
+	--sb-panel-ms: 480ms;
+	--sb-fade-ms: 280ms;
+	--sb-fade-in-delay: 140ms;
+
+	max-width: 72rem;
+	margin-inline: auto;
+	padding-block: 2.5rem;
+	padding-inline: 1.25rem;
+	color: var(--sb-text);
+	font-family: var(--sb-font-body);
+}
+
+/* ---- Caption ---- */
+.sb-expandable__caption {
+	margin: 0 0 0.75rem;
+	font-family: var(--sb-font-display);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-align: start;
+	color: var(--sb-primary);
+}
+
+/* ---- Title ---- */
+.sb-expandable__title {
+	margin: 0 0 0.75rem;
+	max-width: 18ch;
+	font-family: var(--sb-font-display);
+	font-weight: 500;
+	font-size: clamp(1.75rem, 4vw, 45px);
+	line-height: 1;
+	letter-spacing: 0;
+	color: var(--sb-text);
+}
+
+/* ---- Description ---- */
+.sb-expandable__description {
+	margin: 0 0 2rem;
+	max-width: 42ch;
+	font-family: var(--sb-font-body);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0;
+	color: var(--sb-muted);
+}
+
+.sb-expandable__description>*:first-child {
+	margin-top: 0;
+}
+
+.sb-expandable__description>*:last-child {
+	margin-bottom: 0;
+}
+
+/* ---- Layout: mobile-first single column ---- */
+
+.sb-expandable__layout {
+	display: block;
+}
+
+.sb-expandable__copy {
+	min-width: 0;
+}
+
+.sb-expandable__body {
+	display: block;
+}
+
+.sb-expandable__stage {
+	display: none;
+}
+
+.sb-expandable__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sb-expandable__item {
+	border-block-start: 1px solid var(--sb-border);
+}
+
+.sb-expandable__item:last-child:not(.is-active) {
+	border-block-end: 1px solid var(--sb-border);
+}
+
+.sb-expandable__item>h3 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/* ---- Collapsible heading ---- */
+.sb-expandable__trigger {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	width: 100%;
+	margin: 0;
+	padding-block: 1.25rem;
+	padding-inline: 0;
+	border: 0;
+	background: transparent;
+	color: var(--sb-inactive);
+	font-family: var(--sb-font-display);
+	font-weight: 500;
+	font-size: clamp(1.25rem, 3.5vw, 30px);
+	line-height: 1;
+	letter-spacing: 0;
+	text-align: start;
+	cursor: pointer;
+	transition: color 0.25s var(--sb-ease);
+}
+
+.sb-expandable__trigger:hover,
+.sb-expandable__trigger:focus-visible,
+.sb-expandable__trigger:active,
+.sb-expandable__trigger:focus {
+	color: var(--sb-text);
+	background-color: transparent;
+}
+
+.sb-expandable__trigger:focus-visible {
+	outline: 2px solid var(--sb-primary);
+	outline-offset: 4px;
+}
+
+.sb-expandable__item.is-active .sb-expandable__trigger {
+	color: var(--sb-text);
+}
+
+.sb-expandable__icon {
+	flex-shrink: 0;
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+}
+
+.sb-expandable__icon::before,
+.sb-expandable__icon::after {
+	content: "";
+	position: absolute;
+	inset-inline-start: 50%;
+	inset-block-start: 50%;
+	background: currentColor;
+	transform: translate(-50%, -50%);
+	transition: opacity 0.2s var(--sb-ease), transform 0.2s var(--sb-ease);
+}
+
+.sb-expandable__icon::before {
+	width: 100%;
+	height: 1.5px;
+}
+
+.sb-expandable__icon::after {
+	width: 1.5px;
+	height: 100%;
+}
+
+.sb-expandable__item.is-active .sb-expandable__icon::after {
+	opacity: 0;
+	transform: translate(-50%, -50%) scaleY(0);
+}
+
+/* ---- Collapsible panel (grid 0fr → 1fr) ---- */
+
+.sb-expandable__panel {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows var(--sb-panel-ms) var(--sb-ease);
+	padding-bottom: 10px;
+}
+
+.sb-expandable__item.is-active .sb-expandable__panel {
+	grid-template-rows: 1fr;
+}
+
+.sb-expandable__panel-inner {
+	overflow: hidden;
+	min-height: 0;
+}
+
+/*
+ * Fade content so closing text never clips mid-collapse (the “bounce”).
+ * Close: opacity drops immediately. Open: fade in after height starts expanding.
+ */
+.sb-expandable__content {
+	padding-block-end: 1.25rem;
+	font-family: var(--sb-font-body);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0;
+	color: var(--sb-muted);
+	opacity: 0;
+	transform: translateY(-4px);
+	transition:
+		opacity var(--sb-fade-ms) var(--sb-ease),
+		transform var(--sb-fade-ms) var(--sb-ease);
+	transition-delay: 0s;
+}
+
+.sb-expandable__item.is-active .sb-expandable__content {
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: var(--sb-fade-in-delay);
+}
+
+.sb-expandable__content>*:first-child {
+	margin-top: 0;
+}
+
+.sb-expandable__content>*:last-child {
+	margin-bottom: 0;
+}
+
+/* ---- Media: inline on mobile (square) ---- */
+
+.sb-expandable__media {
+	margin: 0 0 1.25rem;
+	border-radius: var(--sb-radius);
+	overflow: hidden;
+	background: var(--e-global-color-912081c, #f5f5f5);
+	aspect-ratio: 1 / 1;
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		opacity 0.4s var(--sb-ease),
+		visibility 0s linear 0.4s;
+}
+
+.sb-expandable__item.is-active .sb-expandable__media {
+	opacity: 1;
+	visibility: visible;
+	transition:
+		opacity 0.45s var(--sb-ease) var(--sb-fade-in-delay),
+		visibility 0s linear 0s;
+}
+
+.sb-expandable__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ---- Progress bar ---- */
+
+.sb-expandable__progress {
+	display: none;
+	height: 2px;
+	margin: 0;
+	background: var(--sb-border);
+	overflow: hidden;
+	pointer-events: none;
+	animation-play-state: running;
+}
+
+.sb-expandable__item.is-active .sb-expandable__progress {
+	display: block;
+}
+
+.sb-expandable.is-paused .sb-expandable__progress {
+	animation-play-state: paused;
+}
+
+.sb-expandable__progress::after {
+	content: "";
+	display: block;
+	height: 100%;
+	width: 0;
+	background: var(--sb-primary);
+}
+
+.sb-expandable__item.is-active .sb-expandable__progress.is-running::after {
+	/* Longhands only — shorthand would reset play-state and break pause. */
+	animation-name: sb-progress-fill;
+	animation-duration: var(--sb-duration);
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-play-state: inherit;
+}
+
+.sb-expandable.is-paused .sb-expandable__progress.is-running::after {
+	animation-play-state: paused;
+}
+
+@keyframes sb-progress-fill {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+/* ---- CTA ---- */
+
+.sb-expandable__cta {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-block-start: 2rem;
+	padding: 0.875rem 1.5rem;
+	border-radius: 999px;
+	background: var(--sb-primary);
+	color: var(--e-global-color-3918724, #ffffff);
+	font-family: var(--sb-font-body);
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0;
+	text-align: center;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: opacity 0.2s var(--sb-ease);
+}
+
+.sb-expandable__cta:hover,
+.sb-expandable__cta:focus-visible,
+.sb-expandable__cta:active,
+.sb-expandable__cta:focus {
+	opacity: 0.85;
+	background-color: transparent;
+}
+
+.sb-expandable__cta:focus-visible {
+	outline: 2px solid var(--sb-primary);
+	outline-offset: 3px;
+}
+
+.sb-expandable__cta-icon {
+	display: inline-flex;
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	line-height: 0;
+}
+
+.sb-expandable__cta-icon svg {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+/* ---- Desktop: copy column + 600×600 stage ---- */
+
+@media (min-width: 768px) {
+	.sb-expandable {
+		padding-inline: 0;
+		--sb-stage-size: min(600px, 42vw);
+		--sb-gap: 3rem;
+	}
+
+	.sb-expandable__layout {
+		position: relative;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) var(--sb-stage-size);
+		gap: var(--sb-gap);
+		/* < 1200: pin image to bottom of the taller copy column */
+		align-items: end;
+	}
+
+	.sb-expandable__copy {
+		grid-column: 1;
+		grid-row: 1;
+		min-width: 0;
+	}
+
+	.sb-expandable__stage {
+		display: block;
+		grid-column: 2;
+		grid-row: 1;
+		align-self: end;
+		width: var(--sb-stage-size);
+		height: var(--sb-stage-size);
+		aspect-ratio: 1 / 1;
+		border-radius: var(--sb-radius);
+		background: transparent;
+		pointer-events: none;
+	}
+
+	/*
+	 * One image set: inline in panels on mobile; on desktop abspos into the
+	 * layout stage. Below 1200px the stage sticks to the bottom.
+	 */
+	.sb-expandable__item.is-active .sb-expandable__panel-inner {
+		overflow: visible;
+	}
+
+	.sb-expandable__media {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+		right: 0;
+		left: auto;
+		width: var(--sb-stage-size);
+		height: var(--sb-stage-size);
+		aspect-ratio: 1 / 1;
+		margin: 0;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		z-index: 1;
+		transition:
+			opacity 0.5s var(--sb-ease),
+			visibility 0s linear 0.5s;
+	}
+
+	.sb-expandable__item.is-active .sb-expandable__media {
+		opacity: 1;
+		visibility: visible;
+		z-index: 2;
+		transition:
+			opacity 0.5s var(--sb-ease) 80ms,
+			visibility 0s linear 0s;
+	}
+
+	.sb-expandable__trigger {
+		padding-block: 1.5rem;
+	}
+
+	.sb-expandable__icon {
+		display: none;
+	}
+}
+
+@media (min-width: 1100px) {
+	.sb-expandable {
+		--sb-stage-size: 600px;
+		--sb-gap: 4rem;
+	}
+}
+
+/* ≥ 1200: image back to top, level with title */
+@media (min-width: 1200px) {
+	.sb-expandable__layout {
+		align-items: start;
+	}
+
+	.sb-expandable__stage {
+		align-self: start;
+	}
+
+	.sb-expandable__media {
+		top: 0;
+		bottom: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.sb-expandable__panel {
+		padding-bottom: 10px;
+	}
+}
+
+/* ---- Reduced motion ---- */
+
+@media (prefers-reduced-motion: reduce) {
+	.sb-expandable {
+		--sb-panel-ms: 0ms;
+		--sb-fade-ms: 0ms;
+		--sb-fade-in-delay: 0ms;
+	}
+
+	.sb-expandable__panel,
+	.sb-expandable__content,
+	.sb-expandable__media {
+		transition: none;
+	}
+
+	.sb-expandable__content {
+		transform: none;
+	}
+
+	.sb-expandable__item.is-active .sb-expandable__progress.is-running::after {
+		animation: none;
+		width: 100%;
+	}
+}
