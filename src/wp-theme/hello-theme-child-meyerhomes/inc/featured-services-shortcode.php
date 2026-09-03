@@ -71,7 +71,7 @@ function mh_featured_services_shortcode( $atts ): string {
 		$query->the_post();
 
 		$post_id   = get_the_ID();
-		$image_url = get_the_post_thumbnail_url( $post_id, 'large' );
+		$image_url = get_the_post_thumbnail_url( $post_id, 'full' );
 
 		if ( ! $image_url ) {
 			continue;
@@ -96,20 +96,23 @@ function mh_featured_services_shortcode( $atts ): string {
 
 	$GLOBALS['mh_featured_services_used'] = true;
 
-	$icon          = mh_featured_services_arrow_icon();
-	$default_image = $services[0]['image'];
-	$default_alt   = $services[0]['alt'];
+	$icon = mh_featured_services_arrow_icon();
 
 	ob_start();
 	?>
 	<section class="mh-featured-services" data-mh-featured-services>
 		<div class="mh-featured-services__preview">
-			<img
-				class="mh-featured-services__image"
-				src="<?php echo esc_url( $default_image ); ?>"
-				alt="<?php echo esc_attr( $default_alt ); ?>"
-				data-mh-preview-img
-			/>
+			<?php foreach ( $services as $index => $service ) : ?>
+				<img
+					class="mh-featured-services__image<?php echo $index === 0 ? ' is-visible' : ''; ?>"
+					src="<?php echo esc_url( $service['image'] ); ?>"
+					alt="<?php echo esc_attr( $service['alt'] ); ?>"
+					width="500"
+					height="596"
+					data-mh-preview-img="<?php echo esc_attr( (string) $index ); ?>"
+					<?php echo $index > 0 ? 'loading="lazy" decoding="async"' : 'loading="eager" fetchpriority="high"'; ?>
+				/>
+			<?php endforeach; ?>
 		</div>
 
 		<div class="mh-featured-services__content">
@@ -122,9 +125,8 @@ function mh_featured_services_shortcode( $atts ): string {
 					<li class="mh-featured-services__item-wrap">
 						<a
 							href="<?php echo esc_url( $service['url'] ); ?>"
-							class="mh-featured-services__item<?php echo $index === 0 ? ' is-active' : ''; ?>"
-							data-image="<?php echo esc_url( $service['image'] ); ?>"
-							data-alt="<?php echo esc_attr( $service['alt'] ); ?>"
+							class="mh-featured-services__item"
+							data-preview-index="<?php echo esc_attr( (string) $index ); ?>"
 						>
 							<span class="mh-featured-services__number"><?php echo esc_html( sprintf( '%02d', $index + 1 ) ); ?></span>
 							<span class="mh-featured-services__title"><?php echo esc_html( $service['title'] ); ?></span>

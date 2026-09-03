@@ -24,6 +24,8 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 	--e-global-color-bf8f894: #8D5E40;
 	--e-global-color-22bff8a: #1D1F21;
 	--e-global-color-e76072f: #FFFFFF;
+	--header-sticky-duration: 0.35s;
+	--header-sticky-ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -381,4 +383,22 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 	top: 0;
 	left: 0;
 	visibility: visible;
+}
+
+/* --------------------------------------------------------------------------
+   Sticky header – background on scroll (.is-scrolled toggled via JS)
+   -------------------------------------------------------------------------- */
+
+.header-container {
+	transition: background-color var(--header-sticky-duration) var(--header-sticky-ease);
+}
+
+.header-container.is-scrolled {
+	background-color: var(--e-global-color-secondary) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.header-container {
+		transition-duration: 0.01ms;
+	}
 }

@@ -9,26 +9,37 @@
 	--mh-fs-row-gap: 1.25rem;
 	--mh-fs-brown: var(--e-global-color-bf8f894, #8d5e40);
 	--mh-fs-dark: var(--e-global-color-secondary, #00243d);
+	--mh-fs-image-width: 500px;
+	--mh-fs-image-height: 596px;
 
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	grid-template-columns: minmax(0, var(--mh-fs-image-width)) minmax(0, 1fr);
 	gap: clamp(2rem, 4vw, 4rem);
 	align-items: start;
 }
 
 .mh-featured-services__preview {
 	position: relative;
-	aspect-ratio: 4 / 5;
+	width: var(--mh-fs-image-width);
+	max-width: 100%;
+	height: var(--mh-fs-image-height);
 	overflow: hidden;
-	background: var(--e-global-color-accent, #f2f2f2);
 }
 
-.mh-featured-services__image {
+img.mh-featured-services__image {
+	position: absolute;
+	inset: 0;
 	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	opacity: 0;
 	transition: opacity 0.25s ease;
+	pointer-events: none;
+}
+
+img.mh-featured-services__image.is-visible {
+	opacity: 1;
 }
 
 .mh-featured-services__content {
@@ -37,8 +48,11 @@
 
 .mh-featured-services__heading {
 	margin: 0 0 1.5rem;
-	font-size: 1rem;
-	line-height: 1.4;
+	font-family: "Carmen Sans", sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 22px;
+	letter-spacing: 0;
 	color: var(--e-global-color-text, #333333);
 }
 
@@ -67,6 +81,7 @@
 	flex: 0 0 var(--mh-fs-num-width);
 	font-weight: 500;
 	color: var(--mh-fs-dark);
+	transition: color 0.2s ease;
 }
 
 .mh-featured-services__title {
@@ -75,6 +90,7 @@
 	font-weight: 500;
 	color: var(--mh-fs-dark);
 	line-height: 1.35;
+	transition: color 0.2s ease;
 }
 
 .mh-featured-services__icon {
@@ -84,6 +100,7 @@
 	justify-content: center;
 	width: 25px;
 	height: 25px;
+	transition: color 0.2s ease;
 }
 
 .mh-featured-services__icon svg {
@@ -92,16 +109,13 @@
 	height: 25px;
 }
 
-.mh-featured-services__item:hover,
-.mh-featured-services__item.is-active {
+.mh-featured-services__item:hover {
 	background: linear-gradient(90deg, #004a75 0%, #008bdb 100%);
 	color: #fff;
 }
 
 .mh-featured-services__item:hover .mh-featured-services__number,
-.mh-featured-services__item:hover .mh-featured-services__title,
-.mh-featured-services__item.is-active .mh-featured-services__number,
-.mh-featured-services__item.is-active .mh-featured-services__title {
+.mh-featured-services__item:hover .mh-featured-services__title {
 	color: #fff;
 }
 
@@ -117,7 +131,16 @@
 	}
 
 	.mh-featured-services__preview {
-		aspect-ratio: 16 / 10;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 500 / 596;
+	}
+
+	.mh-featured-services__image {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	.mh-featured-services__item {

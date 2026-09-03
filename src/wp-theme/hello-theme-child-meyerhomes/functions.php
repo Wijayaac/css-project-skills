@@ -135,6 +135,14 @@ function hello_elementor_child_scripts_styles() {
 		true
 	);
 
+	wp_enqueue_script(
+		'hello-elementor-child-header-scroll',
+		get_stylesheet_directory_uri() . '/assets/js/header-scroll.js',
+		array(),
+		HELLO_ELEMENTOR_CHILD_VERSION,
+		true
+	);
+
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
 
