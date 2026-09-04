@@ -49,6 +49,11 @@ if ( file_exists( $mh_featured_services_shortcode_file ) ) {
 	require_once $mh_featured_services_shortcode_file;
 }
 
+$mh_elementor_widgets_file = get_stylesheet_directory() . '/inc/elementor/class-widgets-loader.php';
+if ( file_exists( $mh_elementor_widgets_file ) ) {
+	require_once $mh_elementor_widgets_file;
+}
+
 /**
  * Detect whether the current request needs review assets.
  *
@@ -110,6 +115,100 @@ function mh_featured_services_should_enqueue_assets() {
 
 	return false;
 }
+
+
+/**
+ * Register ACF FAQ accordion script for Elementor widget dependency.
+ *
+ * @return void
+ */
+function mh_acf_faq_register_scripts() {
+	wp_register_script(
+		'mh-acf-faq-accordion',
+		get_stylesheet_directory_uri() . '/assets/js/acf-faq-accordion.js',
+		array(),
+		HELLO_ELEMENTOR_CHILD_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mh_acf_faq_register_scripts', 5 );
+add_action( 'elementor/frontend/after_register_scripts', 'mh_acf_faq_register_scripts' );
+
+/**
+ * Register service-details stylesheet (widgets declare it via get_style_depends).
+ *
+ * @return void
+ */
+function mh_service_details_register_styles() {
+	wp_register_style(
+		'mh-service-details',
+		get_stylesheet_directory_uri() . '/assets/css/service-details.css',
+		array( 'hello-elementor-child-style' ),
+		HELLO_ELEMENTOR_CHILD_VERSION
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mh_service_details_register_styles', 5 );
+add_action( 'elementor/frontend/after_register_styles', 'mh_service_details_register_styles' );
+
+/**
+ * Detect whether the current request needs service-details CSS.
+ *
+ * Primary: singular `service` CPT. Fallback: Elementor data contains related
+ * CSS classes or custom widgets (covers reuse outside the CPT).
+ *
+ * @return bool
+ */
+function mh_service_details_should_enqueue_assets() {
+	if ( is_singular( 'service' ) ) {
+		return true;
+	}
+
+	if ( ! is_singular() ) {
+		return false;
+	}
+
+	$post = get_post();
+	if ( ! $post instanceof WP_Post ) {
+		return false;
+	}
+
+	$elementor_data = get_post_meta( $post->ID, '_elementor_data', true );
+	if ( ! is_string( $elementor_data ) || $elementor_data === '' ) {
+		return false;
+	}
+
+	$markers = array(
+		'carousel-faded',
+		'container-accordion-align',
+		'container-numbering-items',
+		'mh_acf_faq_accordion',
+		'mh_acf_image_list_badge',
+		'mh-faq-accordion',
+		'mh-image-list-badge',
+	);
+
+	foreach ( $markers as $marker ) {
+		if ( str_contains( $elementor_data, $marker ) ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+/**
+ * Enqueue service-details CSS when needed on the frontend.
+ *
+ * @return void
+ */
+function mh_service_details_enqueue_assets() {
+	if ( ! mh_service_details_should_enqueue_assets() ) {
+		return;
+	}
+
+	wp_enqueue_style( 'mh-service-details' );
+}
+add_action( 'wp_enqueue_scripts', 'mh_service_details_enqueue_assets', 30 );
 
 /**
  * Load child theme scripts & styles.

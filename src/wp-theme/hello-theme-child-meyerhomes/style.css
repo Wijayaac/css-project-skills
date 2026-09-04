@@ -270,119 +270,61 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2300243d' d='M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m-2 19.59l-5-5L10.59 15L14 18.41L21.41 11l1.596 1.586Z'/%3E%3Cpath fill='none' d='m14 21.591l-5-5L10.591 15L14 18.409L21.41 11l1.595 1.585z'/%3E%3C/svg%3E");
 }
 
-/* --------------------------------------------------------------------------
-   Numbered accordion (.container-accordion-align)
-   Nested Accordion widget. Title format:
-   <span class="accordion-num">01</span> Initial Consultation
-   -------------------------------------------------------------------------- */
-
-.container-accordion-align {
-	--accordion-num-width: 2.5rem;
-	--accordion-content-gap: 10.5rem;
-	--accordion-row-padding-y: 1.25rem;
-	--accordion-divider: rgba(0, 36, 61, 0.15);
+/* Two-column list (.two-column / .two-columns)
+   CSS columns for .custom-list. Items flow top→bottom per column.
+   For row-wise (L,R,L,R) HTML order matching Figma, grid is used by default;
+   add .column-list to force native CSS columns instead. */
+.custom-list.two-column ul,
+.custom-list.two-columns ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 2.5rem;
+	row-gap: 1em;
 }
 
-.container-accordion-align .e-n-accordion {
-	display: flex;
-	flex-direction: column;
-	gap: 0;
+.custom-list.two-column.column-list ul,
+.custom-list.two-columns.column-list ul {
+	display: block;
+	columns: 2;
+	column-gap: 2.5rem;
 }
 
-.container-accordion-align .e-n-accordion-item {
-	border-bottom: 1px solid var(--accordion-divider);
+.custom-list.two-column.column-list ul li,
+.custom-list.two-columns.column-list ul li {
+	break-inside: avoid;
+	margin-bottom: 1em;
 }
 
-.container-accordion-align .e-n-accordion-item-title {
-	display: flex;
-	align-items: center;
-	gap: var(--accordion-content-gap);
-	padding: var(--accordion-row-padding-y) 0;
-	list-style: none;
-	border: 0;
-	border-bottom: 0 !important;
+.custom-list.two-column.column-list ul li:last-child,
+.custom-list.two-columns.column-list ul li:last-child {
+	margin-bottom: 0;
 }
 
-.container-accordion-align .e-n-accordion-item[open] .e-n-accordion-item-title {
-	align-items: flex-start;
-	padding-bottom: 0.75rem;
-}
-
-.container-accordion-align .e-n-accordion-item-title-header {
-	flex: 1;
-	min-width: 0;
-}
-
-.container-accordion-align .e-n-accordion-item-title-text {
-	display: flex;
-	align-items: baseline;
-	gap: var(--accordion-content-gap);
-}
-
-.container-accordion-align .e-n-accordion-item-title-text .accordion-num,
-.container-accordion-align .e-n-accordion-item-title-text>span:first-child {
-	flex: 0 0 var(--accordion-num-width);
-}
-
-.container-accordion-align .e-n-accordion-item-title-icon {
-	flex-shrink: 0;
-	margin-top: 0.15em;
-}
-
-.container-accordion-align .e-n-accordion-item-title-icon svg {
-	width: 0.85em;
-	height: 0.85em;
-}
-
-/* Body aligns with title column, not the number */
-.container-accordion-align .e-n-accordion-item>.e-con {
-	padding-left: calc(var(--accordion-num-width) + var(--accordion-content-gap));
-	padding-top: 0;
-	padding-bottom: var(--accordion-row-padding-y);
-	border: 0;
-	border-top: 0 !important;
-}
-
-.container-accordion-align .e-n-accordion-item>.e-con p {
-	margin: 0;
-}
-
-.container-accordion-align .e-n-accordion-item>.e-con .e-con-inner {
-	padding: 0;
+/* Brown list icons (.brown) — solid rounded #8D5E40 */
+.custom-list.brown ul li::before {
+	background-image: none;
+	background-color: var(--e-global-color-bf8f894, #8D5E40);
+	border-radius: 50%;
+	width: 0.55em;
+	height: 0.55em;
+	margin-top: 0.45em;
 }
 
 @media (max-width: 767px) {
 
-	.container-accordion-align {
-		--accordion-num-width: 2rem;
-		--accordion-content-gap: 1rem;
+	.custom-list.two-column ul,
+	.custom-list.two-columns ul {
+		display: flex;
+		flex-direction: column;
+		columns: auto;
+		grid-template-columns: none;
+		gap: 1em;
 	}
-}
 
-/* --------------------------------------------------------------------------
-   Loop grid numbering (.container-numbering-items)
-   Leave "0" in the .numbering-order heading widget — CSS replaces it.
-   -------------------------------------------------------------------------- */
-
-.container-numbering-items {
-	counter-reset: service-item;
-}
-
-.container-numbering-items .e-loop-item {
-	counter-increment: service-item;
-}
-
-.container-numbering-items .numbering-order .elementor-heading-title {
-	position: relative;
-	visibility: hidden;
-}
-
-.container-numbering-items .numbering-order .elementor-heading-title::before {
-	content: counter(service-item, decimal-leading-zero);
-	position: absolute;
-	top: 0;
-	left: 0;
-	visibility: visible;
+	.custom-list.two-column.column-list ul li,
+	.custom-list.two-columns.column-list ul li {
+		margin-bottom: 0;
+	}
 }
 
 /* --------------------------------------------------------------------------
@@ -402,3 +344,4 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 		transition-duration: 0.01ms;
 	}
 }
+

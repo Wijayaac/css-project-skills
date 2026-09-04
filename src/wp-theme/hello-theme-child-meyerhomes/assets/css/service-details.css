@@ -1,0 +1,653 @@
+/* --------------------------------------------------------------------------
+   Service details page styles
+   Loaded only on singular `service` posts (or when related widgets/classes
+   appear in Elementor data). Keeps style.css lean for the rest of the site.
+
+   Includes:
+   - .carousel-faded
+   - .container-accordion-align
+   - .container-numbering-items
+   - .mh-faq-accordion
+   - .mh-image-list-badge
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   Faded image carousel (.carousel-faded)
+   Soft edge fade + center-hero scale. Add class to the carousel container.
+   Design sizes: big 319×375, small 249×292 (same ~0.85 ratio).
+   Side slides use scale(249/319); center slide stays scale(1).
+   With slides_to_show: 5 (no centeredSlides), Swiper marks the LEFTMOST as
+   .swiper-slide-active — so the visual center is active + 2 siblings.
+   -------------------------------------------------------------------------- */
+
+.carousel-faded {
+	--carousel-fade-color: #ffffff;
+	--carousel-fade-size: clamp(64px, 12%, 160px);
+	--carousel-ratio: 319 / 375;
+	--carousel-scale-sm: calc(249 / 319);
+	/* ≈ 0.781 */
+	--carousel-scale-duration: 0.5s;
+	--carousel-hero-gap: 26px;
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel-faded::before,
+.carousel-faded::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: var(--carousel-fade-size);
+	z-index: 2;
+	pointer-events: none;
+}
+
+.carousel-faded::before {
+	left: 0;
+	background: linear-gradient(to right,
+			var(--carousel-fade-color) 0%,
+			rgba(255, 255, 255, 0.95) 45%,
+			rgba(255, 255, 255, 0) 100%);
+}
+
+.carousel-faded::after {
+	right: 0;
+	background: linear-gradient(to left,
+			var(--carousel-fade-color) 0%,
+			rgba(255, 255, 255, 0.95) 45%,
+			rgba(255, 255, 255, 0) 100%);
+}
+
+.carousel-faded .elementor-widget-image-carousel,
+.carousel-faded.elementor-widget-image-carousel {
+	overflow: hidden;
+}
+
+.carousel-faded .swiper-wrapper {
+	align-items: center;
+}
+
+.carousel-faded .swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	overflow: visible;
+}
+
+/* Scale the inner figure — never the slide itself (Swiper owns that transform) */
+.carousel-faded .swiper-slide-inner {
+	aspect-ratio: var(--carousel-ratio);
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	transform: scale(var(--carousel-scale-sm));
+	transform-origin: center center;
+	transition: transform var(--carousel-scale-duration) ease;
+	will-change: transform;
+}
+
+.carousel-faded .swiper-slide-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/*
+ * Hero gap without shifting center:
+ * Asymmetric margins pushed the hero right. Instead, nudge neighbors
+ * outward with translateX — layout/Swiper stay centered, 26px clear each side.
+ */
+/* Desktop 5-up: active = leftmost → hero = active+2 */
+.carousel-faded .swiper-slide-active+.swiper-slide .swiper-slide-inner {
+	transform: scale(var(--carousel-scale-sm)) translateX(calc(-1 * var(--carousel-hero-gap)));
+}
+
+.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide {
+	z-index: 1;
+}
+
+.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide .swiper-slide-inner {
+	transform: scale(1);
+}
+
+.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide+.swiper-slide .swiper-slide-inner {
+	transform: scale(var(--carousel-scale-sm)) translateX(var(--carousel-hero-gap));
+}
+
+@media (max-width: 1024px) {
+
+	/* Reset 5-up nudges */
+	.carousel-faded .swiper-slide-active+.swiper-slide .swiper-slide-inner,
+	.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide .swiper-slide-inner,
+	.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide+.swiper-slide .swiper-slide-inner {
+		transform: scale(var(--carousel-scale-sm));
+	}
+
+	.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide {
+		z-index: auto;
+	}
+
+	/* 3-up: hero = active+1 */
+	.carousel-faded .swiper-slide-active .swiper-slide-inner {
+		transform: scale(var(--carousel-scale-sm)) translateX(calc(-1 * var(--carousel-hero-gap)));
+	}
+
+	.carousel-faded .swiper-slide-active+.swiper-slide {
+		z-index: 1;
+	}
+
+	.carousel-faded .swiper-slide-active+.swiper-slide .swiper-slide-inner {
+		transform: scale(1);
+	}
+
+	.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide .swiper-slide-inner {
+		transform: scale(var(--carousel-scale-sm)) translateX(var(--carousel-hero-gap));
+	}
+}
+
+@media (max-width: 767px) {
+	.carousel-faded {
+		--carousel-fade-size: clamp(32px, 10%, 80px);
+		--carousel-hero-gap: 0px;
+	}
+
+	.carousel-faded .swiper-slide-active .swiper-slide-inner,
+	.carousel-faded .swiper-slide-active+.swiper-slide .swiper-slide-inner,
+	.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide .swiper-slide-inner {
+		transform: scale(var(--carousel-scale-sm));
+	}
+
+	.carousel-faded .swiper-slide-active+.swiper-slide {
+		z-index: auto;
+	}
+
+	.carousel-faded .swiper-slide-active {
+		z-index: 1;
+	}
+
+	.carousel-faded .swiper-slide-active .swiper-slide-inner {
+		transform: scale(1);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.carousel-faded .swiper-slide-inner {
+		transition: none;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Numbered accordion (.container-accordion-align)
+   Nested Accordion widget. Title format:
+   <span class="accordion-num">01</span> Initial Consultation
+   -------------------------------------------------------------------------- */
+
+.container-accordion-align {
+	--accordion-num-width: 2.5rem;
+	--accordion-content-gap: 10.5rem;
+	--accordion-row-padding-y: 1.25rem;
+	--accordion-divider: rgba(0, 36, 61, 0.15);
+}
+
+.container-accordion-align .e-n-accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.container-accordion-align .e-n-accordion-item {
+	border-bottom: 1px solid var(--accordion-divider);
+}
+
+.container-accordion-align .e-n-accordion-item-title {
+	display: flex;
+	align-items: center;
+	gap: var(--accordion-content-gap);
+	padding: var(--accordion-row-padding-y) 0;
+	list-style: none;
+	border: 0;
+	border-bottom: 0 !important;
+}
+
+.container-accordion-align .e-n-accordion-item[open] .e-n-accordion-item-title {
+	align-items: flex-start;
+	padding-bottom: 0.75rem;
+}
+
+.container-accordion-align .e-n-accordion-item-title-header {
+	flex: 1;
+	min-width: 0;
+}
+
+.container-accordion-align .e-n-accordion-item-title-text {
+	display: flex;
+	align-items: baseline;
+	gap: var(--accordion-content-gap);
+}
+
+.container-accordion-align .e-n-accordion-item-title-text .accordion-num,
+.container-accordion-align .e-n-accordion-item-title-text>span:first-child {
+	flex: 0 0 var(--accordion-num-width);
+}
+
+.container-accordion-align .e-n-accordion-item-title-icon {
+	flex-shrink: 0;
+	margin-top: 0.15em;
+}
+
+.container-accordion-align .e-n-accordion-item-title-icon svg {
+	width: 0.85em;
+	height: 0.85em;
+}
+
+/* Body aligns with title column, not the number */
+.container-accordion-align .e-n-accordion-item>.e-con {
+	padding-left: calc(var(--accordion-num-width) + var(--accordion-content-gap));
+	padding-top: 0;
+	padding-bottom: var(--accordion-row-padding-y);
+	border: 0;
+	border-top: 0 !important;
+}
+
+.container-accordion-align .e-n-accordion-item>.e-con p {
+	margin: 0;
+}
+
+.container-accordion-align .e-n-accordion-item>.e-con .e-con-inner {
+	padding: 0;
+}
+
+@media (max-width: 767px) {
+
+	.container-accordion-align {
+		--accordion-num-width: 2rem;
+		--accordion-content-gap: 1rem;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Loop grid numbering (.container-numbering-items)
+   Leave "0" in the .numbering-order heading widget — CSS replaces it.
+   -------------------------------------------------------------------------- */
+
+.container-numbering-items {
+	counter-reset: service-item;
+}
+
+.container-numbering-items .e-loop-item {
+	counter-increment: service-item;
+}
+
+.container-numbering-items .numbering-order .elementor-heading-title {
+	position: relative;
+	visibility: hidden;
+}
+
+.container-numbering-items .numbering-order .elementor-heading-title::before {
+	content: counter(service-item, decimal-leading-zero);
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: visible;
+}
+/* --------------------------------------------------------------------------
+   ACF FAQ Accordion widget (.mh-faq-accordion)
+   Height is animated via JS (scrollHeight → px) + CSS transition.
+   -------------------------------------------------------------------------- */
+
+.mh-faq-accordion {
+	--faq-divider: rgba(0, 36, 61, 0.15);
+	--faq-row-padding-y: 1.5rem;
+	--faq-answer-gap: 0.75rem;
+	--faq-animation-duration: 400ms;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	width: 100%;
+}
+
+.mh-faq-accordion .mh-faq-accordion__item,
+.mh-faq-accordion .e-n-accordion-item {
+	margin: 0;
+	border: 0;
+	border-bottom: 1px solid var(--faq-divider);
+	padding-bottom: 20px;
+}
+
+.mh-faq-accordion .mh-faq-accordion__trigger,
+.mh-faq-accordion .e-n-accordion-item-title,
+.mh-faq-accordion .mh-faq-accordion__trigger:focus,
+.mh-faq-accordion .mh-faq-accordion__trigger:active,
+.mh-faq-accordion .mh-faq-accordion__trigger:hover {
+	display: flex !important;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1.25rem;
+	width: 100%;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: var(--faq-row-padding-y);
+	padding-bottom: 4px;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.mh-faq-accordion .e-n-accordion-item-title-header {
+	flex: 1 1 auto;
+	min-width: 0;
+	padding-right: 0.25rem;
+}
+
+.mh-faq-accordion .e-n-accordion-item-title-text {
+	display: block;
+	overflow-wrap: anywhere;
+}
+
+/* Reserved icon slot on the right — never overlaps heading. */
+.mh-faq-accordion .e-n-accordion-item-title-icon {
+	position: relative;
+	flex: 0 0 1em;
+	width: 1em;
+	height: 1em;
+	margin-top: 0.2em;
+	margin-left: auto;
+	display: block;
+	color: var(--e-global-color-bf8f894, #8D5E40);
+}
+
+.mh-faq-accordion .e-n-accordion-item-title-icon .e-opened,
+.mh-faq-accordion .e-n-accordion-item-title-icon .e-closed {
+	position: absolute;
+	inset: 0;
+	display: block;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.mh-faq-accordion .mh-faq-accordion__item:not(.is-open) .e-n-accordion-item-title-icon .e-closed,
+.mh-faq-accordion .mh-faq-accordion__item.is-open .e-n-accordion-item-title-icon .e-opened {
+	opacity: 1;
+	visibility: visible;
+}
+
+.mh-faq-accordion .e-n-accordion-item-title-icon svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	fill: currentColor;
+}
+
+/* Height shell — JS sets height in px; CSS transitions it. */
+.mh-faq-accordion .mh-faq-accordion__panel {
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	transition: height var(--faq-animation-duration) ease;
+}
+
+.mh-faq-accordion .mh-faq-accordion__panel-inner {
+	padding: var(--faq-answer-gap) 0 0;
+	max-width: none;
+}
+
+.mh-faq-accordion__answer {
+	color: var(--e-global-color-text, #333333);
+}
+
+.mh-faq-accordion__answer>*:first-child {
+	margin-top: 0;
+}
+
+.mh-faq-accordion__answer>*:last-child {
+	margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.mh-faq-accordion {
+		--faq-animation-duration: 0ms;
+	}
+
+	.mh-faq-accordion .mh-faq-accordion__panel {
+		transition: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.mh-faq-accordion {
+		--faq-row-padding-y: 1.25rem;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   ACF Image List Badge widget (.mh-image-list-badge)
+   Central image with floating checklist badges left / right.
+   -------------------------------------------------------------------------- */
+
+.mh-image-list-badge {
+	--mh-image-width: 340px;
+	--mh-badge-overlap: 48px;
+	--mh-badge-gap: 1.25rem;
+	/* Base nudge unit — scale all stagger offsets from one value. */
+	--mh-badge-nudge: 2.75rem;
+	width: 100%;
+	max-width: 1100px;
+	margin-inline: auto;
+}
+
+.mh-image-list-badge__stage {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(var(--mh-image-width) * 1.25);
+}
+
+.mh-image-list-badge__media {
+	position: relative;
+	z-index: 1;
+	width: var(--mh-image-width);
+	max-width: 42%;
+	flex-shrink: 0;
+}
+
+.mh-image-list-badge__media img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	aspect-ratio: 3 / 4;
+}
+
+.mh-image-list-badge__media-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 3 / 4;
+	padding: 1rem;
+	background: #f3f4f6;
+	color: #6b7280;
+	text-align: center;
+	font-size: 0.875rem;
+}
+
+.mh-image-list-badge__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mh-image-list-badge__list--left,
+.mh-image-list-badge__list--right {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: var(--mh-badge-gap);
+	width: max-content;
+	max-width: 100%;
+}
+
+.mh-image-list-badge__list--left {
+	right: calc(50% + (var(--mh-image-width) / 2) - var(--mh-badge-overlap));
+	align-items: flex-end;
+	text-align: left;
+}
+
+.mh-image-list-badge__list--right {
+	left: calc(50% + (var(--mh-image-width) / 2) - var(--mh-badge-overlap));
+	align-items: flex-start;
+	text-align: left;
+}
+
+/*
+ * Figma zig-zag (not a straight column / not a progressive V):
+ *   Left:  out → in → out   (positive X = toward image)
+ *   Right: in  → out → in   (negative X = toward image)
+ */
+.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(1) {
+	transform: translateX(calc(var(--mh-badge-nudge) * 0.2));
+}
+
+.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(2) {
+	transform: translateX(calc(var(--mh-badge-nudge) * 1.15));
+}
+
+.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(3) {
+	transform: translateX(calc(var(--mh-badge-nudge) * 1.5));
+}
+
+.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(1) {
+	transform: translateX(calc(var(--mh-badge-nudge) * -0.95));
+}
+
+.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(2) {
+	transform: translateX(calc(var(--mh-badge-nudge) * -0.65));
+}
+
+.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(3) {
+	transform: translateX(calc(var(--mh-badge-nudge) * 0));
+}
+
+.mh-image-list-badge__item {
+	margin: 0;
+	padding: 0;
+}
+
+.mh-image-list-badge__badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.65rem;
+	max-width: 100%;
+	padding: 0.55rem 1.1rem 0.55rem 0.55rem;
+	border: 1px solid rgba(0, 36, 61, 0.12);
+	border-radius: 999px;
+	background-color: #fff;
+	box-shadow: 0 4px 18px rgba(0, 36, 61, 0.08);
+	box-sizing: border-box;
+}
+
+.mh-image-list-badge__icon {
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background-color: #00243d;
+	color: #fff;
+	line-height: 1;
+}
+
+.mh-image-list-badge__icon i,
+.mh-image-list-badge__icon svg {
+	display: block;
+	width: 12px;
+	height: 12px;
+	font-size: 12px;
+	fill: currentColor;
+}
+
+.mh-image-list-badge__label {
+	display: block;
+	min-width: 0;
+	color: var(--e-global-color-text, #00243d);
+	font-size: 0.9375rem;
+	font-weight: 500;
+	line-height: 1.3;
+	white-space: normal;
+}
+
+@media (max-width: 1024px) {
+	.mh-image-list-badge {
+		--mh-image-width: 280px;
+		--mh-badge-overlap: 36px;
+	}
+
+	.mh-image-list-badge__list--left,
+	.mh-image-list-badge__list--right {
+		max-width: min(260px, calc(50% - (var(--mh-image-width) / 2) + var(--mh-badge-overlap) + 0.5rem));
+	}
+}
+
+@media (max-width: 767px) {
+	.mh-image-list-badge {
+		--mh-image-width: min(280px, 72vw);
+	}
+
+	.mh-image-list-badge__stage {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.75rem;
+		min-height: 0;
+	}
+
+	.mh-image-list-badge__media {
+		order: 1;
+		max-width: var(--mh-image-width);
+		width: var(--mh-image-width);
+		margin-inline: auto;
+	}
+
+	.mh-image-list-badge__list--left,
+	.mh-image-list-badge__list--right {
+		position: static;
+		order: 2;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		width: 100%;
+		max-width: 100%;
+		align-items: stretch;
+		justify-content: flex-start;
+		gap: 0.75rem;
+	}
+
+	.mh-image-list-badge__list--left .mh-image-list-badge__item,
+	.mh-image-list-badge__list--right .mh-image-list-badge__item {
+		transform: none;
+	}
+
+	.mh-image-list-badge__badge {
+		display: flex;
+		width: 100%;
+	}
+}
