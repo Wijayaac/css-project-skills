@@ -10,12 +10,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Default parallax speeds per column.
+ * Default relative speed weights per column (kept for markup hooks).
  *
  * @return float[]
  */
 function mh_reviews_default_speeds() {
-	return array( 0.12, 0.22, 0.18, 0.28 );
+	return array( 1, 1, 1, 1 );
 }
 
 /**
@@ -90,8 +90,8 @@ function mh_reviews_shortcode( $atts ) {
 		array(
 			'columns' => '4',
 			'limit'   => '-1',
-			'orderby' => 'date',
-			'order'   => 'DESC',
+			'orderby' => 'menu_order',
+			'order'   => 'ASC',
 		),
 		$atts,
 		'meyer_reviews'
@@ -124,18 +124,20 @@ function mh_reviews_shortcode( $atts ) {
 
 	ob_start();
 	?>
-	<section class="mh-reviews" data-mh-reviews>
-		<div class="mh-reviews__columns mh-reviews__columns--<?php echo esc_attr( (string) $columns ); ?>">
-			<?php foreach ( $column_groups as $column_index => $column_posts ) : ?>
-				<?php
-				$speed = $speeds[ $column_index % count( $speeds ) ];
-				?>
-				<div class="mh-reviews__col" data-speed="<?php echo esc_attr( (string) $speed ); ?>">
-					<?php foreach ( $column_posts as $post ) : ?>
-						<?php echo mh_reviews_render_card( $post ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-					<?php endforeach; ?>
-				</div>
-			<?php endforeach; ?>
+	<section class="mh-reviews" data-mh-reviews style="--mh-reviews-visible: 3.8">
+		<div class="mh-reviews__viewport">
+			<div class="mh-reviews__track">
+				<?php foreach ( $column_groups as $column_index => $column_posts ) : ?>
+					<?php
+					$speed = $speeds[ $column_index % count( $speeds ) ];
+					?>
+					<div class="mh-reviews__col" data-speed="<?php echo esc_attr( (string) $speed ); ?>">
+						<?php foreach ( $column_posts as $post ) : ?>
+							<?php echo mh_reviews_render_card( $post ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php endforeach; ?>
+					</div>
+				<?php endforeach; ?>
+			</div>
 		</div>
 	</section>
 	<?php

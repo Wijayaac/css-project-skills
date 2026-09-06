@@ -1,112 +1,260 @@
+/**
+ * Testimonials — horizontal marquee (≈3.8 columns visible).
+ * Continuous scroll; page-scroll velocity gives a temporary speed boost.
+ */
 (function () {
-	"use strict";
+  "use strict";
 
-	var sections = document.querySelectorAll("[data-mh-reviews]");
-	if (!sections.length) {
-		return;
-	}
+  // Tunable knobs — raise VELOCITY_SCALE / MAX_BOOST if scroll boost feels weak.
+  var BASE_SPEED = 0.5; // idle marquee px/frame (~30px/s)
+  var MAX_BOOST = 8; // max extra px/frame while scrolling (BASE + this)
+  var BOOST_DECAY = 0.965; // closer to 1 = boost lasts longer
+  var VELOCITY_SCALE = 1.5; // how hard page-scroll pushes the marquee
 
-	if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-		return;
-	}
+  var instances = [];
+  var scrollBound = false;
+  var resizeBound = false;
+  var rafId = 0;
+  var running = false;
+  var scrollBoost = 0;
+  var lastScrollY = 0;
+  var lastScrollTs = 0;
 
-	var mobileQuery = window.matchMedia("(max-width: 640px)");
-	var maxOffset = 120;
-	var activeSections = new Set();
-	var ticking = false;
+  function prefersReducedMotion() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
 
-	function getSectionProgress(section) {
-		var rect = section.getBoundingClientRect();
-		var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-		var total = rect.height + viewportHeight;
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
 
-		if (total <= 0) {
-			return 0;
-		}
+  function getScrollY() {
+    if (window.lenis && typeof window.lenis.scroll === "number") {
+      return window.lenis.scroll;
+    }
+    return window.scrollY || window.pageYOffset || 0;
+  }
 
-		var progress = (viewportHeight - rect.top) / total;
-		return Math.min(1, Math.max(0, progress));
-	}
+  function getScrollVelocity() {
+    if (window.lenis && typeof window.lenis.velocity === "number") {
+      return window.lenis.velocity;
+    }
+    return 0;
+  }
 
-	function updateSection(section) {
-		var progress = getSectionProgress(section);
-		var columns = section.querySelectorAll(".mh-reviews__col");
+  function duplicateTrack(track) {
+    if (track.getAttribute("data-mh-marquee-cloned") === "1") {
+      return;
+    }
 
-		columns.forEach(function (column) {
-			var speed = parseFloat(column.getAttribute("data-speed") || "0");
-			var offset = progress * speed * maxOffset;
+    var children = Array.prototype.slice.call(track.children);
+    if (!children.length) {
+      return;
+    }
 
-			column.style.transform = "translate3d(0, " + offset + "px, 0)";
-		});
-	}
+    children.forEach(function (child) {
+      var clone = child.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+    });
 
-	function updateActiveSections() {
-		activeSections.forEach(function (section) {
-			updateSection(section);
-		});
-		ticking = false;
-	}
+    track.setAttribute("data-mh-marquee-cloned", "1");
+  }
 
-	function requestTick() {
-		if (!ticking) {
-			ticking = true;
-			window.requestAnimationFrame(updateActiveSections);
-		}
-	}
+  function measureHalf(track) {
+    // After cloning, half the scroll width is one full set.
+    return track.scrollWidth / 2;
+  }
 
-	function bindSection(section) {
-		if (mobileQuery.matches) {
-			section.querySelectorAll(".mh-reviews__col").forEach(function (column) {
-				column.style.transform = "";
-			});
-			return;
-		}
+  function createInstance(section) {
+    var viewport = section.querySelector(".mh-reviews__viewport");
+    var track = section.querySelector(".mh-reviews__track");
 
-		var observer = new IntersectionObserver(
-			function (entries) {
-				entries.forEach(function (entry) {
-					if (entry.isIntersecting) {
-						activeSections.add(section);
-						updateSection(section);
-					} else {
-						activeSections.delete(section);
-					}
-				});
-			},
-			{
-				root: null,
-				rootMargin: "20% 0px 20% 0px",
-				threshold: 0,
-			}
-		);
+    if (!viewport || !track) {
+      return null;
+    }
 
-		observer.observe(section);
-		activeSections.add(section);
-		updateSection(section);
-	}
+    if (section.getAttribute("data-marquee") === "off" || prefersReducedMotion()) {
+      return null;
+    }
 
-	sections.forEach(bindSection);
+    duplicateTrack(track);
 
-	window.addEventListener(
-		"scroll",
-		function () {
-			if (!mobileQuery.matches) {
-				requestTick();
-			}
-		},
-		{ passive: true }
-	);
+    return {
+      section: section,
+      viewport: viewport,
+      track: track,
+      offset: 0,
+      half: measureHalf(track),
+    };
+  }
 
-	window.addEventListener("resize", function () {
-		if (mobileQuery.matches) {
-			activeSections.forEach(function (section) {
-				section.querySelectorAll(".mh-reviews__col").forEach(function (column) {
-					column.style.transform = "";
-				});
-			});
-			return;
-		}
+  function onScrollBoost() {
+    var now = performance.now();
+    var y = getScrollY();
+    var lenisVelocity = Math.abs(getScrollVelocity());
+    var deltaVelocity = 0;
 
-		requestTick();
-	});
+    if (lastScrollTs) {
+      var dt = Math.max(8, now - lastScrollTs);
+      deltaVelocity = (Math.abs(y - lastScrollY) / dt) * 16.67;
+    }
+
+    lastScrollY = y;
+    lastScrollTs = now;
+
+    // Use whichever reading is stronger (Lenis can report tiny mid-lerp values).
+    var velocity = Math.max(lenisVelocity, deltaVelocity);
+    var boost = velocity * VELOCITY_SCALE;
+    scrollBoost = clamp(Math.max(scrollBoost, boost), 0, MAX_BOOST);
+    startLoop();
+  }
+
+  function tick() {
+    if (prefersReducedMotion() || !instances.length) {
+      running = false;
+      rafId = 0;
+      return;
+    }
+
+    // Additive boost: idle = BASE_SPEED, scrolling adds up to MAX_BOOST px/frame.
+    var speed = BASE_SPEED + scrollBoost;
+    scrollBoost *= BOOST_DECAY;
+    if (scrollBoost < 0.01) {
+      scrollBoost = 0;
+    }
+
+    instances.forEach(function (instance) {
+      if (!instance.half) {
+        return;
+      }
+
+      instance.offset -= speed;
+      if (Math.abs(instance.offset) >= instance.half) {
+        instance.offset += instance.half;
+      }
+
+      instance.track.style.transform = "translate3d(" + instance.offset.toFixed(2) + "px, 0, 0)";
+    });
+
+    rafId = window.requestAnimationFrame(tick);
+  }
+
+  function startLoop() {
+    if (running) {
+      return;
+    }
+    running = true;
+    rafId = window.requestAnimationFrame(tick);
+  }
+
+  function stopLoop() {
+    if (rafId) {
+      window.cancelAnimationFrame(rafId);
+    }
+    running = false;
+    rafId = 0;
+  }
+
+  function remeasure() {
+    instances.forEach(function (instance) {
+      instance.half = measureHalf(instance.track);
+      if (instance.half > 0 && Math.abs(instance.offset) >= instance.half) {
+        instance.offset = instance.offset % instance.half;
+      }
+    });
+  }
+
+  function ensureListeners() {
+    if (!scrollBound) {
+      scrollBound = true;
+      window.addEventListener("scroll", onScrollBoost, { passive: true });
+
+      function bindLenis(lenis) {
+        if (!lenis || typeof lenis.on !== "function") {
+          return;
+        }
+        lenis.on("scroll", onScrollBoost);
+      }
+
+      if (window.lenis) {
+        bindLenis(window.lenis);
+      } else {
+        document.addEventListener("mh-lenis-ready", function (event) {
+          bindLenis(event.detail && event.detail.lenis);
+        });
+      }
+    }
+
+    if (!resizeBound) {
+      resizeBound = true;
+      window.addEventListener("resize", function () {
+        remeasure();
+      });
+    }
+  }
+
+  function bindSection(section) {
+    if (section.getAttribute("data-mh-reviews-bound") === "1") {
+      return;
+    }
+    section.setAttribute("data-mh-reviews-bound", "1");
+
+    var instance = createInstance(section);
+    if (!instance) {
+      return;
+    }
+
+    instances.push(instance);
+    ensureListeners();
+    startLoop();
+  }
+
+  function destroyInScope(scope) {
+    var root = scope && scope.querySelectorAll ? scope : document;
+    root.querySelectorAll("[data-mh-reviews]").forEach(function (section) {
+      instances = instances.filter(function (instance) {
+        return instance.section !== section;
+      });
+      section.removeAttribute("data-mh-reviews-bound");
+      var track = section.querySelector(".mh-reviews__track");
+      if (track) {
+        track.style.transform = "";
+        track.removeAttribute("data-mh-marquee-cloned");
+        track.querySelectorAll('[aria-hidden="true"]').forEach(function (node) {
+          node.remove();
+        });
+      }
+    });
+
+    if (!instances.length) {
+      stopLoop();
+    }
+  }
+
+  function init(scope) {
+    var root = scope && scope.querySelectorAll ? scope : document;
+    root.querySelectorAll("[data-mh-reviews]").forEach(bindSection);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      init(document);
+    });
+  } else {
+    init(document);
+  }
+
+  window.addEventListener("elementor/frontend/init", function () {
+    if (!window.elementorFrontend || !elementorFrontend.hooks) {
+      return;
+    }
+    elementorFrontend.hooks.addAction("frontend/element_ready/mh_testimonials_masonry.default", function ($el) {
+      var el = $el && $el[0] ? $el[0] : $el;
+      if (el) {
+        destroyInScope(el);
+        init(el);
+      }
+    });
+  });
 })();

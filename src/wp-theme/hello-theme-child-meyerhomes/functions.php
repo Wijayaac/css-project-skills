@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '2.0.0' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '2.1.2' );
 
 /**
  * Point ACF JSON sync to the child theme.
@@ -55,7 +55,7 @@ if ( file_exists( $mh_elementor_widgets_file ) ) {
 }
 
 /**
- * Detect whether the current request needs review assets.
+ * Detect whether the current request needs review / testimonials assets.
  *
  * @return bool
  */
@@ -78,12 +78,49 @@ function mh_reviews_should_enqueue_assets() {
 	}
 
 	$elementor_data = get_post_meta( $post->ID, '_elementor_data', true );
-	if ( is_string( $elementor_data ) && str_contains( $elementor_data, 'meyer_reviews' ) ) {
-		return true;
+	if ( ! is_string( $elementor_data ) || $elementor_data === '' ) {
+		return false;
+	}
+
+	$markers = array(
+		'meyer_reviews',
+		'mh_testimonials_masonry',
+		'mh-reviews',
+	);
+
+	foreach ( $markers as $marker ) {
+		if ( str_contains( $elementor_data, $marker ) ) {
+			return true;
+		}
 	}
 
 	return false;
 }
+
+/**
+ * Register Testimonials Masonry assets (widget pulls via get_*_depends).
+ *
+ * @return void
+ */
+function mh_reviews_register_assets() {
+	wp_register_style(
+		'mh-reviews',
+		get_stylesheet_directory_uri() . '/assets/css/reviews.css',
+		array( 'hello-elementor-child-style' ),
+		HELLO_ELEMENTOR_CHILD_VERSION
+	);
+
+	wp_register_script(
+		'mh-reviews-scroll',
+		get_stylesheet_directory_uri() . '/assets/js/reviews-scroll.js',
+		array( 'mh-lenis-init' ),
+		HELLO_ELEMENTOR_CHILD_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mh_reviews_register_assets', 5 );
+add_action( 'elementor/frontend/after_register_styles', 'mh_reviews_register_assets' );
+add_action( 'elementor/frontend/after_register_scripts', 'mh_reviews_register_assets' );
 
 /**
  * Detect whether the current request needs featured services assets.
@@ -133,6 +170,47 @@ function mh_acf_faq_register_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'mh_acf_faq_register_scripts', 5 );
 add_action( 'elementor/frontend/after_register_scripts', 'mh_acf_faq_register_scripts' );
+
+/**
+ * Register Project Gallery assets (widget pulls via get_*_depends).
+ *
+ * @return void
+ */
+function mh_project_gallery_register_assets() {
+	wp_register_style(
+		'mh-project-gallery',
+		get_stylesheet_directory_uri() . '/assets/css/project-gallery.css',
+		array( 'hello-elementor-child-style' ),
+		HELLO_ELEMENTOR_CHILD_VERSION
+	);
+
+	wp_register_script(
+		'mh-project-gallery',
+		get_stylesheet_directory_uri() . '/assets/js/project-gallery.js',
+		array(),
+		HELLO_ELEMENTOR_CHILD_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mh_project_gallery_register_assets', 5 );
+add_action( 'elementor/frontend/after_register_styles', 'mh_project_gallery_register_assets' );
+add_action( 'elementor/frontend/after_register_scripts', 'mh_project_gallery_register_assets' );
+
+/**
+ * Register Project Partners assets (widget pulls via get_style_depends).
+ *
+ * @return void
+ */
+function mh_project_partners_register_assets() {
+	wp_register_style(
+		'mh-project-partners',
+		get_stylesheet_directory_uri() . '/assets/css/project-partners.css',
+		array( 'hello-elementor-child-style' ),
+		HELLO_ELEMENTOR_CHILD_VERSION
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mh_project_partners_register_assets', 5 );
+add_action( 'elementor/frontend/after_register_styles', 'mh_project_partners_register_assets' );
 
 /**
  * Register service-details stylesheet (widgets declare it via get_style_depends).
@@ -211,6 +289,39 @@ function mh_service_details_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'mh_service_details_enqueue_assets', 30 );
 
 /**
+ * Register Lenis smooth-scroll assets.
+ *
+ * @return void
+ */
+function mh_lenis_register_assets() {
+	wp_register_style(
+		'mh-lenis',
+		get_stylesheet_directory_uri() . '/assets/css/lenis.css',
+		array( 'hello-elementor-child-style' ),
+		HELLO_ELEMENTOR_CHILD_VERSION
+	);
+
+	wp_register_script(
+		'mh-lenis',
+		get_stylesheet_directory_uri() . '/assets/js/lenis.min.js',
+		array(),
+		HELLO_ELEMENTOR_CHILD_VERSION,
+		true
+	);
+
+	wp_register_script(
+		'mh-lenis-init',
+		get_stylesheet_directory_uri() . '/assets/js/lenis-init.js',
+		array( 'mh-lenis' ),
+		HELLO_ELEMENTOR_CHILD_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'mh_lenis_register_assets', 5 );
+add_action( 'elementor/frontend/after_register_styles', 'mh_lenis_register_assets' );
+add_action( 'elementor/frontend/after_register_scripts', 'mh_lenis_register_assets' );
+
+/**
  * Load child theme scripts & styles.
  *
  * @return void
@@ -226,6 +337,10 @@ function hello_elementor_child_scripts_styles() {
 		HELLO_ELEMENTOR_CHILD_VERSION
 	);
 
+	wp_enqueue_style( 'mh-lenis' );
+	wp_enqueue_script( 'mh-lenis' );
+	wp_enqueue_script( 'mh-lenis-init' );
+
 	wp_enqueue_script(
 		'hello-elementor-child-swiper-offset',
 		get_stylesheet_directory_uri() . '/assets/js/swiper-offset.js',
@@ -237,7 +352,7 @@ function hello_elementor_child_scripts_styles() {
 	wp_enqueue_script(
 		'hello-elementor-child-header-scroll',
 		get_stylesheet_directory_uri() . '/assets/js/header-scroll.js',
-		array(),
+		array( 'mh-lenis-init' ),
 		HELLO_ELEMENTOR_CHILD_VERSION,
 		true
 	);
@@ -273,7 +388,7 @@ function mh_featured_services_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'mh_featured_services_enqueue_assets', 30 );
 
 /**
- * Enqueue review masonry assets when the shortcode is present.
+ * Enqueue review masonry assets when the shortcode / widget is present.
  *
  * @return void
  */
@@ -282,19 +397,7 @@ function mh_reviews_enqueue_assets() {
 		return;
 	}
 
-	wp_enqueue_style(
-		'mh-reviews',
-		get_stylesheet_directory_uri() . '/assets/css/reviews.css',
-		array(),
-		HELLO_ELEMENTOR_CHILD_VERSION
-	);
-
-	wp_enqueue_script(
-		'mh-reviews-scroll',
-		get_stylesheet_directory_uri() . '/assets/js/reviews-scroll.js',
-		array(),
-		HELLO_ELEMENTOR_CHILD_VERSION,
-		true
-	);
+	wp_enqueue_style( 'mh-reviews' );
+	wp_enqueue_script( 'mh-reviews-scroll' );
 }
 add_action( 'wp_enqueue_scripts', 'mh_reviews_enqueue_assets', 30 );

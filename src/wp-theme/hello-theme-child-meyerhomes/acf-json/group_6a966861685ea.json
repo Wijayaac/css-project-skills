@@ -3,6 +3,36 @@
   "title": "Projects content",
   "fields": [
     {
+      "key": "field_6a9ac3ff17878",
+      "label": "Listing image size",
+      "name": "listing_image_size",
+      "aria-label": "",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "regular": "Regular ( 1 columns )",
+        "medium": "Medium (2 \/ 3 columns )",
+        "large": "Large ( 1 full row )"
+      },
+      "default_value": "regular",
+      "return_format": "value",
+      "multiple": 0,
+      "allow_null": 0,
+      "allow_in_bindings": 0,
+      "ui": 0,
+      "ajax": 0,
+      "placeholder": "",
+      "create_options": 0,
+      "save_options": 0
+    },
+    {
       "key": "field_6a966862551c5",
       "label": "Project Overview",
       "name": "project_overview",
@@ -216,7 +246,7 @@
       {
         "param": "post_type",
         "operator": "==",
-        "value": "post"
+        "value": "project"
       }
     ]
   ],
@@ -232,5 +262,5 @@
   "display_title": "",
   "allow_ai_access": false,
   "ai_description": "",
-  "modified": 1788242325
+  "modified": 1788528634
 }

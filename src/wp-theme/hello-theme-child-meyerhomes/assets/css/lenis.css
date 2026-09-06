@@ -1,0 +1,38 @@
+/* Lenis smooth scroll — required base styles */
+
+html.lenis,
+html.lenis body {
+	height: auto;
+}
+
+html.lenis {
+	scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+	overflow: clip;
+}
+
+/* Nested scroll surfaces Lenis should ignore */
+.elementor-popup-modal,
+.dialog-message,
+.dialog-lightbox-widget,
+.elementor-lightbox {
+	overflow-y: auto !important;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html.lenis,
+	html.mh-lenis {
+		scroll-behavior: auto;
+	}
+}

@@ -1,0 +1,175 @@
+/**
+ * Project Gallery — filter + size-based CSS grid shell.
+ *
+ * Loop Item look/hover comes from Elementor Loop CSS (same as Loop Grid).
+ * Only size the cell and the root card — never stretch nested panels.
+ *
+ * Spans (12-col): regular=4, medium=8, large=12
+ */
+
+.mh-project-gallery {
+	--mh-gallery-cols: 12;
+	--mh-gallery-row-height: 528px;
+	--mh-span-regular: 4;
+	--mh-span-medium: 8;
+	--mh-span-large: 12;
+	--mh-gallery-filter-radius: 999px;
+	--mh-gallery-filter-border: rgba(255, 255, 255, 0.55);
+	--mh-gallery-filter-color: #ffffff;
+	--mh-gallery-filter-active-bg: var(--e-global-color-secondary, #00243d);
+	--mh-gallery-filter-active-color: #ffffff;
+	width: 100%;
+}
+
+.mh-project-gallery__notice {
+	margin: 0;
+	padding: 1rem;
+	color: inherit;
+	opacity: 0.75;
+}
+
+/* --------------------------------------------------------------------------
+   Filter bar
+   -------------------------------------------------------------------------- */
+
+.mh-project-gallery__filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 28px;
+}
+
+.mh-project-gallery__filter-btn {
+	appearance: none;
+	margin: 0;
+	padding: 0.55em 1.15em;
+	border: 1px solid var(--mh-gallery-filter-border);
+	border-radius: var(--mh-gallery-filter-radius);
+	background: transparent;
+	color: var(--mh-gallery-filter-color);
+	font: inherit;
+	line-height: 1.2;
+	cursor: pointer;
+	transition:
+		background-color 0.2s ease,
+		border-color 0.2s ease,
+		color 0.2s ease;
+}
+
+.mh-project-gallery__filter-btn:hover {
+	border-color: currentColor;
+}
+
+.mh-project-gallery__filter-btn:focus-visible {
+	outline: 2px solid var(--mh-gallery-filter-active-bg);
+	outline-offset: 2px;
+}
+
+.mh-project-gallery__filter-btn.is-active {
+	background-color: var(--mh-gallery-filter-active-bg);
+	border-color: var(--mh-gallery-filter-active-bg);
+	color: var(--mh-gallery-filter-active-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.mh-project-gallery__filter-btn {
+		transition: none;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Grid
+   -------------------------------------------------------------------------- */
+
+.mh-project-gallery__grid {
+	display: grid;
+	grid-template-columns: repeat(var(--mh-gallery-cols), minmax(0, 1fr));
+	gap: 12px;
+	align-items: stretch;
+}
+
+.mh-project-gallery__item {
+	grid-column: span var(--mh-span-regular);
+	min-width: 0;
+	min-height: var(--mh-gallery-row-height);
+}
+
+.mh-project-gallery__item--medium {
+	grid-column: span var(--mh-span-medium);
+}
+
+.mh-project-gallery__item--large {
+	grid-column: span var(--mh-span-large);
+}
+
+.mh-project-gallery__item.is-hidden {
+	display: none;
+}
+
+.mh-project-gallery__item-inner {
+	position: relative;
+	height: 100%;
+	min-height: inherit;
+}
+
+/*
+ * Match Loop Grid “equal height” rule:
+ * only the Loop Item root + its direct .e-con / .card-project fill the cell.
+ * Nested title/hover panels keep Elementor absolute + auto height.
+ */
+.mh-project-gallery__item-inner>.e-loop-item,
+.mh-project-gallery__item-inner>.elementor.e-loop-item {
+	height: 100%;
+	min-height: inherit;
+}
+
+.mh-project-gallery__item-inner .e-loop-item>.e-con,
+.mh-project-gallery__item-inner .e-loop-item>.elementor-section,
+.mh-project-gallery__item-inner .card-project {
+	height: 100%;
+	min-height: inherit;
+	position: relative;
+	overflow: hidden;
+}
+
+.mh-project-gallery__item-inner .card-project>.e-con-inner {
+	height: 100%;
+	position: relative;
+}
+
+.mh-project-gallery__item-inner .card-content-title,
+.mh-project-gallery__item-inner .card-project-content {
+	height: auto;
+	min-height: 0;
+}
+
+/* Hover: clear Elementor off-canvas translate (Loop Item custom CSS also targets this) */
+.mh-project-gallery__item-inner .card-project:hover .card-project-content,
+.mh-project-gallery__item-inner .card-project:focus-within .card-project-content {
+	--e-con-transform-translateY: 0%;
+	transform: translate3d(0, 0, 0);
+}
+
+.mh-project-gallery__item-inner .card-project:hover .card-content-title,
+.mh-project-gallery__item-inner .card-project:focus-within .card-content-title {
+	opacity: 0;
+	pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+	.mh-project-gallery {
+		--mh-span-regular: 3;
+		--mh-span-medium: 6;
+		--mh-span-large: 6;
+	}
+}
+
+@media (max-width: 767px) {
+	.mh-project-gallery {
+		--mh-gallery-row-height: 240px;
+		--mh-span-regular: 4;
+		--mh-span-medium: 4;
+		--mh-span-large: 4;
+	}
+}

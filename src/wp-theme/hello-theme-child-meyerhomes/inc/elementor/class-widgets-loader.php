@@ -67,9 +67,15 @@ final class MH_Elementor_Widgets_Loader {
 	public function register_widgets( $widgets_manager ): void {
 		require_once get_stylesheet_directory() . '/inc/elementor/widgets/class-acf-faq-accordion.php';
 		require_once get_stylesheet_directory() . '/inc/elementor/widgets/class-acf-image-list-badge.php';
+		require_once get_stylesheet_directory() . '/inc/elementor/widgets/class-project-gallery.php';
+		require_once get_stylesheet_directory() . '/inc/elementor/widgets/class-project-partners.php';
+		require_once get_stylesheet_directory() . '/inc/elementor/widgets/class-testimonials-masonry.php';
 
 		$widgets_manager->register( new MH_ACF_FAQ_Accordion_Widget() );
 		$widgets_manager->register( new MH_ACF_Image_List_Badge_Widget() );
+		$widgets_manager->register( new MH_Project_Gallery_Widget() );
+		$widgets_manager->register( new MH_Project_Partners_Widget() );
+		$widgets_manager->register( new MH_Testimonials_Masonry_Widget() );
 	}
 }
 
