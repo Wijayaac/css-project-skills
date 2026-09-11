@@ -18,10 +18,11 @@
    Side slides use scale(249/319); center slide stays scale(1).
    With slides_to_show: 5 (no centeredSlides), Swiper marks the LEFTMOST as
    .swiper-slide-active — so the visual center is active + 2 siblings.
+   Breakpoints (CSS + carousel-faded.js): >1366 = 5-up, ≤1366 = 3-up, ≤767 = 1.3 + centered.
    -------------------------------------------------------------------------- */
 
 .carousel-faded {
-	--carousel-fade-color: #ffffff;
+	--carousel-fade-color: var(--e-global-color-e76072f);
 	--carousel-fade-size: clamp(64px, 12%, 160px);
 	--carousel-ratio: 319 / 375;
 	--carousel-scale-sm: calc(249 / 319);
@@ -47,16 +48,16 @@
 	left: 0;
 	background: linear-gradient(to right,
 			var(--carousel-fade-color) 0%,
-			rgba(255, 255, 255, 0.95) 45%,
-			rgba(255, 255, 255, 0) 100%);
+			color-mix(in srgb, var(--carousel-fade-color) 95%, transparent) 45%,
+			color-mix(in srgb, var(--carousel-fade-color) 0%, transparent) 100%);
 }
 
 .carousel-faded::after {
 	right: 0;
 	background: linear-gradient(to left,
 			var(--carousel-fade-color) 0%,
-			rgba(255, 255, 255, 0.95) 45%,
-			rgba(255, 255, 255, 0) 100%);
+			color-mix(in srgb, var(--carousel-fade-color) 95%, transparent) 45%,
+			color-mix(in srgb, var(--carousel-fade-color) 0%, transparent) 100%);
 }
 
 .carousel-faded .elementor-widget-image-carousel,
@@ -117,7 +118,16 @@
 	transform: scale(var(--carousel-scale-sm)) translateX(var(--carousel-hero-gap));
 }
 
-@media (max-width: 1024px) {
+/*
+ * Smaller desktop → tablet (≤1366): 3 slides, hero = middle (active+1).
+ * Must match carousel-faded.js slidesPerView breakpoints.
+ * Keep hero-gap modest so scale+nudge does not push the big slide off-center.
+ */
+@media (max-width: 1366px) {
+
+	.carousel-faded {
+		--carousel-hero-gap: 16px;
+	}
 
 	/* Reset 5-up nudges */
 	.carousel-faded .swiper-slide-active+.swiper-slide .swiper-slide-inner,
@@ -130,7 +140,7 @@
 		z-index: auto;
 	}
 
-	/* 3-up: hero = active+1 */
+	/* 3-up: leftmost = active → hero = active+1 (true center) */
 	.carousel-faded .swiper-slide-active .swiper-slide-inner {
 		transform: scale(var(--carousel-scale-sm)) translateX(calc(-1 * var(--carousel-hero-gap)));
 	}
@@ -148,12 +158,14 @@
 	}
 }
 
+/* Mobile: 1.3 + centeredSlides → active is hero, prev/next peek at sides */
 @media (max-width: 767px) {
 	.carousel-faded {
-		--carousel-fade-size: clamp(32px, 10%, 80px);
+		--carousel-fade-size: clamp(20px, 6%, 48px);
 		--carousel-hero-gap: 0px;
 	}
 
+	/* Reset tablet 3-up sibling rules */
 	.carousel-faded .swiper-slide-active .swiper-slide-inner,
 	.carousel-faded .swiper-slide-active+.swiper-slide .swiper-slide-inner,
 	.carousel-faded .swiper-slide-active+.swiper-slide+.swiper-slide .swiper-slide-inner {
@@ -162,6 +174,11 @@
 
 	.carousel-faded .swiper-slide-active+.swiper-slide {
 		z-index: auto;
+	}
+
+	.carousel-faded .swiper-slide-prev .swiper-slide-inner,
+	.carousel-faded .swiper-slide-next .swiper-slide-inner {
+		transform: scale(var(--carousel-scale-sm));
 	}
 
 	.carousel-faded .swiper-slide-active {
@@ -189,7 +206,12 @@
 	--accordion-num-width: 2.5rem;
 	--accordion-content-gap: 10.5rem;
 	--accordion-row-padding-y: 1.25rem;
-	--accordion-divider: rgba(0, 36, 61, 0.15);
+	--accordion-divider: color-mix(in srgb, var(--e-global-color-secondary) 15%, transparent);
+	font-family: var(--e-global-typography-text-font-family), sans-serif;
+	font-size: var(--e-global-typography-text-font-size);
+	font-weight: var(--e-global-typography-text-font-weight);
+	line-height: var(--e-global-typography-text-line-height);
+	color: var(--e-global-color-text);
 }
 
 .container-accordion-align .e-n-accordion {
@@ -299,7 +321,7 @@
    -------------------------------------------------------------------------- */
 
 .mh-faq-accordion {
-	--faq-divider: rgba(0, 36, 61, 0.15);
+	--faq-divider: color-mix(in srgb, var(--e-global-color-secondary) 15%, transparent);
 	--faq-row-padding-y: 1.5rem;
 	--faq-answer-gap: 0.75rem;
 	--faq-animation-duration: 400ms;
@@ -307,6 +329,12 @@
 	flex-direction: column;
 	gap: 0;
 	width: 100%;
+	font-family: var(--e-global-typography-text-font-family), sans-serif;
+	font-size: var(--e-global-typography-text-font-size);
+	font-weight: var(--e-global-typography-text-font-weight);
+	line-height: var(--e-global-typography-text-line-height);
+	letter-spacing: var(--e-global-typography-text-letter-spacing);
+	color: var(--e-global-color-text);
 }
 
 .mh-faq-accordion .mh-faq-accordion__item,
@@ -327,6 +355,7 @@
 	justify-content: space-between;
 	gap: 1.25rem;
 	width: 100%;
+	max-width: 100%;
 	margin: 0;
 	padding-left: 0;
 	padding-right: 0;
@@ -337,20 +366,26 @@
 	color: inherit;
 	font: inherit;
 	text-align: left;
+	white-space: normal !important;
 	cursor: pointer;
 	appearance: none;
 	-webkit-appearance: none;
 }
 
 .mh-faq-accordion .e-n-accordion-item-title-header {
-	flex: 1 1 auto;
+	flex: 1 1 0;
 	min-width: 0;
+	max-width: 100%;
 	padding-right: 0.25rem;
 }
 
 .mh-faq-accordion .e-n-accordion-item-title-text {
 	display: block;
-	overflow-wrap: anywhere;
+	max-width: 100%;
+	white-space: normal;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
 }
 
 /* Reserved icon slot on the right — never overlaps heading. */
@@ -362,7 +397,7 @@
 	margin-top: 0.2em;
 	margin-left: auto;
 	display: block;
-	color: var(--e-global-color-bf8f894, #8D5E40);
+	color: var(--e-global-color-bf8f894);
 }
 
 .mh-faq-accordion .e-n-accordion-item-title-icon .e-opened,
@@ -404,7 +439,11 @@
 }
 
 .mh-faq-accordion__answer {
-	color: var(--e-global-color-text, #333333);
+	color: var(--e-global-color-text);
+	font-family: var(--e-global-typography-text-font-family), sans-serif;
+	font-size: var(--e-global-typography-text-font-size);
+	font-weight: var(--e-global-typography-text-font-weight);
+	line-height: var(--e-global-typography-text-line-height);
 }
 
 .mh-faq-accordion__answer>*:first-child {
@@ -477,10 +516,13 @@
 	justify-content: center;
 	aspect-ratio: 3 / 4;
 	padding: 1rem;
-	background: #f3f4f6;
-	color: #6b7280;
+	background: var(--e-global-color-accent);
+	color: var(--e-global-color-text);
 	text-align: center;
-	font-size: 0.875rem;
+	font-family: var(--e-global-typography-text-font-family), sans-serif;
+	font-size: var(--e-global-typography-text-font-size);
+	font-weight: var(--e-global-typography-text-font-weight);
+	line-height: var(--e-global-typography-text-line-height);
 }
 
 .mh-image-list-badge__list {
@@ -516,32 +558,35 @@
 }
 
 /*
- * Figma zig-zag (not a straight column / not a progressive V):
+ * Figma zig-zag — desktop only.
+ * Mobile stays a normal stacked list (no translateX stairs).
  *   Left:  out → in → out   (positive X = toward image)
  *   Right: in  → out → in   (negative X = toward image)
  */
-.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(1) {
-	transform: translateX(calc(var(--mh-badge-nudge) * 0.2));
-}
+@media (min-width: 768px) {
+	.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(1) {
+		transform: translateX(calc(var(--mh-badge-nudge) * 0.2));
+	}
 
-.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(2) {
-	transform: translateX(calc(var(--mh-badge-nudge) * 1.15));
-}
+	.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(2) {
+		transform: translateX(calc(var(--mh-badge-nudge) * 1.15));
+	}
 
-.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(3) {
-	transform: translateX(calc(var(--mh-badge-nudge) * 1.5));
-}
+	.mh-image-list-badge__list--left .mh-image-list-badge__item:nth-child(3) {
+		transform: translateX(calc(var(--mh-badge-nudge) * 1.5));
+	}
 
-.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(1) {
-	transform: translateX(calc(var(--mh-badge-nudge) * -0.95));
-}
+	.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(1) {
+		transform: translateX(calc(var(--mh-badge-nudge) * -0.95));
+	}
 
-.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(2) {
-	transform: translateX(calc(var(--mh-badge-nudge) * -0.65));
-}
+	.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(2) {
+		transform: translateX(calc(var(--mh-badge-nudge) * -0.65));
+	}
 
-.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(3) {
-	transform: translateX(calc(var(--mh-badge-nudge) * 0));
+	.mh-image-list-badge__list--right .mh-image-list-badge__item:nth-child(3) {
+		transform: translateX(calc(var(--mh-badge-nudge) * 0));
+	}
 }
 
 .mh-image-list-badge__item {
@@ -555,10 +600,10 @@
 	gap: 0.65rem;
 	max-width: 100%;
 	padding: 0.55rem 1.1rem 0.55rem 0.55rem;
-	border: 1px solid rgba(0, 36, 61, 0.12);
+	border: 1px solid color-mix(in srgb, var(--e-global-color-secondary) 12%, transparent);
 	border-radius: 999px;
-	background-color: #fff;
-	box-shadow: 0 4px 18px rgba(0, 36, 61, 0.08);
+	background-color: var(--e-global-color-e76072f);
+	box-shadow: 0 4px 18px color-mix(in srgb, var(--e-global-color-secondary) 8%, transparent);
 	box-sizing: border-box;
 }
 
@@ -570,8 +615,8 @@
 	width: 28px;
 	height: 28px;
 	border-radius: 50%;
-	background-color: #00243d;
-	color: #fff;
+	background-color: var(--e-global-color-secondary);
+	color: var(--e-global-color-e76072f);
 	line-height: 1;
 }
 
@@ -587,10 +632,12 @@
 .mh-image-list-badge__label {
 	display: block;
 	min-width: 0;
-	color: var(--e-global-color-text, #00243d);
-	font-size: 0.9375rem;
-	font-weight: 500;
-	line-height: 1.3;
+	color: var(--e-global-color-text);
+	font-family: var(--e-global-typography-dc7d407-font-family), sans-serif;
+	font-size: var(--e-global-typography-dc7d407-font-size);
+	font-weight: var(--e-global-typography-dc7d407-font-weight);
+	line-height: var(--e-global-typography-dc7d407-line-height);
+	letter-spacing: var(--e-global-typography-dc7d407-letter-spacing);
 	white-space: normal;
 }
 

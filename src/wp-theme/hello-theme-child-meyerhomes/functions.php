@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'HELLO_ELEMENTOR_CHILD_VERSION', '2.1.2' );
+define( 'HELLO_ELEMENTOR_CHILD_VERSION', '2.1.5' );
 
 /**
  * Point ACF JSON sync to the child theme.
@@ -285,6 +285,14 @@ function mh_service_details_enqueue_assets() {
 	}
 
 	wp_enqueue_style( 'mh-service-details' );
+
+	wp_enqueue_script(
+		'mh-carousel-faded',
+		get_stylesheet_directory_uri() . '/assets/js/carousel-faded.js',
+		array(),
+		HELLO_ELEMENTOR_CHILD_VERSION,
+		true
+	);
 }
 add_action( 'wp_enqueue_scripts', 'mh_service_details_enqueue_assets', 30 );
 

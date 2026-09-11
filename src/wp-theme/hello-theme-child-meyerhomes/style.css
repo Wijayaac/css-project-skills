@@ -15,18 +15,9 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 /* Add your custom styles here */
 
 /* global colors */
-:root {
-	--e-global-color-primary: #333333;
-	--e-global-color-secondary: #00243D;
-	--e-global-color-text: #333333;
-	--e-global-color-accent: #F2F2F2;
-	--e-global-color-8c4b4c8: #FFF8F4;
-	--e-global-color-bf8f894: #8D5E40;
-	--e-global-color-22bff8a: #1D1F21;
-	--e-global-color-e76072f: #FFFFFF;
-	--header-sticky-duration: 0.35s;
-	--header-sticky-ease: cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* :root {
+	
+} */
 
 /* --------------------------------------------------------------------------
    Testimonial carousel – staircase layout (.container-carousel)
@@ -344,4 +335,3 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 		transition-duration: 0.01ms;
 	}
 }
-

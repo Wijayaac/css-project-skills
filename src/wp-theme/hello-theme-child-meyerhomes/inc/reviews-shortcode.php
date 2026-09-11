@@ -124,7 +124,7 @@ function mh_reviews_shortcode( $atts ) {
 
 	ob_start();
 	?>
-	<section class="mh-reviews" data-mh-reviews style="--mh-reviews-visible: 3.8">
+	<section class="mh-reviews" data-mh-reviews>
 		<div class="mh-reviews__viewport">
 			<div class="mh-reviews__track">
 				<?php foreach ( $column_groups as $column_index => $column_posts ) : ?>
@@ -248,3 +248,4 @@ function mh_reviews_seed_sample_data() {
 	update_option( 'mh_testimonials_seeded', 1, false );
 }
 add_action( 'after_switch_theme', 'mh_reviews_seed_sample_data' );
+

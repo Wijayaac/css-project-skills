@@ -14,11 +14,16 @@
 	--mh-span-medium: 8;
 	--mh-span-large: 12;
 	--mh-gallery-filter-radius: 999px;
-	--mh-gallery-filter-border: rgba(255, 255, 255, 0.55);
-	--mh-gallery-filter-color: #ffffff;
-	--mh-gallery-filter-active-bg: var(--e-global-color-secondary, #00243d);
-	--mh-gallery-filter-active-color: #ffffff;
+	--mh-gallery-filter-border: color-mix(in srgb, var(--e-global-color-e76072f) 55%, transparent);
+	--mh-gallery-filter-color: var(--e-global-color-e76072f);
+	--mh-gallery-filter-active-bg: var(--e-global-color-secondary);
+	--mh-gallery-filter-active-color: var(--e-global-color-e76072f);
 	width: 100%;
+	font-family: var(--e-global-typography-text-font-family), sans-serif;
+	font-size: var(--e-global-typography-text-font-size);
+	font-weight: var(--e-global-typography-text-font-weight);
+	line-height: var(--e-global-typography-text-line-height);
+	letter-spacing: var(--e-global-typography-text-letter-spacing);
 }
 
 .mh-project-gallery__notice {
@@ -48,9 +53,13 @@
 	border-radius: var(--mh-gallery-filter-radius);
 	background: transparent;
 	color: var(--mh-gallery-filter-color);
-	font: inherit;
-	line-height: 1.2;
+	font-family: var(--e-global-typography-6977213-font-family), sans-serif;
+	font-size: var(--e-global-typography-6977213-font-size);
+	font-weight: var(--e-global-typography-6977213-font-weight);
+	line-height: var(--e-global-typography-6977213-line-height);
 	cursor: pointer;
+	white-space: nowrap;
+	flex: 0 0 auto;
 	transition:
 		background-color 0.2s ease,
 		border-color 0.2s ease,
@@ -75,6 +84,55 @@
 @media (prefers-reduced-motion: reduce) {
 	.mh-project-gallery__filter-btn {
 		transition: none;
+	}
+}
+
+/*
+ * Smaller desktop / tablet / mobile: one row + horizontal scroll.
+ * Tighter gap/padding so more pills fit before scrolling.
+ */
+@media (max-width: 1200px) {
+	.mh-project-gallery__filters {
+		flex-wrap: nowrap;
+		gap: 6px;
+		margin-bottom: 20px;
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+		overscroll-behavior-x: contain;
+		scrollbar-width: thin;
+		padding-bottom: 2px;
+	}
+
+	.mh-project-gallery__filters::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	.mh-project-gallery__filters::-webkit-scrollbar-thumb {
+		background: color-mix(in srgb, var(--e-global-color-22bff8a) 25%, transparent);
+		border-radius: 999px;
+	}
+
+	.mh-project-gallery__filter-btn {
+		padding: 0.4em 0.85em;
+		font-size: 0.925em;
+	}
+}
+
+@media (max-width: 767px) {
+	.mh-project-gallery__filters {
+		gap: 5px;
+		margin-bottom: 16px;
+		scrollbar-width: none;
+	}
+
+	.mh-project-gallery__filters::-webkit-scrollbar {
+		display: none;
+	}
+
+	.mh-project-gallery__filter-btn {
+		padding: 0.35em 0.75em;
+		font-size: 0.875em;
 	}
 }
 
@@ -118,14 +176,14 @@
  * only the Loop Item root + its direct .e-con / .card-project fill the cell.
  * Nested title/hover panels keep Elementor absolute + auto height.
  */
-.mh-project-gallery__item-inner>.e-loop-item,
-.mh-project-gallery__item-inner>.elementor.e-loop-item {
+.mh-project-gallery__item-inner > .e-loop-item,
+.mh-project-gallery__item-inner > .elementor.e-loop-item {
 	height: 100%;
 	min-height: inherit;
 }
 
-.mh-project-gallery__item-inner .e-loop-item>.e-con,
-.mh-project-gallery__item-inner .e-loop-item>.elementor-section,
+.mh-project-gallery__item-inner .e-loop-item > .e-con,
+.mh-project-gallery__item-inner .e-loop-item > .elementor-section,
 .mh-project-gallery__item-inner .card-project {
 	height: 100%;
 	min-height: inherit;
@@ -133,7 +191,7 @@
 	overflow: hidden;
 }
 
-.mh-project-gallery__item-inner .card-project>.e-con-inner {
+.mh-project-gallery__item-inner .card-project > .e-con-inner {
 	height: 100%;
 	position: relative;
 }
@@ -159,9 +217,10 @@
 
 @media (max-width: 1024px) {
 	.mh-project-gallery {
+		/* Elementor tablet --mh-gallery-cols: 6 → span 3 = 2 items / row */
 		--mh-span-regular: 3;
-		--mh-span-medium: 6;
-		--mh-span-large: 6;
+		--mh-span-medium: 3;
+		--mh-span-large: 3;
 	}
 }
 
