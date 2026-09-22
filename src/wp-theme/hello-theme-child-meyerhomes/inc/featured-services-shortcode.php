@@ -33,6 +33,28 @@ function mh_featured_services_arrow_icon(): string {
  * @return string
  */
 function mh_featured_services_shortcode( $atts ): string {
+	try {
+		return mh_featured_services_shortcode_render( $atts );
+	} catch ( \Throwable $e ) {
+		error_log(
+			sprintf(
+				'[meyer_featured_services] %s in %s:%d',
+				$e->getMessage(),
+				$e->getFile(),
+				$e->getLine()
+			)
+		);
+		return '';
+	}
+}
+
+/**
+ * Internal render for [meyer_featured_services].
+ *
+ * @param array|string $atts Shortcode attributes.
+ * @return string
+ */
+function mh_featured_services_shortcode_render( $atts ): string {
 	$atts = shortcode_atts(
 		[
 			'heading' => 'Our work includes:',
@@ -48,9 +70,10 @@ function mh_featured_services_shortcode( $atts ): string {
 		[
 			'post_type'      => 'service',
 			'posts_per_page' => (int) $atts['limit'],
-			'orderby'        => $atts['orderby'],
-			'order'          => $atts['order'],
+			'orderby'        => sanitize_key( (string) $atts['orderby'] ),
+			'order'          => strtoupper( (string) $atts['order'] ) === 'DESC' ? 'DESC' : 'ASC',
 			'post_status'    => 'publish',
+			'no_found_rows'  => true,
 			'meta_query'     => [
 				[
 					'key'     => 'featured_service',
@@ -62,6 +85,7 @@ function mh_featured_services_shortcode( $atts ): string {
 	);
 
 	if ( ! $query->have_posts() ) {
+		wp_reset_postdata();
 		return '';
 	}
 
@@ -130,7 +154,7 @@ function mh_featured_services_shortcode( $atts ): string {
 						>
 							<span class="mh-featured-services__number"><?php echo esc_html( sprintf( '%02d', $index + 1 ) ); ?></span>
 							<span class="mh-featured-services__title"><?php echo esc_html( $service['title'] ); ?></span>
-							<span class="mh-featured-services__icon"><?php echo $icon; ?></span>
+							<span class="mh-featured-services__icon"><?php echo $icon; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- theme SVG. ?></span>
 						</a>
 					</li>
 				<?php endforeach; ?>
@@ -143,3 +167,4 @@ function mh_featured_services_shortcode( $atts ): string {
 }
 
 add_shortcode( 'meyer_featured_services', 'mh_featured_services_shortcode' );
+

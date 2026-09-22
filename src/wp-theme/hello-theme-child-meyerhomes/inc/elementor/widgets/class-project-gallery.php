@@ -695,17 +695,29 @@ class MH_Project_Gallery_Widget extends Widget_Base {
 			return;
 		}
 
-		$post_id   = (int) get_the_ID();
-		$document  = \Elementor\Plugin::$instance->documents->get( $template_id );
+		$post_id  = (int) get_the_ID();
+		$document = \Elementor\Plugin::$instance->documents->get( $template_id );
 
 		if ( ! $document ) {
 			return;
 		}
 
-		$this->print_loop_dynamic_css( $post_id, $template_id );
-
-		// Same call as ElementorPro Loop Grid skin.
-		$document->print_content();
+		try {
+			$this->print_loop_dynamic_css( $post_id, $template_id );
+			// Same call as ElementorPro Loop Grid skin.
+			$document->print_content();
+		} catch ( \Throwable $e ) {
+			error_log(
+				sprintf(
+					'[mh-project-gallery] print_loop_item post %d template %d: %s in %s:%d',
+					$post_id,
+					$template_id,
+					$e->getMessage(),
+					$e->getFile(),
+					$e->getLine()
+				)
+			);
+		}
 	}
 
 	/**
@@ -758,24 +770,40 @@ class MH_Project_Gallery_Widget extends Widget_Base {
 				: $documents->get( $template_id );
 
 			if ( $document ) {
-				$documents->switch_to_document( $document );
+				$switched = false;
 
-				$css_file = \ElementorPro\Modules\LoopBuilder\Files\Css\Loop_Dynamic_CSS::create( $post_id, $template_id );
-				$post_css = $css_file ? $css_file->get_content() : '';
+				try {
+					$documents->switch_to_document( $document );
+					$switched = true;
 
-				if ( is_string( $post_css ) && $post_css !== '' ) {
-					// Dynamic_CSS emits `.elementor-{post_id}`; Loop Grid rewrites to `.e-loop-item-{post_id}`.
-					$css = str_replace( '.elementor-' . $post_id, '.e-loop-item-' . $post_id, $post_css );
+					$css_file = \ElementorPro\Modules\LoopBuilder\Files\Css\Loop_Dynamic_CSS::create( $post_id, $template_id );
+					$post_css = $css_file ? $css_file->get_content() : '';
 
-					printf(
-						'<style id="mh-loop-dynamic-%1$d-%2$d">%3$s</style>',
-						$template_id,
-						$post_id,
-						$css // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Elementor CSS.
+					if ( is_string( $post_css ) && $post_css !== '' ) {
+						// Dynamic_CSS emits `.elementor-{post_id}`; Loop Grid rewrites to `.e-loop-item-{post_id}`.
+						$css = str_replace( '.elementor-' . $post_id, '.e-loop-item-' . $post_id, $post_css );
+
+						printf(
+							'<style id="mh-loop-dynamic-%1$d-%2$d">%3$s</style>',
+							$template_id,
+							$post_id,
+							$css // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Elementor CSS.
+						);
+					}
+				} catch ( \Throwable $e ) {
+					error_log(
+						sprintf(
+							'[mh-project-gallery] loop CSS post %d template %d: %s',
+							$post_id,
+							$template_id,
+							$e->getMessage()
+						)
 					);
+				} finally {
+					if ( $switched ) {
+						$documents->restore_document();
+					}
 				}
-
-				$documents->restore_document();
 			}
 		}
 

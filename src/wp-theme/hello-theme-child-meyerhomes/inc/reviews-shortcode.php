@@ -19,6 +19,31 @@ function mh_reviews_default_speeds() {
 }
 
 /**
+ * Read an ACF/meta string field safely (no fatal if ACF missing / wrong type).
+ *
+ * @param string $key     Field name.
+ * @param int    $post_id Post ID.
+ * @return string
+ */
+function mh_reviews_get_string_field( $key, $post_id ) {
+	$value = null;
+
+	if ( function_exists( 'get_field' ) ) {
+		$value = get_field( $key, $post_id );
+	}
+
+	if ( null === $value || false === $value || '' === $value ) {
+		$value = get_post_meta( $post_id, $key, true );
+	}
+
+	if ( is_array( $value ) ) {
+		return '';
+	}
+
+	return is_string( $value ) ? $value : ( is_scalar( $value ) ? (string) $value : '' );
+}
+
+/**
  * Render a single testimonial card.
  *
  * Staging ACF fields: name, position, content (WYSIWYG).
@@ -28,32 +53,36 @@ function mh_reviews_default_speeds() {
  * @return string
  */
 function mh_reviews_render_card( $post ) {
-	$headline = get_the_title( $post );
-	$content  = get_field( 'content', $post->ID );
-	$name     = get_field( 'name', $post->ID );
-	$position = get_field( 'position', $post->ID );
+	if ( ! $post instanceof WP_Post ) {
+		return '';
+	}
 
-	if ( empty( $headline ) && empty( $content ) && empty( $name ) ) {
+	$headline = get_the_title( $post );
+	$content  = mh_reviews_get_string_field( 'content', (int) $post->ID );
+	$name     = mh_reviews_get_string_field( 'name', (int) $post->ID );
+	$position = mh_reviews_get_string_field( 'position', (int) $post->ID );
+
+	if ( '' === $headline && '' === $content && '' === $name ) {
 		return '';
 	}
 
 	$attribution = $name;
-	if ( ! empty( $name ) && ! empty( $position ) ) {
+	if ( '' !== $name && '' !== $position ) {
 		$attribution = $name . ', ' . $position;
 	}
 
 	ob_start();
 	?>
 	<article class="mh-reviews__card">
-		<?php if ( ! empty( $headline ) ) : ?>
+		<?php if ( '' !== $headline ) : ?>
 			<h3 class="mh-reviews__headline">&ldquo;<?php echo esc_html( $headline ); ?>&rdquo;</h3>
 		<?php endif; ?>
 
-		<?php if ( ! empty( $content ) ) : ?>
+		<?php if ( '' !== $content ) : ?>
 			<div class="mh-reviews__body"><?php echo wp_kses_post( $content ); ?></div>
 		<?php endif; ?>
 
-		<?php if ( ! empty( $attribution ) ) : ?>
+		<?php if ( '' !== $attribution ) : ?>
 			<p class="mh-reviews__author">&mdash; <?php echo esc_html( $attribution ); ?></p>
 		<?php endif; ?>
 	</article>
@@ -86,6 +115,29 @@ function mh_reviews_split_into_columns( $posts, $columns ) {
  * @return string
  */
 function mh_reviews_shortcode( $atts ) {
+	try {
+		return mh_reviews_shortcode_render( $atts );
+	} catch ( \Throwable $e ) {
+		// Keep Elementor save alive; surface real cause in PHP error log.
+		error_log(
+			sprintf(
+				'[meyer_reviews] %s in %s:%d',
+				$e->getMessage(),
+				$e->getFile(),
+				$e->getLine()
+			)
+		);
+		return '';
+	}
+}
+
+/**
+ * Internal render for [meyer_reviews].
+ *
+ * @param array|string $atts Shortcode attributes.
+ * @return string
+ */
+function mh_reviews_shortcode_render( $atts ) {
 	$atts = shortcode_atts(
 		array(
 			'columns' => '4',
@@ -107,6 +159,7 @@ function mh_reviews_shortcode( $atts ) {
 			'posts_per_page' => $limit,
 			'orderby'        => sanitize_key( $atts['orderby'] ),
 			'order'          => strtoupper( $atts['order'] ) === 'DESC' ? 'DESC' : 'ASC',
+			'no_found_rows'  => true,
 		)
 	);
 
@@ -248,4 +301,5 @@ function mh_reviews_seed_sample_data() {
 	update_option( 'mh_testimonials_seeded', 1, false );
 }
 add_action( 'after_switch_theme', 'mh_reviews_seed_sample_data' );
+
 
