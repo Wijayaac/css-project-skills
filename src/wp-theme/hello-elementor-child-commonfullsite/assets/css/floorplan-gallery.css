@@ -1,0 +1,504 @@
+/**
+ * ACF Floorplan Gallery (.cfs-floorplan-gallery)
+ * Main / thumbs / lightbox synced slider + maximize/minimize.
+ */
+
+.cfs-floorplan-gallery {
+	--cfs-fpg-accent: #c36645;
+	--cfs-fpg-stage-bg: #f2f4f8;
+	--cfs-fpg-nav-size: 40px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.cfs-floorplan-gallery *,
+.cfs-floorplan-gallery *::before,
+.cfs-floorplan-gallery *::after {
+	box-sizing: border-box;
+}
+
+.cfs-floorplan-gallery__stage {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 24px;
+	background-color: var(--cfs-fpg-stage-bg);
+}
+
+/* ---- Main slider ---- */
+.cfs-floorplan-gallery__main-wrap {
+	position: relative;
+	width: 100%;
+}
+
+.cfs-floorplan-gallery__main {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 420px;
+	background-color: #fff;
+	cursor: zoom-in;
+	overflow: hidden;
+}
+
+.cfs-floorplan-gallery__viewport {
+	width: 100%;
+	height: 100%;
+	min-height: 420px;
+	overflow: hidden;
+	touch-action: pan-y;
+}
+
+.cfs-floorplan-gallery__track {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	min-height: 420px;
+	transition: transform 0.35s ease;
+	will-change: transform;
+}
+
+.cfs-floorplan-gallery__slide {
+	flex: 0 0 100%;
+	width: 100%;
+	min-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+}
+
+.cfs-floorplan-gallery__image {
+	display: block;
+	max-width: 100%;
+	max-height: 70vh;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	cursor: zoom-in;
+	pointer-events: none;
+	user-select: none;
+}
+
+/* ---- Shared nav arrows ---- */
+.cfs-floorplan-gallery__nav,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__nav,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav {
+	position: relative;
+	z-index: 3;
+	flex: 0 0 auto;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	width: var(--cfs-fpg-nav-size) !important;
+	height: var(--cfs-fpg-nav-size) !important;
+	min-width: var(--cfs-fpg-nav-size) !important;
+	min-height: var(--cfs-fpg-nav-size) !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	border-radius: 50% !important;
+	background: #c36645 !important;
+	background-color: var(--cfs-fpg-accent, #c36645) !important;
+	background-image: none !important;
+	color: #fff !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	line-height: 1 !important;
+	font-size: 16px !important;
+	text-decoration: none !important;
+	appearance: none;
+	-webkit-appearance: none;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cfs-floorplan-gallery__nav:hover,
+.cfs-floorplan-gallery__nav:focus-visible,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav:hover,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav:focus-visible,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav:hover,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav:focus-visible {
+	background-color: var(--cfs-fpg-accent, #c36645) !important;
+	color: #fff !important;
+	outline: none;
+}
+
+.cfs-floorplan-gallery__nav:not(.cfs-floorplan-gallery__nav--main):hover,
+.cfs-floorplan-gallery__nav:not(.cfs-floorplan-gallery__nav--main):focus-visible {
+	transform: scale(1.06);
+}
+
+.cfs-floorplan-gallery__nav span {
+	display: block;
+	line-height: 1;
+	font-size: 16px;
+	pointer-events: none;
+}
+
+/* Main arrows — overlay on image; desktop hover-only */
+.cfs-floorplan-gallery__nav--main {
+	position: absolute !important;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 3;
+}
+
+.cfs-floorplan-gallery__nav--main.cfs-floorplan-gallery__nav--prev {
+	left: 12px;
+}
+
+.cfs-floorplan-gallery__nav--main.cfs-floorplan-gallery__nav--next {
+	right: 12px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.cfs-floorplan-gallery__nav--main {
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.2s ease, transform 0.2s ease;
+	}
+
+	.cfs-floorplan-gallery__main:hover .cfs-floorplan-gallery__nav--main,
+	.cfs-floorplan-gallery__main:focus-within .cfs-floorplan-gallery__nav--main,
+	.cfs-floorplan-gallery__nav--main:focus-visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.cfs-floorplan-gallery__main:hover .cfs-floorplan-gallery__nav--main:hover,
+	.cfs-floorplan-gallery__nav--main:focus-visible {
+		transform: translateY(-50%) scale(1.06);
+	}
+}
+
+/* ---- Zoom / minimize ---- */
+.cfs-floorplan-gallery__zoom,
+.cfs-floorplan-gallery__minimize,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__zoom,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__minimize,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize {
+	position: absolute;
+	z-index: 4;
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	width: 48px !important;
+	height: 48px !important;
+	min-width: 48px !important;
+	min-height: 48px !important;
+	max-width: 48px !important;
+	max-height: 48px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	border-radius: 50% !important;
+	background: #c36645 !important;
+	background-color: #c36645 !important;
+	background-color: var(--cfs-fpg-accent, #c36645) !important;
+	background-image: none !important;
+	color: #fff !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	line-height: 1 !important;
+	font-size: 0 !important;
+	text-decoration: none !important;
+	appearance: none;
+	-webkit-appearance: none;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cfs-floorplan-gallery__zoom:hover,
+.cfs-floorplan-gallery__zoom:focus,
+.cfs-floorplan-gallery__zoom:focus-visible,
+.cfs-floorplan-gallery__zoom:active,
+.cfs-floorplan-gallery__minimize:hover,
+.cfs-floorplan-gallery__minimize:focus,
+.cfs-floorplan-gallery__minimize:focus-visible,
+.cfs-floorplan-gallery__minimize:active,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize:hover,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize:focus,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize:focus-visible,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize:active,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize:hover,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize:focus,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize:focus-visible,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize:active {
+	background: #c36645 !important;
+	background-color: var(--cfs-fpg-accent, #c36645) !important;
+	background-image: none !important;
+	color: #fff !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	outline: none;
+	transform: scale(1.06);
+}
+
+.cfs-floorplan-gallery__zoom:focus-visible,
+.cfs-floorplan-gallery__minimize:focus-visible {
+	box-shadow: 0 0 0 3px rgba(195, 102, 69, 0.4) !important;
+}
+
+.cfs-floorplan-gallery__zoom {
+	right: 16px;
+	bottom: 16px;
+}
+
+.cfs-floorplan-gallery__zoom i,
+.cfs-floorplan-gallery__zoom svg,
+.cfs-floorplan-gallery__minimize i,
+.cfs-floorplan-gallery__minimize svg,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize i,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize svg,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize i,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize svg {
+	display: block;
+	width: 18px !important;
+	height: 18px !important;
+	font-size: 18px !important;
+	line-height: 1 !important;
+	fill: currentColor;
+	color: inherit;
+	pointer-events: none;
+}
+
+/* ---- Thumbs strip (no arrows) ---- */
+.cfs-floorplan-gallery__thumbs {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	gap: 12px;
+	width: 100%;
+	margin: 0;
+	padding: 2px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+}
+
+.cfs-floorplan-gallery__thumbs::-webkit-scrollbar {
+	height: 4px;
+}
+
+.cfs-floorplan-gallery__thumbs::-webkit-scrollbar-thumb {
+	background: rgba(195, 102, 69, 0.45);
+	border-radius: 2px;
+}
+
+.cfs-floorplan-gallery__thumb,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__thumb {
+	display: block;
+	flex: 1 0 calc(25% - 9px);
+	width: auto !important;
+	min-width: 100px !important;
+	max-width: 180px;
+	min-height: 0 !important;
+	aspect-ratio: 1;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+	border: 2px solid transparent !important;
+	border-radius: 0 !important;
+	background: #fff !important;
+	background-color: #fff !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	color: inherit !important;
+	cursor: pointer;
+	line-height: 0 !important;
+	font-size: 0 !important;
+	text-decoration: none !important;
+	appearance: none;
+	-webkit-appearance: none;
+	scroll-snap-align: start;
+	transition: border-color 0.2s ease;
+}
+
+.cfs-floorplan-gallery__thumb img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	background: #fff;
+	pointer-events: none;
+}
+
+.cfs-floorplan-gallery__thumb:hover,
+.cfs-floorplan-gallery__thumb:focus,
+.cfs-floorplan-gallery__thumb:focus-visible,
+.cfs-floorplan-gallery__thumb:active,
+.cfs-floorplan-gallery__thumb:focus-within,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__thumb:hover,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__thumb:focus,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__thumb:focus-visible,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__thumb:active,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__thumb:focus-within {
+	background: #fff !important;
+	background-color: #fff !important;
+	background-image: none !important;
+	color: inherit !important;
+	box-shadow: none !important;
+	outline: none !important;
+	border-color: var(--cfs-fpg-accent) !important;
+}
+
+.cfs-floorplan-gallery__thumb.is-active,
+.cfs-floorplan-gallery button.cfs-floorplan-gallery__thumb.is-active {
+	border-color: var(--cfs-fpg-accent) !important;
+	background: #fff !important;
+	background-color: #fff !important;
+}
+
+/* ---- Lightbox slider ---- */
+.cfs-floorplan-gallery__lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 48px 24px;
+	background-color: rgba(20, 28, 40, 0.92);
+	--cfs-fpg-accent: #c36645;
+}
+
+.cfs-floorplan-gallery__lightbox[hidden] {
+	display: none !important;
+}
+
+.cfs-floorplan-gallery__lightbox-viewport {
+	flex: 1 1 auto;
+	min-width: 0;
+	max-width: min(96vw, 1400px);
+	overflow: hidden;
+	touch-action: pan-y;
+}
+
+.cfs-floorplan-gallery__lightbox-track {
+	display: flex;
+	width: 100%;
+	transition: transform 0.35s ease;
+	will-change: transform;
+}
+
+.cfs-floorplan-gallery__lightbox-slide {
+	flex: 0 0 100%;
+	width: 100%;
+	min-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cfs-floorplan-gallery__lightbox-image {
+	display: block;
+	max-width: 100%;
+	max-height: 90vh;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	background: #fff;
+	cursor: default;
+	pointer-events: auto;
+	user-select: none;
+}
+
+.cfs-floorplan-gallery__nav--lightbox,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav--lightbox,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav--lightbox {
+	flex: 0 0 auto;
+	width: 48px !important;
+	height: 48px !important;
+	min-width: 48px !important;
+	min-height: 48px !important;
+}
+
+.cfs-floorplan-gallery__minimize,
+.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize,
+body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__minimize {
+	top: 24px;
+	right: 24px;
+	bottom: auto;
+	cursor: zoom-out;
+}
+
+body.cfs-floorplan-gallery-open {
+	overflow: hidden;
+}
+
+@media (max-width: 767px) {
+	.cfs-floorplan-gallery {
+		--cfs-fpg-nav-size: 28px;
+	}
+
+	.cfs-floorplan-gallery__stage {
+		padding: 16px;
+	}
+
+	.cfs-floorplan-gallery__main,
+	.cfs-floorplan-gallery__viewport,
+	.cfs-floorplan-gallery__track {
+		min-height: 260px;
+	}
+
+	.cfs-floorplan-gallery__nav--main {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.cfs-floorplan-gallery__nav--main.cfs-floorplan-gallery__nav--prev {
+		left: 8px;
+	}
+
+	.cfs-floorplan-gallery__nav--main.cfs-floorplan-gallery__nav--next {
+		right: 8px;
+	}
+
+	.cfs-floorplan-gallery__nav--main span {
+		font-size: 12px;
+	}
+
+	.cfs-floorplan-gallery__thumbs {
+		gap: 8px;
+	}
+
+	.cfs-floorplan-gallery__thumb,
+	.cfs-floorplan-gallery button.cfs-floorplan-gallery__thumb {
+		flex: 0 0 calc(40% - 4px);
+		min-width: 88px !important;
+		max-width: none;
+	}
+
+	.cfs-floorplan-gallery__zoom,
+	.cfs-floorplan-gallery__minimize,
+	.cfs-floorplan-gallery button.cfs-floorplan-gallery__zoom,
+	.cfs-floorplan-gallery button.cfs-floorplan-gallery__minimize {
+		width: 40px !important;
+		height: 40px !important;
+		min-width: 40px !important;
+		min-height: 40px !important;
+		max-width: 40px !important;
+		max-height: 40px !important;
+	}
+
+	.cfs-floorplan-gallery__lightbox {
+		padding: 56px 8px 24px;
+		gap: 4px;
+	}
+
+	.cfs-floorplan-gallery__nav--lightbox,
+	.cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav--lightbox,
+	body > .cfs-floorplan-gallery__lightbox .cfs-floorplan-gallery__nav--lightbox {
+		width: 32px !important;
+		height: 32px !important;
+		min-width: 32px !important;
+		min-height: 32px !important;
+	}
+}

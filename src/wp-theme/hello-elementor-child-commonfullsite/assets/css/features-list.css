@@ -1,0 +1,59 @@
+/**
+ * ACF Features List widget (.cfs-features-list)
+ * Two-column checklist with circular check icons.
+ */
+
+.cfs-features-list {
+	--cfs-features-columns: 2;
+	--cfs-features-column-gap: 48px;
+	--cfs-features-row-gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(var(--cfs-features-columns), minmax(0, 1fr));
+	column-gap: var(--cfs-features-column-gap);
+	row-gap: var(--cfs-features-row-gap);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.cfs-features-list__item {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	min-width: 0;
+}
+
+.cfs-features-list__icon {
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	margin-top: 0.1em;
+	border-radius: 50%;
+	background-color: #c36645;
+	color: #fff;
+	line-height: 1;
+}
+
+.cfs-features-list__icon i,
+.cfs-features-list__icon svg {
+	display: block;
+	width: 11px;
+	height: 11px;
+	font-size: 11px;
+	fill: currentColor;
+}
+
+.cfs-features-list__label {
+	display: block;
+	min-width: 0;
+	color: #4a4a4a;
+	font-size: 1rem;
+	line-height: 1.45;
+}
