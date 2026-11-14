@@ -1,0 +1,51 @@
+/* 
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/elementor/hello-theme-child/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 2.0.0
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/* Add your custom styles here */
+
+:root {
+	--header-sticky-duration: 0.35s;
+	--header-sticky-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global styles */
+.cta-arrow .elementor-button-content-wrapper {
+	align-items: center;
+}
+
+.cta-arrow .elementor-button-icon {
+	width: 40px;
+	height: 40px;
+	padding: 16px;
+	background-color: var(--e-global-color-accent);
+	border-radius: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Sticky header – background on scroll (.is-scrolled toggled via JS)
+   -------------------------------------------------------------------------- */
+
+.header-container {
+	transition: background-color var(--header-sticky-duration) var(--header-sticky-ease);
+}
+
+.header-container.is-scrolled {
+	background-color: var(--e-global-color-secondary) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.header-container {
+		transition-duration: 0.01ms;
+	}
+}

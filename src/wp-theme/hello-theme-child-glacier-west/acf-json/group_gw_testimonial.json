@@ -1,0 +1,58 @@
+{
+    "key": "group_gw_testimonial",
+    "title": "Testimonial",
+    "fields": [
+        {
+            "key": "field_tst_gw_quote",
+            "label": "Quote",
+            "name": "gw_quote",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Blank line = new paragraph. The post title is the company name.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 8,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_tst_gw_featured",
+            "label": "Featured (blue card)",
+            "name": "gw_featured",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gw_testimonial"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794303686
+}

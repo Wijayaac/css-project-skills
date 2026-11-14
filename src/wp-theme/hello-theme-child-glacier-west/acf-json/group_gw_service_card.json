@@ -1,0 +1,90 @@
+{
+    "key": "group_gw_service_card",
+    "title": "Service – Overview card",
+    "fields": [
+        {
+            "key": "field_svc_gw_short_name",
+            "label": "Short name",
+            "name": "gw_short_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Tag on the card and the service hero, e.g. \"Cold Storage\". The number \"01 / 05\" comes from Order (Page Attributes).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_svc_gw_card_title",
+            "label": "Card title",
+            "name": "gw_card_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. \"Cold storage construction.\" Card text = the Excerpt; card image = the Featured image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_svc_gw_includes",
+            "label": "Includes (4 items)",
+            "name": "gw_includes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_svc_gw_includes_item",
+                    "label": "Item",
+                    "name": "item",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "parent_repeater": "field_svc_gw_includes"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gw_service"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794303686
+}

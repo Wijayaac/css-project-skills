@@ -1,0 +1,70 @@
+{
+    "key": "group_gw_post_takeaways",
+    "title": "Post – Key takeaways",
+    "fields": [
+        {
+            "aria-label": "",
+            "instructions": "3–5 short sentences shown in the grey \"Key takeaways\" box under the article (one row per takeaway). Leave empty to hide the box.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "key": "field_post_gw_takeaways",
+            "label": "Key takeaways",
+            "name": "gw_takeaways",
+            "type": "repeater",
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 8,
+            "collapsed": "",
+            "button_label": "Add takeaway",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "aria-label": "",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "key": "field_post_gw_takeaways_gw_takeaway",
+                    "label": "Takeaway",
+                    "name": "gw_takeaway",
+                    "type": "text",
+                    "default_value": "",
+                    "maxlength": 160,
+                    "placeholder": "e.g. Design around operations first, then the building.",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_post_gw_takeaways"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Shown in the blog single template under the article ([gw_takeaways]).",
+    "show_in_rest": 0,
+    "modified": 1794375448
+}

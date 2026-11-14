@@ -1,0 +1,45 @@
+{
+    "key": "group_gw_team",
+    "title": "Team Member",
+    "fields": [
+        {
+            "key": "field_tm_gw_role",
+            "label": "Role / position",
+            "name": "gw_role",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown in blue under the name, e.g. \"Vice President, Construction\". Name = the post title, photo = the Featured image (portrait, at least 600×700; cropped to 336 px high).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Project Manager",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gw_team"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794364989
+}

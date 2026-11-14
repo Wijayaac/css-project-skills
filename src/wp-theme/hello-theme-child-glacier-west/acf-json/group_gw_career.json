@@ -1,0 +1,208 @@
+{
+    "key": "group_gw_career",
+    "title": "Job details",
+    "fields": [
+        {
+            "key": "field_car_gw_is_open",
+            "label": "Accepting applications",
+            "name": "gw_is_open",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Switch off to hide the job from the Careers page (it stays in the admin).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Open",
+            "ui_off_text": "Closed"
+        },
+        {
+            "key": "field_car_gw_close_date",
+            "label": "Close date (optional)",
+            "name": "gw_close_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "After this date the job hides itself. Leave empty to keep it open until switched off.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "Ymd",
+            "first_day": 1
+        },
+        {
+            "key": "field_car_gw_employment_type",
+            "label": "Employment type",
+            "name": "gw_employment_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "34",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full-time": "Full-time",
+                "part-time": "Part-time",
+                "contract": "Contract",
+                "temporary": "Temporary"
+            },
+            "default_value": "full-time",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_car_gw_location_text",
+            "label": "Location shown on the row",
+            "name": "gw_location_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional, e.g. \"Edmonton, AB\". Leave empty to show the Location terms (e.g. \"Alberta / British Columbia\"). Tick the Location boxes in the sidebar either way – they drive the tabs.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 60,
+            "placeholder": "Edmonton, AB",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_car_gw_apply_url",
+            "label": "External apply link (optional)",
+            "name": "gw_apply_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "If set, Apply Now opens this link (new tab) instead of scrolling to the application form.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://"
+        },
+        {
+            "key": "field_car_gw_overview",
+            "label": "Short overview",
+            "name": "gw_overview",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "One or two sentences shown when the row opens.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 320,
+            "rows": 3,
+            "placeholder": "What this person will do, who they will work with, and the projects they will support.",
+            "new_lines": ""
+        },
+        {
+            "key": "field_car_gw_description",
+            "label": "Full description (optional)",
+            "name": "gw_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Shown under \"View full job description\" in the open row.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_car_gw_responsibilities",
+            "label": "Responsibilities (optional)",
+            "name": "gw_responsibilities",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Use a bulleted list.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_car_gw_requirements",
+            "label": "Requirements (optional)",
+            "name": "gw_requirements",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Use a bulleted list.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gw_career"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Careers page rows ([gw_careers]) and the application form's Position list.",
+    "show_in_rest": 0,
+    "modified": 1794469991
+}

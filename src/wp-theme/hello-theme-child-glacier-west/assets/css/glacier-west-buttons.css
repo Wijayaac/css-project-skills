@@ -1,0 +1,190 @@
+/* Glacier West – global button hover "sweep" (pure CSS, loaded site-wide by functions.php).
+
+   Applies automatically, no class needed, to:
+     - Elementor Button widgets           .elementor-widget-button .elementor-button
+     - Elementor Pro Form submit / steps  .elementor-widget-form .elementor-button
+     - Elementor Pro Call to Action       .elementor-widget-call-to-action .elementor-cta__button
+     - Elementor Pro Price Table          .elementor-widget-price-table .elementor-price-table__button
+     - any widget with the class gw-btn-sweep (explicit opt-in for other .elementor-button markup)
+   Not touched: Loop Grid "Load more", nav menu toggles, popup close buttons, search/login widgets, atomic (v4) e-button.
+
+   Opt out: add gw-no-sweep to the widget (Advanced > CSS Classes) or to the button element.
+
+   Fill colour (custom property --gw-sweep-bg on the button):
+     default (any other button, incl. the header "Contact Us") ... brand blue #0074BE
+     .gw-pill--primary (our solid blue pill) ....................... white #FFFFFF (blue label & arrow)
+     .gw-pill--light / .gw-pill--outline ........................... brand blue #0074BE
+     legacy Elementor "Button Type" Info/Success/Warning/Danger ...... white #FFFFFF (blue label & arrow)
+     overrides (widget class): gw-btn-sweep--navy, gw-btn-sweep--brand, gw-btn-sweep--white */
+
+/* ---- colour tokens (default rule has zero specificity, so every mapping below wins) ---- */
+:where(:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep)) {
+	--gw-sweep-bg: #0074BE;
+	--gw-sweep-text: #FFFFFF;
+	--gw-sweep-arrow: var(--gw-sweep-text);
+	--gw-sweep-bw: 0px;
+	--gw-sweep-time: .45s;
+	--gw-sweep-ease: cubic-bezier(.65, 0, .35, 1);
+}
+
+.gw-pill--primary .elementor-button,
+.elementor-button:is(.elementor-button-info, .elementor-button-success, .elementor-button-warning, .elementor-button-danger) {
+	--gw-sweep-bg: #ffffff;
+	--gw-sweep-text: #0074BE;
+	--gw-sweep-arrow: #0074BE;
+}
+
+.gw-pill--light .elementor-button {
+	--gw-sweep-bg: #0074BE;
+}
+
+.gw-pill--outline .elementor-button {
+	--gw-sweep-bg: #0074BE;
+	--gw-sweep-bw: 1px;
+}
+
+.gw-btn-sweep.gw-btn-sweep--navy .elementor-button {
+	--gw-sweep-bg: #001828;
+	--gw-sweep-text: #FFFFFF;
+	--gw-sweep-arrow: #FFFFFF;
+}
+
+.gw-btn-sweep.gw-btn-sweep--brand .elementor-button {
+	--gw-sweep-bg: #0074BE;
+	--gw-sweep-text: #FFFFFF;
+	--gw-sweep-arrow: #FFFFFF;
+}
+
+.gw-btn-sweep.gw-btn-sweep--white .elementor-button {
+	--gw-sweep-bg: #FFFFFF;
+	--gw-sweep-text: #000000;
+	--gw-sweep-arrow: #0074BE;
+}
+
+/* ---- layers ---- */
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) {
+	position: relative;
+	isolation: isolate;
+	transition: color calc(var(--gw-sweep-time) * .45) ease calc(var(--gw-sweep-time) * .25), opacity .2s ease;
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep)::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	pointer-events: none;
+	inset: calc(-1 * var(--gw-sweep-bw));
+	border-radius: inherit;
+	background: var(--gw-sweep-bg);
+	clip-path: inset(0 100% 0 0 round 1000px);
+	transition: clip-path var(--gw-sweep-time) var(--gw-sweep-ease);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon {
+	transition: background-color calc(var(--gw-sweep-time) * .35) ease calc(var(--gw-sweep-time) * .6), color calc(var(--gw-sweep-time) * .35) ease calc(var(--gw-sweep-time) * .6);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon>* {
+	transition: transform var(--gw-sweep-time) var(--gw-sweep-ease);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon svg,
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon svg * {
+	transition: fill calc(var(--gw-sweep-time) * .35) ease calc(var(--gw-sweep-time) * .6), stroke calc(var(--gw-sweep-time) * .35) ease calc(var(--gw-sweep-time) * .6);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon svg[fill="none"],
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon svg[fill="none"] :not([fill]),
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon svg [stroke]:not([stroke="none"]):not([fill]),
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon svg [fill="none"] {
+	fill: none !important;
+}
+
+/* ---- active state: hover (mouse/trackpad only, so taps don't stick), keyboard focus, press ---- */
+@media (hover: hover) {
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):hover {
+		opacity: 1;
+		color: var(--gw-sweep-text) !important;
+		border-color: var(--gw-sweep-text);
+	}
+
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):hover::before {
+		clip-path: inset(0 0 0 0 round 0px);
+	}
+
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):hover .elementor-button-text {
+		color: var(--gw-sweep-text);
+	}
+
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):hover .elementor-button-icon {
+		background-color: transparent;
+		color: var(--gw-sweep-arrow);
+	}
+
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):hover .elementor-button-icon>* {
+		transform: translateX(4px);
+		transition: transform var(--gw-sweep-time) var(--gw-sweep-ease);
+	}
+
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):hover .elementor-button-icon svg:not([fill="none"]):not(:has([stroke]:not([stroke="none"]))),
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):hover .elementor-button-icon svg [fill]:not([fill="none"]):not([stroke]) {
+		fill: var(--gw-sweep-arrow);
+	}
+
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):hover .elementor-button-icon svg [stroke]:not([stroke="none"]) {
+		stroke: var(--gw-sweep-arrow);
+	}
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):is(:focus-visible, :active) {
+	opacity: 1;
+	color: var(--gw-sweep-text) !important;
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):is(:focus-visible, :active)::before {
+	clip-path: inset(0 0 0 0 round 0px);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):is(:focus-visible, :active) .elementor-button-text {
+	color: var(--gw-sweep-text);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):is(:focus-visible, :active) .elementor-button-icon {
+	background-color: transparent;
+	color: var(--gw-sweep-arrow);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):focus-visible .elementor-button-icon>* {
+	transform: translateX(4px);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):is(:focus-visible, :active) .elementor-button-icon svg:not([fill="none"]):not(:has([stroke]:not([stroke="none"]))),
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):is(:focus-visible, :active) .elementor-button-icon svg [fill]:not([fill="none"]):not([stroke]) {
+	fill: var(--gw-sweep-arrow);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):is(:focus-visible, :active) .elementor-button-icon svg [stroke]:not([stroke="none"]) {
+	stroke: var(--gw-sweep-arrow);
+}
+
+:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep):focus-visible {
+	outline: 2px solid #00CBFA;
+	outline-offset: 3px;
+}
+
+/* ---- reduced motion: same end state, no animation ---- */
+@media (prefers-reduced-motion: reduce) {
+
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep),
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep)::before,
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon,
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon>*,
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon svg,
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon svg * {
+		transition: none;
+	}
+
+	:is(.elementor-widget-button, .elementor-widget-form, .elementor-widget-call-to-action, .elementor-widget-price-table, .gw-btn-sweep):not(.gw-no-sweep) .elementor-button:not(.gw-no-sweep) .elementor-button-icon>* {
+		transform: none !important;
+	}
+}
