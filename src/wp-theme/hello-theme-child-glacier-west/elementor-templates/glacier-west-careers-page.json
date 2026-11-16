@@ -1,0 +1,3196 @@
+{
+ "version": "0.4",
+ "title": "Glacier West – Careers",
+ "type": "page",
+ "content": [
+  {
+   "id": "9c96715",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Careers Hero",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#001828",
+    "min_height": {
+     "unit": "px",
+     "size": 600,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 0,
+     "sizes": []
+    },
+    "flex_justify_content": "flex-end",
+    "custom_css": "/* Pill buttons for all homepage sections (needs Elementor Pro Custom CSS). Not scoped, so it styles every .gw-pill on the page. */\n.gw-pill .elementor-button { display: inline-flex; align-items: center; min-height: 52px; transition: opacity .3s; }\n.gw-pill .elementor-button:hover { opacity: .85; }\n.gw-pill .elementor-button-content-wrapper { align-items: center; }\n.gw-pill .elementor-button-icon svg { width: 16px; height: auto; }\n.gw-pill--primary .elementor-button-icon, .gw-pill--light .elementor-button-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; }\n.gw-pill--primary .elementor-button-icon { background: #FFFFFF; }\n.gw-pill--light .elementor-button-icon { background: #0074BE; }\n/* Glacier West overflow safety, 980-1440px (Elementor Pro Custom CSS). Mirrors the _laptop values, so it also works\n   when the Laptop breakpoint is NOT enabled in Site Settings > Layout > Breakpoints. Scoped to .gw-sec sections only. */\n.gw-sec .e-con, .gw-sec .elementor-widget { min-width: 0; }\n.gw-sec .elementor-heading-title, .gw-sec .elementor-widget-text-editor { overflow-wrap: break-word; }\n@media (min-width: 1025px) and (max-width: 1366px) {\n  .gw-sec > .gw-inner { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-gap-lg { column-gap: 40px !important; }\n  .gw-sec .gw-wwb-panel { margin-right: -48px !important; padding: 96px 48px 56px 32px !important; }\n  .gw-sec .gw-pad-lg { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-fs-xl .elementor-heading-title, .gw-sec .gw-fs-xl.elementor-widget-text-editor, .gw-sec .gw-fs-xl .elementor-widget-container { font-size: 52px !important; line-height: 1.05 !important; }\n  .gw-sec .gw-fs-lg .elementor-heading-title, .gw-sec .gw-fs-lg.elementor-widget-text-editor, .gw-sec .gw-fs-lg .elementor-widget-container { font-size: 44px !important; line-height: 1.2 !important; }\n  .gw-sec .gw-fs-md .elementor-heading-title, .gw-sec .gw-fs-md.elementor-widget-text-editor, .gw-sec .gw-fs-md .elementor-widget-container { font-size: 40px !important; }\n}\n"
+   },
+   "elements": [
+    {
+     "id": "8b82cff",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "178",
+       "right": "100",
+       "bottom": "120",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Careers Hero inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "142",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "160",
+       "right": "40",
+       "bottom": "72",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "130",
+       "right": "20",
+       "bottom": "56",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_justify_content": "flex-end"
+     },
+     "elements": [
+      {
+       "id": "8296f2b8",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Careers hero row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 32,
+         "column": "32",
+         "row": "32",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "29683ae5",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 32,
+           "column": "32",
+           "row": "32",
+           "isLinked": true
+          },
+          "_title": "Careers hero left",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "882df6dc",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Careers",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Careers</p>",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "rgba(255,255,255,0.2)",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "_background_background": "classic",
+            "_background_color": "rgba(255,255,255,0.2)"
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "2d7b29a",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Careers H1",
+            "title": "Build your career with us.",
+            "header_size": "h1",
+            "title_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 52,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 38,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 42,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 700px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit",
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 52,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 52,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-xl"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "4f3b846",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 32,
+           "column": "32",
+           "row": "32",
+           "isLinked": true
+          },
+          "_title": "Careers hero right",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 480px, 33.33vw)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "padding_tablet": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [
+          {
+           "id": "c8e5fdf",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Hero lead",
+            "editor": "<p>Join a team that&#8217;s building some of Western Canada&#8217;s most complex industrial facilities. At Glacier West, you&#8217;ll find opportunities to grow your career while working alongside experienced professionals who value quality, teamwork, and accountability.</p>",
+            "text_color": "rgba(255,255,255,0.85)",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 24,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "c5e72465",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Btn Apply Now",
+            "text": "Apply Now",
+            "link": {
+             "url": "#apply",
+             "is_external": "",
+             "nofollow": "",
+             "custom_attributes": ""
+            },
+            "selected_icon": {
+             "value": {
+              "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/07/Vector.svg",
+              "id": 84
+             },
+             "library": "svg"
+            },
+            "icon_align": "row-reverse",
+            "icon_indent": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "button_text_color": "#000000",
+            "hover_color": "#000000",
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "button_background_hover_background": "classic",
+            "button_background_hover_color": "#FFFFFF",
+            "border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "text_padding": {
+             "unit": "px",
+             "top": "6",
+             "right": "6",
+             "bottom": "6",
+             "left": "24",
+             "isLinked": false
+            },
+            "_css_classes": "gw-pill gw-pill--light gw-btn-sweep"
+           },
+           "elements": [],
+           "widgetType": "button"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5bbc1940",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Careers Who We Are",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF",
+    "position": "relative"
+   },
+   "elements": [
+    {
+     "id": "25323baf",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "140",
+       "right": "100",
+       "bottom": "170",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 64,
+       "column": "64",
+       "row": "64",
+       "isLinked": true
+      },
+      "_title": "Careers Who We Are inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "112",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "80",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "64",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "64",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "9ea92744",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "_title": "Careers statement row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "53e0ea4c",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Careers label",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 260px, 18.06vw)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [
+          {
+           "id": "31977ba2",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Why Join Glacier West",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Why Join Glacier West</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          }
+         ]
+        },
+        {
+         "id": "50eb98c3",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Careers statement",
+          "title": "At Glacier West, you&#8217;ll be part of a team that takes pride in delivering specialized industrial facilities<span style=\"color:#8A8A8A;\"> that make a real impact.</span>",
+          "header_size": "h2",
+          "title_color": "#000000",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 50,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 60,
+           "sizes": []
+          },
+          "typography_font_size_tablet": {
+           "unit": "px",
+           "size": 40,
+           "sizes": []
+          },
+          "typography_line_height_tablet": {
+           "unit": "px",
+           "size": 48,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 32,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "px",
+           "size": 40,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1,
+          "typography_font_size_laptop": {
+           "unit": "px",
+           "size": 44,
+           "sizes": []
+          },
+          "typography_line_height_laptop": {
+           "unit": "px",
+           "size": 53,
+           "sizes": []
+          },
+          "_css_classes": "gw-fs-lg"
+         },
+         "elements": [],
+         "widgetType": "heading"
+        }
+       ]
+      },
+      {
+       "id": "6bd0f8b",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "300",
+         "isLinked": false
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 48,
+         "column": "48",
+         "row": "48",
+         "isLinked": true
+        },
+        "_title": "Careers body",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "padding_tablet": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "width": {
+         "unit": "custom",
+         "size": "min(100%, 1240px)",
+         "sizes": []
+        },
+        "padding_laptop": {
+         "unit": "px",
+         "top": "0",
+         "right": "48",
+         "bottom": "0",
+         "left": "48",
+         "isLinked": false
+        },
+        "css_classes": "gw-pad-lg"
+       },
+       "elements": [
+        {
+         "id": "65f4de4",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Careers para 1",
+          "editor": "<p>We value people who are dependable, collaborative, and committed to doing quality work.</p>",
+          "text_color": "#000000",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 14,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 21,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_element_width_tablet": "inherit",
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 400px)",
+           "sizes": []
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ecf2b9cd",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Careers Hero Image",
+    "html_tag": "section",
+    "flex_direction": "column"
+   },
+   "elements": [
+    {
+     "id": "13500a0b",
+     "elType": "widget",
+     "isInner": false,
+     "settings": {
+      "_title": "Careers wide image (placeholder)",
+      "image": {
+       "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+       "id": 105,
+       "size": "",
+       "alt": "",
+       "source": "library"
+      },
+      "image_size": "full",
+      "width": {
+       "unit": "%",
+       "size": 100,
+       "sizes": []
+      },
+      "height": {
+       "unit": "px",
+       "size": 600,
+       "sizes": []
+      },
+      "height_tablet": {
+       "unit": "px",
+       "size": 400,
+       "sizes": []
+      },
+      "height_mobile": {
+       "unit": "px",
+       "size": 260,
+       "sizes": []
+      },
+      "object-fit": "cover",
+      "image_border_radius": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "_element_width": "inherit"
+     },
+     "elements": [],
+     "widgetType": "image"
+    }
+   ]
+  },
+  {
+   "id": "3e249c8",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Careers What You Will Find",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "41cf2e9",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "112",
+       "right": "100",
+       "bottom": "140",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 64,
+       "column": "64",
+       "row": "64",
+       "isLinked": true
+      },
+      "_title": "Careers What You Will Find inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "90",
+       "right": "48",
+       "bottom": "112",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "96",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "72",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "64",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "aa64bb8",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Values header",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "addf186",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Values heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "569af8f",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag What You&#8217;ll Find Here",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;What You&#8217;ll Find Here</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "43de9990",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Values H2",
+            "title": "A place to grow, build, and do work you&#8217;re proud of.",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 640px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit",
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "041c1a9",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Values intro",
+          "editor": "<p>Four things our team can count on &#8212; on every project, in every role.</p>",
+          "text_color": "#8A8A8A",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 14,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 21,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 320px, 22.22vw)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit",
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "23f52ec1",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "_title": "Value cards",
+        "flex_direction": "row",
+        "flex_wrap": "wrap",
+        "flex_align_items": "stretch",
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "07457b10",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "28",
+           "left": "20",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 28,
+           "column": "28",
+           "row": "28",
+           "isLinked": true
+          },
+          "_title": "Value Meaningful projects",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "calc(25% - 18px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "custom",
+           "size": "calc(50% - 12px)",
+           "sizes": []
+          },
+          "background_background": "classic",
+          "background_color": "#001828",
+          "border_radius": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "20",
+           "left": "20",
+           "isLinked": true
+          },
+          "min_height": {
+           "unit": "px",
+           "size": 260,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "fe919fb",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Value icon Meaningful projects",
+            "selected_icon": {
+             "value": "fas fa-magic",
+             "library": "fa-solid"
+            },
+            "view": "stacked",
+            "shape": "circle",
+            "primary_color": "#FFFFFF",
+            "secondary_color": "#001828",
+            "size": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "icon_padding": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "_element_width": "auto"
+           },
+           "elements": [],
+           "widgetType": "icon"
+          },
+          {
+           "id": "fa0be90",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 8,
+             "column": "8",
+             "row": "8",
+             "isLinked": true
+            },
+            "_title": "Value text Meaningful projects",
+            "flex_direction": "column",
+            "flex_align_items": "flex-start"
+           },
+           "elements": [
+            {
+             "id": "9fea626",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Value title Meaningful projects",
+              "title": "Meaningful projects",
+              "header_size": "h3",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 26,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 22,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "0ccaf71",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Value body Meaningful projects",
+              "editor": "<p>Work on cold storage, food processing, and industrial facilities across Western Canada.</p>",
+              "text_color": "rgba(255,255,255,0.85)",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 21,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "7b1ad1e",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "28",
+           "left": "20",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 28,
+           "column": "28",
+           "row": "28",
+           "isLinked": true
+          },
+          "_title": "Value Collaborative team",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "calc(25% - 18px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "custom",
+           "size": "calc(50% - 12px)",
+           "sizes": []
+          },
+          "background_background": "classic",
+          "background_color": "#001828",
+          "border_radius": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "20",
+           "left": "20",
+           "isLinked": true
+          },
+          "min_height": {
+           "unit": "px",
+           "size": 260,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "f5c8ec6",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Value icon Collaborative team",
+            "selected_icon": {
+             "value": "far fa-handshake",
+             "library": "fa-regular"
+            },
+            "view": "stacked",
+            "shape": "circle",
+            "primary_color": "#FFFFFF",
+            "secondary_color": "#001828",
+            "size": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "icon_padding": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "_element_width": "auto"
+           },
+           "elements": [],
+           "widgetType": "icon"
+          },
+          {
+           "id": "442aa10",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 8,
+             "column": "8",
+             "row": "8",
+             "isLinked": true
+            },
+            "_title": "Value text Collaborative team",
+            "flex_direction": "column",
+            "flex_align_items": "flex-start"
+           },
+           "elements": [
+            {
+             "id": "5b9bb8e",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Value title Collaborative team",
+              "title": "Collaborative team",
+              "header_size": "h3",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 26,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 22,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "08bb314",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Value body Collaborative team",
+              "editor": "<p>Join experienced professionals who support one another and share their knowledge.</p>",
+              "text_color": "rgba(255,255,255,0.85)",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 21,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "2cdb242",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "28",
+           "left": "20",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 28,
+           "column": "28",
+           "row": "28",
+           "isLinked": true
+          },
+          "_title": "Value Opportunities to grow",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "calc(25% - 18px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "custom",
+           "size": "calc(50% - 12px)",
+           "sizes": []
+          },
+          "background_background": "classic",
+          "background_color": "#001828",
+          "border_radius": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "20",
+           "left": "20",
+           "isLinked": true
+          },
+          "min_height": {
+           "unit": "px",
+           "size": 260,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "cbf1785",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Value icon Opportunities to grow",
+            "selected_icon": {
+             "value": "fas fa-magic",
+             "library": "fa-solid"
+            },
+            "view": "stacked",
+            "shape": "circle",
+            "primary_color": "#FFFFFF",
+            "secondary_color": "#001828",
+            "size": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "icon_padding": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "_element_width": "auto"
+           },
+           "elements": [],
+           "widgetType": "icon"
+          },
+          {
+           "id": "2c3b52c",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 8,
+             "column": "8",
+             "row": "8",
+             "isLinked": true
+            },
+            "_title": "Value text Opportunities to grow",
+            "flex_direction": "column",
+            "flex_align_items": "flex-start"
+           },
+           "elements": [
+            {
+             "id": "119b6d1",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Value title Opportunities to grow",
+              "title": "Opportunities to grow",
+              "header_size": "h3",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 26,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 22,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "4b238955",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Value body Opportunities to grow",
+              "editor": "<p>Build your skills while taking on new challenges and responsibilities.</p>",
+              "text_color": "rgba(255,255,255,0.85)",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 21,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "3199b6b9",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "28",
+           "left": "20",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 28,
+           "column": "28",
+           "row": "28",
+           "isLinked": true
+          },
+          "_title": "Value Quality-driven culture",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "calc(25% - 18px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "custom",
+           "size": "calc(50% - 12px)",
+           "sizes": []
+          },
+          "background_background": "classic",
+          "background_color": "#001828",
+          "border_radius": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "20",
+           "left": "20",
+           "isLinked": true
+          },
+          "min_height": {
+           "unit": "px",
+           "size": 260,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "8d234021",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Value icon Quality-driven culture",
+            "selected_icon": {
+             "value": "far fa-thumbs-up",
+             "library": "fa-regular"
+            },
+            "view": "stacked",
+            "shape": "circle",
+            "primary_color": "#FFFFFF",
+            "secondary_color": "#001828",
+            "size": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "icon_padding": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "_element_width": "auto"
+           },
+           "elements": [],
+           "widgetType": "icon"
+          },
+          {
+           "id": "669697b",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 8,
+             "column": "8",
+             "row": "8",
+             "isLinked": true
+            },
+            "_title": "Value text Quality-driven culture",
+            "flex_direction": "column",
+            "flex_align_items": "flex-start"
+           },
+           "elements": [
+            {
+             "id": "d83cb01c",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Value title Quality-driven culture",
+              "title": "Quality-driven culture",
+              "header_size": "h3",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 26,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 22,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "4c79c434",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Value body Quality-driven culture",
+              "editor": "<p>We believe in doing the job right and delivering work we&#8217;re proud to stand behind.</p>",
+              "text_color": "rgba(255,255,255,0.85)",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 21,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "897afa7",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Careers Current Opportunities",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#F3F3F3"
+   },
+   "elements": [
+    {
+     "id": "c4566b8",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "120",
+       "right": "84",
+       "bottom": "120",
+       "left": "84",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 56,
+       "column": "56",
+       "row": "56",
+       "isLinked": true
+      },
+      "_title": "Careers Current Opportunities inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "96",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "96",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "72",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "56",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "b7d7dbe",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Openings header",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "34b4a0eb",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Openings heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "577c3a15",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Open Positions",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Open Positions</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "32c36330",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Openings H2",
+            "title": "Current opportunities.",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "7e663d9b",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Openings intro",
+          "editor": "<p>Current opportunities are available in Alberta and British Columbia.</p>",
+          "text_color": "#000000",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 320px, 22.22vw)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit",
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "3e809ca",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Open positions list",
+        "shortcode": "[gw_careers form=\"#apply\"]",
+        "_element_width": "inherit"
+       },
+       "elements": [],
+       "widgetType": "shortcode"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6d1e1af",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Careers Apply",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF",
+    "_element_id": "apply"
+   },
+   "elements": [
+    {
+     "id": "6d882754",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "140",
+       "right": "100",
+       "bottom": "140",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Careers Apply inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "112",
+       "right": "48",
+       "bottom": "112",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "96",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "72",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner"
+     },
+     "elements": [
+      {
+       "id": "7e56fd60",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 100,
+         "column": "100",
+         "row": "100",
+         "isLinked": true
+        },
+        "_title": "Apply row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 48,
+         "column": "48",
+         "row": "48",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "100",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "2dfaff3c",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 28,
+           "column": "28",
+           "row": "28",
+           "isLinked": true
+          },
+          "_title": "Apply intro",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 440px, 30.56vw)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [
+          {
+           "id": "dbdd25b",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Apply",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Apply</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "de3721cd",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Apply H2",
+            "title": "Ready for your next opportunity?",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "57c2797",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Apply intro text",
+            "editor": "<p>If you&#8217;re ready for your next opportunity, we&#8217;d love to hear from you. Complete the application form to apply.</p>",
+            "text_color": "#8A8A8A",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "871b1cb",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "20",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 14,
+             "column": "14",
+             "row": "14",
+             "isLinked": true
+            },
+            "_title": "No phone calls",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "border_border": "solid",
+            "border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "border_color": "#DBDBDB",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "aeaf05d",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "No calls icon",
+              "selected_icon": {
+               "value": "fas fa-times",
+               "library": "fa-solid"
+              },
+              "view": "framed",
+              "shape": "circle",
+              "primary_color": "#DBDBDB",
+              "secondary_color": "#FFFFFF",
+              "size": {
+               "unit": "px",
+               "size": 10,
+               "sizes": []
+              },
+              "icon_padding": {
+               "unit": "px",
+               "size": 10,
+               "sizes": []
+              },
+              "border_width": {
+               "unit": "px",
+               "top": "1",
+               "right": "1",
+               "bottom": "1",
+               "left": "1",
+               "isLinked": true
+              },
+              "_element_width": "auto",
+              "_flex_size": "none",
+              "custom_css": "selector .elementor-icon { color: #8A8A8A; fill: #8A8A8A; }"
+             },
+             "elements": [],
+             "widgetType": "icon"
+            },
+            {
+             "id": "350d4bc",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "No calls text",
+              "editor": "<p>No phone calls, please.</p>",
+              "text_color": "#000000",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              },
+              "typography_font_weight": "500",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.3,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              },
+              "_flex_size": "custom",
+              "_flex_grow": 1,
+              "_flex_shrink": 1
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "03d8123",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "40",
+           "right": "40",
+           "bottom": "40",
+           "left": "40",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 0,
+           "column": "0",
+           "row": "0",
+           "isLinked": true
+          },
+          "_title": "Form card",
+          "flex_direction": "column",
+          "_flex_size": "custom",
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "20",
+           "bottom": "24",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#F3F3F3",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "794d78d",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Application form",
+            "form_name": "Glacier West job application",
+            "form_fields": [
+             {
+              "_id": "0bba943e",
+              "custom_id": "first_name",
+              "field_type": "text",
+              "field_label": "First name",
+              "placeholder": "First name",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "a0de30db",
+              "custom_id": "last_name",
+              "field_type": "text",
+              "field_label": "Last name",
+              "placeholder": "Last name",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "b29aa6d",
+              "custom_id": "email",
+              "field_type": "email",
+              "field_label": "Email",
+              "placeholder": "you@email.com",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "89e2a463",
+              "custom_id": "phone",
+              "field_type": "tel",
+              "field_label": "Phone",
+              "placeholder": "(000) 000-0000",
+              "required": "",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "a13e55c8",
+              "custom_id": "position",
+              "field_type": "select",
+              "field_label": "Position of interest",
+              "placeholder": "",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100",
+              "field_options": "Select a position|\nGeneral application"
+             },
+             {
+              "_id": "ef4a2fa",
+              "custom_id": "location",
+              "field_type": "select",
+              "field_label": "Preferred location",
+              "placeholder": "",
+              "required": "",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100",
+              "field_options": "Alberta or British Columbia|\nAlberta\nBritish Columbia\nEither location"
+             },
+             {
+              "_id": "b7676bb",
+              "custom_id": "resume",
+              "field_type": "upload",
+              "field_label": "Resume",
+              "placeholder": "",
+              "required": "true",
+              "width": "100",
+              "width_tablet": "100",
+              "width_mobile": "100",
+              "file_sizes": "10",
+              "file_types": "pdf,doc,docx",
+              "allow_multiple_upload": ""
+             },
+             {
+              "_id": "c09cc676",
+              "custom_id": "message",
+              "field_type": "textarea",
+              "field_label": "Message (optional)",
+              "placeholder": "Tell us a bit about your experience",
+              "required": "",
+              "width": "100",
+              "width_tablet": "100",
+              "width_mobile": "100",
+              "rows": 5
+             }
+            ],
+            "input_size": "md",
+            "show_labels": "yes",
+            "mark_required": "",
+            "button_text": "Submit Application",
+            "button_size": "md",
+            "button_width": "",
+            "button_align": "start",
+            "selected_button_icon": {
+             "value": {
+              "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/Vector.svg",
+              "id": 44
+             },
+             "library": "svg"
+            },
+            "button_icon_align": "right",
+            "button_icon_indent": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "submit_actions": [
+             "email",
+             "save-to-database"
+            ],
+            "email_subject": "New job application: [field id=\"position\"]",
+            "email_content": "[all-fields]",
+            "success_message": "Thanks for applying &#8212; our team will review your application and be in touch if there&#8217;s a fit.",
+            "error_message": "Something went wrong. Please check the form and try again.",
+            "column_gap": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "row_gap": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "label_spacing": {
+             "unit": "px",
+             "size": 8,
+             "sizes": []
+            },
+            "label_color": "#000000",
+            "label_typography_typography": "custom",
+            "label_typography_font_family": "Clash Grotesk",
+            "label_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "label_typography_font_weight": "400",
+            "label_typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "mark_required_color": "#000000",
+            "field_text_color": "#000000",
+            "field_typography_typography": "custom",
+            "field_typography_font_family": "Clash Grotesk",
+            "field_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "field_typography_font_weight": "400",
+            "field_typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "field_background_color": "#FFFFFF",
+            "field_border_color": "#DBDBDB",
+            "field_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "field_border_radius": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": true
+            },
+            "button_typography_typography": "custom",
+            "button_typography_font_family": "Clash Grotesk",
+            "button_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "button_typography_font_weight": "400",
+            "button_typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "button_background_color": "#0074BE",
+            "button_text_color": "#FFFFFF",
+            "button_background_hover_color": "#0074BE",
+            "button_hover_color": "#FFFFFF",
+            "button_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "button_text_padding": {
+             "unit": "px",
+             "top": "6",
+             "right": "6",
+             "bottom": "6",
+             "left": "24",
+             "isLinked": false
+            },
+            "_css_classes": "gw-pill gw-pill--primary gw-apply-form",
+            "custom_css": "/* Job application form: 52px inputs, 16px radius, grey placeholders, pill submit (Pro Custom CSS) */\nselector .elementor-field-group .elementor-field:not(textarea):not(.elementor-select-wrapper) { min-height: 52px; padding: 0 20px; }\nselector .elementor-field-group textarea.elementor-field { min-height: 160px; padding: 16px 20px; resize: vertical; }\nselector .elementor-field::placeholder { color: #8A8A8A; opacity: 1; }\nselector .elementor-select-wrapper select { color: #000; }\nselector .elementor-field-type-submit { margin-top: 8px; }\nselector .elementor-button[type=\"submit\"] .elementor-button-icon { order: 2; }\nselector .elementor-select-wrapper select { min-height: 52px; padding: 0 44px 0 20px; }\nselector .elementor-select-wrapper .select-caret-down-wrapper { inset-inline-end: 20px; font-size: 12px; color: #000; }\nselector .elementor-field-group textarea.elementor-field { min-height: 140px; }\nselector .elementor-field-type-upload .elementor-field-label { margin-bottom: 8px; }\n"
+           },
+           "elements": [],
+           "widgetType": "form"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "page_settings": []
+}

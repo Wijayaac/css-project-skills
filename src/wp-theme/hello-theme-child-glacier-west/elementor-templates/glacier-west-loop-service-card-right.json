@@ -1,0 +1,492 @@
+{
+ "version": "0.4",
+ "title": "Glacier West – Loop: Service card (image right)",
+ "type": "loop-item",
+ "content": [
+  {
+   "id": "ebf8956",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Service card image right",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "css_classes": "gw-sec gw-card-link",
+    "custom_css": "/* Pill buttons for all homepage sections (needs Elementor Pro Custom CSS). Not scoped, so it styles every .gw-pill on the page. */\n.gw-pill .elementor-button { display: inline-flex; align-items: center; min-height: 52px; transition: opacity .3s; }\n.gw-pill .elementor-button:hover { opacity: .85; }\n.gw-pill .elementor-button-content-wrapper { align-items: center; }\n.gw-pill .elementor-button-icon svg { width: 16px; height: auto; }\n.gw-pill--primary .elementor-button-icon, .gw-pill--light .elementor-button-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; }\n.gw-pill--primary .elementor-button-icon { background: #FFFFFF; }\n.gw-pill--light .elementor-button-icon { background: #0074BE; }\n/* Glacier West overflow safety, 980-1440px (Elementor Pro Custom CSS). Mirrors the _laptop values, so it also works\n   when the Laptop breakpoint is NOT enabled in Site Settings > Layout > Breakpoints. Scoped to .gw-sec sections only. */\n.gw-sec .e-con, .gw-sec .elementor-widget { min-width: 0; }\n.gw-sec .elementor-heading-title, .gw-sec .elementor-widget-text-editor { overflow-wrap: break-word; }\n@media (min-width: 1025px) and (max-width: 1366px) {\n  .gw-sec > .gw-inner { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-gap-lg { column-gap: 40px !important; }\n  .gw-sec .gw-wwb-panel { margin-right: -48px !important; padding: 96px 48px 56px 32px !important; }\n  .gw-sec .gw-pad-lg { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-fs-xl .elementor-heading-title, .gw-sec .gw-fs-xl.elementor-widget-text-editor, .gw-sec .gw-fs-xl .elementor-widget-container { font-size: 52px !important; line-height: 1.05 !important; }\n  .gw-sec .gw-fs-lg .elementor-heading-title, .gw-sec .gw-fs-lg.elementor-widget-text-editor, .gw-sec .gw-fs-lg .elementor-widget-container { font-size: 44px !important; line-height: 1.2 !important; }\n  .gw-sec .gw-fs-md .elementor-heading-title, .gw-sec .gw-fs-md.elementor-widget-text-editor, .gw-sec .gw-fs-md .elementor-widget-container { font-size: 40px !important; }\n}\n/* tags filled by a shortcode get the cyan marker here */\n.gw-tag-sc p::before { content: \"\\25B2\"; color: #00CBFA; font-size: 11px; margin-right: 10px; }\n",
+    "html_tag": "a",
+    "link": {
+     "url": "#",
+     "is_external": "",
+     "nofollow": "",
+     "custom_attributes": ""
+    },
+    "__dynamic__": {
+     "link": "[elementor-tag id=\"aebf895\" name=\"post-url\" settings=\"%7B%7D\"]"
+    }
+   },
+   "elements": [
+    {
+     "id": "deb0d66",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "80",
+       "right": "100",
+       "bottom": "80",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 100,
+       "column": "100",
+       "row": "100",
+       "isLinked": true
+      },
+      "_title": "Card row",
+      "flex_direction": "row",
+      "flex_direction_tablet": "column-reverse",
+      "flex_align_items": "center",
+      "flex_align_items_tablet": "flex-start",
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "40",
+       "right": "40",
+       "bottom": "40",
+       "left": "40",
+       "isLinked": true
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "40",
+       "right": "20",
+       "bottom": "40",
+       "left": "20",
+       "isLinked": false
+      },
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "100",
+       "isLinked": false
+      },
+      "css_classes": "gw-gap-lg gw-pad-lg",
+      "padding_laptop": {
+       "unit": "px",
+       "top": "80",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "fc8cf9ac",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 28,
+         "column": "28",
+         "row": "28",
+         "isLinked": true
+        },
+        "_title": "Card content",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "custom",
+        "_flex_grow": 1,
+        "_flex_shrink": 1
+       },
+       "elements": [
+        {
+         "id": "4b9ac656",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Card heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start"
+         },
+         "elements": [
+          {
+           "id": "e07e8833",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag 01 / 05 · Cold Storage",
+            "editor": "<p>01 / 05 · Cold Storage</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "_css_classes": "gw-tag-sc",
+            "__dynamic__": {
+             "editor": "[elementor-tag id=\"7fdfb453\" name=\"shortcode\" settings=\"%7B%22shortcode%22%3A%22%5Bgw_service_tag%5D%22%7D\"]"
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "b7495ae",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Card title",
+            "title": "Cold storage construction.",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "__dynamic__": {
+             "title": "[elementor-tag id=\"82d9f17a\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_svc_gw_card_title%3Agw_card_title%22%7D\"]"
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "9c2865ad",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Card text",
+          "editor": "<p>Temperature-controlled facilities engineered for efficiency, reliability, and long-term performance.</p>",
+          "text_color": "#000000",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "__dynamic__": {
+           "editor": "[elementor-tag id=\"d5da5ef8\" name=\"post-excerpt\" settings=\"%7B%22max_length%22%3A%22%22%7D\"]"
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "2413326d",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Includes label",
+          "editor": "<p>Includes</p>",
+          "text_color": "#0074BE",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "typography_letter_spacing": {
+           "unit": "px",
+           "size": 2.4,
+           "sizes": []
+          },
+          "typography_text_transform": "uppercase",
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "69e9177",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Includes list",
+          "shortcode": "[gw_list field=\"gw_includes\" cols=\"2\"]",
+          "_element_width": "inherit"
+         },
+         "elements": [],
+         "widgetType": "shortcode"
+        },
+        {
+         "id": "5c448d79",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "8",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 0,
+           "column": "0",
+           "row": "0",
+           "isLinked": true
+          },
+          "_title": "Card action"
+         },
+         "elements": [
+          {
+           "id": "bf5f3ab9",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Btn Learn More (div, card is the link)",
+            "html": "<span class=\"elementor-button gw-faux-btn__el\"><span class=\"elementor-button-content-wrapper\"><span class=\"elementor-button-text\">Learn More</span><span class=\"elementor-button-icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"11\" height=\"10\" viewBox=\"0 0 11 10\" fill=\"none\" aria-hidden=\"true\"><path d=\"M0.75 4.75H9.75M5.75 8.75L9.75 4.75L5.75 0.75\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke=\"#0074BE\"></path></svg></span></span></span>",
+            "_css_classes": "gw-faux-btn gw-faux-btn--pill gw-pill gw-pill--primary gw-btn-sweep"
+           },
+           "elements": [],
+           "widgetType": "html"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "56743e7",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Card image",
+        "image": {
+         "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+         "id": 105,
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "image_size": "large",
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "height": {
+         "unit": "px",
+         "size": 520,
+         "sizes": []
+        },
+        "height_tablet": {
+         "unit": "px",
+         "size": 400,
+         "sizes": []
+        },
+        "height_mobile": {
+         "unit": "px",
+         "size": 260,
+         "sizes": []
+        },
+        "object-fit": "cover",
+        "image_border_radius": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_element_width": "initial",
+        "_element_custom_width": {
+         "unit": "custom",
+         "size": "min(100%, 560px, 38.89vw)",
+         "sizes": []
+        },
+        "_element_width_tablet": "inherit",
+        "link_to": "none",
+        "__dynamic__": {
+         "image": "[elementor-tag id=\"683a08e9\" name=\"post-featured-image\" settings=\"%7B%22fallback%22%3A%7B%22url%22%3A%22https%3A%2F%2Fwordpress-1619480-6775513.cloudwaysapps.com%2Fwp-content%2Fuploads%2F2026%2F11%2F7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp%22%2C%22id%22%3A105%7D%7D\"]"
+        },
+        "_flex_size": "custom",
+        "_flex_grow": 0,
+        "_flex_shrink": 0,
+        "_element_width_mobile": "inherit",
+        "_css_classes": "gw-card-img"
+       },
+       "elements": [],
+       "widgetType": "image"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "page_settings": {
+  "preview_type": "single/gw_service"
+ }
+}

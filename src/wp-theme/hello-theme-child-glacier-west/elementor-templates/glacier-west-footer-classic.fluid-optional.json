@@ -1,0 +1,622 @@
+{
+ "version": "0.4",
+ "title": "Glacier West – Footer (classic, fluid – optional)",
+ "type": "section",
+ "content": [
+  {
+   "id": "69201b4",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Footer",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#000000"
+   },
+   "elements": [
+    {
+     "id": "305ac57b",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "80",
+       "right": "100",
+       "bottom": "48",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 35,
+       "column": "35",
+       "row": "35",
+       "isLinked": true
+      },
+      "_title": "Footer inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "80",
+       "right": "48",
+       "bottom": "48",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "64",
+       "right": "40",
+       "bottom": "40",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "48",
+       "right": "20",
+       "bottom": "32",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_align_items": "stretch"
+     },
+     "elements": [
+      {
+       "id": "473040f",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "_title": "Footer top",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "9cc9650c",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Footer logo",
+          "image": {
+           "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/126fc5e27ed4c2168aae5a10a2fba0f628b01920.png",
+           "id": 36,
+           "size": "",
+           "alt": "",
+           "source": "library"
+          },
+          "image_size": "full",
+          "width": {
+           "unit": "px",
+           "size": 265,
+           "sizes": []
+          },
+          "_element_width": "auto",
+          "link_to": "custom",
+          "link": {
+           "url": "/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          }
+         },
+         "elements": [],
+         "widgetType": "image"
+        },
+        {
+         "id": "2da84deb",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 80,
+           "column": "80",
+           "row": "80",
+           "isLinked": true
+          },
+          "_title": "Footer columns",
+          "flex_direction": "row",
+          "flex_direction_mobile": "column",
+          "flex_gap_mobile": {
+           "unit": "px",
+           "size": 32,
+           "column": "32",
+           "row": "32",
+           "isLinked": true
+          },
+          "width": {
+           "unit": "custom",
+           "size": "auto",
+           "sizes": []
+          },
+          "flex_gap_laptop": {
+           "unit": "px",
+           "size": 40,
+           "column": "40",
+           "row": "80",
+           "isLinked": false
+          },
+          "css_classes": "gw-gap-lg"
+         },
+         "elements": [
+          {
+           "id": "7107bd5b",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 20,
+             "column": "20",
+             "row": "20",
+             "isLinked": true
+            },
+            "_title": "Quick Links",
+            "flex_direction": "column",
+            "flex_align_items": "flex-start",
+            "width_tablet": {
+             "unit": "custom",
+             "size": "auto",
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "c0d3924a",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Quick Links title",
+              "title": "Quick Links",
+              "header_size": "h4",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              },
+              "typography_font_weight": "500",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.2,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "eef6585e",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Quick Links list",
+              "view": "traditional",
+              "icon_list": [
+               {
+                "_id": "0e3362fc",
+                "text": "About Us",
+                "selected_icon": {
+                 "value": "",
+                 "library": ""
+                },
+                "link": {
+                 "url": "/about-us/",
+                 "is_external": "",
+                 "nofollow": "",
+                 "custom_attributes": ""
+                }
+               },
+               {
+                "_id": "a404fd9",
+                "text": "Services",
+                "selected_icon": {
+                 "value": "",
+                 "library": ""
+                },
+                "link": {
+                 "url": "/services/",
+                 "is_external": "",
+                 "nofollow": "",
+                 "custom_attributes": ""
+                }
+               },
+               {
+                "_id": "40cece2d",
+                "text": "Projects",
+                "selected_icon": {
+                 "value": "",
+                 "library": ""
+                },
+                "link": {
+                 "url": "/projects/",
+                 "is_external": "",
+                 "nofollow": "",
+                 "custom_attributes": ""
+                }
+               },
+               {
+                "_id": "092e0498",
+                "text": "Careers",
+                "selected_icon": {
+                 "value": "",
+                 "library": ""
+                },
+                "link": {
+                 "url": "/careers/",
+                 "is_external": "",
+                 "nofollow": "",
+                 "custom_attributes": ""
+                }
+               },
+               {
+                "_id": "c5b47b1",
+                "text": "Contact Us",
+                "selected_icon": {
+                 "value": "",
+                 "library": ""
+                },
+                "link": {
+                 "url": "/contact-us/",
+                 "is_external": "",
+                 "nofollow": "",
+                 "custom_attributes": ""
+                }
+               }
+              ],
+              "space_between": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "text_color": "#FFFFFF",
+              "text_color_hover": "#00CBFA",
+              "text_indent": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              },
+              "icon_typography_typography": "custom",
+              "icon_typography_font_family": "Clash Grotesk",
+              "icon_typography_font_size": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "icon_typography_font_weight": "400",
+              "icon_typography_line_height": {
+               "unit": "px",
+               "size": 21,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "icon-list"
+            }
+           ]
+          },
+          {
+           "id": "9cb4554f",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 20,
+             "column": "20",
+             "row": "20",
+             "isLinked": true
+            },
+            "_title": "Contact",
+            "flex_direction": "column",
+            "flex_align_items": "flex-start",
+            "width_tablet": {
+             "unit": "custom",
+             "size": "auto",
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "57cb2d03",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Contact title",
+              "title": "Contact Us",
+              "header_size": "h4",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              },
+              "typography_font_weight": "500",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.2,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "168df58",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Contact address",
+              "editor": "<p>1841 Pandora Street,<br>Vancouver, BC&nbsp; V5L 1M4</p>",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 21,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            },
+            {
+             "id": "22b75ea",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Contact phone",
+              "editor": "<p>Phone: <a href=\"tel:6045700006\" style=\"color:inherit;\">604-570-0006</a></p>",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 14,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 21,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              }
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "4b29997",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Footer divider",
+        "style": "solid",
+        "weight": {
+         "unit": "px",
+         "size": 1,
+         "sizes": []
+        },
+        "color": "rgba(255,255,255,0.3)",
+        "gap": {
+         "unit": "px",
+         "size": 0,
+         "sizes": []
+        },
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "_element_width": "inherit"
+       },
+       "elements": [],
+       "widgetType": "divider"
+      },
+      {
+       "id": "427d0918",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 12,
+         "column": "12",
+         "row": "12",
+         "isLinked": true
+        },
+        "_title": "Footer bottom bar",
+        "flex_direction": "row",
+        "flex_direction_mobile": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "flex_align_items_mobile": "flex-start"
+       },
+       "elements": [
+        {
+         "id": "52fa549d",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Footer copyright",
+          "editor": "<p>© 2026 Glacier West. All Rights Reserved.&nbsp; | Powered by 12Creative</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 21,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "f225f80",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Footer legal",
+          "editor": "<p><a href=\"/privacy-policy/\" style=\"color:inherit;\">Privacy Policy</a>&nbsp; |&nbsp; <a href=\"/terms-conditions/\" style=\"color:inherit;\">Terms &amp; Conditions</a></p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 21,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "page_settings": []
+}

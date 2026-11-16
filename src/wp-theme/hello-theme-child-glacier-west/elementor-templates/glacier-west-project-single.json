@@ -1,0 +1,2491 @@
+{
+ "version": "0.4",
+ "title": "Glacier West – Project (single)",
+ "type": "single-post",
+ "content": [
+  {
+   "id": "255f18b8",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Project Hero",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#001828",
+    "min_height": {
+     "unit": "px",
+     "size": 600,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 0,
+     "sizes": []
+    },
+    "flex_justify_content": "center",
+    "custom_css": "/* Pill buttons for all homepage sections (needs Elementor Pro Custom CSS). Not scoped, so it styles every .gw-pill on the page. */\n.gw-pill .elementor-button { display: inline-flex; align-items: center; min-height: 52px; transition: opacity .3s; }\n.gw-pill .elementor-button:hover { opacity: .85; }\n.gw-pill .elementor-button-content-wrapper { align-items: center; }\n.gw-pill .elementor-button-icon svg { width: 16px; height: auto; }\n.gw-pill--primary .elementor-button-icon, .gw-pill--light .elementor-button-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; }\n.gw-pill--primary .elementor-button-icon { background: #FFFFFF; }\n.gw-pill--light .elementor-button-icon { background: #0074BE; }\n/* Glacier West overflow safety, 980-1440px (Elementor Pro Custom CSS). Mirrors the _laptop values, so it also works\n   when the Laptop breakpoint is NOT enabled in Site Settings > Layout > Breakpoints. Scoped to .gw-sec sections only. */\n.gw-sec .e-con, .gw-sec .elementor-widget { min-width: 0; }\n.gw-sec .elementor-heading-title, .gw-sec .elementor-widget-text-editor { overflow-wrap: break-word; }\n@media (min-width: 1025px) and (max-width: 1366px) {\n  .gw-sec > .gw-inner { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-gap-lg { column-gap: 40px !important; }\n  .gw-sec .gw-wwb-panel { margin-right: -48px !important; padding: 96px 48px 56px 32px !important; }\n  .gw-sec .gw-pad-lg { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-fs-xl .elementor-heading-title, .gw-sec .gw-fs-xl.elementor-widget-text-editor, .gw-sec .gw-fs-xl .elementor-widget-container { font-size: 52px !important; line-height: 1.05 !important; }\n  .gw-sec .gw-fs-lg .elementor-heading-title, .gw-sec .gw-fs-lg.elementor-widget-text-editor, .gw-sec .gw-fs-lg .elementor-widget-container { font-size: 44px !important; line-height: 1.2 !important; }\n  .gw-sec .gw-fs-md .elementor-heading-title, .gw-sec .gw-fs-md.elementor-widget-text-editor, .gw-sec .gw-fs-md .elementor-widget-container { font-size: 40px !important; }\n}\n/* tags filled by a shortcode get the cyan marker here */\n.gw-tag-sc p::before { content: \"\\25B2\"; color: #00CBFA; font-size: 11px; margin-right: 10px; }\n"
+   },
+   "elements": [
+    {
+     "id": "da0ee40",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "178",
+       "right": "100",
+       "bottom": "120",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "_title": "Project Hero inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "142",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "160",
+       "right": "40",
+       "bottom": "72",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "130",
+       "right": "20",
+       "bottom": "56",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_align_items": "flex-start"
+     },
+     "elements": [
+      {
+       "id": "bd2f3cf",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Back link",
+        "editor": "<p><a style=\"color:inherit;\" href=\"/projects/\">&#8592; Back to Projects</a></p>",
+        "text_color": "rgba(255,255,255,0.85)",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1.3,
+         "sizes": []
+        },
+        "paragraph_spacing": {
+         "unit": "px",
+         "size": 0,
+         "sizes": []
+        }
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "0293e9cc",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Tag Cold Storage Projects",
+        "editor": "<p>Cold Storage Projects</p>",
+        "text_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "px",
+         "size": 20,
+         "sizes": []
+        },
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.4,
+         "sizes": []
+        },
+        "typography_text_transform": "uppercase",
+        "paragraph_spacing": {
+         "unit": "px",
+         "size": 0,
+         "sizes": []
+        },
+        "_element_width": "auto",
+        "_padding": {
+         "unit": "px",
+         "top": "8",
+         "right": "16",
+         "bottom": "8",
+         "left": "16",
+         "isLinked": false
+        },
+        "_border_border": "solid",
+        "_border_width": {
+         "unit": "px",
+         "top": "1",
+         "right": "1",
+         "bottom": "1",
+         "left": "1",
+         "isLinked": true
+        },
+        "_border_color": "rgba(255,255,255,0.2)",
+        "_border_radius": {
+         "unit": "px",
+         "top": "1000",
+         "right": "1000",
+         "bottom": "1000",
+         "left": "1000",
+         "isLinked": true
+        },
+        "_background_background": "classic",
+        "_background_color": "rgba(255,255,255,0.2)",
+        "_css_classes": "gw-tag-sc",
+        "__dynamic__": {
+         "editor": "[elementor-tag id=\"22bbb647\" name=\"shortcode\" settings=\"%7B%22shortcode%22%3A%22%5Bgw_sector%20after%3D%5C%22%20Projects%5C%22%20fallback%3D%5C%22Projects%5C%22%5D%22%7D\"]"
+        }
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "2a25b31c",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Project H1",
+        "title": "Klondike Cold Storage &#8211; Surrey",
+        "header_size": "h1",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 60,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "px",
+         "size": 60,
+         "sizes": []
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 48,
+         "sizes": []
+        },
+        "typography_line_height_tablet": {
+         "unit": "px",
+         "size": 52,
+         "sizes": []
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 38,
+         "sizes": []
+        },
+        "typography_line_height_mobile": {
+         "unit": "px",
+         "size": 42,
+         "sizes": []
+        },
+        "_element_width": "initial",
+        "_element_custom_width": {
+         "unit": "custom",
+         "size": "min(100%, 900px)",
+         "sizes": []
+        },
+        "_element_width_tablet": "inherit",
+        "__dynamic__": {
+         "title": "[elementor-tag id=\"0b00b770\" name=\"post-title\" settings=\"%7B%7D\"]"
+        },
+        "typography_font_size_laptop": {
+         "unit": "px",
+         "size": 52,
+         "sizes": []
+        },
+        "typography_line_height_laptop": {
+         "unit": "px",
+         "size": 52,
+         "sizes": []
+        },
+        "_css_classes": "gw-fs-xl"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "8039b98",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Hero meta",
+        "editor": "<p>Surrey, British Columbia · 132,000 SF · Under $120/SF</p>",
+        "text_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 16,
+         "sizes": []
+        },
+        "typography_font_weight": "500",
+        "typography_line_height": {
+         "unit": "px",
+         "size": 24,
+         "sizes": []
+        },
+        "paragraph_spacing": {
+         "unit": "px",
+         "size": 0,
+         "sizes": []
+        },
+        "__dynamic__": {
+         "editor": "[elementor-tag id=\"f4ce047c\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_hero_meta%3Agw_hero_meta%22%7D\"]"
+        }
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "65a12db",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Project Overview",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "a43a448",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "140",
+       "right": "100",
+       "bottom": "100",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Project Overview inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "112",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "72",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "56",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner"
+     },
+     "elements": [
+      {
+       "id": "16b0f011",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Overview row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "d7f4d2c",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Overview content",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "ea29a41",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Project Overview",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Project Overview</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "c8688660",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Overview H2",
+            "title": "A cold storage facility built to grow.",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 640px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit",
+            "__dynamic__": {
+             "title": "[elementor-tag id=\"0e4336b7\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_overview_title%3Agw_overview_title%22%7D\"]"
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "9ac686b",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Overview lead",
+            "editor": "<p>Glacier West has worked on the Surrey cold storage facility through multiple phases.</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 24,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "__dynamic__": {
+             "editor": "[elementor-tag id=\"52c7e13\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_overview_lead%3Agw_overview_lead%22%7D\"]"
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "b2cee9a3",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Overview text",
+            "editor": "<p>The 132,000 SF facility includes freezer, cooler, and loading dock space.</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "__dynamic__": {
+             "editor": "[elementor-tag id=\"32c6ee50\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_overview_text%3Agw_overview_text%22%7D\"]"
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          }
+         ]
+        },
+        {
+         "id": "59a870f",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "32",
+           "right": "32",
+           "bottom": "32",
+           "left": "32",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 0,
+           "column": "0",
+           "row": "0",
+           "isLinked": true
+          },
+          "_title": "Details card",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 440px, 30.56vw)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "background_background": "classic",
+          "background_color": "#F3F3F3",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [
+          {
+           "id": "faeb8b2f",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Project details",
+            "shortcode": "[gw_project_details]",
+            "_element_width": "inherit"
+           },
+           "elements": [],
+           "widgetType": "shortcode"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ea9fd679",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Project Gallery",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec gw-if-gw_gallery",
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "230123a",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "100",
+       "bottom": "120",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Project Gallery inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "0",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "0",
+       "right": "40",
+       "bottom": "80",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "0",
+       "right": "20",
+       "bottom": "64",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner"
+     },
+     "elements": [
+      {
+       "id": "dfafa2c0",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Project gallery",
+        "gallery_type": "single",
+        "gallery": [],
+        "gallery_layout": "masonry",
+        "columns": 3,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "gap": {
+         "unit": "px",
+         "size": 24,
+         "sizes": []
+        },
+        "gap_mobile": {
+         "unit": "px",
+         "size": 16,
+         "sizes": []
+        },
+        "thumbnail_image_size": "large",
+        "link_to": "file",
+        "open_lightbox": "yes",
+        "image_border_radius": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "overlay_background": "",
+        "overlay_title": "",
+        "overlay_description": "",
+        "_element_width": "inherit",
+        "__dynamic__": {
+         "gallery": "[elementor-tag id=\"0f03d139\" name=\"acf-gallery\" settings=\"%7B%22key%22%3A%22field_prj_gw_gallery%3Agw_gallery%22%7D\"]"
+        }
+       },
+       "elements": [],
+       "widgetType": "gallery"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "63e8611d",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Project Stats",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec gw-if-gw_stats",
+    "background_background": "classic",
+    "background_color": "#001828"
+   },
+   "elements": [
+    {
+     "id": "d868841",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "120",
+       "right": "84",
+       "bottom": "100",
+       "left": "84",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 56,
+       "column": "56",
+       "row": "56",
+       "isLinked": true
+      },
+      "_title": "Project Stats inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "96",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "80",
+       "right": "40",
+       "bottom": "80",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "64",
+       "right": "20",
+       "bottom": "64",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "56",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "0d5371b",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Project Stats header",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "58e336f",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Project Stats heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "de635a9",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag At a Glance",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;At a Glance</p>",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "rgba(255,255,255,0.2)",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "_background_background": "classic",
+            "_background_color": "rgba(255,255,255,0.2)"
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "198bd92",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Project Stats H2",
+            "title": "Project highlights.",
+            "header_size": "h2",
+            "title_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 640px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit",
+            "__dynamic__": {
+             "title": "[elementor-tag id=\"fd80e41\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_hl_title%3Agw_hl_title%22%2C%22fallback%22%3A%22Project%20highlights.%22%7D\"]"
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "b785789",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Project Stats intro",
+          "editor": "<p>A track record of large, multi-phase facilities.</p>",
+          "text_color": "rgba(255,255,255,0.85)",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 440px, 30.56vw)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit",
+          "__dynamic__": {
+           "editor": "[elementor-tag id=\"3be8ee3b\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_hl_intro%3Agw_hl_intro%22%7D\"]"
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "15a103d",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Project stats",
+        "shortcode": "[gw_stats]",
+        "_element_width": "inherit"
+       },
+       "elements": [],
+       "widgetType": "shortcode"
+      },
+      {
+       "id": "1422b5b4",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Project timeline",
+        "shortcode": "[gw_timeline]",
+        "_element_width": "inherit",
+        "_css_classes": "gw-if-gw_timeline"
+       },
+       "elements": [],
+       "widgetType": "shortcode"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b8e3ef8",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Feature 1",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec gw-if-gw_f1_title",
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "7cee026",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "120",
+       "right": "100",
+       "bottom": "120",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Feature 1 inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "96",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "80",
+       "right": "40",
+       "bottom": "80",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "64",
+       "right": "20",
+       "bottom": "64",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner"
+     },
+     "elements": [
+      {
+       "id": "00f4661",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Feature 1 row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column-reverse",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "center",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "eeb9044",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Feature content",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 620px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "cb6a85ff",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Building Envelope",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Building Envelope</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "__dynamic__": {
+             "editor": "[elementor-tag id=\"fe41c48\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_f1_tag%3Agw_f1_tag%22%2C%22before%22%3A%22%3Cspan%20style%3D%5C%22color%3A%2300CBFA%3Bfont-size%3A11px%3Bletter-spacing%3A0%3B%5C%22%3E%26%239650%3B%3C%2Fspan%3E%26nbsp%3B%26nbsp%3B%22%2C%22fallback%22%3A%22Building%20Envelope%22%7D\"]"
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "1ac67d4",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Feature title",
+            "title": "Designed around the building envelope.",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 600px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit",
+            "__dynamic__": {
+             "title": "[elementor-tag id=\"655e7da\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_f1_title%3Agw_f1_title%22%7D\"]"
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "acff2c3",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Feature text",
+            "editor": "<p>The building envelope plays a critical role in the performance of any cold storage facility.</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "__dynamic__": {
+             "editor": "[elementor-tag id=\"95114f0\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_f1_text%3Agw_f1_text%22%7D\"]"
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          }
+         ]
+        },
+        {
+         "id": "aa3489b",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Feature image",
+          "image": {
+           "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+           "id": 105,
+           "size": "",
+           "alt": "",
+           "source": "library"
+          },
+          "image_size": "full",
+          "width": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "height": {
+           "unit": "px",
+           "size": 560,
+           "sizes": []
+          },
+          "height_tablet": {
+           "unit": "px",
+           "size": 480,
+           "sizes": []
+          },
+          "height_mobile": {
+           "unit": "px",
+           "size": 300,
+           "sizes": []
+          },
+          "object-fit": "cover",
+          "image_border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 520px, 36.11vw)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit",
+          "__dynamic__": {
+           "image": "[elementor-tag id=\"3937cac9\" name=\"acf-image\" settings=\"%7B%22key%22%3A%22field_prj_gw_f1_image%3Agw_f1_image%22%2C%22fallback%22%3A%7B%22url%22%3A%22https%3A%2F%2Fwordpress-1619480-6775513.cloudwaysapps.com%2Fwp-content%2Fuploads%2F2026%2F11%2F7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp%22%2C%22id%22%3A105%7D%7D\"]"
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [],
+         "widgetType": "image"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "daf33875",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Project Related",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec gw-if-related_projects",
+    "background_background": "classic",
+    "background_color": "#F3F3F3"
+   },
+   "elements": [
+    {
+     "id": "ed138a2",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "100",
+       "right": "84",
+       "bottom": "100",
+       "left": "84",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 48,
+       "column": "48",
+       "row": "48",
+       "isLinked": true
+      },
+      "_title": "Project Related inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "80",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "80",
+       "right": "40",
+       "bottom": "80",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "64",
+       "right": "20",
+       "bottom": "64",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "94dad12",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Project Related header",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "65f1394",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Project Related heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "9ab2e443",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag More Cold Storage Projects",
+            "editor": "<p>More Cold Storage Projects</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "_css_classes": "gw-tag-sc",
+            "__dynamic__": {
+             "editor": "[elementor-tag id=\"64def2f\" name=\"shortcode\" settings=\"%7B%22shortcode%22%3A%22%5Bgw_sector%20before%3D%5C%22More%20%5C%22%20after%3D%5C%22%20Projects%5C%22%20fallback%3D%5C%22More%20Projects%5C%22%5D%22%7D\"]"
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "d4d8c0c4",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Related H2",
+            "title": "Related projects.",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "39afec3",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Project Related grid (Project card light)",
+        "_skin": "post",
+        "template_id": "",
+        "columns": "2",
+        "columns_tablet": "2",
+        "columns_mobile": "1",
+        "posts_per_page": 2,
+        "post_query_post_type": "gw_project",
+        "post_query_orderby": "menu_order",
+        "post_query_order": "asc",
+        "column_gap": {
+         "unit": "px",
+         "size": 24,
+         "sizes": []
+        },
+        "row_gap": {
+         "unit": "px",
+         "size": 24,
+         "sizes": []
+        },
+        "equal_height": "yes",
+        "_element_width": "inherit",
+        "post_query_query_id": "gw_related_projects",
+        "_css_classes": "gw-cases-grid"
+       },
+       "elements": [],
+       "widgetType": "loop-grid"
+      },
+      {
+       "id": "1251dda",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "16",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 0,
+         "column": "0",
+         "row": "0",
+         "isLinked": true
+        },
+        "_title": "Project Related action",
+        "flex_direction": "row",
+        "flex_justify_content": "center"
+       },
+       "elements": [
+        {
+         "id": "a470bbc",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Btn View All Projects",
+          "text": "View All Projects",
+          "link": {
+           "url": "/projects/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "selected_icon": {
+           "value": {
+            "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/Vector.svg",
+            "id": 44
+           },
+           "library": "svg"
+          },
+          "icon_align": "row-reverse",
+          "icon_indent": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 14,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1,
+           "sizes": []
+          },
+          "button_text_color": "#FFFFFF",
+          "hover_color": "#FFFFFF",
+          "background_background": "classic",
+          "background_color": "#0074BE",
+          "button_background_hover_background": "classic",
+          "button_background_hover_color": "#0074BE",
+          "border_radius": {
+           "unit": "px",
+           "top": "1000",
+           "right": "1000",
+           "bottom": "1000",
+           "left": "1000",
+           "isLinked": true
+          },
+          "text_padding": {
+           "unit": "px",
+           "top": "6",
+           "right": "6",
+           "bottom": "6",
+           "left": "24",
+           "isLinked": false
+          },
+          "_css_classes": "gw-pill gw-pill--primary gw-btn-sweep"
+         },
+         "elements": [],
+         "widgetType": "button"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e1c5453d",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Project CTA",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "min_height": {
+     "unit": "px",
+     "size": 560,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 460,
+     "sizes": []
+    },
+    "min_height_mobile": {
+     "unit": "px",
+     "size": 420,
+     "sizes": []
+    },
+    "flex_justify_content": "center",
+    "background_background": "classic",
+    "background_color": "#001828",
+    "background_image": {
+     "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+     "id": 105,
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#001828",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.62,
+     "sizes": []
+    },
+    "__dynamic__": {
+     "background_image": "[elementor-tag id=\"f07f9c2\" name=\"acf-image\" settings=\"%7B%22key%22%3A%22field_prj_gw_cta_image%3Agw_cta_image%22%2C%22fallback%22%3A%7B%22url%22%3A%22https%3A%2F%2Fwordpress-1619480-6775513.cloudwaysapps.com%2Fwp-content%2Fuploads%2F2026%2F11%2F7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp%22%2C%22id%22%3A105%7D%7D\"]"
+    }
+   },
+   "elements": [
+    {
+     "id": "ec177b5",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "120",
+       "right": "100",
+       "bottom": "120",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 28,
+       "column": "28",
+       "row": "28",
+       "isLinked": true
+      },
+      "_title": "Project CTA inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "96",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "96",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "72",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "flex_justify_content": "center"
+     },
+     "elements": [
+      {
+       "id": "8dcfe3f2",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Tag Let&#8217;s Talk",
+        "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Let&#8217;s Talk</p>",
+        "text_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 12,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "px",
+         "size": 20,
+         "sizes": []
+        },
+        "typography_letter_spacing": {
+         "unit": "px",
+         "size": 2.4,
+         "sizes": []
+        },
+        "typography_text_transform": "uppercase",
+        "paragraph_spacing": {
+         "unit": "px",
+         "size": 0,
+         "sizes": []
+        },
+        "_element_width": "auto",
+        "_padding": {
+         "unit": "px",
+         "top": "8",
+         "right": "16",
+         "bottom": "8",
+         "left": "16",
+         "isLinked": false
+        },
+        "_border_border": "solid",
+        "_border_width": {
+         "unit": "px",
+         "top": "1",
+         "right": "1",
+         "bottom": "1",
+         "left": "1",
+         "isLinked": true
+        },
+        "_border_color": "rgba(255,255,255,0.2)",
+        "_border_radius": {
+         "unit": "px",
+         "top": "1000",
+         "right": "1000",
+         "bottom": "1000",
+         "left": "1000",
+         "isLinked": true
+        },
+        "_background_background": "classic",
+        "_background_color": "rgba(255,255,255,0.2)"
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "42a52d3",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Project CTA H2",
+        "title": "Let&#8217;s build your next facility",
+        "header_size": "h2",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 50,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "px",
+         "size": 60,
+         "sizes": []
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 40,
+         "sizes": []
+        },
+        "typography_line_height_tablet": {
+         "unit": "px",
+         "size": 48,
+         "sizes": []
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 32,
+         "sizes": []
+        },
+        "typography_line_height_mobile": {
+         "unit": "px",
+         "size": 40,
+         "sizes": []
+        },
+        "align": "center",
+        "_element_width": "initial",
+        "_element_custom_width": {
+         "unit": "custom",
+         "size": "min(100%, 760px)",
+         "sizes": []
+        },
+        "_element_width_tablet": "inherit",
+        "__dynamic__": {
+         "title": "[elementor-tag id=\"07eb0aad\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_cta_title%3Agw_cta_title%22%2C%22fallback%22%3A%22Let%26%238217%3Bs%20build%20your%20next%20facility%22%7D\"]"
+        },
+        "typography_font_size_laptop": {
+         "unit": "px",
+         "size": 44,
+         "sizes": []
+        },
+        "typography_line_height_laptop": {
+         "unit": "px",
+         "size": 53,
+         "sizes": []
+        },
+        "_css_classes": "gw-fs-lg"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "6da2a94",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Project CTA text",
+        "editor": "<p>Whether you&#8217;re developing a cold storage facility, food processing plant, or industrial facility, Glacier West has the expertise to help bring your project from concept to completion.</p>",
+        "text_color": "rgba(255,255,255,0.85)",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 16,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "px",
+         "size": 24,
+         "sizes": []
+        },
+        "paragraph_spacing": {
+         "unit": "px",
+         "size": 0,
+         "sizes": []
+        },
+        "align": "center",
+        "_element_width": "initial",
+        "_element_custom_width": {
+         "unit": "custom",
+         "size": "min(100%, 640px)",
+         "sizes": []
+        },
+        "_element_width_tablet": "inherit",
+        "__dynamic__": {
+         "editor": "[elementor-tag id=\"154da8ce\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_cta_text%3Agw_cta_text%22%2C%22fallback%22%3A%22Whether%20you%26%238217%3Bre%20developing%20a%20cold%20storage%20facility%2C%20food%20processing%20plant%2C%20or%20industrial%20facility%2C%20Glacier%20West%20has%20the%20expertise%20to%20help%20bring%20your%20project%20from%20concept%20to%20completion.%22%7D\"]"
+        }
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "64c8bf1",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "12",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": false
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 0,
+         "column": "0",
+         "row": "0",
+         "isLinked": true
+        },
+        "_title": "Project CTA action",
+        "flex_align_items": "center"
+       },
+       "elements": [
+        {
+         "id": "2bb0d6d5",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Btn Contact Us",
+          "text": "Contact Us",
+          "link": {
+           "url": "/contact-us/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "selected_icon": {
+           "value": {
+            "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/07/Vector.svg",
+            "id": 84
+           },
+           "library": "svg"
+          },
+          "icon_align": "row-reverse",
+          "icon_indent": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 14,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1,
+           "sizes": []
+          },
+          "button_text_color": "#000000",
+          "hover_color": "#000000",
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "button_background_hover_background": "classic",
+          "button_background_hover_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "1000",
+           "right": "1000",
+           "bottom": "1000",
+           "left": "1000",
+           "isLinked": true
+          },
+          "text_padding": {
+           "unit": "px",
+           "top": "6",
+           "right": "6",
+           "bottom": "6",
+           "left": "24",
+           "isLinked": false
+          },
+          "_css_classes": "gw-pill gw-pill--light gw-btn-sweep",
+          "__dynamic__": {
+           "text": "[elementor-tag id=\"6f2f40c3\" name=\"acf-text\" settings=\"%7B%22key%22%3A%22field_prj_gw_cta_button%3Agw_cta_button%22%2C%22fallback%22%3A%22Contact%20Us%22%7D\"]"
+          }
+         },
+         "elements": [],
+         "widgetType": "button"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "page_settings": {
+  "preview_type": "single/gw_project"
+ }
+}

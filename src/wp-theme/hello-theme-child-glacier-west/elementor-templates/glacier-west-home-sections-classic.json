@@ -1,0 +1,6471 @@
+{
+ "version": "0.4",
+ "title": "Glacier West – Home sections (classic)",
+ "type": "page",
+ "content": [
+  {
+   "id": "c14114d",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "About",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF",
+    "custom_css": "/* Pill buttons for all homepage sections (needs Elementor Pro Custom CSS). Not scoped, so it styles every .gw-pill on the page. */\n.gw-pill .elementor-button { display: inline-flex; align-items: center; min-height: 52px; transition: opacity .3s; }\n.gw-pill .elementor-button:hover { opacity: .85; }\n.gw-pill .elementor-button-content-wrapper { align-items: center; }\n.gw-pill .elementor-button-icon svg { width: 16px; height: auto; }\n.gw-pill--primary .elementor-button-icon, .gw-pill--light .elementor-button-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; }\n.gw-pill--primary .elementor-button-icon { background: #FFFFFF; }\n.gw-pill--light .elementor-button-icon { background: #0074BE; }\n/* Glacier West overflow safety, 980-1440px (Elementor Pro Custom CSS). Mirrors the _laptop values, so it also works\n   when the Laptop breakpoint is NOT enabled in Site Settings > Layout > Breakpoints. Scoped to .gw-sec sections only. */\n.gw-sec .e-con, .gw-sec .elementor-widget { min-width: 0; }\n.gw-sec .elementor-heading-title, .gw-sec .elementor-widget-text-editor { overflow-wrap: break-word; }\n@media (min-width: 1025px) and (max-width: 1366px) {\n  .gw-sec > .gw-inner { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-gap-lg { column-gap: 40px !important; }\n  .gw-sec .gw-wwb-panel { margin-right: -48px !important; padding: 96px 48px 56px 32px !important; }\n  .gw-sec .gw-pad-lg { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-fs-xl .elementor-heading-title, .gw-sec .gw-fs-xl.elementor-widget-text-editor, .gw-sec .gw-fs-xl .elementor-widget-container { font-size: 52px !important; line-height: 1.05 !important; }\n  .gw-sec .gw-fs-lg .elementor-heading-title, .gw-sec .gw-fs-lg.elementor-widget-text-editor, .gw-sec .gw-fs-lg .elementor-widget-container { font-size: 44px !important; line-height: 1.2 !important; }\n  .gw-sec .gw-fs-md .elementor-heading-title, .gw-sec .gw-fs-md.elementor-widget-text-editor, .gw-sec .gw-fs-md .elementor-widget-container { font-size: 40px !important; }\n}\n"
+   },
+   "elements": [
+    {
+     "id": "d289fe17",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "120",
+       "right": "100",
+       "bottom": "80",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 64,
+       "column": "64",
+       "row": "64",
+       "isLinked": true
+      },
+      "_title": "About inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "96",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "80",
+       "right": "40",
+       "bottom": "64",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "64",
+       "right": "20",
+       "bottom": "48",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_mobile": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "64",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "30250a1",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "_title": "About intro row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "3b76a1c0",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "About heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 639px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "706fe9e",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Partner With Us",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Partner With Us</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "0ed6c5b",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "About H2",
+            "title": "A Specialized Builder for Complex Environments",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 639px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit",
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "97fa185",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Btn Start Your Project",
+            "text": "Start Your Project",
+            "link": {
+             "url": "/contact-us/",
+             "is_external": "",
+             "nofollow": "",
+             "custom_attributes": ""
+            },
+            "selected_icon": {
+             "value": {
+              "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/Vector.svg",
+              "id": 44
+             },
+             "library": "svg"
+            },
+            "icon_align": "row-reverse",
+            "icon_indent": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "button_text_color": "#FFFFFF",
+            "hover_color": "#FFFFFF",
+            "background_background": "classic",
+            "background_color": "#0074BE",
+            "button_background_hover_background": "classic",
+            "button_background_hover_color": "#0074BE",
+            "border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "text_padding": {
+             "unit": "px",
+             "top": "6",
+             "right": "6",
+             "bottom": "6",
+             "left": "24",
+             "isLinked": false
+            },
+            "_css_classes": "gw-pill gw-pill--primary gw-btn-sweep"
+           },
+           "elements": [],
+           "widgetType": "button"
+          }
+         ]
+        },
+        {
+         "id": "0c8fa31",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "About text",
+          "editor": "<p>Our expertise spans cold storage, food processing, industrial, and institutional construction, with experience delivering facilities that involve demanding operational requirements, specialized systems, regulatory considerations, and complex project conditions.</p><p>From refrigerated warehouses and CFIA-compliant food processing facilities to industrial operations and institutional spaces, our team brings the expertise needed to deliver projects from planning through completion.</p>",
+          "text_color": "#000000",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 494px)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "f852ab7",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "About image (placeholder)",
+        "image": {
+         "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+         "id": 105,
+         "size": "",
+         "alt": "",
+         "source": "library"
+        },
+        "image_size": "full",
+        "width": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        },
+        "height": {
+         "unit": "px",
+         "size": 577,
+         "sizes": []
+        },
+        "height_tablet": {
+         "unit": "px",
+         "size": 420,
+         "sizes": []
+        },
+        "height_mobile": {
+         "unit": "px",
+         "size": 240,
+         "sizes": []
+        },
+        "object-fit": "cover",
+        "image_border_radius": {
+         "unit": "px",
+         "top": "24",
+         "right": "24",
+         "bottom": "24",
+         "left": "24",
+         "isLinked": true
+        },
+        "_element_width": "inherit"
+       },
+       "elements": [],
+       "widgetType": "image"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c9df233e",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "What We Build",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#000000"
+   },
+   "elements": [
+    {
+     "id": "46e0a4a6",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "64",
+       "right": "100",
+       "bottom": "80",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "What We Build inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "64",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "64",
+       "right": "40",
+       "bottom": "64",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "48",
+       "right": "20",
+       "bottom": "48",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner"
+     },
+     "elements": [
+      {
+       "id": "5e70ad14",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "_title": "What We Build row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "85b6245",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 40,
+           "column": "40",
+           "row": "40",
+           "isLinked": true
+          },
+          "_title": "WWB left",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 639px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "4fd5b39",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 24,
+             "column": "24",
+             "row": "24",
+             "isLinked": true
+            },
+            "_title": "WWB heading",
+            "flex_direction": "column",
+            "flex_align_items": "flex-start",
+            "width": {
+             "unit": "custom",
+             "size": "min(100%, 639px)",
+             "sizes": []
+            },
+            "width_tablet": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "98b558c7",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Tag Partner With Us",
+              "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Partner With Us</p>",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 12,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_letter_spacing": {
+               "unit": "px",
+               "size": 2.4,
+               "sizes": []
+              },
+              "typography_text_transform": "uppercase",
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              },
+              "_element_width": "auto",
+              "_padding": {
+               "unit": "px",
+               "top": "8",
+               "right": "16",
+               "bottom": "8",
+               "left": "16",
+               "isLinked": false
+              },
+              "_border_border": "solid",
+              "_border_width": {
+               "unit": "px",
+               "top": "1",
+               "right": "1",
+               "bottom": "1",
+               "left": "1",
+               "isLinked": true
+              },
+              "_border_color": "rgba(255,255,255,0.2)",
+              "_border_radius": {
+               "unit": "px",
+               "top": "1000",
+               "right": "1000",
+               "bottom": "1000",
+               "left": "1000",
+               "isLinked": true
+              },
+              "_background_background": "classic",
+              "_background_color": "rgba(255,255,255,0.2)"
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            },
+            {
+             "id": "d702d827",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "WWB H2",
+              "title": "Our Expertise",
+              "header_size": "h2",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 50,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 60,
+               "sizes": []
+              },
+              "typography_font_size_tablet": {
+               "unit": "px",
+               "size": 40,
+               "sizes": []
+              },
+              "typography_line_height_tablet": {
+               "unit": "px",
+               "size": 48,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 32,
+               "sizes": []
+              },
+              "typography_line_height_mobile": {
+               "unit": "px",
+               "size": 40,
+               "sizes": []
+              },
+              "typography_font_size_laptop": {
+               "unit": "px",
+               "size": 44,
+               "sizes": []
+              },
+              "typography_line_height_laptop": {
+               "unit": "px",
+               "size": 53,
+               "sizes": []
+              },
+              "_css_classes": "gw-fs-lg"
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "37981f8",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "WWB text",
+              "editor": "<p>We design and construct specialized industrial and commercial facilities across Canada that support performance, compliance, and long-term operational success.</p>",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 24,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              },
+              "_element_width": "initial",
+              "_element_custom_width": {
+               "unit": "custom",
+               "size": "min(100%, 528px)",
+               "sizes": []
+              },
+              "_element_width_tablet": "inherit"
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          },
+          {
+           "id": "c5fdd3e",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "WWB image (placeholder)",
+            "image": {
+             "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+             "id": 105,
+             "size": "",
+             "alt": "",
+             "source": "library"
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "height": {
+             "unit": "px",
+             "size": 545,
+             "sizes": []
+            },
+            "height_tablet": {
+             "unit": "px",
+             "size": 400,
+             "sizes": []
+            },
+            "height_mobile": {
+             "unit": "px",
+             "size": 260,
+             "sizes": []
+            },
+            "object-fit": "cover",
+            "image_border_radius": {
+             "unit": "px",
+             "top": "24",
+             "right": "24",
+             "bottom": "24",
+             "left": "24",
+             "isLinked": true
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 581px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit"
+           },
+           "elements": [],
+           "widgetType": "image"
+          }
+         ]
+        },
+        {
+         "id": "aa4d963d",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "112",
+           "right": "100",
+           "bottom": "64",
+           "left": "43",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Services panel",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 691px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "min_height": {
+           "unit": "px",
+           "size": 689,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "margin": {
+           "unit": "px",
+           "top": "-64",
+           "right": "-100",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "margin_laptop": {
+           "unit": "px",
+           "top": "-64",
+           "right": "-48",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": false
+          },
+          "margin_tablet": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "padding_laptop": {
+           "unit": "px",
+           "top": "96",
+           "right": "48",
+           "bottom": "56",
+           "left": "32",
+           "isLinked": false
+          },
+          "padding_tablet": {
+           "unit": "px",
+           "top": "32",
+           "right": "32",
+           "bottom": "32",
+           "left": "32",
+           "isLinked": true
+          },
+          "css_classes": "gw-wwb-panel",
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "background_background": "classic",
+          "background_color": "#0074BE",
+          "border_radius": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "24",
+           "isLinked": false
+          },
+          "border_radius_tablet": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "d1e58033",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Services eyebrow",
+            "editor": "<p>Construction Services</p>",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "4450cffa",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 12,
+             "column": "12",
+             "row": "12",
+             "isLinked": true
+            },
+            "_title": "Service list",
+            "flex_direction": "column",
+            "flex_align_items": "flex-start",
+            "width_tablet": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "d562e99",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "16",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 16,
+               "column": "16",
+               "row": "16",
+               "isLinked": true
+              },
+              "_title": "Service row Food Processing Facility Construction",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "1",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "rgba(255,255,255,0.2)"
+             },
+             "elements": [
+              {
+               "id": "ec20e054",
+               "elType": "container",
+               "isInner": true,
+               "settings": {
+                "content_width": "full",
+                "padding": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": true
+                },
+                "flex_gap": {
+                 "unit": "px",
+                 "size": 24,
+                 "column": "24",
+                 "row": "24",
+                 "isLinked": true
+                },
+                "_title": "Row Food Processing Facility Construction",
+                "flex_direction": "row",
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center"
+               },
+               "elements": [
+                {
+                 "id": "cb9e9520",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Service Food Processing Facility Construction",
+                  "title": "Food Processing Facility Construction",
+                  "header_size": "h3",
+                  "title_color": "#FFFFFF",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Clash Grotesk",
+                  "typography_font_size": {
+                   "unit": "px",
+                   "size": 26,
+                   "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "typography_line_height": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_tablet": {
+                   "unit": "px",
+                   "size": 22,
+                   "sizes": []
+                  },
+                  "typography_line_height_tablet": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "typography_line_height_mobile": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  }
+                 },
+                 "elements": [],
+                 "widgetType": "heading"
+                },
+                {
+                 "id": "daa7460",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Chip Food Processing Facility Construction",
+                  "selected_icon": {
+                   "value": {
+                    "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/07/Vector.svg",
+                    "id": 84
+                   },
+                   "library": "svg"
+                  },
+                  "view": "stacked",
+                  "shape": "circle",
+                  "primary_color": "#00CBFA",
+                  "secondary_color": "#FFFFFF",
+                  "size": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "icon_padding": {
+                   "unit": "px",
+                   "size": 10,
+                   "sizes": []
+                  },
+                  "rotate": {
+                   "unit": "deg",
+                   "size": -45,
+                   "sizes": []
+                  },
+                  "_element_width": "auto"
+                 },
+                 "elements": [],
+                 "widgetType": "icon"
+                }
+               ]
+              },
+              {
+               "id": "babaaf4a",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Desc Food Processing Facility Construction",
+                "editor": "<p>Glacier West designs and builds temperature-controlled facilities across Canada, including cold storage, freezers, coolers, and blast freezers.</p>",
+                "text_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                 "unit": "px",
+                 "size": 20,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                 "unit": "custom",
+                 "size": "min(100%, 477px)",
+                 "sizes": []
+                },
+                "_element_width_tablet": "inherit"
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            },
+            {
+             "id": "a6630f22",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "16",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 16,
+               "column": "16",
+               "row": "16",
+               "isLinked": true
+              },
+              "_title": "Service row Food Processing Facility Construction",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "1",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "rgba(255,255,255,0.2)"
+             },
+             "elements": [
+              {
+               "id": "5e9d030",
+               "elType": "container",
+               "isInner": true,
+               "settings": {
+                "content_width": "full",
+                "padding": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": true
+                },
+                "flex_gap": {
+                 "unit": "px",
+                 "size": 24,
+                 "column": "24",
+                 "row": "24",
+                 "isLinked": true
+                },
+                "_title": "Row Food Processing Facility Construction",
+                "flex_direction": "row",
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center"
+               },
+               "elements": [
+                {
+                 "id": "5e78c952",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Service Food Processing Facility Construction",
+                  "title": "Food Processing Facility Construction",
+                  "header_size": "h3",
+                  "title_color": "#FFFFFF",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Clash Grotesk",
+                  "typography_font_size": {
+                   "unit": "px",
+                   "size": 26,
+                   "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "typography_line_height": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_tablet": {
+                   "unit": "px",
+                   "size": 22,
+                   "sizes": []
+                  },
+                  "typography_line_height_tablet": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "typography_line_height_mobile": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  }
+                 },
+                 "elements": [],
+                 "widgetType": "heading"
+                },
+                {
+                 "id": "3b9c18f",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Chip Food Processing Facility Construction",
+                  "selected_icon": {
+                   "value": {
+                    "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/07/Vector.svg",
+                    "id": 84
+                   },
+                   "library": "svg"
+                  },
+                  "view": "stacked",
+                  "shape": "circle",
+                  "primary_color": "rgba(255,255,255,0.2)",
+                  "secondary_color": "#FFFFFF",
+                  "size": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "icon_padding": {
+                   "unit": "px",
+                   "size": 10,
+                   "sizes": []
+                  },
+                  "rotate": {
+                   "unit": "deg",
+                   "size": 0,
+                   "sizes": []
+                  },
+                  "_element_width": "auto"
+                 },
+                 "elements": [],
+                 "widgetType": "icon"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "id": "db8969e",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "16",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 16,
+               "column": "16",
+               "row": "16",
+               "isLinked": true
+              },
+              "_title": "Service row Community, Medical, Lab",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "1",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "rgba(255,255,255,0.2)"
+             },
+             "elements": [
+              {
+               "id": "c8388dfb",
+               "elType": "container",
+               "isInner": true,
+               "settings": {
+                "content_width": "full",
+                "padding": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": true
+                },
+                "flex_gap": {
+                 "unit": "px",
+                 "size": 24,
+                 "column": "24",
+                 "row": "24",
+                 "isLinked": true
+                },
+                "_title": "Row Community, Medical, Lab",
+                "flex_direction": "row",
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center"
+               },
+               "elements": [
+                {
+                 "id": "53b4b35",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Service Community, Medical, Lab",
+                  "title": "Community, Medical, Lab",
+                  "header_size": "h3",
+                  "title_color": "#FFFFFF",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Clash Grotesk",
+                  "typography_font_size": {
+                   "unit": "px",
+                   "size": 26,
+                   "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "typography_line_height": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_tablet": {
+                   "unit": "px",
+                   "size": 22,
+                   "sizes": []
+                  },
+                  "typography_line_height_tablet": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "typography_line_height_mobile": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  }
+                 },
+                 "elements": [],
+                 "widgetType": "heading"
+                },
+                {
+                 "id": "dda2d5c0",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Chip Community, Medical, Lab",
+                  "selected_icon": {
+                   "value": {
+                    "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/07/Vector.svg",
+                    "id": 84
+                   },
+                   "library": "svg"
+                  },
+                  "view": "stacked",
+                  "shape": "circle",
+                  "primary_color": "rgba(255,255,255,0.2)",
+                  "secondary_color": "#FFFFFF",
+                  "size": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "icon_padding": {
+                   "unit": "px",
+                   "size": 10,
+                   "sizes": []
+                  },
+                  "rotate": {
+                   "unit": "deg",
+                   "size": 0,
+                   "sizes": []
+                  },
+                  "_element_width": "auto"
+                 },
+                 "elements": [],
+                 "widgetType": "icon"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "id": "0fb036af",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "16",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 16,
+               "column": "16",
+               "row": "16",
+               "isLinked": true
+              },
+              "_title": "Service row Industrial",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "1",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "rgba(255,255,255,0.2)"
+             },
+             "elements": [
+              {
+               "id": "3493316f",
+               "elType": "container",
+               "isInner": true,
+               "settings": {
+                "content_width": "full",
+                "padding": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": true
+                },
+                "flex_gap": {
+                 "unit": "px",
+                 "size": 24,
+                 "column": "24",
+                 "row": "24",
+                 "isLinked": true
+                },
+                "_title": "Row Industrial",
+                "flex_direction": "row",
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center"
+               },
+               "elements": [
+                {
+                 "id": "186d2e7",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Service Industrial",
+                  "title": "Industrial",
+                  "header_size": "h3",
+                  "title_color": "#FFFFFF",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Clash Grotesk",
+                  "typography_font_size": {
+                   "unit": "px",
+                   "size": 26,
+                   "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "typography_line_height": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_tablet": {
+                   "unit": "px",
+                   "size": 22,
+                   "sizes": []
+                  },
+                  "typography_line_height_tablet": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "typography_line_height_mobile": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  }
+                 },
+                 "elements": [],
+                 "widgetType": "heading"
+                },
+                {
+                 "id": "cd1838c5",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Chip Industrial",
+                  "selected_icon": {
+                   "value": {
+                    "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/07/Vector.svg",
+                    "id": 84
+                   },
+                   "library": "svg"
+                  },
+                  "view": "stacked",
+                  "shape": "circle",
+                  "primary_color": "rgba(255,255,255,0.2)",
+                  "secondary_color": "#FFFFFF",
+                  "size": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "icon_padding": {
+                   "unit": "px",
+                   "size": 10,
+                   "sizes": []
+                  },
+                  "rotate": {
+                   "unit": "deg",
+                   "size": 0,
+                   "sizes": []
+                  },
+                  "_element_width": "auto"
+                 },
+                 "elements": [],
+                 "widgetType": "icon"
+                }
+               ]
+              }
+             ]
+            },
+            {
+             "id": "99e42b27",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "16",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 16,
+               "column": "16",
+               "row": "16",
+               "isLinked": true
+              },
+              "_title": "Service row Institutional",
+              "flex_direction": "column",
+              "flex_align_items": "flex-start",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "1",
+               "right": "0",
+               "bottom": "0",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "rgba(255,255,255,0.2)"
+             },
+             "elements": [
+              {
+               "id": "e9bbb22",
+               "elType": "container",
+               "isInner": true,
+               "settings": {
+                "content_width": "full",
+                "padding": {
+                 "unit": "px",
+                 "top": "0",
+                 "right": "0",
+                 "bottom": "0",
+                 "left": "0",
+                 "isLinked": true
+                },
+                "flex_gap": {
+                 "unit": "px",
+                 "size": 24,
+                 "column": "24",
+                 "row": "24",
+                 "isLinked": true
+                },
+                "_title": "Row Institutional",
+                "flex_direction": "row",
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center"
+               },
+               "elements": [
+                {
+                 "id": "a7a320e",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Service Institutional",
+                  "title": "Institutional",
+                  "header_size": "h3",
+                  "title_color": "#FFFFFF",
+                  "typography_typography": "custom",
+                  "typography_font_family": "Clash Grotesk",
+                  "typography_font_size": {
+                   "unit": "px",
+                   "size": 26,
+                   "sizes": []
+                  },
+                  "typography_font_weight": "400",
+                  "typography_line_height": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_tablet": {
+                   "unit": "px",
+                   "size": 22,
+                   "sizes": []
+                  },
+                  "typography_line_height_tablet": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "typography_line_height_mobile": {
+                   "unit": "em",
+                   "size": 1.2,
+                   "sizes": []
+                  }
+                 },
+                 "elements": [],
+                 "widgetType": "heading"
+                },
+                {
+                 "id": "327f30e3",
+                 "elType": "widget",
+                 "isInner": false,
+                 "settings": {
+                  "_title": "Chip Institutional",
+                  "selected_icon": {
+                   "value": {
+                    "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/07/Vector.svg",
+                    "id": 84
+                   },
+                   "library": "svg"
+                  },
+                  "view": "stacked",
+                  "shape": "circle",
+                  "primary_color": "rgba(255,255,255,0.2)",
+                  "secondary_color": "#FFFFFF",
+                  "size": {
+                   "unit": "px",
+                   "size": 20,
+                   "sizes": []
+                  },
+                  "icon_padding": {
+                   "unit": "px",
+                   "size": 10,
+                   "sizes": []
+                  },
+                  "rotate": {
+                   "unit": "deg",
+                   "size": 0,
+                   "sizes": []
+                  },
+                  "_element_width": "auto"
+                 },
+                 "elements": [],
+                 "widgetType": "icon"
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "id": "ec78e3c0",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Btn Learn More",
+            "text": "Learn More",
+            "link": {
+             "url": "/services/",
+             "is_external": "",
+             "nofollow": "",
+             "custom_attributes": ""
+            },
+            "selected_icon": {
+             "value": {
+              "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/07/Vector.svg",
+              "id": 84
+             },
+             "library": "svg"
+            },
+            "icon_align": "row-reverse",
+            "icon_indent": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "button_text_color": "#000000",
+            "hover_color": "#000000",
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "button_background_hover_background": "classic",
+            "button_background_hover_color": "#FFFFFF",
+            "border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "text_padding": {
+             "unit": "px",
+             "top": "6",
+             "right": "6",
+             "bottom": "6",
+             "left": "24",
+             "isLinked": false
+            },
+            "_css_classes": "gw-pill gw-pill--light gw-btn-sweep"
+           },
+           "elements": [],
+           "widgetType": "button"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ebab2f5",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Food Safety",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "1ef13829",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "100",
+       "right": "100",
+       "bottom": "100",
+       "left": "100",
+       "isLinked": true
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Food Safety inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "80",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "80",
+       "right": "40",
+       "bottom": "80",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "64",
+       "right": "20",
+       "bottom": "64",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner"
+     },
+     "elements": [
+      {
+       "id": "aa53b587",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "_title": "Food Safety row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "ea3bd45e",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Food Safety content",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 639px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "f441c8f",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Partner With Us",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Partner With Us</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "1fa0bc9a",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Food Safety H2",
+            "title": "Built for Canadian Food Safety Standards",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 547px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit",
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "2143c32d",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Food Safety text",
+            "editor": "<p>Food processing and cold storage facilities require a level of expertise beyond traditional construction.</p><p>Glacier West understands the requirements behind CFIA-compliant construction, including hygienic design, food-safe materials, cleanable surfaces, and operational workflows that support inspection readiness.</p><p>Our team works closely with clients to design and construct facilities aligned with HACCP principles, GMP standards, and Canadian food safety expectations.</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 24,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 24,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 494px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit"
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "1d79b790",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Btn About Us",
+            "text": "About Us",
+            "link": {
+             "url": "/about-us/",
+             "is_external": "",
+             "nofollow": "",
+             "custom_attributes": ""
+            },
+            "selected_icon": {
+             "value": {
+              "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/Vector.svg",
+              "id": 44
+             },
+             "library": "svg"
+            },
+            "icon_align": "row-reverse",
+            "icon_indent": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "button_text_color": "#FFFFFF",
+            "hover_color": "#FFFFFF",
+            "background_background": "classic",
+            "background_color": "#0074BE",
+            "button_background_hover_background": "classic",
+            "button_background_hover_color": "#0074BE",
+            "border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "text_padding": {
+             "unit": "px",
+             "top": "6",
+             "right": "6",
+             "bottom": "6",
+             "left": "24",
+             "isLinked": false
+            },
+            "_css_classes": "gw-pill gw-pill--primary gw-btn-sweep"
+           },
+           "elements": [],
+           "widgetType": "button"
+          }
+         ]
+        },
+        {
+         "id": "c9bf9f68",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Food Safety image (placeholder)",
+          "image": {
+           "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+           "id": 105,
+           "size": "",
+           "alt": "",
+           "source": "library"
+          },
+          "image_size": "full",
+          "width": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "height": {
+           "unit": "px",
+           "size": 464,
+           "sizes": []
+          },
+          "height_tablet": {
+           "unit": "px",
+           "size": 400,
+           "sizes": []
+          },
+          "height_mobile": {
+           "unit": "px",
+           "size": 260,
+           "sizes": []
+          },
+          "object-fit": "cover",
+          "image_border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 573px)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit"
+         },
+         "elements": [],
+         "widgetType": "image"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "04cad7aa",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "32",
+     "right": "100",
+     "bottom": "32",
+     "left": "100",
+     "isLinked": false
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Stats Band",
+    "html_tag": "section",
+    "flex_direction": "row",
+    "flex_align_items": "flex-start",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "padding_laptop": {
+     "unit": "px",
+     "top": "32",
+     "right": "48",
+     "bottom": "32",
+     "left": "48",
+     "isLinked": false
+    },
+    "padding_tablet": {
+     "unit": "px",
+     "top": "32",
+     "right": "40",
+     "bottom": "32",
+     "left": "40",
+     "isLinked": false
+    },
+    "padding_mobile": {
+     "unit": "px",
+     "top": "24",
+     "right": "20",
+     "bottom": "24",
+     "left": "20",
+     "isLinked": false
+    },
+    "background_background": "classic",
+    "background_color": "#2B71B8",
+    "custom_css": "/* Marquee for the stats band (needs Elementor Pro Custom CSS). Without it the row is static and clipped. */\nselector .gw-stats-track { animation: gw-stats-marquee 40s linear infinite; }\nselector:hover .gw-stats-track { animation-play-state: paused; }\nselector .gw-nowrap { white-space: nowrap; }\n@keyframes gw-stats-marquee { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 51.5px)); } }\n@media (prefers-reduced-motion: reduce) { selector .gw-stats-track { animation: none; } }\n"
+   },
+   "elements": [
+    {
+     "id": "0df8cbce",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "0",
+       "right": "0",
+       "bottom": "0",
+       "left": "0",
+       "isLinked": true
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 103,
+       "column": "103",
+       "row": "103",
+       "isLinked": true
+      },
+      "_title": "Stats track",
+      "flex_direction": "row",
+      "flex_wrap": "nowrap",
+      "flex_align_items": "center",
+      "flex_gap_mobile": {
+       "unit": "px",
+       "size": 64,
+       "column": "64",
+       "row": "64",
+       "isLinked": true
+      },
+      "width": {
+       "unit": "custom",
+       "size": "max-content",
+       "sizes": []
+      },
+      "_flex_size": "none",
+      "css_classes": "gw-stats-track"
+     },
+     "elements": [
+      {
+       "id": "e09560b0",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 1 3M+ Sq. Ft.",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "px",
+         "size": 220,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "70ee8656",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number 3M+ Sq. Ft.",
+          "editor": "<p>3M+ Sq. Ft.</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "31d5713",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label 3M+ Sq. Ft.",
+          "editor": "<p>Food Processing /Cold Storage / Industrial Facilities Delivered</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "px",
+           "size": 196,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "f7d51407",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 1 Just 4.5 Months",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "custom",
+         "size": "max-content",
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "4ed75b1",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number Just 4.5 Months",
+          "editor": "<p>Just 4.5 Months</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "3a8672dd",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label Just 4.5 Months",
+          "editor": "<p>130,000 Sq. Ft. Freezer Facility Delivered</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "971973ab",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 1 70 Projects",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "px",
+         "size": 220,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "fef1d317",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number 70 Projects",
+          "editor": "<p>70 Projects</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "0e094ada",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label 70 Projects",
+          "editor": "<p>Completed for a single client group</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "px",
+           "size": 196,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "40b7ffd6",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 1 Just 11 Months",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "px",
+         "size": 323,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "9860d26c",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number Just 11 Months",
+          "editor": "<p>Just 11 Months</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "16e858a",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label Just 11 Months",
+          "editor": "<p>30,000 Sq. Ft. Processing Facility Designed, Permitted &amp; Built</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "49138e3f",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 1 Under $280/Sq. Ft.",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "custom",
+         "size": "max-content",
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "812ef471",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number Under $280/Sq. Ft.",
+          "editor": "<p>Under $280/Sq. Ft.</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "8bc7c54b",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label Under $280/Sq. Ft.",
+          "editor": "<p>Across Two Food Processing Facilities Currently Under Construction</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "fd08ed7",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 2 3M+ Sq. Ft.",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "px",
+         "size": 220,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "e4785ec3",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number 3M+ Sq. Ft.",
+          "editor": "<p>3M+ Sq. Ft.</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "61d619e",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label 3M+ Sq. Ft.",
+          "editor": "<p>Food Processing /Cold Storage / Industrial Facilities Delivered</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "px",
+           "size": 196,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "8a26493c",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 2 Just 4.5 Months",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "custom",
+         "size": "max-content",
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "93b6748",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number Just 4.5 Months",
+          "editor": "<p>Just 4.5 Months</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "5dfa8714",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label Just 4.5 Months",
+          "editor": "<p>130,000 Sq. Ft. Freezer Facility Delivered</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "1cc205b6",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 2 70 Projects",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "px",
+         "size": 220,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "2bdc3a0",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number 70 Projects",
+          "editor": "<p>70 Projects</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "93dd091",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label 70 Projects",
+          "editor": "<p>Completed for a single client group</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "px",
+           "size": 196,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "faecdd12",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 2 Just 11 Months",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "px",
+         "size": 323,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "71650f8",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number Just 11 Months",
+          "editor": "<p>Just 11 Months</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "f741f73",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label Just 11 Months",
+          "editor": "<p>30,000 Sq. Ft. Processing Facility Designed, Permitted &amp; Built</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "50b62f0",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 6,
+         "column": "6",
+         "row": "6",
+         "isLinked": true
+        },
+        "_title": "Stat 2 Under $280/Sq. Ft.",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "_flex_size": "none",
+        "width": {
+         "unit": "custom",
+         "size": "max-content",
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "14ca9196",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat number Under $280/Sq. Ft.",
+          "editor": "<p>Under $280/Sq. Ft.</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 45.517,
+           "sizes": []
+          },
+          "typography_font_weight": "500",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 36,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "em",
+           "size": 1.2,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_css_classes": "gw-nowrap"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "a509760",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Stat label Under $280/Sq. Ft.",
+          "editor": "<p>Across Two Food Processing Facilities Currently Under Construction</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          }
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a7b17241",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Built to Perform",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#000000"
+   },
+   "elements": [
+    {
+     "id": "9a742ef4",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "120",
+       "right": "100",
+       "bottom": "80",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 64,
+       "column": "64",
+       "row": "64",
+       "isLinked": true
+      },
+      "_title": "Built to Perform inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "96",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "80",
+       "right": "40",
+       "bottom": "64",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "64",
+       "right": "20",
+       "bottom": "48",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_align_items": "flex-start",
+      "flex_gap_mobile": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "64",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "4d65c89",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "_title": "Perform heading",
+        "flex_direction": "column",
+        "flex_align_items": "flex-start",
+        "width": {
+         "unit": "custom",
+         "size": "min(100%, 639px)",
+         "sizes": []
+        },
+        "width_tablet": {
+         "unit": "%",
+         "size": 100,
+         "sizes": []
+        }
+       },
+       "elements": [
+        {
+         "id": "44f8f98",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Tag Our Approach",
+          "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Our Approach</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 12,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 20,
+           "sizes": []
+          },
+          "typography_letter_spacing": {
+           "unit": "px",
+           "size": 2.4,
+           "sizes": []
+          },
+          "typography_text_transform": "uppercase",
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_element_width": "auto",
+          "_padding": {
+           "unit": "px",
+           "top": "8",
+           "right": "16",
+           "bottom": "8",
+           "left": "16",
+           "isLinked": false
+          },
+          "_border_border": "solid",
+          "_border_width": {
+           "unit": "px",
+           "top": "1",
+           "right": "1",
+           "bottom": "1",
+           "left": "1",
+           "isLinked": true
+          },
+          "_border_color": "rgba(255,255,255,0.2)",
+          "_border_radius": {
+           "unit": "px",
+           "top": "1000",
+           "right": "1000",
+           "bottom": "1000",
+           "left": "1000",
+           "isLinked": true
+          },
+          "_background_background": "classic",
+          "_background_color": "rgba(255,255,255,0.2)"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "d60b8d0",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Perform H2",
+          "title": "A Construction Partner Built for Performance",
+          "header_size": "h2",
+          "title_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 50,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 60,
+           "sizes": []
+          },
+          "typography_font_size_tablet": {
+           "unit": "px",
+           "size": 40,
+           "sizes": []
+          },
+          "typography_line_height_tablet": {
+           "unit": "px",
+           "size": 48,
+           "sizes": []
+          },
+          "typography_font_size_mobile": {
+           "unit": "px",
+           "size": 32,
+           "sizes": []
+          },
+          "typography_line_height_mobile": {
+           "unit": "px",
+           "size": 40,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 569px)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit",
+          "typography_font_size_laptop": {
+           "unit": "px",
+           "size": 44,
+           "sizes": []
+          },
+          "typography_line_height_laptop": {
+           "unit": "px",
+           "size": 53,
+           "sizes": []
+          },
+          "_css_classes": "gw-fs-lg"
+         },
+         "elements": [],
+         "widgetType": "heading"
+        }
+       ]
+      },
+      {
+       "id": "d5b01d1",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "_title": "Principles",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "stretch",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "9506b1e",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "63",
+           "right": "20",
+           "bottom": "63",
+           "left": "20",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Principle Relationships",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "flex_justify_content": "center",
+          "_flex_size": "custom",
+          "min_height": {
+           "unit": "px",
+           "size": 337,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "40",
+           "right": "20",
+           "bottom": "40",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#0A283C",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "64ba9d7",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Icon Relationships",
+            "selected_icon": {
+             "value": "far fa-handshake",
+             "library": "fa-regular"
+            },
+            "view": "stacked",
+            "shape": "circle",
+            "primary_color": "#FFFFFF",
+            "secondary_color": "#343330",
+            "size": {
+             "unit": "px",
+             "size": 28,
+             "sizes": []
+            },
+            "icon_padding": {
+             "unit": "px",
+             "size": 18,
+             "sizes": []
+            },
+            "align": "center"
+           },
+           "elements": [],
+           "widgetType": "icon"
+          },
+          {
+           "id": "14f4b08",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 9,
+             "column": "9",
+             "row": "9",
+             "isLinked": true
+            },
+            "_title": "Principle text Relationships",
+            "flex_direction": "column",
+            "flex_align_items": "center"
+           },
+           "elements": [
+            {
+             "id": "744ba930",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Principle title Relationships",
+              "title": "Relationships",
+              "header_size": "h3",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 26,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.2,
+               "sizes": []
+              },
+              "align": "center"
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "668ca31",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Principle body Relationships",
+              "editor": "<p>Strong partnerships drive better projects. We work with clients and project teams to solve challenges and deliver facilities built around their needs.</p>",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 24,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              },
+              "align": "center"
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "f1dcc81e",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "63",
+           "right": "20",
+           "bottom": "63",
+           "left": "20",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Principle Experience",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "flex_justify_content": "center",
+          "_flex_size": "custom",
+          "min_height": {
+           "unit": "px",
+           "size": 337,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "40",
+           "right": "20",
+           "bottom": "40",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#0A283C",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "d0c401eb",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Icon Experience",
+            "selected_icon": {
+             "value": "far fa-thumbs-up",
+             "library": "fa-regular"
+            },
+            "view": "stacked",
+            "shape": "circle",
+            "primary_color": "#FFFFFF",
+            "secondary_color": "#343330",
+            "size": {
+             "unit": "px",
+             "size": 28,
+             "sizes": []
+            },
+            "icon_padding": {
+             "unit": "px",
+             "size": 18,
+             "sizes": []
+            },
+            "align": "center"
+           },
+           "elements": [],
+           "widgetType": "icon"
+          },
+          {
+           "id": "5e378bdf",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 9,
+             "column": "9",
+             "row": "9",
+             "isLinked": true
+            },
+            "_title": "Principle text Experience",
+            "flex_direction": "column",
+            "flex_align_items": "center"
+           },
+           "elements": [
+            {
+             "id": "a1062568",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Principle title Experience",
+              "title": "Experience",
+              "header_size": "h3",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 26,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.2,
+               "sizes": []
+              },
+              "align": "center"
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "0c7a755",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Principle body Experience",
+              "editor": "<p>With over 30 years of experience, we bring construction, engineering, and project management expertise to complex projects across Canada.</p>",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 24,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              },
+              "align": "center"
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "095664f5",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "63",
+           "right": "20",
+           "bottom": "63",
+           "left": "20",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Principle Results",
+          "flex_direction": "column",
+          "flex_align_items": "center",
+          "flex_justify_content": "center",
+          "_flex_size": "custom",
+          "min_height": {
+           "unit": "px",
+           "size": 337,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "40",
+           "right": "20",
+           "bottom": "40",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#0A283C",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "6fd7ab2",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Icon Results",
+            "selected_icon": {
+             "value": "far fa-star",
+             "library": "fa-regular"
+            },
+            "view": "stacked",
+            "shape": "circle",
+            "primary_color": "#FFFFFF",
+            "secondary_color": "#343330",
+            "size": {
+             "unit": "px",
+             "size": 28,
+             "sizes": []
+            },
+            "icon_padding": {
+             "unit": "px",
+             "size": 18,
+             "sizes": []
+            },
+            "align": "center"
+           },
+           "elements": [],
+           "widgetType": "icon"
+          },
+          {
+           "id": "77290d7",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 9,
+             "column": "9",
+             "row": "9",
+             "isLinked": true
+            },
+            "_title": "Principle text Results",
+            "flex_direction": "column",
+            "flex_align_items": "center"
+           },
+           "elements": [
+            {
+             "id": "9076ba8",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Principle title Results",
+              "title": "Results",
+              "header_size": "h3",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 26,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.2,
+               "sizes": []
+              },
+              "align": "center"
+             },
+             "elements": [],
+             "widgetType": "heading"
+            },
+            {
+             "id": "98cfb33f",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "Principle body Results",
+              "editor": "<p>Our repeat clients and referrals reflect the trust we've earned through quality, clear communication, and reliable project delivery.</p>",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 16,
+               "sizes": []
+              },
+              "typography_font_weight": "400",
+              "typography_line_height": {
+               "unit": "px",
+               "size": 24,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              },
+              "align": "center"
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "27e7493a",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "_title": "Members",
+        "flex_direction": "column",
+        "flex_align_items": "center"
+       },
+       "elements": [
+        {
+         "id": "d091f87",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Members label",
+          "editor": "<p>Proud Members Of</p>",
+          "text_color": "rgba(255,255,255,0.85)",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "align": "center",
+          "_element_width": "inherit"
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        },
+        {
+         "id": "67a68a79",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Member logos",
+          "flex_direction": "row",
+          "flex_wrap": "wrap",
+          "flex_justify_content": "space-between",
+          "flex_justify_content_tablet": "center",
+          "flex_align_items": "center",
+          "flex_gap_tablet": {
+           "unit": "px",
+           "size": 32,
+           "column": "32",
+           "row": "32",
+           "isLinked": true
+          }
+         },
+         "elements": [
+          {
+           "id": "78ed8d7",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Member logo BCCSA (placeholder)",
+            "image": {
+             "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+             "id": 105,
+             "size": "",
+             "alt": "",
+             "source": "library"
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "height": {
+             "unit": "px",
+             "size": 90,
+             "sizes": []
+            },
+            "object-fit": "contain",
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 257px)",
+             "sizes": []
+            },
+            "_element_custom_width_mobile": {
+             "unit": "custom",
+             "size": "min(100%, 140px)",
+             "sizes": []
+            },
+            "height_mobile": {
+             "unit": "px",
+             "size": 56,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "image"
+          },
+          {
+           "id": "b8be02b",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Member logo ECA (placeholder)",
+            "image": {
+             "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+             "id": 105,
+             "size": "",
+             "alt": "",
+             "source": "library"
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "height": {
+             "unit": "px",
+             "size": 90,
+             "sizes": []
+            },
+            "object-fit": "contain",
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 325px)",
+             "sizes": []
+            },
+            "_element_custom_width_mobile": {
+             "unit": "custom",
+             "size": "min(100%, 140px)",
+             "sizes": []
+            },
+            "height_mobile": {
+             "unit": "px",
+             "size": 56,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "image"
+          },
+          {
+           "id": "771f7f52",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Member logo VRCA (placeholder)",
+            "image": {
+             "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+             "id": 105,
+             "size": "",
+             "alt": "",
+             "source": "library"
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "height": {
+             "unit": "px",
+             "size": 73,
+             "sizes": []
+            },
+            "object-fit": "contain",
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 183px)",
+             "sizes": []
+            },
+            "_element_custom_width_mobile": {
+             "unit": "custom",
+             "size": "min(100%, 140px)",
+             "sizes": []
+            },
+            "height_mobile": {
+             "unit": "px",
+             "size": 56,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "image"
+          },
+          {
+           "id": "e9c3825a",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Member logo Food & Beverage (placeholder)",
+            "image": {
+             "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+             "id": 105,
+             "size": "",
+             "alt": "",
+             "source": "library"
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "height": {
+             "unit": "px",
+             "size": 72,
+             "sizes": []
+            },
+            "object-fit": "contain",
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 209px)",
+             "sizes": []
+            },
+            "_element_custom_width_mobile": {
+             "unit": "custom",
+             "size": "min(100%, 140px)",
+             "sizes": []
+            },
+            "height_mobile": {
+             "unit": "px",
+             "size": 56,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "image"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ba4fe0a",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Testimonials",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "7d77950c",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "64",
+       "right": "100",
+       "bottom": "100",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 48,
+       "column": "48",
+       "row": "48",
+       "isLinked": true
+      },
+      "_title": "Testimonials inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "64",
+       "right": "48",
+       "bottom": "80",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "64",
+       "right": "40",
+       "bottom": "80",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "48",
+       "right": "20",
+       "bottom": "64",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_mobile": {
+       "unit": "px",
+       "size": 32,
+       "column": "32",
+       "row": "32",
+       "isLinked": true
+      }
+     },
+     "elements": [
+      {
+       "id": "16f747b",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "40",
+         "isLinked": true
+        },
+        "_title": "Testimonials header",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "bb064e3",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Testimonials heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 639px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "1195a3f3",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Testimonials",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Testimonials</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "7ca872cb",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Testimonials H2",
+            "title": "What Our Clients Say",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "393f34c2",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Btn Start Your Project",
+          "text": "Start Your Project",
+          "link": {
+           "url": "/contact-us/",
+           "is_external": "",
+           "nofollow": "",
+           "custom_attributes": ""
+          },
+          "selected_icon": {
+           "value": {
+            "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/Vector.svg",
+            "id": 44
+           },
+           "library": "svg"
+          },
+          "icon_align": "row-reverse",
+          "icon_indent": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 14,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1,
+           "sizes": []
+          },
+          "button_text_color": "#FFFFFF",
+          "hover_color": "#FFFFFF",
+          "background_background": "classic",
+          "background_color": "#0074BE",
+          "button_background_hover_background": "classic",
+          "button_background_hover_color": "#0074BE",
+          "border_radius": {
+           "unit": "px",
+           "top": "1000",
+           "right": "1000",
+           "bottom": "1000",
+           "left": "1000",
+           "isLinked": true
+          },
+          "text_padding": {
+           "unit": "px",
+           "top": "6",
+           "right": "6",
+           "bottom": "6",
+           "left": "24",
+           "isLinked": false
+          },
+          "_css_classes": "gw-pill gw-pill--primary gw-btn-sweep"
+         },
+         "elements": [],
+         "widgetType": "button"
+        }
+       ]
+      },
+      {
+       "id": "ebdc4f8",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "_title": "Testimonial cards",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "stretch",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "5aef6d5",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "32",
+           "right": "32",
+           "bottom": "32",
+           "left": "32",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 18,
+           "column": "18",
+           "row": "18",
+           "isLinked": true
+          },
+          "_title": "Testimonial Steel Services Centres",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 392px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "min_height": {
+           "unit": "px",
+           "size": 413,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "overflow": "hidden",
+          "border_border": "solid",
+          "border_width": {
+           "unit": "px",
+           "top": "1",
+           "right": "1",
+           "bottom": "1",
+           "left": "1",
+           "isLinked": true
+          },
+          "border_color": "rgba(255,255,255,0.15)",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "background_background": "classic",
+          "background_color": "#2B71B8",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "612a8ff",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Testimonial name Steel Services Centres",
+            "title": "Steel Services Centres",
+            "header_size": "h3",
+            "title_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 26,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.2,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "81e146d",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Quote mark Steel Services Centres",
+            "title": "&#8220;",
+            "header_size": "div",
+            "title_color": "rgba(255,255,255,0.07)",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 200,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "_position": "absolute",
+            "_offset_orientation_h": "end",
+            "_offset_x_end": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_offset_orientation_v": "start",
+            "_offset_y": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "_z_index": 0
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "3f4ede1",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Testimonial quote Steel Services Centres",
+            "editor": "<p>Neil and his team provided exceptional service, communication and commitment in meeting our needs. The team at Glacier West was easy to communicate with, thorough, and performed well throughout the project. They adapted as our needs changed and presented options and experienced input during design planning. The project was delivered on time and met all expectations.</p>",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "_z_index": 1
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          }
+         ]
+        },
+        {
+         "id": "29f313d",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "32",
+           "right": "32",
+           "bottom": "32",
+           "left": "32",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 18,
+           "column": "18",
+           "row": "18",
+           "isLinked": true
+          },
+          "_title": "Testimonial Penske",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 392px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "min_height": {
+           "unit": "px",
+           "size": 413,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "overflow": "hidden",
+          "border_border": "solid",
+          "border_width": {
+           "unit": "px",
+           "top": "1",
+           "right": "1",
+           "bottom": "1",
+           "left": "1",
+           "isLinked": true
+          },
+          "border_color": "rgba(255,255,255,0.15)",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "background_background": "classic",
+          "background_color": "#F3F3F3",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "2ff26cfd",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Testimonial name Penske",
+            "title": "Penske",
+            "header_size": "h3",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 26,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.2,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "8a17a699",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Quote mark Penske",
+            "title": "&#8220;",
+            "header_size": "div",
+            "title_color": "rgba(0,116,190,0.14)",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 200,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "_position": "absolute",
+            "_offset_orientation_h": "end",
+            "_offset_x_end": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_offset_orientation_v": "start",
+            "_offset_y": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "_z_index": 0
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "9259fa7",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Testimonial quote Penske",
+            "editor": "<p>While working with the folks at Glacier West, we built strong relationship with the group. We felt respected through the process, and managed to keep our existing operations ongoing while the renovation was completed. They acted professionally with us, keeping our operations in mind, and treating our team with respect.</p><p>During potentially costly construction times, the folks at Glacier were able to adhere to previously fixed price &amp; deliver on their promises. At the end of the project, we made friendships with this group, and look forward to working with them again.</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "_z_index": 1
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          }
+         ]
+        },
+        {
+         "id": "19c0ca8",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "32",
+           "right": "32",
+           "bottom": "32",
+           "left": "32",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 18,
+           "column": "18",
+           "row": "18",
+           "isLinked": true
+          },
+          "_title": "Testimonial Sunrise Farms",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 392px)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "min_height": {
+           "unit": "px",
+           "size": 413,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "overflow": "hidden",
+          "border_border": "solid",
+          "border_width": {
+           "unit": "px",
+           "top": "1",
+           "right": "1",
+           "bottom": "1",
+           "left": "1",
+           "isLinked": true
+          },
+          "border_color": "rgba(255,255,255,0.15)",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "background_background": "classic",
+          "background_color": "#F3F3F3",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "307b6dd5",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Testimonial name Sunrise Farms",
+            "title": "Sunrise Farms",
+            "header_size": "h3",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 26,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.2,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "a5a08e2",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Quote mark Sunrise Farms",
+            "title": "&#8220;",
+            "header_size": "div",
+            "title_color": "rgba(0,116,190,0.14)",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 200,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "_position": "absolute",
+            "_offset_orientation_h": "end",
+            "_offset_x_end": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "_offset_orientation_v": "start",
+            "_offset_y": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "_z_index": 0
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "498a69a",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Testimonial quote Sunrise Farms",
+            "editor": "<p>Construction is not a perfect science, we know that. Glacier is not perfect either, and they make mistakes like any firm. When mistakes happen or project issues of varying types come up (which they do), we trust the folks at Glacier West to meet us where we are at and come up with timely and viable solutions that keep the project health, at its priority. We work together, and not against each other. It is a two-way street.</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "_z_index": 1
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cc68c52a",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "FAQ",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#000000",
+    "custom_css": "/* FAQ toggle icon circles (needs Elementor Pro Custom CSS). Without it the +/- icons show plain. */\nselector .elementor-toggle .elementor-tab-title { display: flex; align-items: center; justify-content: space-between; gap: 24px; }\nselector .elementor-toggle .elementor-toggle-icon { order: 2; float: none; flex: 0 0 40px; width: 40px; height: 40px; border: 1px solid #DBDBDB; border-radius: 50%; display: flex; align-items: center; justify-content: center; }\nselector .elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon { background: #0074BE; border-color: #0074BE; }\nselector .elementor-toggle .elementor-toggle-item { border-bottom: 1px solid rgba(219,219,219,0.3); }\n"
+   },
+   "elements": [
+    {
+     "id": "2d529c60",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "140",
+       "right": "100",
+       "bottom": "140",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 56,
+       "column": "56",
+       "row": "56",
+       "isLinked": true
+      },
+      "_title": "FAQ inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "112",
+       "right": "48",
+       "bottom": "112",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "96",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "72",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_mobile": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "56",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "ff77eee7",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "FAQ header",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "4efeaf88",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "FAQ heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "9475f45b",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag FAQ",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;FAQ</p>",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "bec4ec7",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "FAQ H2",
+            "title": "Frequently asked questions",
+            "header_size": "h2",
+            "title_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "74fcae0",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "FAQ intro",
+          "editor": "<p>Answers to the questions we hear most often from facility owners and operators.</p>",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 440px, 30.56vw)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit",
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "e1755b4",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 48,
+         "column": "48",
+         "row": "48",
+         "isLinked": true
+        },
+        "_title": "FAQ questions",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 0,
+         "column": "0",
+         "row": "0",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "89f1c2b4",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "FAQ column 1",
+          "tabs": [
+           {
+            "_id": "e4d1cd4",
+            "tab_title": "What does Glacier West specialize in?",
+            "tab_content": "<p>Glacier West specializes in design-build construction for cold storage, food processing, industrial, and institutional facilities — from early planning and approvals through to a facility built for long-term performance.</p>"
+           },
+           {
+            "_id": "efe778f",
+            "tab_title": "Do you provide design-build construction services?",
+            "tab_content": "<p>Answer to be provided.</p>"
+           },
+           {
+            "_id": "299a153",
+            "tab_title": "What industries does Glacier West serve?",
+            "tab_content": "<p>Answer to be provided.</p>"
+           }
+          ],
+          "selected_icon": {
+           "value": "fas fa-plus",
+           "library": "fa-solid"
+          },
+          "selected_active_icon": {
+           "value": "fas fa-minus",
+           "library": "fa-solid"
+          },
+          "title_html_tag": "h3",
+          "faq_schema": "",
+          "border_width": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "space_between": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "title_background": "rgba(0,0,0,0)",
+          "title_color": "#FFFFFF",
+          "tab_active_color": "#FFFFFF",
+          "title_padding": {
+           "unit": "px",
+           "top": "24",
+           "right": "0",
+           "bottom": "24",
+           "left": "0",
+           "isLinked": false
+          },
+          "title_typography_typography": "custom",
+          "title_typography_font_family": "Clash Grotesk",
+          "title_typography_font_size": {
+           "unit": "px",
+           "size": 18,
+           "sizes": []
+          },
+          "title_typography_font_weight": "500",
+          "title_typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "icon_align": "right",
+          "icon_color": "#FFFFFF",
+          "icon_active_color": "#FFFFFF",
+          "icon_space": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "content_background_color": "rgba(0,0,0,0)",
+          "content_color": "#FFFFFF",
+          "content_padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "24",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_typography_typography": "custom",
+          "content_typography_font_family": "Clash Grotesk",
+          "content_typography_font_size": {
+           "unit": "px",
+           "size": 14,
+           "sizes": []
+          },
+          "content_typography_font_weight": "400",
+          "content_typography_line_height": {
+           "unit": "px",
+           "size": 21,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_element_width_tablet": "inherit",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [],
+         "widgetType": "toggle"
+        },
+        {
+         "id": "6d19434",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "FAQ column 2",
+          "tabs": [
+           {
+            "_id": "e84d75a6",
+            "tab_title": "Can Glacier West renovate or expand an existing facility?",
+            "tab_content": "<p>Answer to be provided.</p>"
+           },
+           {
+            "_id": "9df62847",
+            "tab_title": "Does Glacier West incorporate energy efficiency and sustainability?",
+            "tab_content": "<p>Answer to be provided.</p>"
+           },
+           {
+            "_id": "4c09b0f5",
+            "tab_title": "Where does Glacier West provide construction services?",
+            "tab_content": "<p>Answer to be provided.</p>"
+           }
+          ],
+          "selected_icon": {
+           "value": "fas fa-plus",
+           "library": "fa-solid"
+          },
+          "selected_active_icon": {
+           "value": "fas fa-minus",
+           "library": "fa-solid"
+          },
+          "title_html_tag": "h3",
+          "faq_schema": "",
+          "border_width": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "space_between": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "title_background": "rgba(0,0,0,0)",
+          "title_color": "#FFFFFF",
+          "tab_active_color": "#FFFFFF",
+          "title_padding": {
+           "unit": "px",
+           "top": "24",
+           "right": "0",
+           "bottom": "24",
+           "left": "0",
+           "isLinked": false
+          },
+          "title_typography_typography": "custom",
+          "title_typography_font_family": "Clash Grotesk",
+          "title_typography_font_size": {
+           "unit": "px",
+           "size": 18,
+           "sizes": []
+          },
+          "title_typography_font_weight": "500",
+          "title_typography_line_height": {
+           "unit": "em",
+           "size": 1.25,
+           "sizes": []
+          },
+          "icon_align": "right",
+          "icon_color": "#FFFFFF",
+          "icon_active_color": "#FFFFFF",
+          "icon_space": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "content_background_color": "rgba(0,0,0,0)",
+          "content_color": "#FFFFFF",
+          "content_padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "24",
+           "left": "0",
+           "isLinked": false
+          },
+          "content_typography_typography": "custom",
+          "content_typography_font_family": "Clash Grotesk",
+          "content_typography_font_size": {
+           "unit": "px",
+           "size": 14,
+           "sizes": []
+          },
+          "content_typography_font_weight": "400",
+          "content_typography_line_height": {
+           "unit": "px",
+           "size": 21,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_element_width_tablet": "inherit",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [],
+         "widgetType": "toggle"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b1acd0f",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "CTA",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "min_height": {
+     "unit": "px",
+     "size": 626,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 480,
+     "sizes": []
+    },
+    "min_height_mobile": {
+     "unit": "px",
+     "size": 420,
+     "sizes": []
+    },
+    "flex_justify_content": "center",
+    "background_background": "classic",
+    "background_color": "#000000",
+    "background_image": {
+     "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/7ef9018188bc4ccc14223b6ff780f82667cf4c61.webp",
+     "id": 105,
+     "size": "",
+     "alt": "",
+     "source": "library"
+    },
+    "background_position": "center center",
+    "background_size": "cover",
+    "background_repeat": "no-repeat",
+    "background_overlay_background": "classic",
+    "background_overlay_color": "#000000",
+    "background_overlay_opacity": {
+     "unit": "px",
+     "size": 0.6,
+     "sizes": []
+    }
+   },
+   "elements": [
+    {
+     "id": "55fe30c",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "48",
+       "right": "100",
+       "bottom": "48",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 24,
+       "column": "24",
+       "row": "24",
+       "isLinked": true
+      },
+      "_title": "CTA inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "48",
+       "right": "48",
+       "bottom": "48",
+       "left": "48",
+       "isLinked": true
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "64",
+       "right": "40",
+       "bottom": "64",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "56",
+       "right": "20",
+       "bottom": "56",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_align_items": "center",
+      "flex_justify_content": "center"
+     },
+     "elements": [
+      {
+       "id": "fd681a41",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "CTA H2",
+        "title": "Build It Right the First Time",
+        "header_size": "h2",
+        "title_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 50,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "px",
+         "size": 60,
+         "sizes": []
+        },
+        "typography_font_size_tablet": {
+         "unit": "px",
+         "size": 40,
+         "sizes": []
+        },
+        "typography_line_height_tablet": {
+         "unit": "px",
+         "size": 48,
+         "sizes": []
+        },
+        "typography_font_size_mobile": {
+         "unit": "px",
+         "size": 32,
+         "sizes": []
+        },
+        "typography_line_height_mobile": {
+         "unit": "px",
+         "size": 40,
+         "sizes": []
+        },
+        "align": "center",
+        "typography_font_size_laptop": {
+         "unit": "px",
+         "size": 44,
+         "sizes": []
+        },
+        "typography_line_height_laptop": {
+         "unit": "px",
+         "size": 53,
+         "sizes": []
+        },
+        "_css_classes": "gw-fs-lg"
+       },
+       "elements": [],
+       "widgetType": "heading"
+      },
+      {
+       "id": "a130210",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "CTA text",
+        "editor": "<p>When you're building a cold storage, food processing, industrial, or institutional facility, experience matters.</p><p>Work with a construction team that understands complex environments and what it takes to deliver for performance, functionality, and long-term success.</p>",
+        "text_color": "#FFFFFF",
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "px",
+         "size": 21,
+         "sizes": []
+        },
+        "paragraph_spacing": {
+         "unit": "px",
+         "size": 21,
+         "sizes": []
+        },
+        "align": "center",
+        "_element_width": "initial",
+        "_element_custom_width": {
+         "unit": "custom",
+         "size": "min(100%, 666px)",
+         "sizes": []
+        },
+        "_element_width_tablet": "inherit"
+       },
+       "elements": [],
+       "widgetType": "text-editor"
+      },
+      {
+       "id": "303436ba",
+       "elType": "widget",
+       "isInner": false,
+       "settings": {
+        "_title": "Btn Start Your Project",
+        "text": "Start Your Project",
+        "link": {
+         "url": "/contact-us/",
+         "is_external": "",
+         "nofollow": "",
+         "custom_attributes": ""
+        },
+        "selected_icon": {
+         "value": {
+          "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/Vector.svg",
+          "id": 44
+         },
+         "library": "svg"
+        },
+        "icon_align": "row-reverse",
+        "icon_indent": {
+         "unit": "px",
+         "size": 16,
+         "sizes": []
+        },
+        "typography_typography": "custom",
+        "typography_font_family": "Clash Grotesk",
+        "typography_font_size": {
+         "unit": "px",
+         "size": 14,
+         "sizes": []
+        },
+        "typography_font_weight": "400",
+        "typography_line_height": {
+         "unit": "em",
+         "size": 1,
+         "sizes": []
+        },
+        "button_text_color": "#FFFFFF",
+        "hover_color": "#FFFFFF",
+        "background_background": "classic",
+        "background_color": "#0074BE",
+        "button_background_hover_background": "classic",
+        "button_background_hover_color": "#0074BE",
+        "border_radius": {
+         "unit": "px",
+         "top": "1000",
+         "right": "1000",
+         "bottom": "1000",
+         "left": "1000",
+         "isLinked": true
+        },
+        "text_padding": {
+         "unit": "px",
+         "top": "6",
+         "right": "6",
+         "bottom": "6",
+         "left": "24",
+         "isLinked": false
+        },
+        "_css_classes": "gw-pill gw-pill--primary gw-btn-sweep"
+       },
+       "elements": [],
+       "widgetType": "button"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "page_settings": []
+}

@@ -1,0 +1,737 @@
+{
+ "version": "0.4",
+ "title": "Glacier West – Careers application form (section)",
+ "type": "section",
+ "content": [
+  {
+   "id": "5cd9bcbb",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Careers Apply",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF",
+    "_element_id": "apply",
+    "custom_css": "/* Pill buttons for all homepage sections (needs Elementor Pro Custom CSS). Not scoped, so it styles every .gw-pill on the page. */\n.gw-pill .elementor-button { display: inline-flex; align-items: center; min-height: 52px; transition: opacity .3s; }\n.gw-pill .elementor-button:hover { opacity: .85; }\n.gw-pill .elementor-button-content-wrapper { align-items: center; }\n.gw-pill .elementor-button-icon svg { width: 16px; height: auto; }\n.gw-pill--primary .elementor-button-icon, .gw-pill--light .elementor-button-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; }\n.gw-pill--primary .elementor-button-icon { background: #FFFFFF; }\n.gw-pill--light .elementor-button-icon { background: #0074BE; }\n/* Glacier West overflow safety, 980-1440px (Elementor Pro Custom CSS). Mirrors the _laptop values, so it also works\n   when the Laptop breakpoint is NOT enabled in Site Settings > Layout > Breakpoints. Scoped to .gw-sec sections only. */\n.gw-sec .e-con, .gw-sec .elementor-widget { min-width: 0; }\n.gw-sec .elementor-heading-title, .gw-sec .elementor-widget-text-editor { overflow-wrap: break-word; }\n@media (min-width: 1025px) and (max-width: 1366px) {\n  .gw-sec > .gw-inner { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-gap-lg { column-gap: 40px !important; }\n  .gw-sec .gw-wwb-panel { margin-right: -48px !important; padding: 96px 48px 56px 32px !important; }\n  .gw-sec .gw-pad-lg { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-fs-xl .elementor-heading-title, .gw-sec .gw-fs-xl.elementor-widget-text-editor, .gw-sec .gw-fs-xl .elementor-widget-container { font-size: 52px !important; line-height: 1.05 !important; }\n  .gw-sec .gw-fs-lg .elementor-heading-title, .gw-sec .gw-fs-lg.elementor-widget-text-editor, .gw-sec .gw-fs-lg .elementor-widget-container { font-size: 44px !important; line-height: 1.2 !important; }\n  .gw-sec .gw-fs-md .elementor-heading-title, .gw-sec .gw-fs-md.elementor-widget-text-editor, .gw-sec .gw-fs-md .elementor-widget-container { font-size: 40px !important; }\n}\n"
+   },
+   "elements": [
+    {
+     "id": "2e51ee34",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "140",
+       "right": "100",
+       "bottom": "140",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Careers Apply inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "112",
+       "right": "48",
+       "bottom": "112",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "96",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "72",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner"
+     },
+     "elements": [
+      {
+       "id": "284e708",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 100,
+         "column": "100",
+         "row": "100",
+         "isLinked": true
+        },
+        "_title": "Apply row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 48,
+         "column": "48",
+         "row": "48",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "100",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "e342e7ac",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 28,
+           "column": "28",
+           "row": "28",
+           "isLinked": true
+          },
+          "_title": "Apply intro",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 440px, 30.56vw)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [
+          {
+           "id": "ad4e4a9",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Apply",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Apply</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "12888bf3",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Apply H2",
+            "title": "Ready for your next opportunity?",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "ca76da2",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Apply intro text",
+            "editor": "<p>If you&#8217;re ready for your next opportunity, we&#8217;d love to hear from you. Complete the application form to apply.</p>",
+            "text_color": "#8A8A8A",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "88bfd237",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "20",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 14,
+             "column": "14",
+             "row": "14",
+             "isLinked": true
+            },
+            "_title": "No phone calls",
+            "flex_direction": "row",
+            "flex_align_items": "center",
+            "border_border": "solid",
+            "border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "border_color": "#DBDBDB",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "5b483844",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "No calls icon",
+              "selected_icon": {
+               "value": "fas fa-times",
+               "library": "fa-solid"
+              },
+              "view": "framed",
+              "shape": "circle",
+              "primary_color": "#DBDBDB",
+              "secondary_color": "#FFFFFF",
+              "size": {
+               "unit": "px",
+               "size": 10,
+               "sizes": []
+              },
+              "icon_padding": {
+               "unit": "px",
+               "size": 10,
+               "sizes": []
+              },
+              "border_width": {
+               "unit": "px",
+               "top": "1",
+               "right": "1",
+               "bottom": "1",
+               "left": "1",
+               "isLinked": true
+              },
+              "_element_width": "auto",
+              "_flex_size": "none",
+              "custom_css": "selector .elementor-icon { color: #8A8A8A; fill: #8A8A8A; }"
+             },
+             "elements": [],
+             "widgetType": "icon"
+            },
+            {
+             "id": "bc13d31",
+             "elType": "widget",
+             "isInner": false,
+             "settings": {
+              "_title": "No calls text",
+              "editor": "<p>No phone calls, please.</p>",
+              "text_color": "#000000",
+              "typography_typography": "custom",
+              "typography_font_family": "Clash Grotesk",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 18,
+               "sizes": []
+              },
+              "typography_font_weight": "500",
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.3,
+               "sizes": []
+              },
+              "paragraph_spacing": {
+               "unit": "px",
+               "size": 0,
+               "sizes": []
+              },
+              "_flex_size": "custom",
+              "_flex_grow": 1,
+              "_flex_shrink": 1
+             },
+             "elements": [],
+             "widgetType": "text-editor"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "4d3527b",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "40",
+           "right": "40",
+           "bottom": "40",
+           "left": "40",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 0,
+           "column": "0",
+           "row": "0",
+           "isLinked": true
+          },
+          "_title": "Form card",
+          "flex_direction": "column",
+          "_flex_size": "custom",
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "20",
+           "bottom": "24",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#F3F3F3",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "cec8fa8",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Application form",
+            "form_name": "Glacier West job application",
+            "form_fields": [
+             {
+              "_id": "099bdc38",
+              "custom_id": "first_name",
+              "field_type": "text",
+              "field_label": "First name",
+              "placeholder": "First name",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "e779938f",
+              "custom_id": "last_name",
+              "field_type": "text",
+              "field_label": "Last name",
+              "placeholder": "Last name",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "ccb0bee",
+              "custom_id": "email",
+              "field_type": "email",
+              "field_label": "Email",
+              "placeholder": "you@email.com",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "0db94ff",
+              "custom_id": "phone",
+              "field_type": "tel",
+              "field_label": "Phone",
+              "placeholder": "(000) 000-0000",
+              "required": "",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "281870ea",
+              "custom_id": "position",
+              "field_type": "select",
+              "field_label": "Position of interest",
+              "placeholder": "",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100",
+              "field_options": "Select a position|\nGeneral application"
+             },
+             {
+              "_id": "c1bbe7b",
+              "custom_id": "location",
+              "field_type": "select",
+              "field_label": "Preferred location",
+              "placeholder": "",
+              "required": "",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100",
+              "field_options": "Alberta or British Columbia|\nAlberta\nBritish Columbia\nEither location"
+             },
+             {
+              "_id": "4083ef9",
+              "custom_id": "resume",
+              "field_type": "upload",
+              "field_label": "Resume",
+              "placeholder": "",
+              "required": "true",
+              "width": "100",
+              "width_tablet": "100",
+              "width_mobile": "100",
+              "file_sizes": "10",
+              "file_types": "pdf,doc,docx",
+              "allow_multiple_upload": ""
+             },
+             {
+              "_id": "2a9736a",
+              "custom_id": "message",
+              "field_type": "textarea",
+              "field_label": "Message (optional)",
+              "placeholder": "Tell us a bit about your experience",
+              "required": "",
+              "width": "100",
+              "width_tablet": "100",
+              "width_mobile": "100",
+              "rows": 5
+             }
+            ],
+            "input_size": "md",
+            "show_labels": "yes",
+            "mark_required": "",
+            "button_text": "Submit Application",
+            "button_size": "md",
+            "button_width": "",
+            "button_align": "start",
+            "selected_button_icon": {
+             "value": {
+              "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/Vector.svg",
+              "id": 44
+             },
+             "library": "svg"
+            },
+            "button_icon_align": "right",
+            "button_icon_indent": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "submit_actions": [
+             "email",
+             "save-to-database"
+            ],
+            "email_subject": "New job application: [field id=\"position\"]",
+            "email_content": "[all-fields]",
+            "success_message": "Thanks for applying &#8212; our team will review your application and be in touch if there&#8217;s a fit.",
+            "error_message": "Something went wrong. Please check the form and try again.",
+            "column_gap": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "row_gap": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "label_spacing": {
+             "unit": "px",
+             "size": 8,
+             "sizes": []
+            },
+            "label_color": "#000000",
+            "label_typography_typography": "custom",
+            "label_typography_font_family": "Clash Grotesk",
+            "label_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "label_typography_font_weight": "400",
+            "label_typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "mark_required_color": "#000000",
+            "field_text_color": "#000000",
+            "field_typography_typography": "custom",
+            "field_typography_font_family": "Clash Grotesk",
+            "field_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "field_typography_font_weight": "400",
+            "field_typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "field_background_color": "#FFFFFF",
+            "field_border_color": "#DBDBDB",
+            "field_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "field_border_radius": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": true
+            },
+            "button_typography_typography": "custom",
+            "button_typography_font_family": "Clash Grotesk",
+            "button_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "button_typography_font_weight": "400",
+            "button_typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "button_background_color": "#0074BE",
+            "button_text_color": "#FFFFFF",
+            "button_background_hover_color": "#0074BE",
+            "button_hover_color": "#FFFFFF",
+            "button_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "button_text_padding": {
+             "unit": "px",
+             "top": "6",
+             "right": "6",
+             "bottom": "6",
+             "left": "24",
+             "isLinked": false
+            },
+            "_css_classes": "gw-pill gw-pill--primary gw-apply-form",
+            "custom_css": "/* Job application form: 52px inputs, 16px radius, grey placeholders, pill submit (Pro Custom CSS) */\nselector .elementor-field-group .elementor-field:not(textarea):not(.elementor-select-wrapper) { min-height: 52px; padding: 0 20px; }\nselector .elementor-field-group textarea.elementor-field { min-height: 160px; padding: 16px 20px; resize: vertical; }\nselector .elementor-field::placeholder { color: #8A8A8A; opacity: 1; }\nselector .elementor-select-wrapper select { color: #000; }\nselector .elementor-field-type-submit { margin-top: 8px; }\nselector .elementor-button[type=\"submit\"] .elementor-button-icon { order: 2; }\nselector .elementor-select-wrapper select { min-height: 52px; padding: 0 44px 0 20px; }\nselector .elementor-select-wrapper .select-caret-down-wrapper { inset-inline-end: 20px; font-size: 12px; color: #000; }\nselector .elementor-field-group textarea.elementor-field { min-height: 140px; }\nselector .elementor-field-type-upload .elementor-field-label { margin-bottom: 8px; }\n"
+           },
+           "elements": [],
+           "widgetType": "form"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "page_settings": []
+}

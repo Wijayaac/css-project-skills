@@ -568,6 +568,12 @@ add_action( 'wp_enqueue_scripts', function () {
 			(string) filemtime( $path )
 		);
 	}
+	// Scroll text fill for two-tone headings, site-wide.
+	$fx_rel  = '/assets/js/glacier-west-interactions.js';
+	$fx_path = get_stylesheet_directory() . $fx_rel;
+	if ( file_exists( $fx_path ) ) {
+		wp_enqueue_script( 'hello-elementor-child-glacier-west-interactions', get_stylesheet_directory_uri() . $fx_rel, array(), (string) filemtime( $fx_path ), true );
+	}
 	$js_rel  = '/assets/js/glacier-west-testimonials.js';
 	$js_path = get_stylesheet_directory() . $js_rel;
 	if ( file_exists( $js_path ) ) {

@@ -1,0 +1,2853 @@
+{
+ "version": "0.4",
+ "title": "Glacier West – Contact Us (classic)",
+ "type": "page",
+ "content": [
+  {
+   "id": "8ef25e8f",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Contact Hero",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#001828",
+    "min_height": {
+     "unit": "px",
+     "size": 485,
+     "sizes": []
+    },
+    "min_height_tablet": {
+     "unit": "px",
+     "size": 0,
+     "sizes": []
+    },
+    "flex_justify_content": "flex-end",
+    "custom_css": "/* Pill buttons for all homepage sections (needs Elementor Pro Custom CSS). Not scoped, so it styles every .gw-pill on the page. */\n.gw-pill .elementor-button { display: inline-flex; align-items: center; min-height: 52px; transition: opacity .3s; }\n.gw-pill .elementor-button:hover { opacity: .85; }\n.gw-pill .elementor-button-content-wrapper { align-items: center; }\n.gw-pill .elementor-button-icon svg { width: 16px; height: auto; }\n.gw-pill--primary .elementor-button-icon, .gw-pill--light .elementor-button-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; }\n.gw-pill--primary .elementor-button-icon { background: #FFFFFF; }\n.gw-pill--light .elementor-button-icon { background: #0074BE; }\n/* Glacier West overflow safety, 980-1440px (Elementor Pro Custom CSS). Mirrors the _laptop values, so it also works\n   when the Laptop breakpoint is NOT enabled in Site Settings > Layout > Breakpoints. Scoped to .gw-sec sections only. */\n.gw-sec .e-con, .gw-sec .elementor-widget { min-width: 0; }\n.gw-sec .elementor-heading-title, .gw-sec .elementor-widget-text-editor { overflow-wrap: break-word; }\n@media (min-width: 1025px) and (max-width: 1366px) {\n  .gw-sec > .gw-inner { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-gap-lg { column-gap: 40px !important; }\n  .gw-sec .gw-wwb-panel { margin-right: -48px !important; padding: 96px 48px 56px 32px !important; }\n  .gw-sec .gw-pad-lg { padding-left: 48px !important; padding-right: 48px !important; }\n  .gw-sec .gw-fs-xl .elementor-heading-title, .gw-sec .gw-fs-xl.elementor-widget-text-editor, .gw-sec .gw-fs-xl .elementor-widget-container { font-size: 52px !important; line-height: 1.05 !important; }\n  .gw-sec .gw-fs-lg .elementor-heading-title, .gw-sec .gw-fs-lg.elementor-widget-text-editor, .gw-sec .gw-fs-lg .elementor-widget-container { font-size: 44px !important; line-height: 1.2 !important; }\n  .gw-sec .gw-fs-md .elementor-heading-title, .gw-sec .gw-fs-md.elementor-widget-text-editor, .gw-sec .gw-fs-md .elementor-widget-container { font-size: 40px !important; }\n}\n"
+   },
+   "elements": [
+    {
+     "id": "424ab139",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "178",
+       "right": "100",
+       "bottom": "72",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Contact Hero inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "142",
+       "right": "48",
+       "bottom": "72",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "160",
+       "right": "40",
+       "bottom": "72",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "130",
+       "right": "20",
+       "bottom": "56",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_justify_content": "flex-end"
+     },
+     "elements": [
+      {
+       "id": "ff5a8435",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Contact hero row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 32,
+         "column": "32",
+         "row": "32",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "4f98cd9b",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 32,
+           "column": "32",
+           "row": "32",
+           "isLinked": true
+          },
+          "_title": "Contact hero left",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "68e66e0",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Contact Us",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Contact Us</p>",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "rgba(255,255,255,0.2)",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "_background_background": "classic",
+            "_background_color": "rgba(255,255,255,0.2)"
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "33f1733",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Contact H1",
+            "title": "Let&#8217;s talk about your<br>project.",
+            "header_size": "h1",
+            "title_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 52,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 38,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 42,
+             "sizes": []
+            },
+            "_element_width": "initial",
+            "_element_custom_width": {
+             "unit": "custom",
+             "size": "min(100%, 640px)",
+             "sizes": []
+            },
+            "_element_width_tablet": "inherit",
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 52,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 52,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-xl"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "b84efd17",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 32,
+           "column": "32",
+           "row": "32",
+           "isLinked": true
+          },
+          "_title": "Contact hero right",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 440px, 30.56vw)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "padding_tablet": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [
+          {
+           "id": "4b49e76a",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Hero lead",
+            "editor": "<p>Whether you&#8217;re planning a cold storage, food processing, or industrial construction project, our team is here to help. We work with clients across Canada to deliver specialized facilities built for performance, compliance, and long-term reliability.</p>",
+            "text_color": "rgba(255,255,255,0.85)",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 24,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "60fd9e14",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Contact Form",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#FFFFFF"
+   },
+   "elements": [
+    {
+     "id": "fa5bf6dc",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "120",
+       "right": "100",
+       "bottom": "120",
+       "left": "100",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 0,
+       "column": "0",
+       "row": "0",
+       "isLinked": true
+      },
+      "_title": "Contact Form inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "96",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "96",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "72",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner"
+     },
+     "elements": [
+      {
+       "id": "7f1967ed",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 100,
+         "column": "100",
+         "row": "100",
+         "isLinked": true
+        },
+        "_title": "Contact row",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 48,
+         "column": "48",
+         "row": "48",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "100",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "40d67c4",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 28,
+           "column": "28",
+           "row": "28",
+           "isLinked": true
+          },
+          "_title": "Contact intro",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "width": {
+           "unit": "custom",
+           "size": "min(100%, 440px, 30.56vw)",
+           "sizes": []
+          },
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [
+          {
+           "id": "60584f27",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Start a Conversation",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Start a Conversation</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "500",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "#DBDBDB",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "15c6ee21",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Contact H2",
+            "title": "Tell us about your project.",
+            "header_size": "h2",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "611071b7",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Contact intro text",
+            "editor": "<p>Tell us about your project and a member of our team will be in touch.</p>",
+            "text_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 24,
+             "sizes": []
+            },
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "dbadac1",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 0,
+             "column": "0",
+             "row": "0",
+             "isLinked": true
+            },
+            "_title": "Quick contact",
+            "flex_direction": "column",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "963476e",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "16",
+               "right": "0",
+               "bottom": "16",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 16,
+               "column": "16",
+               "row": "16",
+               "isLinked": true
+              },
+              "_title": "Quick contact Vancouver",
+              "flex_direction": "row",
+              "flex_align_items": "center",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "1",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "#DBDBDB"
+             },
+             "elements": [
+              {
+               "id": "3ef26af",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Phone icon Vancouver",
+                "selected_icon": {
+                 "value": "fas fa-phone",
+                 "library": "fa-solid"
+                },
+                "view": "stacked",
+                "shape": "circle",
+                "primary_color": "#F3F3F3",
+                "secondary_color": "#343330",
+                "size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "icon_padding": {
+                 "unit": "px",
+                 "size": 11.0,
+                 "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+               },
+               "elements": [],
+               "widgetType": "icon"
+              },
+              {
+               "id": "ba18445",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "City Vancouver",
+                "editor": "<p>Vancouver</p>",
+                "text_color": "#8A8A8A",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                 "unit": "px",
+                 "size": 21,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_flex_size": "custom",
+                "_flex_grow": 1,
+                "_flex_shrink": 1
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              },
+              {
+               "id": "b2dc463",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Number Vancouver",
+                "editor": "<p><a style=\"color:inherit;\" href=\"tel:+16045700006\">604-570-0006</a></p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 18,
+                 "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.3,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_element_width": "auto"
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            },
+            {
+             "id": "8a2c739",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "16",
+               "right": "0",
+               "bottom": "16",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 16,
+               "column": "16",
+               "row": "16",
+               "isLinked": true
+              },
+              "_title": "Quick contact Edmonton",
+              "flex_direction": "row",
+              "flex_align_items": "center",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "1",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "#DBDBDB"
+             },
+             "elements": [
+              {
+               "id": "bf6d0b98",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Phone icon Edmonton",
+                "selected_icon": {
+                 "value": "fas fa-phone",
+                 "library": "fa-solid"
+                },
+                "view": "stacked",
+                "shape": "circle",
+                "primary_color": "#F3F3F3",
+                "secondary_color": "#343330",
+                "size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "icon_padding": {
+                 "unit": "px",
+                 "size": 11.0,
+                 "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+               },
+               "elements": [],
+               "widgetType": "icon"
+              },
+              {
+               "id": "f68a8d7f",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "City Edmonton",
+                "editor": "<p>Edmonton</p>",
+                "text_color": "#8A8A8A",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                 "unit": "px",
+                 "size": 21,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_flex_size": "custom",
+                "_flex_grow": 1,
+                "_flex_shrink": 1
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              },
+              {
+               "id": "ad0b535",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Number Edmonton",
+                "editor": "<p><a style=\"color:inherit;\" href=\"tel:+15875571810\">587-557-1810</a></p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 18,
+                 "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.3,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_element_width": "auto"
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            },
+            {
+             "id": "9c1113b",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "16",
+               "right": "0",
+               "bottom": "16",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 16,
+               "column": "16",
+               "row": "16",
+               "isLinked": true
+              },
+              "_title": "Quick contact Paris, Ontario",
+              "flex_direction": "row",
+              "flex_align_items": "center",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "1",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "#DBDBDB"
+             },
+             "elements": [
+              {
+               "id": "12cac2f3",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Phone icon Paris, Ontario",
+                "selected_icon": {
+                 "value": "fas fa-phone",
+                 "library": "fa-solid"
+                },
+                "view": "stacked",
+                "shape": "circle",
+                "primary_color": "#F3F3F3",
+                "secondary_color": "#343330",
+                "size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "icon_padding": {
+                 "unit": "px",
+                 "size": 11.0,
+                 "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+               },
+               "elements": [],
+               "widgetType": "icon"
+              },
+              {
+               "id": "35d55b5b",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "City Paris, Ontario",
+                "editor": "<p>Paris, Ontario</p>",
+                "text_color": "#8A8A8A",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                 "unit": "px",
+                 "size": 21,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_flex_size": "custom",
+                "_flex_grow": 1,
+                "_flex_shrink": 1
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              },
+              {
+               "id": "981e3a2",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Number Paris, Ontario",
+                "editor": "<p><a style=\"color:inherit;\" href=\"tel:+13658892933\">365-889-2933</a></p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 18,
+                 "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.3,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_element_width": "auto"
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "8603e16b",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "40",
+           "right": "40",
+           "bottom": "40",
+           "left": "40",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 0,
+           "column": "0",
+           "row": "0",
+           "isLinked": true
+          },
+          "_title": "Form card",
+          "flex_direction": "column",
+          "_flex_size": "custom",
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "20",
+           "bottom": "24",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#F3F3F3",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "559dad6",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Contact form",
+            "form_name": "Glacier West project enquiry",
+            "form_fields": [
+             {
+              "_id": "764872e",
+              "custom_id": "first_name",
+              "field_type": "text",
+              "field_label": "First name",
+              "placeholder": "First name",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "54b07b97",
+              "custom_id": "last_name",
+              "field_type": "text",
+              "field_label": "Last name",
+              "placeholder": "Last name",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "ff23a64",
+              "custom_id": "company",
+              "field_type": "text",
+              "field_label": "Company",
+              "placeholder": "Company name",
+              "required": "",
+              "width": "100",
+              "width_tablet": "100",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "f51392b2",
+              "custom_id": "email",
+              "field_type": "email",
+              "field_label": "Email",
+              "placeholder": "you@company.com",
+              "required": "true",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "ea92fae7",
+              "custom_id": "phone",
+              "field_type": "tel",
+              "field_label": "Phone",
+              "placeholder": "(000) 000-0000",
+              "required": "",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100"
+             },
+             {
+              "_id": "50b2edfa",
+              "custom_id": "project_type",
+              "field_type": "select",
+              "field_label": "Project type",
+              "placeholder": "",
+              "required": "",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100",
+              "field_options": "Select a project type|\nCold Storage\nFood Processing\nIndustrial\nInstitutional\nRenovation / Expansion\nOther"
+             },
+             {
+              "_id": "13ac339",
+              "custom_id": "province",
+              "field_type": "select",
+              "field_label": "Province",
+              "placeholder": "",
+              "required": "",
+              "width": "50",
+              "width_tablet": "50",
+              "width_mobile": "100",
+              "field_options": "Select a province|\nAlberta\nBritish Columbia\nManitoba\nNew Brunswick\nNewfoundland and Labrador\nNorthwest Territories\nNova Scotia\nNunavut\nOntario\nPrince Edward Island\nQuebec\nSaskatchewan\nYukon\nOutside Canada"
+             },
+             {
+              "_id": "d62adc6",
+              "custom_id": "message",
+              "field_type": "textarea",
+              "field_label": "Message",
+              "placeholder": "Tell us about your facility, timeline, and goals",
+              "required": "",
+              "width": "100",
+              "width_tablet": "100",
+              "width_mobile": "100",
+              "rows": 6
+             }
+            ],
+            "input_size": "md",
+            "show_labels": "yes",
+            "mark_required": "yes",
+            "button_text": "Send Message",
+            "button_size": "md",
+            "button_width": "",
+            "button_align": "start",
+            "selected_button_icon": {
+             "value": {
+              "url": "https://wordpress-1619480-6775513.cloudwaysapps.com/wp-content/uploads/2026/11/Vector.svg",
+              "id": 44
+             },
+             "library": "svg"
+            },
+            "button_icon_align": "right",
+            "button_icon_indent": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "submit_actions": [
+             "email"
+            ],
+            "email_subject": "New project enquiry from the Glacier West website",
+            "email_content": "[all-fields]",
+            "success_message": "Thanks — a member of our team will be in touch shortly.",
+            "column_gap": {
+             "unit": "px",
+             "size": 16,
+             "sizes": []
+            },
+            "row_gap": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "label_spacing": {
+             "unit": "px",
+             "size": 8,
+             "sizes": []
+            },
+            "label_color": "#000000",
+            "label_typography_typography": "custom",
+            "label_typography_font_family": "Clash Grotesk",
+            "label_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "label_typography_font_weight": "400",
+            "label_typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "mark_required_color": "#000000",
+            "field_text_color": "#000000",
+            "field_typography_typography": "custom",
+            "field_typography_font_family": "Clash Grotesk",
+            "field_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "field_typography_font_weight": "400",
+            "field_typography_line_height": {
+             "unit": "px",
+             "size": 21,
+             "sizes": []
+            },
+            "field_background_color": "#FFFFFF",
+            "field_border_color": "#DBDBDB",
+            "field_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "field_border_radius": {
+             "unit": "px",
+             "top": "16",
+             "right": "16",
+             "bottom": "16",
+             "left": "16",
+             "isLinked": true
+            },
+            "button_typography_typography": "custom",
+            "button_typography_font_family": "Clash Grotesk",
+            "button_typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "button_typography_font_weight": "400",
+            "button_typography_line_height": {
+             "unit": "em",
+             "size": 1,
+             "sizes": []
+            },
+            "button_background_color": "#0074BE",
+            "button_text_color": "#FFFFFF",
+            "button_background_hover_color": "#0074BE",
+            "button_hover_color": "#FFFFFF",
+            "button_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "button_text_padding": {
+             "unit": "px",
+             "top": "6",
+             "right": "6",
+             "bottom": "6",
+             "left": "24",
+             "isLinked": false
+            },
+            "_css_classes": "gw-pill gw-pill--primary gw-btn-sweep",
+            "custom_css": "/* Contact form: 52px inputs, 16px radius, grey placeholders, pill submit (Pro Custom CSS) */\nselector .elementor-field-group .elementor-field:not(textarea) { min-height: 52px; padding: 0 20px; }\nselector .elementor-field-group textarea.elementor-field { min-height: 160px; padding: 16px 20px; resize: vertical; }\nselector .elementor-field::placeholder { color: #8A8A8A; opacity: 1; }\nselector .elementor-select-wrapper select { color: #000; }\nselector .elementor-field-type-submit { margin-top: 8px; }\nselector .elementor-button[type=\"submit\"] .elementor-button-icon { order: 2; }\n"
+           },
+           "elements": [],
+           "widgetType": "form"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ca160256",
+   "elType": "container",
+   "isInner": false,
+   "settings": {
+    "content_width": "full",
+    "padding": {
+     "unit": "px",
+     "top": "0",
+     "right": "0",
+     "bottom": "0",
+     "left": "0",
+     "isLinked": true
+    },
+    "flex_gap": {
+     "unit": "px",
+     "size": 0,
+     "column": "0",
+     "row": "0",
+     "isLinked": true
+    },
+    "_title": "Contact Offices",
+    "html_tag": "section",
+    "flex_direction": "column",
+    "flex_align_items": "center",
+    "overflow": "hidden",
+    "css_classes": "gw-sec",
+    "background_background": "classic",
+    "background_color": "#001828"
+   },
+   "elements": [
+    {
+     "id": "6e6ea291",
+     "elType": "container",
+     "isInner": true,
+     "settings": {
+      "content_width": "full",
+      "padding": {
+       "unit": "px",
+       "top": "120",
+       "right": "84",
+       "bottom": "120",
+       "left": "84",
+       "isLinked": false
+      },
+      "flex_gap": {
+       "unit": "px",
+       "size": 56,
+       "column": "56",
+       "row": "56",
+       "isLinked": true
+      },
+      "_title": "Contact Offices inner",
+      "width": {
+       "unit": "custom",
+       "size": "min(100%, 1440px)",
+       "sizes": []
+      },
+      "padding_laptop": {
+       "unit": "px",
+       "top": "96",
+       "right": "48",
+       "bottom": "96",
+       "left": "48",
+       "isLinked": false
+      },
+      "padding_tablet": {
+       "unit": "px",
+       "top": "96",
+       "right": "40",
+       "bottom": "96",
+       "left": "40",
+       "isLinked": false
+      },
+      "padding_mobile": {
+       "unit": "px",
+       "top": "72",
+       "right": "20",
+       "bottom": "72",
+       "left": "20",
+       "isLinked": false
+      },
+      "z_index": 1,
+      "css_classes": "gw-inner",
+      "flex_direction": "column",
+      "flex_gap_tablet": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "40",
+       "isLinked": true
+      },
+      "flex_gap_laptop": {
+       "unit": "px",
+       "size": 40,
+       "column": "40",
+       "row": "56",
+       "isLinked": false
+      }
+     },
+     "elements": [
+      {
+       "id": "d2a3d81",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 80,
+         "column": "80",
+         "row": "80",
+         "isLinked": true
+        },
+        "_title": "Offices header",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "flex-end",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "flex_gap_laptop": {
+         "unit": "px",
+         "size": 40,
+         "column": "40",
+         "row": "80",
+         "isLinked": false
+        },
+        "css_classes": "gw-gap-lg"
+       },
+       "elements": [
+        {
+         "id": "924d9f94",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 24,
+           "column": "24",
+           "row": "24",
+           "isLinked": true
+          },
+          "_title": "Offices heading",
+          "flex_direction": "column",
+          "flex_align_items": "flex-start",
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "7528cd8",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Tag Our Offices",
+            "editor": "<p><span style=\"color:#00CBFA;font-size:11px;letter-spacing:0;\">&#9650;</span>&nbsp;&nbsp;Our Offices</p>",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            },
+            "_element_width": "auto",
+            "_padding": {
+             "unit": "px",
+             "top": "8",
+             "right": "16",
+             "bottom": "8",
+             "left": "16",
+             "isLinked": false
+            },
+            "_border_border": "solid",
+            "_border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "1",
+             "bottom": "1",
+             "left": "1",
+             "isLinked": true
+            },
+            "_border_color": "rgba(255,255,255,0.2)",
+            "_border_radius": {
+             "unit": "px",
+             "top": "1000",
+             "right": "1000",
+             "bottom": "1000",
+             "left": "1000",
+             "isLinked": true
+            },
+            "_background_background": "classic",
+            "_background_color": "rgba(255,255,255,0.2)"
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "d72863e",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Offices H2",
+            "title": "Find us across Canada.",
+            "header_size": "h2",
+            "title_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 50,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 60,
+             "sizes": []
+            },
+            "typography_font_size_tablet": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_line_height_tablet": {
+             "unit": "px",
+             "size": 48,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 32,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "px",
+             "size": 40,
+             "sizes": []
+            },
+            "typography_font_size_laptop": {
+             "unit": "px",
+             "size": 44,
+             "sizes": []
+            },
+            "typography_line_height_laptop": {
+             "unit": "px",
+             "size": 53,
+             "sizes": []
+            },
+            "_css_classes": "gw-fs-lg"
+           },
+           "elements": [],
+           "widgetType": "heading"
+          }
+         ]
+        },
+        {
+         "id": "3e496062",
+         "elType": "widget",
+         "isInner": false,
+         "settings": {
+          "_title": "Offices intro",
+          "editor": "<p>Offices in Vancouver and Edmonton, with a team in Paris, Ontario.</p>",
+          "text_color": "rgba(255,255,255,0.85)",
+          "typography_typography": "custom",
+          "typography_font_family": "Clash Grotesk",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "typography_font_weight": "400",
+          "typography_line_height": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "paragraph_spacing": {
+           "unit": "px",
+           "size": 16,
+           "sizes": []
+          },
+          "_element_width": "initial",
+          "_element_custom_width": {
+           "unit": "custom",
+           "size": "min(100%, 440px, 30.56vw)",
+           "sizes": []
+          },
+          "_element_width_tablet": "inherit",
+          "_flex_size": "custom",
+          "_flex_grow": 0,
+          "_flex_shrink": 0
+         },
+         "elements": [],
+         "widgetType": "text-editor"
+        }
+       ]
+      },
+      {
+       "id": "39877f1a",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "padding": {
+         "unit": "px",
+         "top": "0",
+         "right": "0",
+         "bottom": "0",
+         "left": "0",
+         "isLinked": true
+        },
+        "flex_gap": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        },
+        "_title": "Office cards",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "space-between",
+        "flex_align_items": "stretch",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+         "unit": "px",
+         "size": 24,
+         "column": "24",
+         "row": "24",
+         "isLinked": true
+        }
+       },
+       "elements": [
+        {
+         "id": "387ceae",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "32",
+           "right": "32",
+           "bottom": "32",
+           "left": "32",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 20,
+           "column": "20",
+           "row": "20",
+           "isLinked": true
+          },
+          "_title": "Office Vancouver Office",
+          "flex_direction": "column",
+          "flex_align_items": "stretch",
+          "_flex_size": "custom",
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "min_height": {
+           "unit": "px",
+           "size": 299,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "20",
+           "bottom": "24",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "e6ee56b3",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Region British Columbia",
+            "editor": "<p>British Columbia</p>",
+            "text_color": "#0074BE",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "b97e649f",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Office title Vancouver Office",
+            "title": "Vancouver Office",
+            "header_size": "h3",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 26,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.25,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 22,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "em",
+             "size": 1.25,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "b6aa8c2",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 0,
+             "column": "0",
+             "row": "0",
+             "isLinked": true
+            },
+            "_title": "Vancouver Office details",
+            "flex_direction": "column",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "border_border": "solid",
+            "border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "border_color": "#DBDBDB"
+           },
+           "elements": [
+            {
+             "id": "6b6dbf6d",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "14",
+               "right": "0",
+               "bottom": "14",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 14,
+               "column": "14",
+               "row": "14",
+               "isLinked": true
+              },
+              "_title": "Detail Vancouver Office address",
+              "flex_direction": "row",
+              "flex_align_items": "center",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "1",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "#DBDBDB"
+             },
+             "elements": [
+              {
+               "id": "853b71b",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Icon Vancouver Office address",
+                "selected_icon": {
+                 "value": "fas fa-map-marker-alt",
+                 "library": "fa-solid"
+                },
+                "view": "stacked",
+                "shape": "circle",
+                "primary_color": "#F3F3F3",
+                "secondary_color": "#343330",
+                "size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "icon_padding": {
+                 "unit": "px",
+                 "size": 9.0,
+                 "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+               },
+               "elements": [],
+               "widgetType": "icon"
+              },
+              {
+               "id": "33654de",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Text Vancouver Office address",
+                "editor": "<p>1841 Pandora Street,<br>Vancouver, BC V5L 1M4</p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                 "unit": "px",
+                 "size": 21,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_flex_size": "custom",
+                "_flex_grow": 1,
+                "_flex_shrink": 1
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            },
+            {
+             "id": "b0b9cf1f",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "14",
+               "right": "0",
+               "bottom": "14",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 14,
+               "column": "14",
+               "row": "14",
+               "isLinked": true
+              },
+              "_title": "Detail Vancouver Office phone",
+              "flex_direction": "row",
+              "flex_align_items": "center",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "1",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "#DBDBDB"
+             },
+             "elements": [
+              {
+               "id": "58c0a6b",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Icon Vancouver Office phone",
+                "selected_icon": {
+                 "value": "fas fa-phone",
+                 "library": "fa-solid"
+                },
+                "view": "stacked",
+                "shape": "circle",
+                "primary_color": "#F3F3F3",
+                "secondary_color": "#343330",
+                "size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "icon_padding": {
+                 "unit": "px",
+                 "size": 9.0,
+                 "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+               },
+               "elements": [],
+               "widgetType": "icon"
+              },
+              {
+               "id": "2ef39afe",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Text Vancouver Office phone",
+                "editor": "<p><a style=\"color:inherit;\" href=\"tel:+16045700006\">604-570-0006</a></p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 18,
+                 "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.3,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_flex_size": "custom",
+                "_flex_grow": 1,
+                "_flex_shrink": 1
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "f740e3a",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "32",
+           "right": "32",
+           "bottom": "32",
+           "left": "32",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 20,
+           "column": "20",
+           "row": "20",
+           "isLinked": true
+          },
+          "_title": "Office Edmonton Office",
+          "flex_direction": "column",
+          "flex_align_items": "stretch",
+          "_flex_size": "custom",
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "min_height": {
+           "unit": "px",
+           "size": 299,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "20",
+           "bottom": "24",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "36b2c22",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Region Alberta",
+            "editor": "<p>Alberta</p>",
+            "text_color": "#0074BE",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "3887fda4",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Office title Edmonton Office",
+            "title": "Edmonton Office",
+            "header_size": "h3",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 26,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.25,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 22,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "em",
+             "size": 1.25,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "de79454",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 0,
+             "column": "0",
+             "row": "0",
+             "isLinked": true
+            },
+            "_title": "Edmonton Office details",
+            "flex_direction": "column",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "border_border": "solid",
+            "border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "border_color": "#DBDBDB"
+           },
+           "elements": [
+            {
+             "id": "457813c7",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "14",
+               "right": "0",
+               "bottom": "14",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 14,
+               "column": "14",
+               "row": "14",
+               "isLinked": true
+              },
+              "_title": "Detail Edmonton Office address",
+              "flex_direction": "row",
+              "flex_align_items": "center",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "1",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "#DBDBDB"
+             },
+             "elements": [
+              {
+               "id": "56334a43",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Icon Edmonton Office address",
+                "selected_icon": {
+                 "value": "fas fa-map-marker-alt",
+                 "library": "fa-solid"
+                },
+                "view": "stacked",
+                "shape": "circle",
+                "primary_color": "#F3F3F3",
+                "secondary_color": "#343330",
+                "size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "icon_padding": {
+                 "unit": "px",
+                 "size": 9.0,
+                 "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+               },
+               "elements": [],
+               "widgetType": "icon"
+              },
+              {
+               "id": "9200ddfb",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Text Edmonton Office address",
+                "editor": "<p>#201 &#8211; 10310 124 Street NW,<br>Edmonton, AB T5N 1R2</p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                 "unit": "px",
+                 "size": 21,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_flex_size": "custom",
+                "_flex_grow": 1,
+                "_flex_shrink": 1
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            },
+            {
+             "id": "05f6e3e4",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "14",
+               "right": "0",
+               "bottom": "14",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 14,
+               "column": "14",
+               "row": "14",
+               "isLinked": true
+              },
+              "_title": "Detail Edmonton Office phone",
+              "flex_direction": "row",
+              "flex_align_items": "center",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "1",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "#DBDBDB"
+             },
+             "elements": [
+              {
+               "id": "f6def78",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Icon Edmonton Office phone",
+                "selected_icon": {
+                 "value": "fas fa-phone",
+                 "library": "fa-solid"
+                },
+                "view": "stacked",
+                "shape": "circle",
+                "primary_color": "#F3F3F3",
+                "secondary_color": "#343330",
+                "size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "icon_padding": {
+                 "unit": "px",
+                 "size": 9.0,
+                 "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+               },
+               "elements": [],
+               "widgetType": "icon"
+              },
+              {
+               "id": "52770cc",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Text Edmonton Office phone",
+                "editor": "<p><a style=\"color:inherit;\" href=\"tel:+15875571810\">587-557-1810</a></p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 18,
+                 "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.3,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_flex_size": "custom",
+                "_flex_grow": 1,
+                "_flex_shrink": 1
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "23597f30",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "padding": {
+           "unit": "px",
+           "top": "32",
+           "right": "32",
+           "bottom": "32",
+           "left": "32",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "unit": "px",
+           "size": 20,
+           "column": "20",
+           "row": "20",
+           "isLinked": true
+          },
+          "_title": "Office Paris, Ontario",
+          "flex_direction": "column",
+          "flex_align_items": "stretch",
+          "_flex_size": "custom",
+          "width_tablet": {
+           "unit": "%",
+           "size": 100,
+           "sizes": []
+          },
+          "min_height": {
+           "unit": "px",
+           "size": 299,
+           "sizes": []
+          },
+          "min_height_tablet": {
+           "unit": "px",
+           "size": 0,
+           "sizes": []
+          },
+          "padding_mobile": {
+           "unit": "px",
+           "top": "24",
+           "right": "20",
+           "bottom": "24",
+           "left": "20",
+           "isLinked": false
+          },
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": [
+          {
+           "id": "a2a3f27",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Region Ontario",
+            "editor": "<p>Ontario</p>",
+            "text_color": "#0074BE",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 12,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "px",
+             "size": 20,
+             "sizes": []
+            },
+            "typography_letter_spacing": {
+             "unit": "px",
+             "size": 2.4,
+             "sizes": []
+            },
+            "typography_text_transform": "uppercase",
+            "paragraph_spacing": {
+             "unit": "px",
+             "size": 0,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "text-editor"
+          },
+          {
+           "id": "9f56530d",
+           "elType": "widget",
+           "isInner": false,
+           "settings": {
+            "_title": "Office title Paris, Ontario",
+            "title": "Paris, Ontario",
+            "header_size": "h3",
+            "title_color": "#000000",
+            "typography_typography": "custom",
+            "typography_font_family": "Clash Grotesk",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 26,
+             "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.25,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 22,
+             "sizes": []
+            },
+            "typography_line_height_mobile": {
+             "unit": "em",
+             "size": 1.25,
+             "sizes": []
+            }
+           },
+           "elements": [],
+           "widgetType": "heading"
+          },
+          {
+           "id": "e31ca7b",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "padding": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            },
+            "flex_gap": {
+             "unit": "px",
+             "size": 0,
+             "column": "0",
+             "row": "0",
+             "isLinked": true
+            },
+            "_title": "Paris, Ontario details",
+            "flex_direction": "column",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "border_border": "solid",
+            "border_width": {
+             "unit": "px",
+             "top": "1",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": false
+            },
+            "border_color": "#DBDBDB"
+           },
+           "elements": [
+            {
+             "id": "b045158",
+             "elType": "container",
+             "isInner": true,
+             "settings": {
+              "content_width": "full",
+              "padding": {
+               "unit": "px",
+               "top": "14",
+               "right": "0",
+               "bottom": "14",
+               "left": "0",
+               "isLinked": false
+              },
+              "flex_gap": {
+               "unit": "px",
+               "size": 14,
+               "column": "14",
+               "row": "14",
+               "isLinked": true
+              },
+              "_title": "Detail Paris, Ontario phone",
+              "flex_direction": "row",
+              "flex_align_items": "center",
+              "border_border": "solid",
+              "border_width": {
+               "unit": "px",
+               "top": "0",
+               "right": "0",
+               "bottom": "1",
+               "left": "0",
+               "isLinked": false
+              },
+              "border_color": "#DBDBDB"
+             },
+             "elements": [
+              {
+               "id": "9cc1fa3d",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Icon Paris, Ontario phone",
+                "selected_icon": {
+                 "value": "fas fa-phone",
+                 "library": "fa-solid"
+                },
+                "view": "stacked",
+                "shape": "circle",
+                "primary_color": "#F3F3F3",
+                "secondary_color": "#343330",
+                "size": {
+                 "unit": "px",
+                 "size": 14,
+                 "sizes": []
+                },
+                "icon_padding": {
+                 "unit": "px",
+                 "size": 9.0,
+                 "sizes": []
+                },
+                "_element_width": "auto",
+                "_flex_size": "none"
+               },
+               "elements": [],
+               "widgetType": "icon"
+              },
+              {
+               "id": "1e924a6d",
+               "elType": "widget",
+               "isInner": false,
+               "settings": {
+                "_title": "Text Paris, Ontario phone",
+                "editor": "<p><a style=\"color:inherit;\" href=\"tel:+13658892933\">365-889-2933</a></p>",
+                "text_color": "#000000",
+                "typography_typography": "custom",
+                "typography_font_family": "Clash Grotesk",
+                "typography_font_size": {
+                 "unit": "px",
+                 "size": 18,
+                 "sizes": []
+                },
+                "typography_font_weight": "500",
+                "typography_line_height": {
+                 "unit": "em",
+                 "size": 1.3,
+                 "sizes": []
+                },
+                "paragraph_spacing": {
+                 "unit": "px",
+                 "size": 0,
+                 "sizes": []
+                },
+                "_flex_size": "custom",
+                "_flex_grow": 1,
+                "_flex_shrink": 1
+               },
+               "elements": [],
+               "widgetType": "text-editor"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "page_settings": []
+}
