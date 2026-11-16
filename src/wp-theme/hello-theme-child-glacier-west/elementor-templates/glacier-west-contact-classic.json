@@ -1313,7 +1313,8 @@
              "sizes": []
             },
             "submit_actions": [
-             "email"
+             "email",
+            "save-to-database"
             ],
             "email_subject": "New project enquiry from the Glacier West website",
             "email_content": "[all-fields]",

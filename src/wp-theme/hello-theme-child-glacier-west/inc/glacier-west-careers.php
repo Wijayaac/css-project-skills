@@ -14,6 +14,7 @@
  *      options from open jobs / location terms; ?position={job-slug} preselects
  *   5. Admin: Status column, Order sorting
  *   6. Assets: glacier-west-careers.css / .js, only on pages that use them
+ *   7. Application form hardening: rate limits + strict server-side resume checks
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -365,3 +366,177 @@ function gw_careers_enqueue() {
 		wp_enqueue_script( 'hello-elementor-child-glacier-west-careers' );
 	}
 }
+
+/* ---------------------------------------------------------------------------------------------
+ * 7. Application form hardening (server side; the browser-side file limits are easy to bypass).
+ *    Runs on Elementor Pro's validation step, BEFORE any uploaded file is moved into wp-content/uploads,
+ *    so a rejected submission never leaves a file on the server.
+ *    - Rate limit: per IP (3 per 10 min, 10 per day) and site-wide (60 per hour), counted on every attempt.
+ *    - Resume: exactly one file, required, max 10 MB, extension pdf/doc/docx only, a single safe file name
+ *      (no "cv.php.pdf"), and the file content must really be PDF / Word (magic bytes + finfo MIME),
+ *      with no embedded PHP or script tags in the first 64 KB.
+ *    - Any other upload field on this form is refused.
+ *    Tune the limits with the constants below.
+ * ------------------------------------------------------------------------------------------- */
+const GW_APPLY_FILE_FIELD   = 'resume';
+const GW_APPLY_MAX_BYTES    = 10 * MB_IN_BYTES;
+const GW_APPLY_IP_SHORT     = array( 3, 10 * MINUTE_IN_SECONDS );
+const GW_APPLY_IP_DAY       = array( 10, DAY_IN_SECONDS );
+const GW_APPLY_SITE_HOURLY  = array( 60, HOUR_IN_SECONDS );
+
+function gw_apply_client_ip() {
+	$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? (string) $_SERVER['REMOTE_ADDR'] : '';
+	// Behind Cloudways' own proxy REMOTE_ADDR can be a private address; then trust only the LAST
+	// X-Forwarded-For hop (added by that proxy), never the first one, which the visitor can forge.
+	if ( ! filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE ) && ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+		$hops = array_map( 'trim', explode( ',', (string) $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
+		$last = end( $hops );
+		if ( filter_var( $last, FILTER_VALIDATE_IP ) ) {
+			$ip = $last;
+		}
+	}
+	return filter_var( $ip, FILTER_VALIDATE_IP ) ? $ip : 'unknown';
+}
+
+/** Increments a fixed-window counter and returns false once it is over its limit. */
+function gw_apply_hit( $key, $limit_window ) {
+	list( $limit, $window ) = $limit_window;
+	$key  = 'gw_apply_' . substr( md5( $key . '|' . $window ), 0, 20 );
+	$data = get_transient( $key );
+	$now  = time();
+	if ( ! is_array( $data ) || $data['until'] <= $now ) {
+		$data = array( 'n' => 0, 'until' => $now + $window );
+	}
+	$data['n']++;
+	set_transient( $key, $data, max( 1, $data['until'] - $now ) );
+	return $data['n'] <= $limit;
+}
+
+/** Normalises $_FILES['form_fields'][...][ $id ] (single or multiple input) into a list of files. */
+function gw_apply_files( $id ) {
+	if ( empty( $_FILES['form_fields'] ) || ! is_array( $_FILES['form_fields'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		return array();
+	}
+	$f   = $_FILES['form_fields']; // phpcs:ignore WordPress.Security.NonceVerification, WordPress.Security.ValidatedSanitizedInput
+	$out = array();
+	if ( ! isset( $f['name'][ $id ] ) ) {
+		return $out;
+	}
+	foreach ( (array) $f['name'][ $id ] as $i => $name ) {
+		$pick  = function ( $k ) use ( $f, $id, $i ) {
+			$v = $f[ $k ][ $id ] ?? null;
+			return is_array( $v ) ? ( $v[ $i ] ?? null ) : $v;
+		};
+		$error = (int) $pick( 'error' );
+		if ( UPLOAD_ERR_NO_FILE === $error && '' === (string) $name ) {
+			continue;
+		}
+		$out[] = array(
+			'name'     => (string) $name,
+			'tmp_name' => (string) $pick( 'tmp_name' ),
+			'size'     => (int) $pick( 'size' ),
+			'error'    => $error,
+		);
+	}
+	return $out;
+}
+
+function gw_apply_check_file( $file ) {
+	if ( UPLOAD_ERR_OK !== $file['error'] ) {
+		return UPLOAD_ERR_INI_SIZE === $file['error'] || UPLOAD_ERR_FORM_SIZE === $file['error']
+			? 'Your resume is larger than 10 MB.'
+			: 'The upload failed. Please try again.';
+	}
+	if ( ! is_uploaded_file( $file['tmp_name'] ) ) {
+		return 'The upload failed. Please try again.';
+	}
+	$size = (int) filesize( $file['tmp_name'] );
+	if ( $size <= 0 || $size > GW_APPLY_MAX_BYTES ) {
+		return 'Your resume must be a PDF or Word file up to 10 MB.';
+	}
+	$name = strtolower( wp_basename( $file['name'] ) );
+	// One extension only, from the allow-list, and nothing executable hiding in the name.
+	if ( ! preg_match( '/^[^.\/\\\\]{1,150}\.(pdf|docx?)$/', $name, $m ) ) {
+		return 'Your resume must be a single PDF, DOC or DOCX file (one dot, no special file name).';
+	}
+	$ext = $m[1];
+	$fh  = fopen( $file['tmp_name'], 'rb' ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	if ( ! $fh ) {
+		return 'The upload failed. Please try again.';
+	}
+	$head = (string) fread( $fh, 65536 ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	fclose( $fh ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	$magic = array(
+		'pdf'  => "%PDF-",
+		'doc'  => "\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1",
+		'docx' => "PK\x03\x04",
+	);
+	if ( 0 !== strpos( $head, $magic[ $ext ] ) ) {
+		return 'That file does not look like a real ' . strtoupper( $ext ) . ' document.';
+	}
+	if ( preg_match( '/<\?php|<\?=|<script\b/i', $head ) ) {
+		return 'That file could not be accepted.';
+	}
+	if ( function_exists( 'finfo_open' ) ) {
+		$fi   = finfo_open( FILEINFO_MIME_TYPE );
+		$mime = $fi ? (string) finfo_file( $fi, $file['tmp_name'] ) : '';
+		if ( $fi ) {
+			finfo_close( $fi );
+		}
+		$ok = array(
+			'pdf'  => array( 'application/pdf' ),
+			'doc'  => array( 'application/msword', 'application/x-ole-storage', 'application/CDFV2', 'application/vnd.ms-office' ),
+			'docx' => array( 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/zip', 'application/octet-stream' ),
+		);
+		if ( '' !== $mime && ! in_array( $mime, $ok[ $ext ], true ) ) {
+			return 'That file does not look like a real ' . strtoupper( $ext ) . ' document.';
+		}
+	}
+	if ( 'docx' === $ext && class_exists( 'ZipArchive' ) ) {
+		$zip = new ZipArchive();
+		if ( true !== $zip->open( $file['tmp_name'] ) || false === $zip->locateName( 'word/document.xml' ) ) {
+			return 'That file does not look like a real DOCX document.';
+		}
+		// Refuse macro-enabled or oversized ("zip bomb") archives.
+		$total = 0;
+		for ( $i = 0; $i < $zip->numFiles; $i++ ) {
+			$st     = $zip->statIndex( $i );
+			$total += (int) ( $st['size'] ?? 0 );
+			if ( preg_match( '/vbaProject\.bin$/i', (string) ( $st['name'] ?? '' ) ) || $total > 100 * MB_IN_BYTES || $i > 2000 ) {
+				$zip->close();
+				return 'That file could not be accepted.';
+			}
+		}
+		$zip->close();
+	}
+	return '';
+}
+
+add_action( 'elementor_pro/forms/validation', function ( $record, $ajax_handler ) {
+	if ( GW_CAREER_FORM_NAME !== $record->get_form_settings( 'form_name' ) ) {
+		return;
+	}
+	$ip = gw_apply_client_ip();
+	if ( ! gw_apply_hit( 'site', GW_APPLY_SITE_HOURLY ) || ! gw_apply_hit( 'ip-short|' . $ip, GW_APPLY_IP_SHORT ) || ! gw_apply_hit( 'ip-day|' . $ip, GW_APPLY_IP_DAY ) ) {
+		$ajax_handler->add_error_message( 'Too many applications from your connection. Please wait a few minutes and try again, or email us your resume.' );
+		$ajax_handler->add_error( GW_APPLY_FILE_FIELD, 'Please try again later.' );
+		return;
+	}
+	foreach ( (array) $record->get_field( array( 'type' => 'upload' ) ) as $id => $field ) {
+		$files = gw_apply_files( $id );
+		if ( GW_APPLY_FILE_FIELD !== $id ) {
+			if ( $files ) {
+				$ajax_handler->add_error( $id, 'This upload is not accepted.' );
+			}
+			continue;
+		}
+		if ( 1 !== count( $files ) ) {
+			$ajax_handler->add_error( $id, $files ? 'Please upload one file only.' : 'Please upload your resume (PDF, DOC or DOCX, up to 10 MB).' );
+			continue;
+		}
+		$err = gw_apply_check_file( $files[0] );
+		if ( '' !== $err ) {
+			$ajax_handler->add_error( $id, $err );
+		}
+	}
+}, 10, 2 );
