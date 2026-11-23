@@ -32,6 +32,18 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 	border-radius: 100%;
 }
 
+.caption-triangle {
+	display: inline-flex;
+	align-items: center;
+	gap: 0px;
+}
+
+.caption-triangle span {
+	font-size: 18px;
+	color: #00CBFA;
+	letter-spacing: 0;
+}
+
 /* --------------------------------------------------------------------------
    Sticky header – background on scroll (.is-scrolled toggled via JS)
    -------------------------------------------------------------------------- */
