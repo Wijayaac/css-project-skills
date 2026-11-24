@@ -378,6 +378,10 @@
 	transform: scale(1.03);
 }
 
+.gw-card-light .gw-faux-btn--link .elementor-button {
+	color: inherit;
+}
+
 /* Case-study / related grids: 3 columns, but 2 when there are 2 or 4 items (matches the service designs) */
 .gw-cases-grid .elementor-loop-container {
 	grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
