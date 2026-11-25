@@ -157,7 +157,7 @@ function gw_field_has_value( $name ) {
 	if ( 'related_testimonials' === $name ) {
 		return gw_related_count( 'gw_testimonial' ) > 0;
 	}
-	$field = function_exists( 'acf_get_field' ) ? acf_get_field( $name ) : null;
+	$field = function_exists( 'get_field_object' ) ? get_field_object( $name, get_the_ID(), false, false ) : null; // post-context lookup: field names like gw_stats exist in several groups
 	if ( $field && in_array( $field['type'], array( 'repeater', 'gallery' ), true ) ) {
 		return count( gw_rows( $name, get_the_ID() ) ) > 0;
 	}
